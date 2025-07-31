@@ -5,3 +5,5 @@
 #define DONATOR_TIER_3 3
 #define DONATOR_TIER_4 4
 #define DONATOR_TIER_5 5
+
+#define SPECIES_GOLEM_CLOCKWORK "clock_golem"

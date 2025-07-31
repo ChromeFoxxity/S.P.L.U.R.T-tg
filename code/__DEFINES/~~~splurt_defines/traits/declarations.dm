@@ -108,3 +108,6 @@
 
 /// Trait that makes you unable to get pregnant, make people pregnant, and triggers abortions too
 #define TRAIT_INFERTILE "pregnancy_infertile"
+
+/// Has an item been enchanted by a clock cult Stargazer?
+#define TRAIT_STARGAZED				"stargazed"

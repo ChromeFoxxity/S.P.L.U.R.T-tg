@@ -36,6 +36,9 @@
 	var/harmful = FALSE
 	///Sound file: Sound to play when this equipment is destroyed while still attached to the mech
 	var/destroy_sound = 'sound/vehicles/mecha/critdestr.ogg'
+	// SPLURT ADDITION START
+	///what equipment flags does this have
+	var/equipment_flags // SPLURT ADDITION END
 
 /obj/item/mecha_parts/mecha_equipment/Destroy()
 	if(chassis)
@@ -64,7 +67,8 @@
 		return
 	switch(action)
 		if("detach")
-			chassis.ui_selected_module_index = null
+			if(equipment_flags & NOT_ABLE_TO_REMOVE_FROM_MECHA) //SPLURT EDIT
+				return //SPLURT EDIT
 			detach(get_turf(src))
 			. = TRUE
 		if("toggle")
