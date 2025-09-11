@@ -185,25 +185,12 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/water,
 /area/space)
-"arh" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/mob/living/basic/clockwork_marauder,
-/turf/open/floor/bronze/filled,
-/area/space)
 "aru" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /obj/structure/closet/emcloset,
 /turf/open/floor/plating,
-/area/space)
-"arD" = (
-/obj/item/food/meat/slab/spider,
-/obj/item/food/spiderlollipop,
-/obj/item/food/spiderleg,
-/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "arL" = (
 /obj/structure/table/reinforced,
@@ -279,13 +266,6 @@
 	},
 /obj/machinery/space_heater,
 /turf/open/floor/plating,
-/area/space)
-"ayX" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/mob/living/basic/trooper/syndicate/ranged/complex,
-/turf/open/floor/mineral/plastitanium/red,
 /area/space)
 "azH" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -470,6 +450,15 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/space/basic,
+/area/space)
+"aMz" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	},
+/obj/structure/spider/stickyweb/sealed,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "aNx" = (
 /obj/structure/table/reinforced,
@@ -859,6 +848,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/space)
+"blg" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -11
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/space)
 "blI" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/structure/cable{
@@ -1018,6 +1014,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/space/basic,
 /area/space)
+"byX" = (
+/obj/item/ammo_casing/c9mm,
+/obj/structure/spider/stickyweb,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "bzl" = (
 /obj/item/clockwork/replica_fabricator,
 /turf/open/floor/engine/vacuum,
@@ -1132,6 +1135,11 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
+/area/space)
+"bGo" = (
+/obj/structure/fence/door,
+/obj/effect/turf_decal/trimline/red/real_red,
+/turf/open/floor/mineral/titanium/tiled,
 /area/space)
 "bGF" = (
 /obj/structure/fence{
@@ -1287,6 +1295,11 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/turf/open/misc/asteroid/snow/complex,
+/area/space)
+"bTh" = (
+/obj/item/toy/snowball,
+/mob/living/basic/mining/legion/monkey/snow,
 /turf/open/misc/asteroid/snow/complex,
 /area/space)
 "bTX" = (
@@ -1507,6 +1520,13 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"chV" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hos,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "cik" = (
 /obj/structure/rack,
 /obj/structure/railing{
@@ -1540,11 +1560,6 @@
 "cjg" = (
 /obj/structure/bed/dogbed,
 /turf/open/floor/iron,
-/area/space)
-"ckg" = (
-/obj/effect/decal/cleanable/wrapping,
-/mob/living/simple_animal/hostile/asteroid/polarbear,
-/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "ckr" = (
 /obj/machinery/chem_dispenser,
@@ -1695,6 +1710,11 @@
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
+/area/space)
+"cqv" = (
+/obj/structure/flora/grass/both,
+/obj/structure/fence,
+/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "cqy" = (
 /obj/structure/closet/l3closet/janitor,
@@ -2187,6 +2207,14 @@
 /obj/item/ammo_casing/c9mm,
 /turf/open/floor/iron,
 /area/space)
+"cPs" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
+/mob/living/basic/spider/giant/hunter/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "cQZ" = (
 /obj/machinery/hydroponics/constructable,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2426,6 +2454,11 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"dfT" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/basic/clockwork_marauder,
+/turf/open/floor/bronze/flat,
+/area/space)
 "dgd" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -2512,6 +2545,13 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/iron,
 /area/space)
+"dmk" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/mob/living/basic/trooper/syndicate/ranged/complex,
+/turf/open/floor/mineral/plastitanium/red,
+/area/space)
 "dmy" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -2553,6 +2593,10 @@
 /obj/structure/bed,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet,
+/area/space)
+"dnw" = (
+/obj/item/clothing/glasses/clockwork/wraith_spectacles,
+/turf/open/floor/bronze/flat,
 /area/space)
 "dnC" = (
 /obj/machinery/space_heater,
@@ -3011,11 +3055,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
 /area/space)
-"dJi" = (
-/obj/item/chair,
-/mob/living/basic/trooper/syndicate/melee/complex,
-/turf/open/misc/asteroid/snow/complex,
-/area/space)
 "dLm" = (
 /obj/machinery/light/small{
 	brightness = 3;
@@ -3114,10 +3153,6 @@
 /obj/structure/bodycontainer/morgue,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/space)
-"dQv" = (
-/obj/structure/curtain,
-/turf/open/floor/mineral/plastitanium,
 /area/space)
 "dQE" = (
 /obj/structure/cable{
@@ -3296,15 +3331,18 @@
 	icon_state = "snow_dug"
 	},
 /area/space)
+"ebc" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/spider/stickyweb/sealed,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "ebJ" = (
 /obj/machinery/vending/hydroseeds,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/spacevine,
 /turf/open/floor/bronze/flat,
-/area/space)
-"ebT" = (
-/obj/item/clockwork/weapon/brass_sword,
-/turf/open/floor/bronze/filled,
 /area/space)
 "ecc" = (
 /obj/structure/fence/door{
@@ -3667,6 +3705,10 @@
 	icon_state = "snow_dug"
 	},
 /area/space)
+"euQ" = (
+/mob/living/basic/trooper/syndicate/ranged/complex,
+/turf/open/misc/asteroid/snow/complex,
+/area/space)
 "evh" = (
 /obj/machinery/door/airlock/research/glass,
 /obj/structure/barricade/wooden/crude,
@@ -3704,15 +3746,6 @@
 	},
 /turf/open/floor/plating/snowed/complex,
 /area/space)
-"ewx" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/mineral/plastitanium/red,
-/area/space)
 "exe" = (
 /obj/machinery/light{
 	dir = 8
@@ -3726,6 +3759,10 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/space/basic,
+/area/space)
+"eyl" = (
+/obj/structure/spider/stickyweb,
+/turf/closed/indestructible/rock/snow,
 /area/space)
 "eyo" = (
 /obj/effect/turf_decal/tile/green,
@@ -3741,6 +3778,12 @@
 	icon_state = "1-2"
 	},
 /turf/open/space/basic,
+/area/space)
+"ezd" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/mineral/plastitanium/red,
 /area/space)
 "ezw" = (
 /obj/structure/table/reinforced,
@@ -3871,11 +3914,6 @@
 /obj/effect/spawner/structure/window/bronze,
 /turf/closed/indestructible/grille,
 /area/space)
-"eEU" = (
-/obj/machinery/light,
-/mob/living/basic/clockwork_marauder,
-/turf/open/floor/bronze/filled,
-/area/space)
 "eFf" = (
 /obj/machinery/light{
 	dir = 4;
@@ -3978,10 +4016,6 @@
 /obj/effect/turf_decal/loading_area,
 /turf/open/floor/plating,
 /area/space)
-"ePs" = (
-/obj/structure/spider/stickyweb,
-/turf/closed/indestructible/rock/snow,
-/area/space)
 "ePI" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/melee/baseball_bat,
@@ -3990,6 +4024,13 @@
 "eQa" = (
 /obj/machinery/vending/wardrobe/jani_wardrobe,
 /turf/open/floor/iron,
+/area/space)
+"eQk" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/stickyweb,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "eQH" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4022,6 +4063,10 @@
 /obj/item/trash/energybar,
 /obj/item/trash/popcorn,
 /turf/open/floor/wood,
+/area/space)
+"eSS" = (
+/obj/item/clockwork/weapon/brass_battlehammer,
+/turf/open/floor/bronze/flat,
 /area/space)
 "eTx" = (
 /obj/structure/railing{
@@ -4324,6 +4369,15 @@
 /obj/structure/table/bronze,
 /turf/open/floor/bronze/filled,
 /area/space)
+"fgl" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/space)
 "fgp" = (
 /obj/structure/table,
 /obj/item/storage/box/bodybags,
@@ -4489,11 +4543,6 @@
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/plating,
 /area/space)
-"fpP" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/clockwork/weapon/brass_spear,
-/turf/open/floor/bronze,
-/area/space)
 "fqu" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -4588,6 +4637,10 @@
 /obj/structure/table/bronze,
 /turf/open/floor/bronze/filled,
 /area/space)
+"fvy" = (
+/mob/living/basic/pet/fox/icemoon,
+/turf/open/floor/iron/dark,
+/area/space)
 "fvz" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/effect/turf_decal/weather/dirt{
@@ -4601,16 +4654,6 @@
 /obj/effect/turf_decal/box,
 /obj/machinery/space_heater,
 /turf/open/floor/plating,
-/area/space)
-"fww" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 8
-	},
-/obj/structure/spider/stickyweb,
-/mob/living/basic/spider/giant/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "fxB" = (
 /obj/structure/cable{
@@ -4642,10 +4685,6 @@
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/space)
-"fyI" = (
-/mob/living/basic/mining/legion/snow,
-/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "fAb" = (
 /obj/structure/fluff/paper/corner,
@@ -5098,10 +5137,6 @@
 	},
 /turf/closed/wall/mineral/bronze,
 /area/space)
-"fVv" = (
-/obj/item/clothing/glasses/clockwork/wraith_spectacles,
-/turf/open/floor/bronze/flat,
-/area/space)
 "fVw" = (
 /obj/structure/frame/computer,
 /obj/machinery/light/broken{
@@ -5227,13 +5262,6 @@
 	dir = 4
 	},
 /turf/open/misc/ice/complex,
-/area/space)
-"fZQ" = (
-/obj/structure/bed,
-/obj/item/bedsheet/hos,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "fZT" = (
 /obj/structure/lattice,
@@ -5641,12 +5669,6 @@
 /obj/structure/table/bronze,
 /turf/open/floor/bronze/filled,
 /area/space)
-"gvg" = (
-/mob/living/basic/spider/giant/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
-/area/space)
 "gwj" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -5861,6 +5883,13 @@
 "gJS" = (
 /obj/machinery/door/airlock/science/glass,
 /turf/open/floor/iron/dark,
+/area/space)
+"gKW" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/mob/living/basic/clockwork_marauder,
+/turf/open/floor/bronze/filled,
 /area/space)
 "gLf" = (
 /obj/structure/railing{
@@ -6243,13 +6272,14 @@
 	},
 /turf/open/floor/plating,
 /area/space)
-"hhx" = (
-/mob/living/basic/clockwork_marauder,
-/turf/open/floor/bronze/flat,
-/area/space)
 "hhI" = (
 /obj/machinery/vending/wardrobe/medi_wardrobe,
 /turf/open/space/basic,
+/area/space)
+"hix" = (
+/obj/item/food/meat/slab/spider,
+/obj/item/food/spiderleg,
+/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "hjA" = (
 /obj/machinery/computer/security/telescreen/entertainment,
@@ -6419,6 +6449,11 @@
 	},
 /turf/closed/wall,
 /area/space)
+"hsl" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/suit_storage_unit/mining,
+/turf/open/floor/iron,
+/area/space)
 "hsm" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
@@ -6526,6 +6561,10 @@
 	},
 /turf/open/water,
 /area/space)
+"hyY" = (
+/obj/item/food/spiderlollipop,
+/turf/open/misc/asteroid/snow/complex,
+/area/space)
 "hzi" = (
 /obj/structure/guncase,
 /obj/effect/decal/cleanable/cobweb,
@@ -6621,10 +6660,6 @@
 /obj/structure/chair/stool/bar,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/space/basic,
-/area/space)
-"hFP" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear,
-/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "hGl" = (
 /obj/structure/railing{
@@ -6885,6 +6920,12 @@
 "hUb" = (
 /turf/open/floor/stone/complex,
 /area/space)
+"hUd" = (
+/mob/living/simple_animal/hostile/asteroid/polarbear,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "hUl" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -6960,6 +7001,13 @@
 	},
 /obj/machinery/power/smes/engineering,
 /turf/open/floor/plating,
+/area/space)
+"hXF" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/mob/living/basic/trooper/syndicate/ranged/complex,
+/turf/open/floor/iron,
 /area/space)
 "hXM" = (
 /obj/structure/cable{
@@ -7535,6 +7583,10 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"iMy" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/mineral/plastitanium,
+/area/space)
 "iMP" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/iron/dark,
@@ -7767,11 +7819,6 @@
 /obj/structure/barricade/sandbags,
 /turf/open/space/basic,
 /area/space)
-"jgk" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/basic/clockwork_marauder,
-/turf/open/floor/bronze/flat,
-/area/space)
 "jgJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -7925,11 +7972,6 @@
 /turf/open/misc/asteroid/snow/standard_air{
 	icon_state = "snow_dug"
 	},
-/area/space)
-"jpj" = (
-/obj/structure/fence/door,
-/obj/effect/turf_decal/trimline/red,
-/turf/open/floor/mineral/titanium/tiled,
 /area/space)
 "jpk" = (
 /obj/machinery/hydroponics/constructable,
@@ -8229,6 +8271,31 @@
 /obj/structure/closet/secure_closet/hydroponics,
 /turf/open/space/basic,
 /area/space)
+"jFI" = (
+/obj/structure/fence/door,
+/obj/effect/turf_decal/trimline/red,
+/turf/open/floor/mineral/titanium/tiled,
+/area/space)
+"jGD" = (
+/obj/structure/closet,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/storage/box/nri_flares,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
+/turf/open/floor/iron,
+/area/space)
 "jGM" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -8364,10 +8431,6 @@
 	},
 /turf/open/floor/plating,
 /area/space)
-"jOU" = (
-/obj/item/food/spiderlollipop,
-/turf/open/misc/asteroid/snow/complex,
-/area/space)
 "jPI" = (
 /obj/machinery/seed_extractor,
 /obj/structure/table/bronze,
@@ -8479,6 +8542,18 @@
 	},
 /turf/open/misc/asteroid/snow/complex,
 /area/space)
+"jVN" = (
+/obj/structure/curtain,
+/turf/open/floor/mineral/plastitanium,
+/area/space)
+"jVS" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
+/mob/living/basic/spider/giant/nurse/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "jVZ" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -8513,10 +8588,6 @@
 	},
 /obj/effect/turf_decal/tile/bar,
 /turf/open/floor/iron,
-/area/space)
-"jXw" = (
-/mob/living/basic/trooper/syndicate/melee/complex,
-/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "jXz" = (
 /obj/effect/decal/cleanable/vomit/old,
@@ -8599,10 +8670,6 @@
 	},
 /turf/open/floor/plating/snowed/complex,
 /area/space)
-"kbs" = (
-/mob/living/basic/clockwork_marauder,
-/turf/open/floor/bronze,
-/area/space)
 "kct" = (
 /obj/structure/railing{
 	dir = 8
@@ -8643,6 +8710,13 @@
 "kes" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
+/area/space)
+"kfk" = (
+/obj/structure/barricade/wooden,
+/obj/structure/spider/stickyweb,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "kfv" = (
 /obj/item/kirbyplants/random,
@@ -8775,13 +8849,10 @@
 	},
 /turf/open/space/basic,
 /area/space)
-"klP" = (
-/obj/item/clothing/gloves/clockwork,
-/turf/open/floor/bronze,
-/area/space)
 "kmf" = (
-/obj/item/clothing/suit/clockwork,
-/turf/open/floor/bronze/flat,
+/obj/item/wallframe/apc,
+/obj/item/electronics/apc,
+/turf/open/floor/bronze/filled,
 /area/space)
 "kmp" = (
 /obj/structure/closet/crate/miningcar,
@@ -8804,10 +8875,6 @@
 "kmU" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/bronze/flat,
-/area/space)
-"knd" = (
-/mob/living/basic/trooper/syndicate/melee/sword/complex,
-/turf/open/floor/plating/snowed/complex,
 /area/space)
 "koA" = (
 /obj/structure/railing{
@@ -9041,23 +9108,6 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/iron,
 /area/space)
-"kBF" = (
-/obj/item/ammo_casing/c9mm,
-/obj/structure/spider/stickyweb,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
-/area/space)
-"kBG" = (
-/mob/living/basic/spider/giant/hunter/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
-/area/space)
-"kBO" = (
-/obj/machinery/door/airlock/bronze/clock,
-/turf/open/floor/bronze/filled,
-/area/space)
 "kCx" = (
 /obj/structure/table,
 /obj/item/stack/sheet/glass/fifty{
@@ -9241,6 +9291,11 @@
 /obj/structure/girder/bronze,
 /turf/open/misc/asteroid/snow/complex,
 /area/space)
+"kMz" = (
+/obj/item/chair,
+/mob/living/basic/trooper/syndicate/melee/complex,
+/turf/open/misc/asteroid/snow/complex,
+/area/space)
 "kMS" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -9254,8 +9309,11 @@
 /turf/open/floor/plating,
 /area/space)
 "kNj" = (
-/mob/living/basic/trooper/syndicate/ranged/complex,
-/turf/open/misc/asteroid/snow/complex,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/nurse/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "kNB" = (
 /obj/effect/turf_decal/siding/brown{
@@ -9428,6 +9486,10 @@
 /obj/effect/temp_visual/cult/rune_spawn/rune5/center,
 /obj/structure/platform/cult,
 /turf/open/floor/cult,
+/area/space)
+"kWI" = (
+/obj/item/clothing/wrists/clockwork_watch,
+/turf/open/floor/bronze,
 /area/space)
 "kXL" = (
 /obj/effect/turf_decal/box,
@@ -9892,6 +9954,11 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/snowed/smoothed/complex,
 /area/space)
+"lAf" = (
+/obj/item/toy/snowball,
+/obj/structure/statue/snow/snowlegion,
+/turf/open/misc/asteroid/snow/complex,
+/area/space)
 "lBu" = (
 /obj/structure/window/bronze/fulltile,
 /obj/structure/grille,
@@ -10148,12 +10215,6 @@
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/space/basic,
 /area/space)
-"lWv" = (
-/obj/structure/flora/grass/both,
-/obj/structure/fence,
-/obj/structure/fence,
-/turf/open/misc/asteroid/snow/complex,
-/area/space)
 "lWH" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
@@ -10250,10 +10311,6 @@
 	},
 /turf/open/floor/iron,
 /area/space)
-"mgH" = (
-/obj/item/clothing/wrists/clockwork_watch,
-/turf/open/floor/bronze,
-/area/space)
 "mgJ" = (
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/radiation,
@@ -10317,6 +10374,12 @@
 	dir = 9
 	},
 /turf/open/floor/cult,
+/area/space)
+"mjI" = (
+/obj/item/food/meat/slab/spider,
+/obj/item/food/spiderlollipop,
+/obj/item/food/spiderleg,
+/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "mjW" = (
 /obj/structure/rack,
@@ -10473,6 +10536,10 @@
 	},
 /turf/open/floor/plating/snowed/smoothed/complex,
 /area/space)
+"mzD" = (
+/mob/living/basic/trooper/syndicate/melee/sword/complex,
+/turf/open/floor/plating/snowed/complex,
+/area/space)
 "mAd" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
@@ -10514,16 +10581,6 @@
 	dir = 1
 	},
 /mob/living/basic/trooper/syndicate/melee/complex,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
-/area/space)
-"mDQ" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5
-	},
-/obj/structure/spider/stickyweb,
-/obj/structure/spider/stickyweb/sealed,
 /turf/open/misc/asteroid/snow/standard_air{
 	icon_state = "snow_dug"
 	},
@@ -10801,6 +10858,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
 /area/space)
+"mNn" = (
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/hunter/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "mNF" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/med_data/laptop,
@@ -10859,6 +10923,11 @@
 	},
 /obj/structure/barricade/wooden/crude/snow,
 /turf/open/space/basic,
+/area/space)
+"mQX" = (
+/obj/structure/flora/grass/both,
+/obj/structure/fence/corner,
+/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "mRe" = (
 /obj/structure/chair/office/light{
@@ -10978,12 +11047,6 @@
 	},
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating,
-/area/space)
-"mVc" = (
-/mob/living/simple_animal/hostile/asteroid/polarbear,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "mVi" = (
 /obj/structure/table,
@@ -11110,6 +11173,10 @@
 	},
 /turf/open/misc/ice/complex,
 /area/space)
+"nds" = (
+/mob/living/basic/clockwork_marauder,
+/turf/open/floor/bronze/flat,
+/area/space)
 "ndB" = (
 /obj/structure/door_assembly/door_assembly_vault,
 /turf/open/floor/plating,
@@ -11217,6 +11284,16 @@
 /obj/structure/table,
 /obj/item/toy/cards/deck,
 /turf/open/space/basic,
+/area/space)
+"nkN" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "nkQ" = (
 /obj/structure/chair{
@@ -11432,6 +11509,10 @@
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/space)
+"nzo" = (
+/mob/living/basic/trooper/syndicate/melee/complex,
+/turf/open/misc/asteroid/snow/complex,
+/area/space)
 "nzr" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -11599,6 +11680,10 @@
 /obj/item/wallframe/camera,
 /turf/open/floor/wood,
 /area/space)
+"nHb" = (
+/obj/item/clockwork/weapon/brass_sword,
+/turf/open/floor/bronze/filled,
+/area/space)
 "nHj" = (
 /obj/machinery/holopad,
 /turf/open/floor/iron,
@@ -11614,11 +11699,6 @@
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/space)
-"nHJ" = (
-/obj/item/toy/snowball,
-/obj/structure/statue/snow/snowlegion,
-/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "nHW" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -11806,14 +11886,6 @@
 	dir = 4
 	},
 /turf/open/space/basic,
-/area/space)
-"nRY" = (
-/obj/structure/spider/stickyweb,
-/obj/structure/spider/cocoon,
-/mob/living/basic/spider/giant/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "nSJ" = (
 /obj/structure/flora/tree/jungle/small,
@@ -12286,13 +12358,6 @@
 /obj/item/pen,
 /turf/open/floor/iron,
 /area/space)
-"osM" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -11
-	},
-/turf/open/floor/mineral/plastitanium,
-/area/space)
 "ota" = (
 /obj/structure/bed{
 	dir = 1
@@ -12379,6 +12444,12 @@
 /turf/closed/indestructible/rock/snow,
 /turf/closed/indestructible/rock/snow,
 /turf/closed/indestructible/rock/snow,
+/area/space)
+"oAl" = (
+/obj/structure/spider/stickyweb/sealed,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "oAn" = (
 /obj/structure/table/reinforced,
@@ -12483,6 +12554,10 @@
 /obj/item/implantcase,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
+/area/space)
+"oHA" = (
+/obj/effect/turf_decal/trimline/red/real_red,
+/turf/closed/indestructible/rock/snow,
 /area/space)
 "oHL" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -12624,6 +12699,10 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/snowed/complex,
+/area/space)
+"oPQ" = (
+/mob/living/basic/mining/legion/snow,
+/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "oQa" = (
 /obj/item/trash/can,
@@ -12966,10 +13045,6 @@
 	},
 /turf/open/space/basic,
 /area/space)
-"pnU" = (
-/mob,
-/turf/open/misc/asteroid/snow/complex,
-/area/space)
 "pot" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small,
@@ -13154,10 +13229,6 @@
 "pvs" = (
 /obj/structure/fence/cut/large,
 /turf/open/misc/asteroid/snow/complex,
-/area/space)
-"pvE" = (
-/obj/machinery/door/airlock,
-/turf/open/floor/mineral/plastitanium,
 /area/space)
 "pvJ" = (
 /obj/item/trash/raisins,
@@ -13358,11 +13429,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/space)
-"pEZ" = (
-/obj/structure/fence/door,
-/obj/effect/turf_decal/trimline/red/real_red,
-/turf/open/floor/mineral/titanium/tiled,
-/area/space)
 "pFf" = (
 /obj/structure/chair{
 	dir = 4
@@ -13494,18 +13560,18 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/iron,
 /area/space)
+"pLm" = (
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "pMF" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 6
 	},
 /turf/open/floor/iron,
-/area/space)
-"pMH" = (
-/obj/structure/spider/stickyweb,
-/mob/living/basic/spider/giant/hunter/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "pMN" = (
 /obj/machinery/jukebox,
@@ -13648,13 +13714,6 @@
 /obj/structure/table,
 /obj/item/wallframe/camera,
 /turf/open/floor/iron/dark,
-/area/space)
-"pWW" = (
-/obj/structure/barricade/wooden,
-/obj/structure/spider/stickyweb,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "pXc" = (
 /obj/structure/closet/wardrobe/mixed,
@@ -13871,11 +13930,6 @@
 /obj/item/flashlight/lantern,
 /turf/open/floor/stone/complex,
 /area/space)
-"qmu" = (
-/obj/structure/flora/grass/both,
-/obj/structure/fence/corner,
-/turf/open/misc/asteroid/snow/complex,
-/area/space)
 "qmx" = (
 /obj/effect/turf_decal/siding/brown{
 	dir = 1
@@ -13920,12 +13974,6 @@
 /obj/structure/table,
 /obj/item/rcl/pre_loaded,
 /turf/open/floor/iron,
-/area/space)
-"qof" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/open/floor/mineral/plastitanium/red,
 /area/space)
 "qot" = (
 /obj/structure/closet/secure_closet/evidence,
@@ -13988,11 +14036,6 @@
 "qqb" = (
 /obj/structure/lattice/catwalk,
 /turf/open/floor/iron,
-/area/space)
-"qqk" = (
-/obj/item/wallframe/apc,
-/obj/item/electronics/apc,
-/turf/open/floor/bronze/filled,
 /area/space)
 "qql" = (
 /obj/structure/closet/firecloset,
@@ -14161,14 +14204,6 @@
 "qAw" = (
 /obj/machinery/door/airlock/research/glass,
 /turf/open/floor/plating,
-/area/space)
-"qBk" = (
-/obj/structure/spider/stickyweb,
-/obj/structure/spider/cocoon,
-/mob/living/basic/spider/giant/nurse/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "qDx" = (
 /obj/machinery/door/poddoor/shutters{
@@ -14363,6 +14398,10 @@
 /obj/item/bedsheet/blue,
 /turf/open/floor/iron/dark,
 /area/space)
+"qOF" = (
+/obj/item/clothing/suit/clockwork,
+/turf/open/floor/bronze/flat,
+/area/space)
 "qPa" = (
 /obj/structure/railing{
 	dir = 9
@@ -14479,6 +14518,14 @@
 	id = "mountainlockdown"
 	},
 /turf/open/space/basic,
+/area/space)
+"qVJ" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
+/mob/living/basic/spider/giant/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "qVX" = (
 /obj/structure/flora/tree/pine,
@@ -15049,11 +15096,6 @@
 /obj/structure/table/reinforced,
 /turf/open/space/basic,
 /area/space)
-"rHJ" = (
-/obj/item/toy/snowball,
-/mob/living/basic/mining/legion/monkey/snow,
-/turf/open/misc/asteroid/snow/complex,
-/area/space)
 "rIc" = (
 /obj/structure/table/wood,
 /turf/open/misc/asteroid/snow/standard_air{
@@ -15581,6 +15623,12 @@
 /obj/item/stack/spacecash/c1000,
 /turf/open/space/basic,
 /area/space)
+"slD" = (
+/mob/living/basic/spider/giant/hunter/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "slY" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -15633,11 +15681,6 @@
 	icon_state = "snow_dug"
 	},
 /area/space)
-"spT" = (
-/obj/structure/flora/grass/both,
-/obj/structure/fence,
-/turf/open/misc/asteroid/snow/complex,
-/area/space)
 "src" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -15668,6 +15711,10 @@
 /obj/item/storage/box/syringes,
 /turf/open/space/basic,
 /area/space)
+"stq" = (
+/mob/living/basic/trooper/syndicate/ranged/smg/complex,
+/turf/open/floor/plating/snowed/complex,
+/area/space)
 "svE" = (
 /obj/machinery/power/smes/magical,
 /obj/structure/cable,
@@ -15690,6 +15737,10 @@
 	},
 /obj/machinery/power/port_gen/pacman,
 /turf/open/floor/plating,
+/area/space)
+"swu" = (
+/mob/living/basic/clockwork_marauder,
+/turf/open/floor/bronze,
 /area/space)
 "swA" = (
 /obj/structure/chair/wood,
@@ -15888,6 +15939,10 @@
 "sHk" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/mineral/random/snow/high_chance/complex,
+/area/space)
+"sHx" = (
+/obj/item/clothing/gloves/clockwork,
+/turf/open/floor/bronze,
 /area/space)
 "sHV" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -16270,10 +16325,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/space)
-"tet" = (
-/obj/item/clockwork/weapon/brass_battlehammer,
-/turf/open/floor/bronze/flat,
-/area/space)
 "teu" = (
 /obj/machinery/space_heater,
 /obj/effect/turf_decal/siding/thinplating/light{
@@ -16440,11 +16491,6 @@
 	},
 /turf/open/misc/asteroid/snow/complex,
 /area/space)
-"tqO" = (
-/obj/item/food/meat/slab/spider,
-/obj/item/food/spiderleg,
-/turf/open/misc/asteroid/snow/complex,
-/area/space)
 "tsL" = (
 /obj/machinery/vending/coffee,
 /turf/open/space/basic,
@@ -16511,10 +16557,6 @@
 /obj/structure/mineral_door/wood,
 /turf/open/space/basic,
 /area/space)
-"twq" = (
-/obj/effect/turf_decal/trimline/red/real_red,
-/turf/closed/indestructible/rock/snow,
-/area/space)
 "twH" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/turf_decal/box,
@@ -16566,6 +16608,11 @@
 	},
 /obj/structure/table,
 /turf/open/floor/iron,
+/area/space)
+"tzA" = (
+/obj/machinery/light,
+/mob/living/basic/clockwork_marauder,
+/turf/open/floor/bronze/filled,
 /area/space)
 "tzI" = (
 /obj/effect/turf_decal/stripes/line{
@@ -16670,11 +16717,8 @@
 /turf/open/floor/engine/vacuum,
 /area/space)
 "tDD" = (
-/obj/structure/spider/stickyweb,
-/mob/living/basic/spider/giant/nurse/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
+/mob/living/simple_animal/hostile/asteroid/polarbear,
+/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "tDE" = (
 /obj/structure/table,
@@ -17034,6 +17078,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/space)
+"tXh" = (
+/mob/living/simple_animal/hostile/cult/assassin,
+/turf/open/floor/plating,
+/area/space)
 "tYn" = (
 /obj/structure/barricade/wooden/snowed,
 /obj/effect/turf_decal/weather/snow/corner,
@@ -17042,6 +17090,10 @@
 "tYr" = (
 /obj/item/seeds/nettle,
 /obj/structure/table/bronze,
+/turf/open/floor/bronze/filled,
+/area/space)
+"tYF" = (
+/obj/machinery/door/airlock/bronze/clock,
 /turf/open/floor/bronze/filled,
 /area/space)
 "tYR" = (
@@ -17621,10 +17673,6 @@
 	},
 /turf/open/floor/iron,
 /area/space)
-"uHv" = (
-/mob/living/basic/pet/fox/icemoon,
-/turf/open/floor/iron/dark,
-/area/space)
 "uHB" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -17654,6 +17702,11 @@
 	icon_state = "snow_dug"
 	},
 /area/space)
+"uKG" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/clockwork/weapon/brass_spear,
+/turf/open/floor/bronze,
+/area/space)
 "uLv" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
@@ -17677,7 +17730,7 @@
 /area/space)
 "uLV" = (
 /obj/structure/spider/stickyweb,
-/obj/structure/spider/stickyweb,
+/obj/structure/spider/stickyweb/sealed,
 /turf/open/misc/asteroid/snow/standard_air{
 	icon_state = "snow_dug"
 	},
@@ -17776,10 +17829,6 @@
 /obj/structure/ore_box,
 /turf/open/floor/plating,
 /area/space)
-"uQM" = (
-/mob/living/simple_animal/hostile/cult/assassin,
-/turf/open/floor/plating,
-/area/space)
 "uQN" = (
 /obj/machinery/chem_heater,
 /turf/open/floor/iron,
@@ -17797,13 +17846,6 @@
 "uSl" = (
 /obj/structure/flora/grass/brown,
 /turf/open/misc/asteroid/snow/complex,
-/area/space)
-"uSm" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/spider/stickyweb/sealed,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "uSx" = (
 /obj/effect/turf_decal/stripes/line{
@@ -17977,6 +18019,10 @@
 /obj/machinery/power/port_gen/pacman,
 /turf/open/floor/plating,
 /area/space)
+"uYv" = (
+/obj/machinery/door/airlock,
+/turf/open/floor/mineral/plastitanium,
+/area/space)
 "uZt" = (
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -18003,6 +18049,16 @@
 /obj/structure/table,
 /obj/item/kitchen/rollingpin,
 /turf/open/space/basic,
+/area/space)
+"vaQ" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/stickyweb/sealed,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "vba" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -18246,10 +18302,6 @@
 	},
 /turf/open/floor/bronze/filled,
 /area/space)
-"vpE" = (
-/mob/living/basic/trooper/syndicate/ranged/smg/complex,
-/turf/open/floor/plating/snowed/complex,
-/area/space)
 "vqe" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/electrical,
@@ -18374,6 +18426,16 @@
 "vxB" = (
 /obj/structure/flora/rock/icy,
 /turf/open/space/basic,
+/area/space)
+"vyB" = (
+/mob,
+/turf/open/misc/asteroid/snow/complex,
+/area/space)
+"vza" = (
+/mob/living/basic/spider/giant/ice,
+/turf/open/misc/asteroid/snow/standard_air{
+	icon_state = "snow_dug"
+	},
 /area/space)
 "vze" = (
 /obj/structure/table,
@@ -18904,15 +18966,6 @@
 /obj/machinery/door/airlock/freezer,
 /turf/open/floor/plating,
 /area/space)
-"whB" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6
-	},
-/obj/structure/spider/stickyweb/sealed,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
-/area/space)
 "wie" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
@@ -19335,6 +19388,12 @@
 /obj/structure/barricade/sandbags,
 /turf/open/floor/iron,
 /area/space)
+"wGO" = (
+/obj/structure/flora/grass/both,
+/obj/structure/fence,
+/obj/structure/fence,
+/turf/open/misc/asteroid/snow/complex,
+/area/space)
 "wGY" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
@@ -19349,14 +19408,6 @@
 /obj/structure/table,
 /obj/item/toy/cards/deck,
 /turf/open/misc/asteroid/snow/complex,
-/area/space)
-"wHI" = (
-/obj/structure/spider/stickyweb,
-/obj/structure/spider/cocoon,
-/mob/living/basic/spider/giant/hunter/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "wIm" = (
 /obj/machinery/camera/autoname,
@@ -19504,6 +19555,11 @@
 	dir = 1
 	},
 /turf/open/floor/plating/snowed/complex,
+/area/space)
+"wQG" = (
+/obj/effect/decal/cleanable/wrapping,
+/mob/living/simple_animal/hostile/asteroid/polarbear,
+/turf/open/misc/asteroid/snow/complex,
 /area/space)
 "wRD" = (
 /obj/structure/easel,
@@ -19841,13 +19897,6 @@
 /obj/machinery/iv_drip,
 /turf/open/space/basic,
 /area/space)
-"xjs" = (
-/obj/structure/spider/stickyweb,
-/mob/living/basic/spider/giant/ice,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
-/area/space)
 "xjx" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/tile/red,
@@ -19895,12 +19944,6 @@
 "xnl" = (
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall,
-/area/space)
-"xnD" = (
-/obj/structure/spider/stickyweb/sealed,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
 /area/space)
 "xnK" = (
 /obj/structure/girder,
@@ -20032,10 +20075,6 @@
 /turf/open/misc/asteroid/snow/standard_air{
 	icon_state = "snow_dug"
 	},
-/area/space)
-"xxU" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/plastitanium,
 /area/space)
 "xyl" = (
 /obj/structure/railing{
@@ -20574,13 +20613,6 @@
 	},
 /turf/open/floor/bronze/filled,
 /area/space)
-"xYI" = (
-/obj/structure/spider/stickyweb,
-/obj/structure/spider/stickyweb/sealed,
-/turf/open/misc/asteroid/snow/standard_air{
-	icon_state = "snow_dug"
-	},
-/area/space)
 "xYL" = (
 /obj/structure/fluff/divine/convertaltar,
 /turf/open/floor/bronze/filled,
@@ -20773,13 +20805,6 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/space/basic,
-/area/space)
-"yme" = (
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/mob/living/basic/trooper/syndicate/ranged/complex,
-/turf/open/floor/iron,
 /area/space)
 
 (1,1,1) = {"
@@ -21232,7 +21257,7 @@ vDw
 vDw
 vDw
 vDw
-twq
+oHA
 vDw
 vDw
 vDw
@@ -21778,7 +21803,7 @@ vDw
 vDw
 rVG
 rVG
-mVc
+hUd
 vDw
 vDw
 vDw
@@ -22268,7 +22293,7 @@ aUv
 aUv
 rKh
 hxi
-rHJ
+bTh
 aUv
 aUv
 aUv
@@ -22513,7 +22538,7 @@ aUv
 aUv
 aUv
 aUv
-rHJ
+bTh
 rKh
 aUv
 uBx
@@ -22783,7 +22808,7 @@ aUv
 aUv
 aUv
 aUv
-fyI
+oPQ
 aUv
 aUv
 aUv
@@ -23275,14 +23300,14 @@ aUv
 aUv
 ugh
 aUv
-pEZ
+bGo
 aUv
 aUv
 aUv
 hxi
 aUv
 aUv
-nHJ
+lAf
 rKh
 aUv
 aUv
@@ -23291,7 +23316,7 @@ aUv
 aUv
 aUv
 tOr
-fyI
+oPQ
 aUv
 ugh
 aUv
@@ -23301,7 +23326,7 @@ hxi
 aUv
 aUv
 aUv
-jpj
+jFI
 aUv
 aUv
 aUv
@@ -23811,7 +23836,7 @@ aUv
 aUv
 rKh
 rqF
-fyI
+oPQ
 aUv
 aUv
 aUv
@@ -24822,7 +24847,7 @@ nTU
 nTU
 nTU
 nTU
-lWv
+wGO
 nTU
 nTU
 nTU
@@ -24833,7 +24858,7 @@ nTU
 nTU
 nTU
 nTU
-spT
+cqv
 nTU
 nTU
 nTU
@@ -24843,7 +24868,7 @@ nTU
 nTU
 nTU
 nTU
-qmu
+mQX
 aUv
 aUv
 aUv
@@ -25022,7 +25047,7 @@ xCG
 xCG
 uQN
 obG
-rRN
+xJx
 eVq
 gqk
 obG
@@ -25279,7 +25304,7 @@ dOv
 iJY
 qyP
 obG
-xJx
+rRN
 gfe
 mdr
 kes
@@ -26041,7 +26066,7 @@ xCG
 xCG
 xCG
 xCG
-pvE
+uYv
 xCG
 xCG
 ovV
@@ -28350,7 +28375,7 @@ rsu
 rVG
 rsu
 xzS
-xxU
+iMy
 xCG
 vDw
 aUv
@@ -32594,7 +32619,7 @@ aUv
 aUv
 aUv
 vtb
-lfM
+jGD
 obG
 kes
 kes
@@ -32853,7 +32878,7 @@ aUv
 luq
 utG
 tSS
-eRu
+hsl
 eRu
 luq
 aUv
@@ -36451,7 +36476,7 @@ aUv
 fOc
 fOc
 fOc
-tfo
+dwC
 dwC
 dwC
 dwC
@@ -41053,7 +41078,7 @@ kJr
 kJr
 kJr
 eTz
-pWW
+kfk
 kJr
 kJr
 kJr
@@ -41299,7 +41324,7 @@ kJr
 rVG
 rVG
 ruR
-tDD
+kNj
 kJr
 kJr
 aUv
@@ -41309,9 +41334,9 @@ kJr
 kJr
 kJr
 kJr
-pWW
-xYI
-xnD
+kfk
+uLV
+oAl
 kJr
 kJr
 kJr
@@ -41552,7 +41577,7 @@ aUv
 kJr
 kJr
 kJr
-nRY
+qVJ
 rVG
 ruR
 ruR
@@ -41566,12 +41591,12 @@ kJr
 kJr
 kJr
 kJr
-mDQ
-xnD
+vaQ
+oAl
 rVG
 rVG
 rVG
-xjs
+pLm
 kJr
 kJr
 kJr
@@ -41824,7 +41849,7 @@ kJr
 kJr
 kJr
 kJr
-tDD
+kNj
 ruR
 rVG
 rVG
@@ -42592,7 +42617,7 @@ kJr
 vDw
 ruR
 ruR
-pMH
+mNn
 ruR
 ruR
 kJr
@@ -42603,7 +42628,7 @@ kJr
 eTz
 hHB
 kJr
-tDD
+kNj
 kJr
 kJr
 kJr
@@ -42833,14 +42858,14 @@ kJr
 kJr
 kJr
 ruR
-uLV
+eQk
 ruR
 rVG
 rVG
-tDD
+kNj
 ruR
 kJr
-gvg
+vza
 ruR
 ruR
 rVG
@@ -43120,7 +43145,7 @@ kJr
 kJr
 kJr
 snz
-qBk
+jVS
 ruR
 rVG
 rVG
@@ -43359,14 +43384,14 @@ kJr
 kJr
 kJr
 kJr
-wHI
+cPs
 hHB
 kJr
 kJr
 kJr
 kJr
 kJr
-xjs
+pLm
 rVG
 rVG
 rVG
@@ -43375,7 +43400,7 @@ ruR
 rVG
 kJr
 kJr
-pMH
+mNn
 ruR
 ruR
 rVG
@@ -43605,7 +43630,7 @@ kJr
 kJr
 kJr
 rVG
-xjs
+pLm
 ruR
 ruR
 kJr
@@ -43619,8 +43644,8 @@ kJr
 kJr
 kJr
 kJr
-fww
-xjs
+nkN
+pLm
 kJr
 kJr
 kJr
@@ -43895,7 +43920,7 @@ rVG
 rVG
 rVG
 rVG
-qBk
+jVS
 kJr
 kJr
 kJr
@@ -44116,7 +44141,7 @@ vDw
 kJr
 kJr
 kJr
-kBG
+slD
 rVG
 rVG
 rVG
@@ -44127,8 +44152,8 @@ hHB
 kJr
 kJr
 ruR
-xYI
-xYI
+uLV
+uLV
 rVG
 rVG
 cls
@@ -44141,7 +44166,7 @@ kJr
 kJr
 ruR
 ruR
-pMH
+mNn
 kJr
 kJr
 kJr
@@ -44383,8 +44408,8 @@ ruR
 eTz
 rVG
 rVG
-pMH
-xYI
+mNn
+uLV
 cls
 cls
 cBN
@@ -44640,8 +44665,8 @@ hHB
 rVG
 rVG
 rVG
-xYI
-whB
+uLV
+aMz
 aUv
 aUv
 aUv
@@ -44663,11 +44688,11 @@ kJr
 rVG
 rVG
 rVG
-xjs
+pLm
 rVG
 rVG
 rVG
-pMH
+mNn
 kJr
 kJr
 vDw
@@ -44890,14 +44915,14 @@ kJr
 kJr
 kJr
 kJr
-tDD
+kNj
 rVG
 ruR
 hHB
 rVG
 rVG
 ruR
-xYI
+uLV
 vDw
 vDw
 vDw
@@ -45153,7 +45178,7 @@ vDw
 vDw
 tUi
 ruR
-ePs
+eyl
 vDw
 vDw
 vDw
@@ -45433,12 +45458,12 @@ kJr
 kJr
 kJr
 snz
-tDD
+kNj
 ruR
 rVG
 rVG
 rVG
-qBk
+jVS
 iJO
 kJr
 vDw
@@ -49267,8 +49292,8 @@ aUv
 aUv
 aUv
 iAJ
-hFP
-arD
+tDD
+mjI
 aUv
 hKp
 aUv
@@ -49523,10 +49548,10 @@ aUv
 aUv
 aUv
 hxi
-hFP
-tqO
-tqO
-hFP
+tDD
+hix
+hix
+tDD
 aUv
 aUv
 aUv
@@ -49783,7 +49808,7 @@ aUv
 aUv
 aUv
 uXO
-jOU
+hyY
 iAJ
 aUv
 aUv
@@ -50041,7 +50066,7 @@ rdl
 aUv
 aUv
 aUv
-ckg
+wQG
 aUv
 aUv
 hxi
@@ -52229,7 +52254,7 @@ vDw
 vDw
 vDw
 vDw
-tDD
+kNj
 vDw
 vDw
 vDw
@@ -52485,8 +52510,8 @@ hgL
 vDw
 vDw
 vDw
-pMH
-kBF
+mNn
+byX
 rVG
 vDw
 rVG
@@ -53261,7 +53286,7 @@ rVG
 gzX
 vDw
 nHW
-tDD
+kNj
 ufb
 rVG
 rVG
@@ -53771,11 +53796,11 @@ aUv
 vDw
 vDw
 vDw
-uSm
+ebc
 vDw
 vDw
 vDw
-xnD
+oAl
 vDw
 vDw
 vDw
@@ -55057,7 +55082,7 @@ vDw
 vDw
 vDw
 vDw
-xnD
+oAl
 vDw
 vDw
 vDw
@@ -62650,7 +62675,7 @@ oZM
 xyE
 xyE
 hrf
-kBO
+tYF
 iJe
 iJe
 tPX
@@ -63355,7 +63380,7 @@ rVG
 rVG
 rVG
 rVG
-mVc
+hUd
 rVG
 kJr
 kJr
@@ -63607,7 +63632,7 @@ kJr
 kJr
 kJr
 rIf
-mVc
+hUd
 rVG
 rVG
 rVG
@@ -64964,7 +64989,7 @@ xyE
 xyE
 hrf
 hrf
-kBO
+tYF
 iJe
 tPX
 tPX
@@ -65160,7 +65185,7 @@ rVG
 rVG
 rVG
 rVG
-mVc
+hUd
 rVG
 kJr
 kJr
@@ -72982,7 +73007,7 @@ utQ
 eYQ
 eYQ
 eYQ
-yme
+hXF
 obG
 etP
 obG
@@ -73040,7 +73065,7 @@ aUv
 hxi
 dwC
 aUv
-dJi
+kMz
 ejl
 aUv
 xNB
@@ -73449,7 +73474,7 @@ kJr
 kJr
 ruR
 ruR
-pMH
+mNn
 ruR
 biM
 biM
@@ -73631,7 +73656,7 @@ luq
 luq
 iFV
 dRB
-dQv
+jVN
 rDg
 aZN
 rDg
@@ -74324,7 +74349,7 @@ aUv
 ugh
 aUv
 fOc
-kNj
+euQ
 wkr
 ems
 alL
@@ -75409,7 +75434,7 @@ aUv
 aUv
 aUv
 aUv
-pnU
+vyB
 aUv
 aUv
 luq
@@ -76382,9 +76407,9 @@ aUv
 fOc
 vYs
 kFl
-jXw
+nzo
 aUv
-kNj
+euQ
 dwC
 fOc
 ugh
@@ -77410,7 +77435,7 @@ sJR
 krO
 krO
 krO
-ayX
+dmk
 mBS
 faa
 bXU
@@ -77754,7 +77779,7 @@ tyS
 qnL
 tdG
 cDc
-uQM
+tXh
 luq
 luq
 nFU
@@ -78182,7 +78207,7 @@ den
 mGS
 jjs
 ucG
-ewx
+fgl
 rMB
 upv
 fJD
@@ -78437,7 +78462,7 @@ dwC
 vrI
 vrI
 uta
-qof
+ezd
 mdr
 pxp
 ffP
@@ -80143,9 +80168,9 @@ biM
 vDw
 vDw
 rkD
-arh
+gKW
 rcZ
-eEU
+tzA
 rkD
 vDw
 "}
@@ -80658,7 +80683,7 @@ vDw
 vDw
 rkD
 rkD
-kBO
+tYF
 rkD
 rkD
 vDw
@@ -81526,7 +81551,7 @@ xyE
 xyE
 xyE
 xyE
-vpE
+stq
 xyE
 xkY
 vYs
@@ -81779,9 +81804,9 @@ ugh
 dwC
 vYs
 oZM
-knd
+mzD
 xyE
-knd
+mzD
 xyE
 xyE
 mhk
@@ -82778,7 +82803,7 @@ vDw
 vDw
 vDw
 vDw
-ebT
+nHb
 tPX
 xCG
 xCG
@@ -82931,7 +82956,7 @@ rVG
 rVG
 rVG
 xCG
-osM
+blg
 jYS
 xCG
 xCG
@@ -83062,7 +83087,7 @@ vDw
 vDw
 tin
 rkD
-kbs
+swu
 wTg
 tin
 mdr
@@ -83301,7 +83326,7 @@ tPX
 bvd
 vDw
 iJe
-jgk
+dfT
 iJe
 opE
 xCG
@@ -83323,7 +83348,7 @@ tin
 fhL
 tin
 sKg
-kbs
+swu
 tin
 xCG
 vDw
@@ -83560,7 +83585,7 @@ sKg
 sKg
 sKg
 tPX
-qqk
+kmf
 xCG
 tPX
 vDw
@@ -84322,7 +84347,7 @@ vDw
 bvd
 sKg
 sKg
-hhx
+nds
 tPX
 vDw
 vDw
@@ -84345,11 +84370,11 @@ vDw
 vDw
 xCG
 igc
-fVv
-kmf
-kbs
+dnw
+qOF
+swu
 tin
-mgH
+kWI
 vDw
 vDw
 vDw
@@ -84473,7 +84498,7 @@ kJr
 kJr
 xCG
 qem
-uHv
+fvy
 prm
 xCG
 bBg
@@ -84588,7 +84613,7 @@ wXT
 tPX
 mdr
 tPX
-fZQ
+chV
 sKg
 vDw
 vDw
@@ -84602,7 +84627,7 @@ vDw
 vDw
 tin
 bng
-fpP
+uKG
 sgC
 pkD
 sim
@@ -84843,7 +84868,7 @@ vDw
 vDw
 sKg
 sKg
-tet
+eSS
 sKg
 sKg
 bvd
@@ -84859,7 +84884,7 @@ vDw
 vDw
 vDw
 tin
-klP
+sHx
 xCG
 xCG
 vDw
@@ -85087,7 +85112,7 @@ tPX
 xBW
 iJe
 sKg
-hhx
+nds
 tPX
 tPX
 tPX
