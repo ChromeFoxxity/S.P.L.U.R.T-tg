@@ -14726,6 +14726,11 @@
 /obj/machinery/space_heater,
 /turf/open/floor/iron/dark,
 /area/space)
+"rFO" = (
+/obj/structure/closet,
+/obj/item/mining_voucher,
+/turf/open/floor/iron,
+/area/space)
 "rFQ" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
@@ -30919,7 +30924,7 @@ rgy
 bBx
 xCG
 obG
-heK
+rFO
 xCG
 vDw
 "}
