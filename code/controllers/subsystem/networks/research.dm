@@ -82,6 +82,7 @@ SUBSYSTEM_DEF(research)
 	new /datum/techweb/oldstation
 	new /datum/techweb/tarkon //Skyrat Edit
 	new /datum/techweb/interdyne //Skyrat Edit
+	new /datum/techweb/complex //Splurt Edit
 	autosort_categories()
 	error_design = new
 	error_node = new
