@@ -1,5 +1,16 @@
 #define ROLE_COMPLEX "Complex Survivors"
 
+/obj/effect/mapping_helpers/ztrait_injector/complex
+	traits_to_add = list(ZTRAIT_SNOWSTORM = TRUE, ZTRAIT_BASETURF = /turf/open/misc/asteroid/snow/complex)
+
+/datum/weather/snow_storm/New()
+	. = ..()
+	protected_areas += list(
+		/area/awaymission/complex/cave,
+		/area/awaymission/complex/secfacility,
+		/area/awaymission/complex/mainfacility
+	)
+
 /turf/open/chasm/icemoon/complex
 	icon = 'icons/turf/floors/icechasms.dmi'
 	initial_gas_mix = COLD_ATMOS
@@ -13,6 +24,12 @@
 	light_range = 1
 	light_power = 0.075
 	light_color = "#89959a"
+
+/turf/open/misc/asteroid/snow/complex/dug //When you want one of these to be already dug.
+	has_floor_variance = FALSE
+	dug = TRUE
+	base_icon_state = "snow_dug"
+	icon_state = "snow_dug"
 
 /turf/open/misc/asteroid/snow/ice/complex
 	initial_gas_mix = COLD_ATMOS
@@ -78,14 +95,46 @@
 /obj/item/ammo_casing/c460rowland/spent
 	projectile_type = null
 
+/obj/item/ammo_casing/c46x30mm/spent
+	projectile_type = null
+
 /obj/machinery/camera/autoname/complex
 	network = list("Complex")
+	use_power = NO_POWER_USE
+	start_active = TRUE
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 
 /obj/machinery/computer/security/complex
 	name = "facility monitoring console"
 	desc = "A camera console used to monitor the various facilities of the A.G.R. Complex."
 	network = list("complex")
 	circuit = null
+
+/obj/item/storage/belt/security/redsec/full/PopulateContents()
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/grenade/flashbang(src)
+	new /obj/item/assembly/flash/handheld(src)
+	new /obj/item/melee/baton/security/loaded(src)
+	update_appearance()
+
+/obj/structure/closet/secure_closet/complex_security
+	name = "security officer's locker"
+	icon = 'icons/obj/storage/closet.dmi'
+	icon_state = "sec"
+	req_access = list(ACCESS_BRIG)
+
+/obj/structure/closet/secure_closet/complex_security/PopulateContents()
+	..()
+	new /obj/item/clothing/suit/armor/vest/alt/sec/redsec(src)
+	new /obj/item/clothing/head/helmet/sec/redsec(src)
+	new /obj/item/radio/headset/headset_sec(src)
+	new /obj/item/radio/headset/headset_sec/alt(src)
+	new /obj/item/clothing/glasses/hud/security/sunglasses/redsec(src)
+	new /obj/item/flashlight/seclite(src)
+	new /obj/item/clothing/gloves/tackler(src)
+	new /obj/item/storage/belt/security/redsec/full
 
 /obj/item/circuitboard/machine/rdserver/complex
 	name = "Complex R&D Server"
@@ -134,6 +183,11 @@
 		return
 	return ..()
 
+/obj/effect/light_emitter/complex
+	set_luminosity = 8
+	set_cap = 2.5
+	light_color = "#060606"
+
 /obj/effect/mob_spawn/corpse/human/complex
 	name = "Complex Assistant"
 	outfit = /datum/outfit/job/assistant/complex
@@ -153,7 +207,7 @@
 
 /obj/effect/mob_spawn/corpse/human/complex/coatless
 	name = "Coatless - Complex Assistant"
-	outfit = /datum/outfit/job/assistant/complex
+	outfit = /datum/outfit/job/assistant/complex/coatless
 
 /datum/outfit/job/assistant/complex/coatless
 	name = "Coatless - Complex Assistant"
@@ -281,9 +335,9 @@
 	suit = /obj/item/clothing/suit/hooded/wintercoat/security/redsec
 	uniform = /obj/item/clothing/under/rank/security/officer/redsec
 	suit_store = null
-	glasses = /obj/item/clothing/glasses/hud/security/redsec
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/redsec
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
-	belt = /obj/item/storage/belt/security/redsec
+	belt = /obj/item/storage/belt/security/redsec/full
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/winterboots
 	backpack = /obj/item/storage/backpack/security/redsec
@@ -296,6 +350,7 @@
 	name = "Complex Armored Security Guard"
 	head = /obj/item/clothing/head/helmet/sec/redsec
 	suit = /obj/item/clothing/suit/armor/vest/alt/sec/redsec
+	shoes = /obj/item/clothing/shoes/jackboots/sec/redsec
 
 /obj/effect/mob_spawn/corpse/human/complex/security/riot
 	name = "Complex Riot Security Guard"
@@ -305,6 +360,7 @@
 	name = "Complex Riot Security Guard"
 	head = /obj/item/clothing/head/helmet/toggleable/riot
 	suit = /obj/item/clothing/suit/armor/riot
+	shoes = /obj/item/clothing/shoes/jackboots/sec/redsec
 
 /obj/effect/mob_spawn/corpse/human/complex/geneticist
 	name = "Complex Mutation Researcher"
@@ -325,6 +381,57 @@
 	shoes = /obj/item/clothing/shoes/winterboots
 	belt = null
 
+/obj/effect/mob_spawn/corpse/human/complex/roboticist
+	name = "Complex Robotics Technician"
+	outfit = /datum/outfit/job/roboticist/complex
+
+/datum/id_trim/job/roboticist/complex
+	assignment = "Robotics Technician"
+	department_color = COLOR_SCIENCE_PINK
+	subdepartment_color = COLOR_CARGO_BROWN
+
+/datum/outfit/job/roboticist/complex
+	name = "Complex Robotics Technician"
+	id_trim = /datum/id_trim/job/roboticist/complex
+	suit = /obj/item/clothing/suit/hooded/wintercoat/science/robotics
+	uniform = /obj/item/clothing/under/rank/rnd/roboticist/tg
+	mask = /obj/item/clothing/mask/gas/alt
+	gloves = /obj/item/clothing/gloves/color/black
+	shoes = /obj/item/clothing/shoes/winterboots
+	belt = /obj/item/storage/belt/utility/full/engi
+
+/obj/effect/mob_spawn/corpse/human/complex/engineer
+	name = "Complex Technician"
+	outfit = /datum/outfit/job/engineer/complex
+
+/datum/id_trim/job/station_engineer/complex
+	assignment = "Technician"
+	department_color = COLOR_ENGINEERING_ORANGE
+	subdepartment_color = COLOR_CARGO_BROWN
+
+/datum/outfit/job/engineer/complex
+	name = "Complex Technician"
+	id_trim = /datum/id_trim/job/station_engineer/complex
+	head = null
+	suit = /obj/item/clothing/suit/hooded/wintercoat/engineering
+	mask = /obj/item/clothing/mask/gas/atmos
+	gloves = /obj/item/clothing/gloves/color/yellow
+	shoes = /obj/item/clothing/shoes/winterboots
+	l_pocket = null
+
+/obj/effect/mob_spawn/corpse/human/complex/engineer/coatless
+	name = "Coatless - Complex Technician"
+	outfit = /datum/outfit/job/engineer/complex/coatless
+
+/datum/outfit/job/engineer/complex/coatless
+	name = "Coatless - Complex Technician"
+	id_trim = /datum/id_trim/job/station_engineer/complex
+	head = /obj/item/clothing/head/utility/hardhat/welding/up
+	suit = /obj/item/clothing/suit/hazardvest
+	mask = null
+	shoes = /obj/item/clothing/shoes/workboots
+	l_pocket = null
+
 /obj/effect/mob_spawn/corpse/human/complex/doctor
 	name = "Complex Medical Officer"
 	outfit = /datum/outfit/job/doctor/complex
@@ -343,6 +450,24 @@
 	shoes = /obj/item/clothing/shoes/winterboots
 	belt = null
 
+/obj/effect/mob_spawn/corpse/human/complex/chemist
+	name = "Complex Pharmacist"
+	outfit = /datum/outfit/job/chemist/complex
+
+/datum/id_trim/job/chemist/complex
+	assignment = "Pharmacist"
+	department_color = COLOR_MEDICAL_BLUE
+	subdepartment_color = COLOR_CARGO_BROWN
+
+/datum/outfit/job/chemist/complex
+	name = "Complex Pharmacist"
+	id_trim = /datum/id_trim/job/chemist/complex
+	suit = /obj/item/clothing/suit/hooded/wintercoat/medical/chemistry
+	mask = /obj/item/clothing/mask/gas/alt
+	gloves = /obj/item/clothing/gloves/color/black
+	shoes = /obj/item/clothing/shoes/winterboots
+	belt = null
+
 /obj/effect/mob_spawn/corpse/human/complex/doctor/coatless
 	name = "Coatless - Complex Medical Officer"
 	outfit = /datum/outfit/job/doctor/complex/coatless
@@ -350,7 +475,7 @@
 /datum/outfit/job/doctor/complex/coatless
 	name = "Coatless - Complex Medical Officer"
 	suit = null
-	gloves = null
+	gloves = /obj/item/clothing/gloves/latex/nitrile
 	mask = null
 	shoes = /obj/item/clothing/shoes/laceup
 	belt = null
@@ -375,6 +500,33 @@
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = null
 
+/obj/effect/mob_spawn/corpse/human/complex/prisoner
+	name = "Complex Convict"
+	outfit = /datum/outfit/job/prisoner/complex
+
+/datum/id_trim/job/prisoner/complex
+	assignment = "Convict"
+	department_color = COLOR_PRISONER_BLACK
+	subdepartment_color = COLOR_CARGO_BROWN
+
+/datum/outfit/job/prisoner/complex
+	name = "Complex Convict"
+	id_trim = /datum/id_trim/job/prisoner/complex
+	suit = /obj/item/clothing/suit/hooded/wintercoat
+	mask = /obj/item/clothing/mask/breath
+	gloves = /obj/item/clothing/gloves/color/orange
+	belt = null
+
+/obj/effect/mob_spawn/corpse/human/complex/prisoner/coatless
+	name = "Coatless - Complex Convict"
+	outfit = /datum/outfit/job/prisoner/complex/coatless
+
+/datum/outfit/job/prisoner/complex/coatless
+	name = "Coatless - Complex Logistics Specialist"
+	suit = null
+	mask = null
+	gloves = null
+
 /obj/effect/mob_spawn/corpse/human/complex/cargo_tech
 	name = "Complex Logistics Specialist"
 	outfit = /datum/outfit/job/cargo_tech/complex
@@ -393,27 +545,9 @@
 	shoes = /obj/item/clothing/shoes/winterboots
 	belt = null
 
-/obj/effect/mob_spawn/corpse/human/complex/shaft_miner
-	name = "Complex Mining Officer"
-	outfit = /datum/outfit/job/shaft_miner/complex
-
-/datum/id_trim/job/shaft_miner/complex
-	assignment = "Mining Officer"
-	department_color = COLOR_CARGO_BROWN
-	subdepartment_color = COLOR_CARGO_BROWN
-
-/datum/outfit/job/shaft_miner/complex
-	name = "Complex Mining Officer"
-	id_trim = /datum/id_trim/job/shaft_miner/complex
-	suit = /obj/item/clothing/suit/hooded/wintercoat/miner
-	mask = /obj/item/clothing/mask/gas/explorer
-	gloves = /obj/item/clothing/gloves/color/black
-	shoes = /obj/item/clothing/shoes/winterboots
-	belt = null
-
 /obj/effect/mob_spawn/corpse/human/complex/cargo_tech/coatless
 	name = "Coatless - Complex Logistics Specialist"
-	outfit = /datum/outfit/job/doctor/complex/coatless
+	outfit = /datum/outfit/job/cargo_tech/complex/coatless
 
 /datum/outfit/job/cargo_tech/complex/coatless
 	name = "Coatless - Complex Logistics Specialist"
@@ -421,6 +555,25 @@
 	gloves = null
 	mask = null
 	shoes = /obj/item/clothing/shoes/sneakers/black
+	belt = null
+
+/obj/effect/mob_spawn/corpse/human/complex/shaft_miner
+	name = "Complex Mining Officer"
+	outfit = /datum/outfit/job/miner/complex
+
+/datum/id_trim/job/shaft_miner/complex
+	assignment = "Mining Officer"
+	department_color = COLOR_CARGO_BROWN
+	subdepartment_color = COLOR_CARGO_BROWN
+
+/datum/outfit/job/miner/complex
+	name = "Complex Mining Officer"
+	id_trim = /datum/id_trim/job/shaft_miner/complex
+	suit = /obj/item/clothing/suit/hooded/wintercoat/miner
+	uniform = /obj/item/clothing/under/rank/cargo/miner
+	mask = /obj/item/clothing/mask/gas/explorer
+	gloves = /obj/item/clothing/gloves/color/black
+	shoes = /obj/item/clothing/shoes/winterboots
 	belt = null
 
 /obj/effect/mob_spawn/corpse/human/complex/quartermaster
@@ -459,6 +612,18 @@
 	mask = /obj/item/clothing/mask/gas
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/winterboots
+	belt = null
+
+/obj/effect/mob_spawn/corpse/human/complex/scientist/coatless
+	name = "Coatless - Complex Research Officer"
+	outfit = /datum/outfit/job/scientist/complex/coatless
+
+/datum/outfit/job/scientist/complex/coatless
+	name = "Coatless - Complex Research Officer"
+	suit = null
+	mask = null
+	gloves = /obj/item/clothing/gloves/latex
+	shoes = /obj/item/clothing/shoes/laceup
 	belt = null
 
 /obj/effect/mob_spawn/corpse/human/complex/syndicate
@@ -597,11 +762,56 @@
 	name = "Syndicate Captain"
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/syndicate/captain
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/syndicate/captain
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst
 	r_hand = /obj/item/gun/ballistic/automatic/m90/unrestricted
 	casingtype = /obj/item/ammo_casing/a223
 	burst_shots = 4
 	ranged_cooldown = 3 SECONDS
 	projectilesound = 'sound/items/weapons/gun/smg/shot.ogg'
+
+/mob/living/simple_animal/hostile/complex/cyborg
+	name = "Security Dogborg"
+	desc = "A cyborg made by Nanotrasen, this one appears to be a vale security module and mildly angry!"
+	faction = list("Complex")
+	icon = 'modular_zzplurt/code/modules/away_mission/mission_code/AGRComplex_Icons.dmi'
+	death_message = "shudders violently for a moment before falling still, its eyes slowly darkening."
+	death_sound = 'sound/mobs/non-humanoids/cyborg/borg_deathsound.ogg'
+	gender = NEUTER
+	pixel_x = -16
+	icon_state = "sec_dogborg"
+	icon_living = "sec_dogborg"
+	icon_dead = "sec_dogborg-dead"
+	mob_biotypes = MOB_ROBOTIC
+	sentience_type = SENTIENCE_HUMANOID
+	speak_chance = 0
+	turns_per_move = 5
+	speed = 0
+	stat_attack = HARD_CRIT
+	projectiletype = /obj/projectile/beam/laser
+	projectilesound = 'sound/items/weapons/laser.ogg'
+	ranged = TRUE
+	ranged_cooldown_time = 8
+	robust_searching = 0
+	maxHealth = 200
+	health = 200
+	harm_intent_damage = 5
+	obj_damage = 20
+	melee_damage_lower = 12
+	melee_damage_upper = 12
+	attack_verb_continuous = "harmbatons"
+	attack_verb_simple = "slammed"
+	attack_sound = 'sound/items/weapons/genhit1.ogg'
+	combat_mode = TRUE
+	atmos_requirements = null
+	aggro_vision_range = 9
+	unsuitable_atmos_damage = 7.5
+	status_flags = CANPUSH
+	rapid_melee = 2
+	weather_immunities = list(TRAIT_LAVA_IMMUNE, TRAIT_ASHSTORM_IMMUNE)
+	minbodytemp = 0
+	maxbodytemp = INFINITY
+	atmos_requirements = null
+	footstep_type = FOOTSTEP_MOB_HEAVY
 
 /mob/living/basic/trooper/complex
 	name = "Complex Survivor"
@@ -609,6 +819,7 @@
 	faction = list("Complex")
 	corpse = /obj/effect/mob_spawn/corpse/human/complex
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex
+	death_message = "seizes up and falls limp, their eyes dead and lifeless..."
 
 /mob/living/basic/trooper/complex/ranged
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911)
@@ -616,10 +827,11 @@
 	r_hand = /obj/item/gun/ballistic/automatic/pistol/m1911
 	/// Type of bullet we use
 	var/casingtype = /obj/item/ammo_casing/c45
+	var/projectiletype = null
 	/// Sound to play when firing weapon
 	var/projectilesound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
 	/// number of burst shots
-	var/burst_shots
+	var/burst_shots = 1
 	/// Time between taking shots
 	var/ranged_cooldown = 1 SECONDS
 
@@ -628,12 +840,11 @@
 	AddComponent(\
 		/datum/component/ranged_attacks,\
 		casing_type = casingtype,\
+		projectile_type = projectiletype,\
 		projectile_sound = projectilesound,\
 		cooldown_time = ranged_cooldown,\
 		burst_shots = burst_shots,\
 	)
-	if (ranged_cooldown <= 1 SECONDS)
-		AddComponent(/datum/component/ranged_mob_full_auto)
 
 /mob/living/basic/trooper/complex/ranged/gp9
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/nt_glock)
@@ -646,7 +857,222 @@
 	r_hand = /obj/item/gun/ballistic/automatic/pistol/clandestine
 	casingtype = /obj/item/ammo_casing/c10mm
 
+/mob/living/basic/trooper/complex/ranged/chemist
+	name = "Complex Chemist"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/chemist
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/chemist
+	loot = list(/obj/item/gun/syringe)
+	r_hand = /obj/item/gun/syringe
+	casingtype = null
+	projectiletype = /obj/projectile/bullet/dart/syringe/sulfonal
+	projectilesound = 'sound/items/syringeproj.ogg'
+	ranged_cooldown = 6 SECONDS
+
+/obj/projectile/bullet/dart/syringe/sulfonal
+	name = "sulfonal syringe"
+	icon_state = "syringeproj"
+
+/obj/projectile/bullet/dart/syringe/sulfonal/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(/datum/reagent/toxin/sulfonal, 15)
+
+/mob/living/basic/trooper/complex/security
+	name = "Complex Security"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/security
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security
+	maxHealth = 150
+	health = 150
+	death_sound = 'sound/items/sec_hailer/sec_death.ogg'
+
+/mob/living/basic/trooper/complex/security/armored
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/security/armored
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security/armored
+	maxHealth = 175
+	health = 175
+
+/mob/living/basic/trooper/complex/security/riot
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/security/riot
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security/riot
+	maxHealth = 200
+	health = 200
+
+/mob/living/basic/trooper/complex/security/baton
+	loot = list(/obj/item/melee/baton/security/loaded)
+	attack_verb_continuous = "batons"
+	attack_verb_simple = "stunned"
+	attack_sound = 'sound/items/weapons/egloves.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SMASH
+	r_hand = /obj/item/melee/baton/security/loaded
+	melee_damage_lower = 30
+	melee_damage_upper = 30
+	melee_damage_type = STAMINA
+
+/mob/living/basic/trooper/complex/security/armored/baton
+	loot = list(/obj/item/melee/baton/security/loaded)
+	attack_verb_continuous = "batons"
+	attack_verb_simple = "stunned"
+	attack_sound = 'sound/items/weapons/egloves.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SMASH
+	r_hand = /obj/item/melee/baton/security/loaded
+	melee_damage_lower = 30
+	melee_damage_upper = 30
+	melee_damage_type = STAMINA
+
+/mob/living/basic/trooper/complex/security/riot/baton
+	loot = list(/obj/item/shield/riot, /obj/item/melee/baton/security/loaded)
+	attack_verb_continuous = "batons"
+	attack_verb_simple = "stunned"
+	attack_sound = 'sound/items/weapons/egloves.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SMASH
+	r_hand = /obj/item/melee/baton/security/loaded
+	l_hand = /obj/item/shield/riot
+	melee_damage_lower = 30
+	melee_damage_upper = 30
+	var/projectile_deflect_chance = 50
+	melee_damage_type = STAMINA
+
+/mob/living/basic/trooper/complex/ranged/security
+	name = "Complex Security"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/security
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/nt_glock)
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/nt_glock
+	casingtype = /obj/item/ammo_casing/c9mm
+	maxHealth = 150
+	health = 150
+	projectilesound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
+	death_sound = 'sound/items/sec_hailer/sec_death.ogg'
+
+/mob/living/basic/trooper/complex/ranged/security/disabler
+	loot = list(/obj/item/gun/energy/disabler)
+	r_hand = /obj/item/gun/energy/disabler
+	casingtype = null
+	projectiletype = /obj/projectile/beam/disabler
+	projectilesound = 'sound/items/weapons/taser2.ogg'
+	ranged_cooldown = 1.5 SECONDS
+	burst_shots = 2
+
+/mob/living/basic/trooper/complex/ranged/security/smg
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst
+	loot = list(/obj/item/gun/ballistic/automatic/wt550)
+	r_hand = /obj/item/gun/ballistic/automatic/wt550
+	casingtype = /obj/item/ammo_casing/c46x30mm
+	ranged_cooldown = 3 SECONDS
+	burst_shots = 3
+	projectilesound = 'sound/items/weapons/gun/smg/shot.ogg'
+
+/mob/living/basic/trooper/complex/ranged/security/smg/disabler
+	loot = list(/obj/item/gun/energy/disabler/smg)
+	r_hand = /obj/item/gun/energy/disabler/smg
+	casingtype = null
+	projectiletype = /obj/projectile/beam/disabler/weak
+	projectilesound = 'sound/items/weapons/taser3.ogg'
+	ranged_cooldown = 6 SECONDS
+	burst_shots = 12
+
+/mob/living/basic/trooper/complex/ranged/security/shotgun
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/shotgunner
+	loot = list(/obj/item/gun/ballistic/shotgun/lethal)
+	r_hand = /obj/item/gun/ballistic/shotgun/lethal
+	casingtype = /obj/item/ammo_casing/shotgun/buckshot
+	projectilesound = 'sound/items/weapons/gun/shotgun/shot.ogg'
+
+/mob/living/basic/trooper/complex/ranged/security/armored
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/security/armored
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security/armored
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/nt_glock)
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/nt_glock
+	casingtype = /obj/item/ammo_casing/c9mm
+	maxHealth = 175
+	health = 175
+	projectilesound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
+
+/mob/living/basic/trooper/complex/ranged/security/armored/disabler
+	loot = list(/obj/item/gun/energy/disabler)
+	r_hand = /obj/item/gun/energy/disabler
+	casingtype = null
+	projectiletype = /obj/projectile/beam/disabler
+	projectilesound = 'sound/items/weapons/taser2.ogg'
+	ranged_cooldown = 1.5 SECONDS
+	burst_shots = 2
+
+/mob/living/basic/trooper/complex/ranged/security/armored/smg
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst
+	loot = list(/obj/item/gun/ballistic/automatic/wt550)
+	r_hand = /obj/item/gun/ballistic/automatic/wt550
+	casingtype = /obj/item/ammo_casing/c46x30mm
+	ranged_cooldown = 3 SECONDS
+	burst_shots = 3
+	projectilesound = 'sound/items/weapons/gun/smg/shot.ogg'
+
+/mob/living/basic/trooper/complex/ranged/security/armored/smg/disabler
+	loot = list(/obj/item/gun/energy/disabler/smg)
+	r_hand = /obj/item/gun/energy/disabler/smg
+	casingtype = null
+	projectiletype = /obj/projectile/beam/disabler/weak
+	projectilesound = 'sound/items/weapons/taser3.ogg'
+	ranged_cooldown = 6 SECONDS
+	burst_shots = 12
+
+/mob/living/basic/trooper/complex/ranged/security/armored/shotgun
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/shotgunner
+	loot = list(/obj/item/gun/ballistic/shotgun/lethal)
+	r_hand = /obj/item/gun/ballistic/shotgun/lethal
+	casingtype = /obj/item/ammo_casing/shotgun/buckshot
+	projectilesound = 'sound/items/weapons/gun/shotgun/shot.ogg'
+
+/mob/living/basic/trooper/complex/ranged/security/riot
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/security/riot
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security/riot
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/shotgunner
+	loot = list(/obj/item/gun/ballistic/shotgun/riot)
+	r_hand = /obj/item/gun/ballistic/shotgun/riot
+	casingtype = /obj/item/ammo_casing/shotgun/rubbershot
+	maxHealth = 200
+	health = 200
+	projectilesound = 'sound/items/weapons/gun/shotgun/shot.ogg'
+
+/mob/living/basic/trooper/complex/prisoner
+	name = "Complex Convict"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/prisoner
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/prisoner
+	faction = list("Complex_Prisoner")
+
+/mob/living/basic/trooper/complex/prisoner/spear
+	loot = list(/obj/item/spear)
+	attack_verb_continuous = "stabs"
+	attack_verb_simple = "stabbed"
+	melee_damage_lower = 18
+	melee_damage_upper = 18
+	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SLASH
+	r_hand = /obj/item/spear
+
+/mob/living/basic/trooper/complex/prisoner/baseball_bat
+	loot = list(/obj/item/melee/baseball_bat)
+	attack_verb_continuous = "stabs"
+	attack_verb_simple = "stabbed"
+	melee_damage_lower = 12
+	melee_damage_upper = 12
+	attack_sound = 'sound/items/weapons/genhit1.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SMASH
+	r_hand = /obj/item/melee/baseball_bat
+
+/mob/living/basic/trooper/complex/prisoner/shield
+	loot = list(/obj/item/shield/riot, /obj/item/melee/baton/security/loaded)
+	attack_verb_continuous = "batons"
+	attack_verb_simple = "stunned"
+	attack_sound = 'sound/items/weapons/egloves.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SMASH
+	r_hand = /obj/item/melee/baton/security/loaded
+	l_hand = /obj/item/shield/riot
+	melee_damage_lower = 30
+	melee_damage_upper = 30
+	var/projectile_deflect_chance = 25
+	melee_damage_type = STAMINA
+
 /mob/living/basic/trooper/complex/cargotech
+	name = "Complex Logistics Specialist"
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/cargo_tech
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/cargo_tech
 	loot = list(/obj/item/knife/combat/survival)
@@ -656,32 +1082,82 @@
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	r_hand = /obj/item/knife/combat/survival
 
+/mob/living/basic/trooper/complex/scientist
+	name = "Complex Scientist"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/scientist
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/scientist
+	loot = list(/obj/item/storage/toolbox/emergency)
+	attack_verb_continuous = "robusts"
+	attack_verb_simple = "hit"
+	attack_sound = 'sound/items/weapons/smash.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SMASH
+	r_hand = /obj/item/storage/toolbox/emergency
+
+/mob/living/basic/trooper/complex/roboticist
+	name = "Complex Roboticist"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/roboticist
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/roboticist
+	loot = list(/obj/item/weldingtool/largetank)
+	attack_verb_continuous = "burns"
+	attack_verb_simple = "welded"
+	attack_sound = 'sound/items/tools/welder.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SMASH
+	r_hand = /obj/item/weldingtool/largetank
+
+/mob/living/basic/trooper/complex/medical
+	name = "Complex Doctor"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/doctor
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/doctor
+
+/mob/living/basic/trooper/complex/medical/circular_saw
+	loot = list(/obj/item/circular_saw)
+	attack_verb_continuous = "saws"
+	attack_verb_simple = "sawed"
+	attack_sound = 'sound/items/weapons/circsawhit.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SLASH
+	r_hand = /obj/item/circular_saw
+
+/mob/living/basic/trooper/complex/medical/scalpel
+	loot = list(/obj/item/scalpel)
+	attack_verb_continuous = "stabs"
+	attack_verb_simple = "stabbed"
+	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SLASH
+	r_hand = /obj/item/scalpel
+
 /mob/living/basic/trooper/complex/ranged/quartermaster
+	name = "Complex Logistics Director"
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/quartermaster
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/quartermaster
+	maxHealth = 125
+	health = 125
 
 /mob/living/basic/trooper/complex/ranged/cargotech
+	name = "Complex Logistics Specialist"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/cargo_tech
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/cargo_tech
 	loot = list(/obj/item/gun/ballistic/shotgun/bulldog)
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot //buckshot (up to 72.5 brute) fired in a two-round burst
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/shotgunner
-	ranged_cooldown = 3 SECONDS
+	ranged_cooldown = 4 SECONDS
 	burst_shots = 2
 	r_hand = /obj/item/gun/ballistic/shotgun/bulldog
 	projectilesound = 'sound/items/weapons/gun/shotgun/shot_alt.ogg'
 
 /mob/living/basic/trooper/complex/ranged/captain
+	name = "Complex Site Manager"
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/captain
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/captain
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/m45a5)
 	r_hand = /obj/item/gun/ballistic/automatic/pistol/m45a5
 	casingtype = /obj/item/ammo_casing/c460rowland
-	ranged_cooldown = 2 SECONDS
 	maxHealth = 250
 	health = 250
 	projectilesound = 'modular_skyrat/modules/modular_weapons/sounds/pistol_heavy.ogg'
 
 /mob/living/basic/trooper/complex/ranged/head_of_personnel
+	name = "Complex Human Resources Officer"
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/head_of_personnel
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/head_of_personnel
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst
@@ -729,12 +1205,39 @@
 	icon = 'icons/area/areas_station.dmi'
 	requires_power = FALSE
 	static_lighting = FALSE
-	base_lighting_alpha = 100
+	base_lighting_alpha = 45
 
 /area/awaymission/complex/exterior
 	name = "Complex Tundra Plains"
 	icon = 'icons/area/areas_away_missions.dmi'
 	icon_state = "away"
+	always_unpowered = TRUE
+	power_environ = FALSE
+	power_equip = FALSE
+	power_light = FALSE
+	requires_power = TRUE
+	area_flags = UNIQUE_AREA | FLORA_ALLOWED
+	outdoors = TRUE
+
+/area/awaymission/complex/exterior/lights
+	name = "Complex Exterior Lights"
+	icon = 'icons/area/areas_station.dmi'
+	icon_state = "commons"
+	always_unpowered = FALSE
+	power_environ = TRUE
+	power_light = TRUE
+	requires_power = FALSE
+	outdoors = TRUE
+
+/area/awaymission/complex/exterior/lights/artillery
+	name = "Security Facility Artillery Yard Lights"
+	icon_state = "security"
+	outdoors = TRUE
+
+/area/awaymission/complex/exterior/lights/prison
+	name = "Security Facility Prison Yard Lights"
+	icon_state = "sec_prison"
+	outdoors = TRUE
 
 /area/awaymission/complex/cave
 	name = "Complex Caves"
@@ -742,6 +1245,105 @@
 	icon_state = "awaycontent15"
 	static_lighting = TRUE
 	base_lighting_alpha = 0
+
+/area/awaymission/complex/cave/mountain
+	name = "Complex Mountains"
+	icon_state = "awaycontent24"
+
+/area/awaymission/complex/secfacility
+	name = "Security Facility Hallway"
+	icon_state = "brig"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
+/area/awaymission/complex/secfacility/lobby
+	name = "Security Facility Lobby"
+	icon_state = "brigentry"
+
+/area/awaymission/complex/secfacility/power
+	name = "Security Facility Power Maintenance"
+	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
+	icon_state = "sec_power"
+
+/area/awaymission/complex/secfacility/power/prison
+	name = "Security Facility Prison Wing Power Maintenance"
+
+/area/awaymission/complex/secfacility/processing
+	name = "Security Facility Processing Office"
+	icon_state = "sec_labor_processing"
+
+/area/awaymission/complex/secfacility/medical
+	name = "Security Facility Medical Post"
+	icon_state = "security_medical"
+
+/area/awaymission/complex/secfacility/execution
+	name = "Security Facility Transfer Center"
+	icon_state = "execution_room"
+
+/area/awaymission/complex/secfacility/office
+	name = "Security Facility Main Office"
+	icon_state = "security"
+
+/area/awaymission/complex/secfacility/warden
+	name = "Security Facility Control Office"
+	icon_state = "warden"
+
+/area/awaymission/complex/secfacility/breakroom
+	name = "Security Facility Break Room"
+	icon_state = "brig"
+
+/area/awaymission/complex/secfacility/detective
+	name = "Security Facility Detective's Office"
+	icon_state = "detective"
+
+/area/awaymission/complex/secfacility/evidence
+	name = "Security Facility Evidence Lockup"
+	icon_state = "evidence"
+
+/area/awaymission/complex/secfacility/mechbay
+	name = "Security Facility Mechbay"
+	icon_state = "sec_mechbay"
+
+/area/awaymission/complex/secfacility/artillery
+	name = "Security Facility Artillery Control Room"
+	icon_state = "brig"
+
+/area/awaymission/complex/secfacility/garage
+	name = "Security Facility Garage"
+	icon_state = "brig"
+
+/area/awaymission/complex/secfacility/armory
+	name = "Security Facility Armory"
+	icon_state = "armory"
+
+/area/awaymission/complex/secfacility/directoroffice
+	name = "Security Facility Security Director's Office"
+	icon_state = "hos_office"
+
+/area/awaymission/complex/secfacility/prison
+	name = "Security Facility Prison Wing"
+	icon_state = "sec_prison"
+
+/area/awaymission/complex/secfacility/prison/laundry
+	name = "Security Facility Prison Laundry Room"
+	icon_state = "sec_prison"
+
+/area/awaymission/complex/secfacility/prison/kitchen
+	name = "Security Facility Prison Kitchen"
+	icon_state = "prison_mess"
+
+/area/awaymission/complex/secfacility/prison/hydroponics
+	name = "Security Facility Prison Hydroponics"
+	icon_state = "prison_garden"
+
+/area/awaymission/complex/secfacility/prison/workshop
+	name = "Security Facility Prison Workshop"
+	icon_state = "prison_work"
+
+/area/awaymission/complex/secfacility/prison/shower
+	name = "Security Facility Prison Showers"
+	icon_state = "prison_shower"
 
 /area/awaymission/complex/mainfacility
 	name = "Main Facility Hallway"
@@ -752,6 +1354,7 @@
 
 /area/awaymission/complex/mainfacility/tram
 	name = "Main Facility Tram Station"
+	icon_state = "halltramM"
 
 /area/awaymission/complex/mainfacility/lounge
 	name = "Main Facility Lounge"
@@ -766,24 +1369,20 @@
 	icon_state = "dorms"
 
 /area/awaymission/complex/mainfacility/dorms/dorm1
-	name = "Main Facility Dorm 1"
-	icon_state = "dorms"
+	name = "Main Facility Barracks 1"
+	icon_state = "room1"
 
 /area/awaymission/complex/mainfacility/dorms/dorm2
-	name = "Main Facility Dorm 2"
-	icon_state = "dorms"
-
-/area/awaymission/complex/mainfacility/dorms/gym
-	name = "Main Facility Gym"
-	icon_state = "dorms"
+	name = "Main Facility Barracks 2"
+	icon_state = "room2"
 
 /area/awaymission/complex/mainfacility/dorms/laundry
 	name = "Main Facility Laundry Room"
-	icon_state = "dorms"
+	icon_state = "laundry_room"
 
 /area/awaymission/complex/mainfacility/dorms/pool
 	name = "Main Facility Pool Room"
-	icon_state = "dorms"
+	icon_state = "pool"
 
 /area/awaymission/complex/mainfacility/security_west
 	name = "Main Facility West Security Post"
@@ -838,7 +1437,7 @@
 	icon_state = "mining_storage"
 
 /area/awaymission/complex/mainfacility/mining/dorms
-	name = "Main Facility Mining Dormitories"
+	name = "Main Facility Mining Lounge"
 	icon_state = "mining_breakroom"
 
 /area/awaymission/complex/mainfacility/research

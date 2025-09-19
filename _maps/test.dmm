@@ -202,9 +202,9 @@
 /turf/open/floor/plating,
 /area/awaymission/complex/mainfacility/research/xenoarcheology)
 "aF" = (
+/obj/item/ammo_casing/c45/spent,
+/obj/item/ammo_casing/c45/spent,
 /mob/living/basic/trooper/syndicate/ranged/smg/complex,
-/obj/item/ammo_casing/c45/spent,
-/obj/item/ammo_casing/c45/spent,
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/mining/dorms)
 "aG" = (
@@ -273,6 +273,9 @@
 "aP" = (
 /obj/effect/decal/cleanable/blood/trail,
 /mob/living/basic/clockwork_marauder,
+/obj/structure/fluff/paper/stack{
+	dir = 1
+	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/xenoarcheology)
 "aQ" = (
@@ -283,7 +286,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/mob_spawn/corpse/human/complex/coatless,
+/obj/effect/mob_spawn/corpse/human/complex,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility/dorms)
 "aV" = (
@@ -331,6 +334,10 @@
 	},
 /turf/open/floor/iron/smooth_large,
 /area/awaymission/complex/mainfacility/cargo)
+"bf" = (
+/mob/living/basic/trooper/complex/cargotech,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical)
 "bj" = (
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 9
@@ -339,12 +346,21 @@
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility/cargo/office)
 "bk" = (
-/mob/living/simple_animal/bot/mulebot{
-	faction = list("Complex", "neutral","silicon","turret")
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
 	},
-/obj/effect/decal/cleanable/blood/tracks,
-/turf/open/floor/iron,
-/area/awaymission/complex/mainfacility)
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/dark_red/filled/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/dark_red/filled/line{
+	dir = 8
+	},
+/mob/living/basic/trooper/complex/roboticist,
+/turf/open/floor/iron/dark,
+/area/awaymission/complex/mainfacility/research/robotics)
 "bl" = (
 /turf/open/floor/carpet/green,
 /area/awaymission/complex/mainfacility/admin/nt_rep)
@@ -427,6 +443,7 @@
 /obj/structure/chair/office{
 	dir = 8
 	},
+/mob/living/basic/trooper/complex/medical,
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/medical/lobby)
 "by" = (
@@ -519,8 +536,8 @@
 /turf/open/floor/plating/snowed/smoothed,
 /area/awaymission/complex/mainfacility/tram)
 "bO" = (
-/obj/effect/mob_spawn/corpse/human/complex/syndicate,
 /obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/complex/syndicate,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility/cargo/lobby)
 "bP" = (
@@ -546,6 +563,9 @@
 "bV" = (
 /obj/effect/turf_decal/trimline/purple/filled/corner{
 	dir = 4
+	},
+/obj/structure/fluff/paper/stack{
+	dir = 1
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research)
@@ -676,9 +696,11 @@
 /turf/open/misc/asteroid/snow/complex,
 /area/awaymission/complex/exterior)
 "cw" = (
-/obj/structure/closet/xenoarch,
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/machinery/firealarm/directional/south,
+/obj/structure/closet/xenoarch/ashwalker_version{
+	name = "xenoarchaeology equipment locker"
+	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/xenoarcheology)
 "cy" = (
@@ -709,6 +731,14 @@
 /obj/structure/holosign/barrier/atmos/tram,
 /turf/open/floor/plating/complex,
 /area/awaymission/complex/mainfacility/tram)
+"cB" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/light_emitter/complex,
+/turf/open/floor/stone/complex,
+/area/awaymission/complex/exterior)
 "cC" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 1
@@ -795,6 +825,18 @@
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/research/breakroom)
+"cX" = (
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Lounge2";
+	location = "WestHall"
+	},
+/mob/living/simple_animal/bot/secbot/beepsky/officer{
+	name = "Officer Olesky";
+	desc = "It's Officer Olesky! Powered by a potato and a shot of whiskey, and with a sturdier reinforced chassis, too.";
+	faction = list("Syndicate", "Complex", "neutral","silicon","turret")
+	},
+/turf/open/floor/iron,
+/area/awaymission/complex/mainfacility)
 "cY" = (
 /obj/machinery/computer/cargo/express{
 	dir = 1
@@ -997,6 +1039,7 @@
 /obj/structure/drain,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/shower/directional/north,
+/obj/machinery/light_switch/directional/west,
 /turf/open/floor/noslip/tram,
 /area/awaymission/complex/mainfacility/dorms/pool)
 "dP" = (
@@ -1057,6 +1100,10 @@
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating,
 /area/awaymission/complex/mainfacility/cargo)
+"dY" = (
+/mob/living/basic/trooper/complex/medical/circular_saw,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical)
 "dZ" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
@@ -1156,6 +1203,11 @@
 "ek" = (
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical)
+"el" = (
+/obj/effect/turf_decal/tile/neutral/tram,
+/obj/effect/light_emitter/complex,
+/turf/open/indestructible/tram/plate,
+/area/awaymission/complex/exterior)
 "em" = (
 /obj/effect/turf_decal/trimline/green/filled/corner,
 /turf/open/floor/iron,
@@ -1233,6 +1285,10 @@
 	dir = 4
 	},
 /obj/machinery/light/floor,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Sci-Med";
+	location = "Mid3"
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "ey" = (
@@ -1678,6 +1734,17 @@
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/complex/mainfacility/medical/directoroffice)
+"fY" = (
+/obj/structure/girder,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/light_emitter/complex,
+/turf/open/floor/plating/snowed/smoothed/complex,
+/area/awaymission/complex/exterior)
 "fZ" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/shoes/winterboots,
@@ -1732,6 +1799,13 @@
 /obj/structure/chair/office/light,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/xenoarcheology)
+"gi" = (
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 1
+	},
+/mob/living/basic/trooper/complex/medical/scalpel,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/office)
 "gj" = (
 /obj/machinery/door/airlock/corporate/glass{
 	name = "Nanotrasen Representative's Office"
@@ -1904,13 +1978,22 @@
 /turf/open/floor/iron/cafeteria,
 /area/awaymission/complex/mainfacility/kitchen)
 "gJ" = (
-/obj/structure/punching_bag,
-/obj/effect/turf_decal/trimline/dark_red,
-/obj/machinery/firealarm/directional/south,
-/turf/open/floor/iron/white/side{
-	dir = 4
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/structure/closet/wardrobe,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
 	},
-/area/awaymission/complex/mainfacility/dorms/gym)
+/turf/open/floor/iron/dark/smooth_large,
+/area/awaymission/complex/mainfacility/dorms)
 "gK" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
 	dir = 1
@@ -1952,12 +2035,14 @@
 /turf/open/floor/iron/smooth_large,
 /area/awaymission/complex/mainfacility/cargo/warehouse)
 "gR" = (
-/obj/machinery/airalarm/directional/west,
-/obj/machinery/light/directional/west,
-/turf/open/floor/iron/white/side{
-	dir = 9
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
 	},
-/area/awaymission/complex/mainfacility/dorms/gym)
+/obj/machinery/light/small/directional/west,
+/obj/structure/rack/shelf,
+/obj/item/storage/toolbox/emergency,
+/turf/open/floor/iron/dark/smooth_large,
+/area/awaymission/complex/mainfacility/dorms)
 "gS" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 8
@@ -2336,10 +2421,8 @@
 "ic" = (
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic,
-/obj/structure/chair/sofa/bench/tram/left{
-	dir = 4
-	},
 /obj/structure/fluff/tram_rail/electric,
+/obj/structure/closet/crate/miningcar,
 /turf/open/floor/plating/snowed/smoothed,
 /area/awaymission/complex/mainfacility/tram)
 "ie" = (
@@ -2415,7 +2498,7 @@
 /obj/machinery/chem_master/condimaster{
 	name = "CondiMaster Neo"
 	},
-/obj/machinery/light/directional/north,
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/freezer,
 /area/awaymission/complex/mainfacility/kitchen)
 "iv" = (
@@ -2529,13 +2612,16 @@
 /turf/open/floor/iron/dark/small,
 /area/awaymission/complex/mainfacility/medical/cryogenics)
 "iG" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/external/glass/ruin{
+	name = "Dormitories External Airlock"
+	},
 /obj/machinery/door/poddoor/shutters{
 	name = "Main Facility Lockdown Shutters";
 	id = "complexhop"
 	},
-/turf/open/floor/plating,
-/area/awaymission/complex/mainfacility/dorms/gym)
+/turf/open/floor/iron/dark/smooth_large,
+/area/awaymission/complex/mainfacility/dorms)
 "iH" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -2622,7 +2708,8 @@
 	name = "Tick's bed"
 	},
 /mob/living/basic/mouse/rat{
-	name = "Tick"
+	name = "Tick";
+	faction = list("Syndicate","Complex","rats","maint_creatures")
 	},
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -2700,6 +2787,7 @@
 /area/awaymission/complex/mainfacility/medical/lobby)
 "ji" = (
 /obj/item/pickaxe/rusted,
+/obj/effect/light_emitter/complex,
 /turf/open/misc/asteroid/snow/complex,
 /area/awaymission/complex/exterior)
 "jj" = (
@@ -2782,7 +2870,7 @@
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility/cargo)
 "jv" = (
-/obj/machinery/door/airlock/external/glass{
+/obj/machinery/door/airlock/external/glass/ruin{
 	name = "Logistics Department External Airlock"
 	},
 /obj/structure/fans/tiny,
@@ -2804,6 +2892,12 @@
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/floor/wood/large,
 /area/awaymission/complex/mainfacility/syndicate)
+"jx" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
+/obj/effect/turf_decal/trimline/blue/filled/line,
+/mob/living/basic/trooper/complex/medical/scalpel,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/cryogenics)
 "jA" = (
 /obj/machinery/door/firedoor/heavy,
 /obj/machinery/door/poddoor/shutters{
@@ -3126,12 +3220,13 @@
 /turf/open/floor/iron/dark/small,
 /area/awaymission/complex/mainfacility/medical/pharmacy)
 "kD" = (
-/obj/structure/reagent_dispensers/water_cooler,
 /obj/structure/sign/poster/official/random/directional/west,
-/turf/open/floor/iron/white/side{
-	dir = 8
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
 	},
-/area/awaymission/complex/mainfacility/dorms/gym)
+/obj/structure/closet/emcloset,
+/turf/open/floor/iron/dark/smooth_large,
+/area/awaymission/complex/mainfacility/dorms)
 "kG" = (
 /obj/structure/sign/departments/evac/directional/east,
 /turf/open/misc/asteroid/snow/complex,
@@ -3190,6 +3285,13 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/treatment)
+"kR" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/light_emitter/complex,
+/turf/open/floor/stone/complex,
+/area/awaymission/complex/exterior)
 "kS" = (
 /obj/machinery/computer/communications,
 /obj/machinery/light/directional/north,
@@ -3475,7 +3577,9 @@
 /area/awaymission/complex/mainfacility/mining/dorms)
 "lP" = (
 /obj/effect/turf_decal/bot_red,
-/mob/living/basic/bot/cleanbot,
+/mob/living/basic/bot/cleanbot{
+	faction = list("Complex", "neutral","silicon","turret")
+	},
 /obj/machinery/button/door/directional/west{
 	name = "Shutters Control";
 	id = "complexroboticslab"
@@ -3703,8 +3807,8 @@
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "mG" = (
-/obj/machinery/door/airlock/external/glass{
-	name = "Mining Dorms External Airlock"
+/obj/machinery/door/airlock/external/glass/ruin{
+	name = "Mining Lounge External Airlock"
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/awaymission/complex/mainfacility/mining/dorms)
@@ -3784,6 +3888,7 @@
 	dir = 1
 	},
 /obj/effect/mapping_helpers/broken_floor,
+/mob/living/basic/trooper/complex/medical/scalpel,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/treatment)
 "na" = (
@@ -3868,6 +3973,16 @@
 /obj/machinery/defibrillator_mount/directional/south,
 /turf/open/floor/iron/dark/small,
 /area/awaymission/complex/mainfacility/medical/treatment)
+"nq" = (
+/obj/effect/turf_decal/trimline/blue/warning{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 8
+	},
+/mob/living/basic/trooper/complex/medical/scalpel,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/storage)
 "nr" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
@@ -3923,12 +4038,11 @@
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/dorms/dorm1)
 "nz" = (
-/obj/machinery/door/airlock/glass{
-	name = "Gym"
+/obj/machinery/door/airlock/external/glass/ruin{
+	name = "Dormitories External Airlock"
 	},
-/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/smooth_large,
-/area/awaymission/complex/mainfacility/dorms/gym)
+/area/awaymission/complex/mainfacility/dorms)
 "nA" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 8
@@ -4097,6 +4211,12 @@
 /obj/structure/closet/secure_closet/freezer/fridge/all_access,
 /turf/open/floor/iron/cafeteria,
 /area/awaymission/complex/mainfacility/kitchen)
+"nZ" = (
+/obj/effect/turf_decal/trimline/purple/filled/warning,
+/obj/effect/mob_spawn/corpse/human/complex/scientist/coatless,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/research)
 "oa" = (
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/turf_decal/trimline/neutral/filled/warning{
@@ -4175,8 +4295,8 @@
 /area/awaymission/complex/mainfacility/dorms)
 "os" = (
 /obj/structure/fans/tiny,
-/obj/machinery/door/airlock/external/glass{
-	name = "Mining Dorms External Airlock"
+/obj/machinery/door/airlock/external/glass/ruin{
+	name = "Mining Lounge External Airlock"
 	},
 /obj/machinery/door/poddoor/shutters{
 	name = "Main Facility Lockdown Shutters";
@@ -4244,6 +4364,11 @@
 /obj/item/reagent_containers/dropper,
 /turf/open/floor/iron/dark/small,
 /area/awaymission/complex/mainfacility/medical/pharmacy)
+"oB" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/complex/shaft_miner,
+/turf/open/floor/wood,
+/area/awaymission/complex/mainfacility/mining/dorms)
 "oD" = (
 /obj/structure/fluff/tram_rail/electric,
 /turf/open/floor/plating/snowed/smoothed,
@@ -4341,6 +4466,7 @@
 "oQ" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/item/ammo_casing/shotgun/buckshot/spent,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research)
 "oS" = (
@@ -4447,12 +4573,12 @@
 /turf/open/floor/iron/dark,
 /area/awaymission/complex/mainfacility/research/genetics)
 "pi" = (
-/obj/effect/temp_visual/ratvar/component/capacitor,
 /obj/structure/table/reinforced/rglass,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
 	},
 /obj/structure/extinguisher_cabinet/directional/west,
+/obj/item/clothing/suit/clockwork,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/xenoarcheology)
 "pk" = (
@@ -4815,6 +4941,13 @@
 	},
 /turf/open/floor/carpet/red,
 /area/awaymission/complex/mainfacility/syndicate)
+"qC" = (
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 5
+	},
+/mob/living/basic/trooper/complex/medical/circular_saw,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/treatment)
 "qD" = (
 /turf/closed/wall,
 /area/awaymission/complex/mainfacility/mining/dorms)
@@ -5071,6 +5204,9 @@
 "rP" = (
 /obj/effect/decal/cleanable/glass,
 /obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/fluff/paper/stack{
+	dir = 8
+	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/xenoarcheology)
 "rQ" = (
@@ -5192,6 +5328,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/surgery)
+"so" = (
+/mob/living/basic/trooper/complex,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/lobby)
 "sp" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -5625,6 +5765,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/awaymission/complex/mainfacility/research/genetics)
+"tJ" = (
+/mob/living/basic/trooper/complex/scientist,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/research/xenoarcheology)
 "tK" = (
 /obj/structure/fence{
 	dir = 4
@@ -5682,6 +5826,13 @@
 /obj/effect/turf_decal/tile/neutral/tram,
 /turf/open/indestructible/tram/plate,
 /area/awaymission/complex/mainfacility/tram)
+"tO" = (
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 1
+	},
+/mob/living/basic/trooper/complex/medical/circular_saw,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/office)
 "tP" = (
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/open/floor/plating,
@@ -5803,6 +5954,10 @@
 	dir = 8
 	},
 /obj/machinery/light/floor,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Cargo";
+	location = "Mid2"
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "uq" = (
@@ -6335,7 +6490,9 @@
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 4
 	},
-/obj/structure/closet/crate/medical,
+/mob/living/simple_animal/bot/mulebot{
+	faction = list("Syndicate", "Complex", "neutral","silicon","turret")
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "wj" = (
@@ -6373,6 +6530,14 @@
 	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
+"wq" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/clipboard,
+/obj/structure/fluff/paper/stack{
+	dir = 9
+	},
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/research)
 "wr" = (
 /obj/structure/bookcase/manuals/research_and_development,
 /obj/effect/turf_decal/trimline/purple/filled/line{
@@ -6604,12 +6769,12 @@
 /area/awaymission/complex/mainfacility/medical/cryogenics)
 "xa" = (
 /obj/effect/decal/cleanable/cobweb,
-/obj/structure/weightmachine,
-/obj/effect/turf_decal/tile/dark_red/half/contrasted,
-/turf/open/floor/iron/white/textured_edge{
-	dir = 1
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
 	},
-/area/awaymission/complex/mainfacility/dorms/gym)
+/obj/structure/closet/firecloset,
+/turf/open/floor/iron/dark/smooth_large,
+/area/awaymission/complex/mainfacility/dorms)
 "xb" = (
 /obj/effect/turf_decal/trimline/neutral/filled/corner{
 	dir = 1
@@ -6691,7 +6856,9 @@
 "xi" = (
 /obj/effect/turf_decal/trimline/purple/filled/warning,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/mob_spawn/corpse/human/complex/scientist,
+/obj/effect/mob_spawn/corpse/human/complex/scientist/coatless{
+	outfit_override = list("head"=/obj/item/clothing/head/bio_hood/scientist,"suit"=/obj/item/clothing/suit/bio_suit/scientist)
+	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/xenoarcheology)
 "xj" = (
@@ -7005,7 +7172,7 @@
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "yn" = (
-/obj/machinery/door/airlock/external/glass{
+/obj/machinery/door/airlock/external/glass/ruin{
 	name = "Logistics Department External Airlock"
 	},
 /turf/open/floor/iron/dark/smooth_large,
@@ -7052,6 +7219,7 @@
 	dir = 1
 	},
 /obj/structure/sign/poster/official/random/directional/west,
+/obj/machinery/light_switch/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/awaymission/complex/mainfacility/dorms/laundry)
 "yw" = (
@@ -7325,6 +7493,10 @@
 /area/awaymission/complex/mainfacility/cargo)
 "zq" = (
 /obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Lounge";
+	location = "Admin"
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "zr" = (
@@ -7335,6 +7507,13 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/dark/smooth_large,
 /area/awaymission/complex/mainfacility/tram)
+"zs" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/obj/effect/light_emitter/complex,
+/turf/open/floor/stone/complex,
+/area/awaymission/complex/exterior)
 "zt" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
@@ -7400,8 +7579,8 @@
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "zJ" = (
-/turf/open/floor/iron,
-/area/awaymission/complex/mainfacility/dorms/gym)
+/turf/open/floor/iron/small,
+/area/awaymission/complex/mainfacility/dorms)
 "zK" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
@@ -7673,6 +7852,7 @@
 /obj/machinery/vending/snack,
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/extinguisher_cabinet/directional/south,
+/obj/machinery/light/broken/directional/south,
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/lounge)
 "AR" = (
@@ -7882,6 +8062,9 @@
 	dir = 10
 	},
 /obj/structure/sign/departments/psychology/directional/south,
+/mob/living/basic/bot/cleanbot/medbay{
+	faction = list("Complex", "neutral","silicon","turret")
+	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/office)
 "BB" = (
@@ -8217,10 +8400,8 @@
 /area/awaymission/complex/mainfacility)
 "CL" = (
 /mob/living/basic/trooper/complex,
-/turf/open/floor/iron/white/side{
-	dir = 1
-	},
-/area/awaymission/complex/mainfacility/dorms/gym)
+/turf/open/floor/iron/small,
+/area/awaymission/complex/mainfacility/dorms)
 "CM" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -8294,10 +8475,10 @@
 /turf/open/floor/carpet/blue,
 /area/awaymission/complex/mainfacility/medical/directoroffice)
 "CV" = (
-/obj/machinery/jukebox,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/machinery/jukebox,
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/lounge)
 "CW" = (
@@ -8322,7 +8503,9 @@
 /turf/open/floor/iron/cafeteria,
 /area/awaymission/complex/mainfacility/kitchen)
 "CZ" = (
-/obj/effect/decal/cleanable/blood/tracks,
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 10
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "Da" = (
@@ -8359,6 +8542,17 @@
 /obj/structure/sign/poster/official/random/directional/west,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/xenoarcheology)
+"De" = (
+/obj/structure/girder,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/light_emitter/complex,
+/turf/open/floor/plating/snowed/smoothed/complex,
+/area/awaymission/complex/exterior)
 "Df" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -9056,6 +9250,7 @@
 	dir = 9
 	},
 /obj/machinery/light_switch/directional/north,
+/obj/machinery/rnd/server/complex,
 /turf/open/floor/wood/large,
 /area/awaymission/complex/mainfacility/research/directoroffice)
 "Ft" = (
@@ -9142,6 +9337,17 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood/large,
 /area/awaymission/complex/mainfacility/syndicate)
+"FG" = (
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Mid2";
+	location = "EastHall"
+	},
+/mob/living/basic/bot/medbot/autopatrol{
+	name = "Dr. Real Doctor";
+	faction = list("Syndicate", "Complex", "neutral","silicon","turret")
+	},
+/turf/open/floor/iron,
+/area/awaymission/complex/mainfacility)
 "FH" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
@@ -9204,10 +9410,9 @@
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/genetics)
 "FQ" = (
-/obj/effect/turf_decal/trimline/dark_red/line,
-/obj/effect/turf_decal/trimline/dark_red/mid_joiner,
-/turf/open/floor/iron/white/smooth_half,
-/area/awaymission/complex/mainfacility/dorms/gym)
+/obj/effect/light_emitter/complex,
+/turf/open/misc/asteroid/snow/complex,
+/area/awaymission/complex/exterior)
 "FR" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
@@ -9265,7 +9470,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/turf_decal/trimline/brown/filled/line,
 /mob/living/simple_animal/bot/mulebot{
-	faction = list("Complex", "neutral","silicon","turret")
+	faction = list("Syndicate", "Complex", "neutral","silicon","turret")
 	},
 /obj/machinery/light/directional/south,
 /obj/structure/railing{
@@ -9525,6 +9730,11 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/smooth_large,
 /area/awaymission/complex/mainfacility/security_east)
+"GP" = (
+/obj/effect/turf_decal/trimline/blue/filled/line,
+/mob/living/basic/trooper/complex,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/office)
 "GQ" = (
 /obj/effect/turf_decal/trimline/purple/filled/warning{
 	dir = 1
@@ -9792,10 +10002,8 @@
 "HN" = (
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic,
-/obj/structure/chair/sofa/bench/tram{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/neutral/tram,
+/obj/structure/ore_box,
 /turf/open/indestructible/tram/plate,
 /area/awaymission/complex/mainfacility/tram)
 "HO" = (
@@ -9803,8 +10011,8 @@
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research)
 "HP" = (
-/obj/effect/mob_spawn/corpse/human/complex/scientist,
 /obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/complex/scientist/coatless,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research/rnd)
 "HQ" = (
@@ -9848,6 +10056,10 @@
 	dir = 1
 	},
 /obj/machinery/light/floor,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=EastHall";
+	location = "Mid4"
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "Ib" = (
@@ -10038,7 +10250,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/mob_spawn/corpse/human/complex/doctor,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/storage)
 "ID" = (
@@ -10145,12 +10356,10 @@
 "IX" = (
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic,
-/obj/structure/chair/sofa/bench/tram/left{
-	dir = 8
-	},
 /obj/structure/fluff/tram_rail/electric{
 	dir = 1
 	},
+/obj/effect/spawner/random/structure/crate_loot,
 /turf/open/floor/plating/snowed/smoothed,
 /area/awaymission/complex/mainfacility/tram)
 "IY" = (
@@ -10264,6 +10473,15 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/storage)
+"Jr" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/complex,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=WestHall";
+	location = "Lounge"
+	},
+/turf/open/floor/wood,
+/area/awaymission/complex/mainfacility/lounge)
 "Ju" = (
 /obj/machinery/computer/crew{
 	dir = 4
@@ -10869,6 +11087,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 8
 	},
+/mob/living/basic/trooper/complex/medical,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/practitioner)
 "Ln" = (
@@ -11007,6 +11226,11 @@
 	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
+"LJ" = (
+/obj/effect/turf_decal/trimline/blue/filled/line,
+/mob/living/basic/trooper/complex,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/treatment)
 "LM" = (
 /turf/open/floor/iron/freezer,
 /area/awaymission/complex/mainfacility/kitchen)
@@ -11793,9 +12017,25 @@
 /obj/effect/mob_spawn/corpse/human/complex,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
+"OE" = (
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Mid4";
+	location = "Sci-Med"
+	},
+/mob/living/basic/bot/firebot{
+	bot_mode_flags = 31;
+	name = "Firefighter Frank";
+	faction = list("Syndicate", "Complex", "neutral","silicon","turret")
+	},
+/turf/open/floor/iron,
+/area/awaymission/complex/mainfacility)
 "OF" = (
-/turf/closed/wall,
-/area/awaymission/complex/mainfacility/dorms/gym)
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Admin2";
+	location = "Lounge2"
+	},
+/turf/open/floor/wood,
+/area/awaymission/complex/mainfacility/lounge)
 "OG" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -11830,7 +12070,8 @@
 /obj/machinery/firealarm/directional/south,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/mob_spawn/corpse/human/complex/scientist,
+/obj/effect/mob_spawn/corpse/human/complex/scientist/coatless,
+/obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/lounge)
 "OO" = (
@@ -12159,9 +12400,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/trimline/blue/filled/corner,
-/mob/living/basic/bot/cleanbot/medbay{
-	faction = list("Complex", "neutral","silicon","turret")
-	},
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/office)
 "PQ" = (
@@ -12269,6 +12507,8 @@
 /area/awaymission/complex/mainfacility/research)
 "Qq" = (
 /obj/effect/mapping_helpers/broken_floor,
+/obj/item/ammo_casing/shotgun/buckshot/spent,
+/obj/structure/fluff/paper/stack,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research)
 "Qt" = (
@@ -12332,7 +12572,6 @@
 "QH" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line,
 /obj/machinery/light/directional/south,
-/obj/structure/barricade/sandbags,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "QJ" = (
@@ -12477,6 +12716,11 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/plating,
 /area/awaymission/complex/mainfacility/tram)
+"Rl" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/light_emitter/complex,
+/turf/open/floor/plating/snowed/complex,
+/area/awaymission/complex/exterior)
 "Rm" = (
 /obj/effect/turf_decal/trimline/purple/filled/warning{
 	dir = 1
@@ -12756,6 +13000,10 @@
 	},
 /obj/effect/turf_decal/tile/neutral,
 /obj/machinery/light/floor,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Admin";
+	location = "Mid1"
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "Sn" = (
@@ -13085,8 +13333,17 @@
 /area/awaymission/complex/mainfacility)
 "TG" = (
 /obj/effect/mapping_helpers/burnt_floor,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Mid3";
+	location = "Admin2"
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
+"TH" = (
+/obj/effect/turf_decal/trimline/yellow/filled/line,
+/mob/living/basic/trooper/complex/ranged/chemist,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/pharmacy)
 "TI" = (
 /obj/structure/table,
 /obj/item/flesh_shears,
@@ -13442,6 +13699,10 @@
 	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility/cargo/lobby)
+"UT" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating,
+/area/awaymission/complex/mainfacility)
 "UU" = (
 /obj/structure/table/reinforced/rglass,
 /obj/structure/window/reinforced/spawner/directional/east,
@@ -13546,7 +13807,7 @@
 /area/awaymission/complex/mainfacility/medical/surgery)
 "Vf" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "Mining Dormitories"
+	name = "Mining Lounge"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/smooth_large,
@@ -13639,6 +13900,16 @@
 	},
 /turf/open/floor/wood/parquet,
 /area/awaymission/complex/mainfacility/mining/dorms)
+"Vn" = (
+/obj/effect/turf_decal/trimline/blue/warning{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 4
+	},
+/mob/living/basic/trooper/complex/medical,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/storage)
 "Vo" = (
 /obj/structure/table/reinforced/rglass,
 /obj/item/stock_parts/micro_laser/quadultra/clock{
@@ -13722,11 +13993,13 @@
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/medical/pharmacy)
 "VC" = (
-/obj/machinery/power/apc/auto_name/directional/east,
-/turf/open/floor/iron/white/side{
-	dir = 5
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
 	},
-/area/awaymission/complex/mainfacility/dorms/gym)
+/obj/machinery/light/small/directional/east,
+/obj/machinery/space_heater,
+/turf/open/floor/iron/dark/smooth_large,
+/area/awaymission/complex/mainfacility/dorms)
 "VH" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
@@ -13805,17 +14078,29 @@
 /obj/item/folder/yellow,
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/cleanable/blood/footprints,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Mid1";
+	location = "Cargo"
+	},
+/mob/living/basic/bot/honkbot{
+	name = "Morale Officer";
+	faction = list("Syndicate", "Complex", "neutral","silicon","turret")
+	},
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "VT" = (
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic,
-/obj/structure/chair/sofa/bench/tram/right{
-	dir = 8
-	},
 /obj/structure/fluff/tram_rail/electric,
+/obj/effect/spawner/random/structure/crate,
 /turf/open/floor/plating/snowed/smoothed,
 /area/awaymission/complex/mainfacility/tram)
+"VV" = (
+/obj/structure/fluff/paper/stack{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/research)
 "VX" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
@@ -13938,6 +14223,10 @@
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/iron/dark/smooth_large,
 /area/awaymission/complex/mainfacility/medical/lobby)
+"Ww" = (
+/obj/effect/light_emitter/complex,
+/turf/open/floor/stone/complex,
+/area/awaymission/complex/exterior)
 "Wy" = (
 /obj/structure/frame/computer{
 	dir = 8
@@ -14148,6 +14437,14 @@
 "Xn" = (
 /turf/open/floor/plating,
 /area/awaymission/complex/mainfacility/medical/lobby)
+"Xp" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/complex/roboticist,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/research)
 "Xr" = (
 /obj/effect/decal/cleanable/cobweb,
 /obj/structure/closet/l3closet/scientist,
@@ -14195,13 +14492,23 @@
 /turf/open/floor/stone,
 /area/awaymission/complex/mainfacility/tram)
 "XC" = (
-/obj/structure/weightmachine/weightlifter,
-/obj/effect/turf_decal/tile/dark_red/half/contrasted,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/suit/hooded/wintercoat,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/structure/closet/wardrobe,
 /obj/structure/sign/poster/official/random/directional/east,
-/turf/open/floor/iron/white/textured_edge{
-	dir = 1
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
 	},
-/area/awaymission/complex/mainfacility/dorms/gym)
+/turf/open/floor/iron/dark/smooth_large,
+/area/awaymission/complex/mainfacility/dorms)
 "XD" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark,
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
@@ -14217,10 +14524,8 @@
 "XI" = (
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic,
-/obj/structure/chair/sofa/bench/tram{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/neutral/tram,
+/obj/machinery/space_heater,
 /turf/open/indestructible/tram/plate,
 /area/awaymission/complex/mainfacility/tram)
 "XJ" = (
@@ -14430,9 +14735,9 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/obj/effect/mob_spawn/corpse/human/complex/syndicate,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/effect/mob_spawn/corpse/human/complex/syndicate,
 /turf/open/floor/wood/tile,
 /area/awaymission/complex/mainfacility/admin)
 "Yt" = (
@@ -14553,6 +14858,13 @@
 /obj/structure/sign/poster/official/random/directional/north,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility/cargo)
+"YR" = (
+/obj/machinery/door/airlock/external/glass/ruin{
+	name = "Main Facility Tram Station"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/dark/smooth_large,
+/area/awaymission/complex/mainfacility/tram)
 "YS" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 4
@@ -14648,8 +14960,8 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/machinery/light/directional/north,
 /obj/machinery/newscaster/directional/north,
+/obj/machinery/light/broken/directional/north,
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/lounge)
 "Zh" = (
@@ -14662,12 +14974,10 @@
 "Zk" = (
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic,
-/obj/structure/chair/sofa/bench/tram/right{
-	dir = 4
-	},
 /obj/structure/fluff/tram_rail/electric{
 	dir = 1
 	},
+/obj/structure/closet/crate/miningcar,
 /turf/open/floor/plating/snowed/smoothed,
 /area/awaymission/complex/mainfacility/tram)
 "Zl" = (
@@ -14845,6 +15155,14 @@
 /obj/structure/sign/departments/xenobio/alt/directional/west,
 /turf/open/floor/iron/white,
 /area/awaymission/complex/mainfacility/research)
+"ZN" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 1
+	},
+/mob/living/basic/trooper/complex/ranged/chemist,
+/turf/open/floor/iron/white,
+/area/awaymission/complex/mainfacility/medical/cryogenics)
 "ZO" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/structure/fence/cut/medium{
@@ -15020,13 +15338,13 @@ BC
 BC
 BC
 BC
-BC
+FQ
 BC
 VN
 VN
 VN
 BC
-BC
+FQ
 BC
 BC
 wP
@@ -15167,22 +15485,22 @@ SA
 VN
 BC
 BC
+FQ
 BC
 BC
 BC
 BC
+FQ
 BC
 BC
 BC
 BC
+FQ
 BC
 BC
 BC
 BC
-BC
-BC
-BC
-BC
+FQ
 BC
 BC
 BC
@@ -15196,7 +15514,7 @@ BC
 BC
 BC
 BC
-BC
+FQ
 BC
 fE
 BC
@@ -15240,7 +15558,7 @@ hw
 hw
 hw
 hw
-BC
+FQ
 BC
 BC
 VN
@@ -15442,7 +15760,7 @@ gO
 AS
 jD
 eT
-eT
+UT
 BH
 jD
 JQ
@@ -15581,7 +15899,7 @@ Ly
 SA
 VN
 BC
-BC
+FQ
 qD
 qD
 qD
@@ -15687,7 +16005,7 @@ EG
 mo
 mE
 xb
-ta
+cX
 ta
 ta
 gu
@@ -15775,7 +16093,7 @@ ta
 ta
 gu
 Ts
-yC
+Rl
 yC
 yC
 yC
@@ -15819,14 +16137,14 @@ BC
 (12,1,1) = {"
 hw
 hw
-BC
+FQ
 BC
 BC
 BC
 kG
 VN
 XL
-Ly
+el
 SA
 VN
 kG
@@ -15862,12 +16180,12 @@ uA
 lr
 yC
 yC
-DT
+cB
 yC
 yC
 yC
 NP
-Hv
+kR
 lw
 QB
 QB
@@ -15905,7 +16223,7 @@ hw
 BC
 BC
 iZ
-iZ
+YR
 iZ
 Tj
 We
@@ -15913,7 +16231,7 @@ BY
 cA
 CM
 iZ
-iZ
+YR
 qD
 qD
 Qm
@@ -16003,7 +16321,7 @@ ZV
 Sa
 qD
 qL
-Dq
+oB
 jC
 Gn
 jM
@@ -16038,7 +16356,7 @@ IY
 Ux
 QB
 QB
-zm
+zs
 zu
 Pl
 Pl
@@ -16115,7 +16433,7 @@ xi
 mV
 Rm
 PJ
-PJ
+tJ
 gg
 Vo
 Dr
@@ -16311,7 +16629,7 @@ BC
 BC
 BC
 BC
-BC
+FQ
 hw
 "}
 (18,1,1) = {"
@@ -16374,7 +16692,7 @@ zw
 Ot
 Lh
 Dr
-QB
+Ww
 JH
 BC
 BC
@@ -16495,11 +16813,11 @@ nx
 ma
 jU
 MQ
-OF
-OF
-OF
-OF
-OF
+AJ
+AJ
+AJ
+AJ
+AJ
 AJ
 aZ
 UC
@@ -16554,7 +16872,7 @@ BC
 qI
 BC
 BC
-BC
+FQ
 hw
 hw
 hw
@@ -16566,7 +16884,7 @@ hw
 (21,1,1) = {"
 hw
 hw
-BC
+FQ
 BC
 iZ
 MQ
@@ -16578,11 +16896,11 @@ nx
 ma
 jU
 MQ
-iG
+AJ
 xa
 gR
 kD
-OF
+AJ
 fA
 KQ
 ES
@@ -16627,7 +16945,7 @@ il
 JT
 sZ
 dz
-BC
+FQ
 qI
 BC
 qI
@@ -16662,7 +16980,7 @@ ma
 jU
 MQ
 iG
-FQ
+zJ
 CL
 zJ
 nz
@@ -16682,7 +17000,7 @@ ED
 kX
 Mm
 tx
-mM
+Jr
 et
 et
 KK
@@ -16697,7 +17015,7 @@ Fv
 Wl
 Wl
 Wl
-Wl
+VV
 HO
 rA
 bu
@@ -16744,11 +17062,11 @@ nx
 ma
 jU
 MQ
-iG
+AJ
 XC
 VC
 gJ
-OF
+AJ
 Dp
 CF
 iO
@@ -16780,8 +17098,8 @@ Lc
 qg
 qg
 bV
-Wl
-HO
+wq
+nZ
 Dr
 nK
 OK
@@ -16848,7 +17166,7 @@ kT
 eZ
 AJ
 jE
-fH
+OF
 fw
 fw
 MZ
@@ -17037,7 +17355,7 @@ eY
 fb
 hV
 hV
-hV
+bk
 Kx
 ko
 pu
@@ -17050,7 +17368,7 @@ Cx
 BC
 BC
 BC
-BC
+FQ
 hw
 hw
 hw
@@ -17125,7 +17443,7 @@ ZD
 oL
 eO
 dz
-Rx
+fY
 Rx
 Rx
 Rx
@@ -17313,7 +17631,7 @@ hw
 (30,1,1) = {"
 hw
 hw
-BC
+FQ
 BC
 iZ
 MQ
@@ -17526,7 +17844,7 @@ kZ
 OO
 Dh
 cS
-pP
+Xp
 Wl
 wj
 DK
@@ -17545,7 +17863,7 @@ BC
 BC
 BC
 BC
-BC
+FQ
 hw
 hw
 hw
@@ -17623,7 +17941,7 @@ NG
 wG
 sA
 sh
-BC
+FQ
 BC
 BC
 BC
@@ -17789,7 +18107,7 @@ iR
 Ac
 Yo
 sh
-Bp
+De
 Rx
 Rx
 Kr
@@ -18226,7 +18544,7 @@ hw
 (41,1,1) = {"
 hw
 hw
-BC
+FQ
 BC
 iZ
 Wk
@@ -18309,7 +18627,7 @@ IE
 (42,1,1) = {"
 hw
 hw
-BC
+fE
 BC
 iZ
 MQ
@@ -18475,8 +18793,8 @@ IE
 (44,1,1) = {"
 hw
 hw
-fE
-BC
+Rx
+Rx
 iZ
 MQ
 TQ
@@ -18755,7 +19073,7 @@ OD
 jL
 jL
 CZ
-bk
+ta
 yk
 mn
 PO
@@ -18772,7 +19090,7 @@ ta
 ta
 ta
 ta
-ta
+OE
 ta
 VA
 mt
@@ -18781,7 +19099,7 @@ kV
 RW
 Mr
 Mr
-Mr
+nq
 IC
 JR
 zi
@@ -18793,7 +19111,7 @@ hw
 IE
 IE
 IE
-Bj
+Rq
 IE
 IE
 vo
@@ -18806,7 +19124,7 @@ IE
 "}
 (48,1,1) = {"
 hw
-BC
+FQ
 BC
 BC
 iZ
@@ -18837,8 +19155,8 @@ pM
 Tc
 Hy
 jG
-jG
 wh
+jG
 up
 AW
 Ia
@@ -18945,7 +19263,7 @@ jD
 zi
 iP
 Zl
-lM
+Vn
 lM
 UZ
 Jp
@@ -19006,7 +19324,7 @@ CT
 dG
 Yz
 LN
-wf
+ta
 pT
 Yz
 dG
@@ -19187,7 +19505,7 @@ dB
 wI
 kY
 Yd
-Pr
+so
 gx
 yZ
 XP
@@ -19358,7 +19676,7 @@ EX
 Cb
 al
 ek
-ek
+bf
 lY
 sb
 GB
@@ -19432,7 +19750,7 @@ ip
 sN
 Al
 VB
-kx
+TH
 WV
 ty
 zk
@@ -19440,16 +19758,16 @@ bx
 Ko
 Cb
 fP
-ek
+dY
 de
 MD
 hp
-ck
+qC
 fU
-Yv
+LJ
 Um
 rg
-BC
+FQ
 BC
 BC
 hw
@@ -19553,7 +19871,7 @@ hw
 "}
 (57,1,1) = {"
 hw
-hw
+FQ
 BC
 BC
 iZ
@@ -19636,7 +19954,7 @@ hw
 "}
 (58,1,1) = {"
 hw
-hw
+BC
 BC
 BC
 iZ
@@ -19720,8 +20038,8 @@ hw
 (59,1,1) = {"
 hw
 hw
-BC
-BC
+Rx
+Rx
 iZ
 Wk
 TQ
@@ -19753,7 +20071,7 @@ GN
 LI
 ta
 wf
-wf
+ta
 QH
 aV
 Lj
@@ -19773,7 +20091,7 @@ Uo
 nT
 fg
 KU
-MA
+jx
 Yh
 hp
 Bl
@@ -19854,7 +20172,7 @@ OC
 OC
 xd
 nT
-fg
+ZN
 Si
 MA
 Yh
@@ -19919,7 +20237,7 @@ PZ
 ll
 ta
 ta
-ta
+FG
 tA
 eP
 Ai
@@ -19947,7 +20265,7 @@ ck
 qR
 WH
 rg
-Rx
+fY
 VN
 Rx
 hw
@@ -20115,7 +20433,7 @@ Jx
 GZ
 BC
 BC
-hw
+BC
 hw
 hw
 hw
@@ -20135,7 +20453,7 @@ hw
 (64,1,1) = {"
 hw
 hw
-BC
+FQ
 BC
 iZ
 MQ
@@ -20198,7 +20516,7 @@ nX
 GZ
 Gg
 BC
-hw
+BC
 hw
 hw
 hw
@@ -20218,7 +20536,7 @@ hw
 (65,1,1) = {"
 hw
 hw
-Rx
+fY
 Rx
 iZ
 Wk
@@ -20268,7 +20586,7 @@ qF
 yx
 rv
 OC
-Od
+tO
 fO
 eb
 GZ
@@ -20328,7 +20646,7 @@ IF
 IF
 IF
 BC
-BC
+FQ
 BC
 BC
 BC
@@ -20405,7 +20723,7 @@ Ur
 BC
 BC
 Hs
-BC
+FQ
 BC
 xk
 BC
@@ -20424,7 +20742,7 @@ BC
 BC
 BC
 BC
-BC
+FQ
 BC
 BC
 BC
@@ -20435,7 +20753,7 @@ rR
 DS
 yQ
 mz
-fO
+GP
 iH
 GZ
 yR
@@ -20445,7 +20763,7 @@ ME
 Eg
 Hp
 GZ
-BC
+FQ
 BC
 hw
 hw
@@ -20468,7 +20786,7 @@ hw
 hw
 hw
 Rx
-Rx
+fY
 iZ
 MQ
 Kq
@@ -20482,7 +20800,7 @@ MQ
 iZ
 BC
 au
-BC
+FQ
 au
 BC
 BC
@@ -20529,7 +20847,7 @@ hI
 GZ
 GZ
 BC
-hw
+BC
 hw
 hw
 hw
@@ -20553,7 +20871,7 @@ hw
 BC
 BC
 iZ
-iZ
+YR
 iZ
 Tj
 We
@@ -20561,7 +20879,7 @@ BY
 cA
 CM
 iZ
-iZ
+YR
 iZ
 BC
 BC
@@ -20580,12 +20898,13 @@ BC
 BC
 BC
 BC
-BC
+FQ
 BC
 VN
 VN
 VN
 BC
+FQ
 BC
 BC
 BC
@@ -20593,8 +20912,7 @@ BC
 BC
 BC
 BC
-BC
-BC
+FQ
 yQ
 Ty
 VK
@@ -20612,7 +20930,7 @@ kc
 GZ
 BC
 BC
-hw
+BC
 hw
 hw
 hw
@@ -20640,7 +20958,7 @@ BC
 bR
 VN
 XL
-Ly
+el
 SA
 VN
 bR
@@ -20683,7 +21001,7 @@ ls
 sm
 Bt
 lC
-Od
+gi
 fO
 HH
 GZ
@@ -20695,7 +21013,7 @@ li
 GZ
 wP
 BC
-hw
+BC
 hw
 hw
 hw
@@ -20778,7 +21096,7 @@ FL
 GZ
 BC
 BC
-hw
+BC
 hw
 hw
 hw
@@ -20800,7 +21118,7 @@ hw
 hw
 hw
 hw
-BC
+FQ
 BC
 BC
 BC
@@ -20859,7 +21177,7 @@ GZ
 GZ
 hf
 GZ
-BC
+FQ
 BC
 hw
 hw
