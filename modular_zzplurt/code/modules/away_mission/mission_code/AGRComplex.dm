@@ -86,6 +86,9 @@
 	<br>You may view intelligence reports from your predecessors in the filing cabinet in your office.
 	"}
 
+/obj/item/gun/ballistic/automatic/pistol/nt_glock/lethal
+	spawn_magazine_type = /obj/item/ammo_box/magazine/m9mm
+
 /obj/item/ammo_casing/c10mm/spent
 	projectile_type = null
 
@@ -710,6 +713,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	name = "Syndicate Winter Operative"
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/syndicate
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/syndicate
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/syndicate/melee/complex
 	name = "Syndicate Winter Operative"
@@ -717,6 +722,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/syndicate
 	r_hand = /obj/item/knife/combat/survival
 	loot = list(/obj/item/knife/combat/survival)
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/syndicate/melee/sword/complex
 	name = "Syndicate Winter Operative"
@@ -724,6 +731,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/syndicate
 	r_hand = /obj/item/melee/energy/sword/saber/red
 	loot = list(/obj/item/melee/energy/sword/saber/red)
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/syndicate/ranged/complex
 	name = "Syndicate Winter Operative"
@@ -732,6 +741,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/clandestine)
 	r_hand = /obj/item/gun/ballistic/automatic/pistol/clandestine
 	casingtype = /obj/item/ammo_casing/c10mm
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/syndicate/ranged/smg/complex
 	name = "Syndicate Winter Operative"
@@ -740,6 +751,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	loot = list(/obj/item/gun/ballistic/automatic/c20r/unrestricted)
 	r_hand = /obj/item/gun/ballistic/automatic/c20r/unrestricted
 	projectilesound = 'sound/items/weapons/gun/smg/shot.ogg'
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/syndicate/ranged/shotgun/complex
 	name = "Syndicate Winter Operative"
@@ -748,6 +761,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	loot = list(/obj/item/gun/ballistic/shotgun/bulldog/unrestricted)
 	r_hand = /obj/item/gun/ballistic/shotgun/bulldog/unrestricted
 	projectilesound = 'sound/items/weapons/gun/shotgun/shot_alt.ogg'
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/syndicate/ranged/complex/comms
 	name = "Syndicate Comms Agent"
@@ -757,6 +772,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	r_hand = /obj/item/gun/ballistic/revolver/badass
 	casingtype = /obj/item/ammo_casing/c357
 	projectilesound = 'sound/items/weapons/gun/revolver/shot_alt.ogg'
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/syndicate/ranged/complex/captain
 	name = "Syndicate Captain"
@@ -768,50 +785,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	burst_shots = 4
 	ranged_cooldown = 3 SECONDS
 	projectilesound = 'sound/items/weapons/gun/smg/shot.ogg'
-
-/mob/living/simple_animal/hostile/complex/cyborg
-	name = "Security Dogborg"
-	desc = "A cyborg made by Nanotrasen, this one appears to be a vale security module and mildly angry!"
-	faction = list("Complex")
-	icon = 'modular_zzplurt/code/modules/away_mission/mission_code/AGRComplex_Icons.dmi'
-	death_message = "shudders violently for a moment before falling still, its eyes slowly darkening."
-	death_sound = 'sound/mobs/non-humanoids/cyborg/borg_deathsound.ogg'
-	gender = NEUTER
-	pixel_x = -16
-	icon_state = "sec_dogborg"
-	icon_living = "sec_dogborg"
-	icon_dead = "sec_dogborg-dead"
-	mob_biotypes = MOB_ROBOTIC
-	sentience_type = SENTIENCE_HUMANOID
-	speak_chance = 0
-	turns_per_move = 5
-	speed = 0
-	stat_attack = HARD_CRIT
-	projectiletype = /obj/projectile/beam/laser
-	projectilesound = 'sound/items/weapons/laser.ogg'
-	ranged = TRUE
-	ranged_cooldown_time = 8
-	robust_searching = 0
-	maxHealth = 200
-	health = 200
-	harm_intent_damage = 5
-	obj_damage = 20
-	melee_damage_lower = 12
-	melee_damage_upper = 12
-	attack_verb_continuous = "harmbatons"
-	attack_verb_simple = "slammed"
-	attack_sound = 'sound/items/weapons/genhit1.ogg'
-	combat_mode = TRUE
-	atmos_requirements = null
-	aggro_vision_range = 9
-	unsuitable_atmos_damage = 7.5
-	status_flags = CANPUSH
-	rapid_melee = 2
-	weather_immunities = list(TRAIT_LAVA_IMMUNE, TRAIT_ASHSTORM_IMMUNE)
-	minbodytemp = 0
-	maxbodytemp = INFINITY
-	atmos_requirements = null
-	footstep_type = FOOTSTEP_MOB_HEAVY
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/complex
 	name = "Complex Survivor"
@@ -820,6 +795,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	corpse = /obj/effect/mob_spawn/corpse/human/complex
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex
 	death_message = "seizes up and falls limp, their eyes dead and lifeless..."
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = 0
 
 /mob/living/basic/trooper/complex/ranged
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911)
@@ -935,8 +912,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	name = "Complex Security"
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/security
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/nt_glock)
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/nt_glock
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/nt_glock/lethal)
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/nt_glock/lethal
 	casingtype = /obj/item/ammo_casing/c9mm
 	maxHealth = 150
 	health = 150
@@ -1219,6 +1196,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	area_flags = UNIQUE_AREA | FLORA_ALLOWED
 	outdoors = TRUE
 
+/area/awaymission/complex/exterior/structure
+	name = "Complex Structure"
+	icon_state = "awaycontent1"
+
 /area/awaymission/complex/exterior/lights
 	name = "Complex Exterior Lights"
 	icon = 'icons/area/areas_station.dmi'
@@ -1232,6 +1213,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 /area/awaymission/complex/exterior/lights/artillery
 	name = "Security Facility Artillery Yard Lights"
 	icon_state = "security"
+	outdoors = TRUE
+
+/area/awaymission/complex/exterior/lights/complex
+	name = "Complex Path Lights"
+	icon_state = "commons"
 	outdoors = TRUE
 
 /area/awaymission/complex/exterior/lights/prison
@@ -1250,6 +1236,22 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	name = "Complex Mountains"
 	icon_state = "awaycontent24"
 
+/area/awaymission/complex/powerstation
+	name = "Power Substation"
+	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
+	icon_state = "engie_power"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
+/area/awaymission/complex/storagestation
+	name = "Storage Substation"
+	icon = 'icons/area/areas_station.dmi'
+	icon_state = "engine_storage"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
 /area/awaymission/complex/secfacility
 	name = "Security Facility Hallway"
 	icon_state = "brig"
@@ -1262,12 +1264,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	icon_state = "brigentry"
 
 /area/awaymission/complex/secfacility/power
-	name = "Security Facility Power Maintenance"
+	name = "Security Facility Power Station"
 	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "sec_power"
 
 /area/awaymission/complex/secfacility/power/prison
-	name = "Security Facility Prison Wing Power Maintenance"
+	name = "Security Facility Prison Wing Power Station"
 
 /area/awaymission/complex/secfacility/processing
 	name = "Security Facility Processing Office"
@@ -1411,6 +1413,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	name = "Main Facility Nanotrasen Representative's Office"
 	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "nt_rep"
+
+/area/awaymission/complex/mainfacility/power
+	name = "Main Facility Power Station"
+	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
+	icon_state = "power_room"
 
 /area/awaymission/complex/mainfacility/cargo
 	name = "Main Facility Logistics Department"

@@ -16,4 +16,3 @@
 #_maps/RandomZLevels/SnowCabin.dmm
 #_maps/RandomZLevels/blackmesa.dmm
 #_maps/RandomZLevels/museum.dmm
-#_maps/AGRCOGREWORK.dmm
