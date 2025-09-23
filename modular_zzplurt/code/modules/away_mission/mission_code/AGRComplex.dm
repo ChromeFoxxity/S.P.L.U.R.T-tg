@@ -1196,16 +1196,23 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	area_flags = UNIQUE_AREA | FLORA_ALLOWED
 	outdoors = TRUE
 
+/area/awaymission/complex/exterior/atmospherics
+	name = "Complex Atmos Yard"
+	always_unpowered = FALSE
+	power_environ = TRUE
+	requires_power = FALSE
+	outdoors = TRUE
+
 /area/awaymission/complex/exterior/structure
 	name = "Complex Structure"
 	icon_state = "awaycontent1"
+	outdoors = FALSE
 
 /area/awaymission/complex/exterior/lights
 	name = "Complex Exterior Lights"
 	icon = 'icons/area/areas_station.dmi'
 	icon_state = "commons"
 	always_unpowered = FALSE
-	power_environ = TRUE
 	power_light = TRUE
 	requires_power = FALSE
 	outdoors = TRUE
@@ -1215,14 +1222,24 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	icon_state = "security"
 	outdoors = TRUE
 
+/area/awaymission/complex/exterior/lights/prison
+	name = "Security Facility Prison Yard Lights"
+	icon_state = "sec_prison"
+	outdoors = TRUE
+
 /area/awaymission/complex/exterior/lights/complex
 	name = "Complex Path Lights"
 	icon_state = "commons"
 	outdoors = TRUE
 
-/area/awaymission/complex/exterior/lights/prison
-	name = "Security Facility Prison Yard Lights"
-	icon_state = "sec_prison"
+/area/awaymission/complex/exterior/lights/storage
+	name = "Storage Station Exterior Lights"
+	icon_state = "commons"
+	outdoors = TRUE
+
+/area/awaymission/complex/exterior/lights/power
+	name = "Power Station Exterior Lights"
+	icon_state = "commons"
 	outdoors = TRUE
 
 /area/awaymission/complex/cave
@@ -1231,6 +1248,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	icon_state = "awaycontent15"
 	static_lighting = TRUE
 	base_lighting_alpha = 0
+
+/area/awaymission/complex/cave/botany
+	name = "Complex Hydroponics Cave"
+	icon = 'icons/area/areas_station.dmi'
+	icon_state = "hydro"
+	always_unpowered = FALSE
+	power_equip = TRUE
+	requires_power = FALSE
 
 /area/awaymission/complex/cave/mountain
 	name = "Complex Mountains"
@@ -1252,6 +1277,86 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	static_lighting = TRUE
 	base_lighting_alpha = 0
 
+/area/awaymission/complex/hydrofacility
+	name = "Hydroponics Facility"
+	icon_state = "hydro"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
+/area/awaymission/complex/hydrofacility/power
+	name = "Hydroponics Facility Power Station"
+	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
+	icon_state = "power_room"
+
+/area/awaymission/complex/hydrofacility/growroom
+	name = "Hydroponics Facility Growroom 1"
+	icon_state = "garden"
+
+/area/awaymission/complex/hydrofacility/growroom2
+	name = "Hydroponics Facility Growroom 2"
+	icon_state = "garden"
+
+/area/awaymission/complex/hydrofacility/breakroom
+	name = "Hydroponics Facility Break Room"
+
+/area/awaymission/complex/hydrofacility/equip
+	name = "Hydroponics Facility Equipment Storage"
+
+/area/awaymission/complex/hydrofacility/freezer
+	name = "Hydroponics Facility Produce Freezer"
+
+/area/awaymission/complex/engfacility
+	name = "Engineering Facility Office"
+	icon_state = "engie"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
+/area/awaymission/complex/engfacility/smes
+	name = "Engineering Facility SMES Foyer"
+	icon_state = "engine_smes"
+
+/area/awaymission/complex/engfacility/breakroom
+	name = "Engineering Facility Break Room"
+	icon_state = "engine_break"
+
+/area/awaymission/complex/engfacility/atmos
+	name = "Engineering Facility Atmospherics"
+	icon_state = "atmos"
+
+/area/awaymission/complex/engfacility/solar
+	name = "Engineering Facility Solar Control Room"
+	icon_state = "panels"
+
+/area/awaymission/complex/engfacility/security
+	name = "Engineering Facility Security Post"
+	icon_state = "checkpoint_engi"
+
+/area/awaymission/complex/engfacility/telecomms
+	name = "Engineering Facility Telecommunications Office"
+	icon_state = "tcomsatcomp"
+
+/area/awaymission/complex/engfacility/telecomms/server
+	name = "Engineering Facility Telecommunications Server Room"
+	icon_state = "tcomsatcham"
+
+/area/awaymission/complex/engfacility/storage
+	name = "Engineering Facility Equipment Storage"
+	icon_state = "engine_storage_shared"
+
+/area/awaymission/complex/engfacility/storage/secure
+	name = "Engineering Facility Secure Storage"
+	icon_state = "engine_storage"
+
+/area/awaymission/complex/engfacility/storage/tech
+	name = "Engineering Facility Tech Storage"
+	icon_state = "tech_storage"
+
+/area/awaymission/complex/engfacility/directoroffice
+	name = "Engineering Facility Engineering Director's Office"
+	icon_state = "ce_office"
+
 /area/awaymission/complex/secfacility
 	name = "Security Facility Hallway"
 	icon_state = "brig"
@@ -1266,7 +1371,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 /area/awaymission/complex/secfacility/power
 	name = "Security Facility Power Station"
 	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
-	icon_state = "sec_power"
+	icon_state = "power_room"
 
 /area/awaymission/complex/secfacility/power/prison
 	name = "Security Facility Prison Wing Power Station"
