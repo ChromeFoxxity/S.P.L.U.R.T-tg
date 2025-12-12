@@ -15,3 +15,10 @@
 
 /datum/map_template/ruin/space/skyrat/shuttle8532
 	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // Skyrat Map edit.
+
+/datum/map_template/ruin/space/splurt/syndiebase
+	id = "syndiebase"
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
+	suffix = "syndiebase.dmm"
+	name = "Space-Ruin Blackspire Research Annex"
+	description = "A Syndicate research outpost in deep space, one of the primary frontier outposts."

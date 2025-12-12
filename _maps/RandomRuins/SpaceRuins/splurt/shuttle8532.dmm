@@ -17,11 +17,11 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
-/obj/machinery/computer/old{
-	name = "Shuttle 8532 Navigation Computer";
+/obj/machinery/computer{
 	desc = "Used to designate a precise transit location for the Shuttle 8532.";
 	icon_keyboard = "security_key";
-	icon_screen = "cameras"
+	icon_screen = "cameras";
+	name = "Shuttle 8532 Navigation Computer"
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/shuttle8532bridge)
@@ -461,13 +461,13 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/obj/machinery/computer/old{
-	name = "Shuttle 8532 Shuttle Console";
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer{
 	desc = "Used to control the Shuttle 8532.";
 	icon_keyboard = "tech_key";
-	icon_screen = "shuttle"
+	icon_screen = "shuttle";
+	name = "Shuttle 8532 Shuttle Console"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/shuttle8532bridge)
 "ei" = (
@@ -4006,11 +4006,11 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
-/obj/machinery/computer/old{
-	name = "communications console";
+/obj/machinery/computer{
 	desc = "A console used for high-priority announcements and emergencies.";
 	icon_keyboard = "tech_key";
-	icon_screen = "comm"
+	icon_screen = "comm";
+	name = "communications console"
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/shuttle8532bridge)

@@ -1,4 +1,5 @@
 /// Syndicate troopers
+/*
 /mob/living/basic/trooper/syndicate
 	name = "Syndicate Operative"
 	desc = "Death to Nanotrasen."
@@ -251,3 +252,5 @@
 	. = ..()
 	AddElement(/datum/element/simple_flying)
 	AddComponent(/datum/component/swarming)
+	*/
+
