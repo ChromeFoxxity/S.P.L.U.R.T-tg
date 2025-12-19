@@ -29,6 +29,8 @@
 		"custom_genital_fluids_pref" = /datum/preference/toggle/erp/custom_genital_fluids,
 		"cumflation_pref" = /datum/preference/toggle/erp/cumflation,
 		"cumflates_partners_pref" = /datum/preference/toggle/erp/cumflates_partners,
+		"knotting_pref" = /datum/preference/toggle/erp/knotting,
+		"knots_partners_pref" = /datum/preference/toggle/erp/knots_partners,
 		"favorite_interactions" = /datum/preference/blob/favorite_interactions, // Not a toggle but it shouldn't cause any issues
 		// Vore prefs
 		"vore_enable_pref" = /datum/preference/toggle/erp/vore_enable,
@@ -244,14 +246,14 @@
 	if(target.get_bodypart(BODY_ZONE_L_ARM) || target.get_bodypart(BODY_ZONE_R_ARM))
 		attributes += "have hands"
 	if(target.get_bodypart(BODY_ZONE_HEAD) || (!iscarbon(target) && target.simulated_interaction_requirements[INTERACTION_REQUIRE_SELF_MOUTH]))
-		attributes += "have a mouth, which is [!target.is_mouth_covered() ? "covered" : "uncovered"]"
+		attributes += "have a mouth, which is [target.is_mouth_covered() ? "covered" : "uncovered"]"
 
 	// Sexual exhaustion
-	if(!COOLDOWN_FINISHED(target, refractory_period))
+	if(target.refractory_period > REALTIMEOFDAY) // fix - was ticks since server start vs ticks since midnight
 		attributes += "are sexually exhausted for the time being"
 
 	// Intent
-	switch(resolve_intent_name(target.combat_mode))
+	switch(target.combat_mode)
 		if(INTENT_HELP)
 			attributes += "are acting gentle"
 		if(INTENT_DISARM)
@@ -297,6 +299,11 @@
 			if(1)
 				attributes += "have a single foot"
 
+	// Tail
+	var/mob/living/carbon/human/human_target = target
+	if(ishuman(human_target) && human_target.has_tail(REQUIRE_GENITAL_ANY))
+		attributes += "have a tail"
+
 	return attributes
 
 /**
@@ -318,11 +325,11 @@
 
 	// Get fluid amount from source genital
 	var/obj/item/organ/genital/fluid_source = partner.get_organ_slot(source_genital)
-	if(!fluid_source || !fluid_source.internal_fluid_count)
+	if(!fluid_source || !fluid_source.reagents.total_volume)
 		return
 
 	// Calculate growth based on fluid amount relative to max capacity
-	var/growth_amount = ROUND_UP(fluid_source.internal_fluid_count / (fluid_source.internal_fluid_maximum * GENITAL_INFLATION_THRESHOLD))
+	var/growth_amount = ROUND_UP(fluid_source.reagents.total_volume / (fluid_source.internal_fluid_maximum * GENITAL_INFLATION_THRESHOLD))
 	if(!growth_amount)
 		return
 

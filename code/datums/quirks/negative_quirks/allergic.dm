@@ -8,6 +8,7 @@
 	medical_record_text = "Patient's immune system responds violently to certain chemicals."
 	hardcore_value = 3
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_PROCESSES
+	species_blacklist = list(SPECIES_SYNTH, SPECIES_PROTEAN) //Splurt Edit
 	mail_goodies = list(/obj/item/reagent_containers/hypospray/medipen) // epinephrine medipen stops allergic reactions
 	no_process_traits = list(TRAIT_STASIS)
 	var/list/allergies = list()
@@ -21,7 +22,9 @@
 		/datum/reagent/medicine/synaphydramine,
 		/datum/reagent/medicine/diphenhydramine,
 		/datum/reagent/medicine/sansufentanyl,
-		/datum/reagent/medicine/coagulant       //Bubber edit: adds coagulant
+		/datum/reagent/medicine/salglu_solution,
+		/datum/reagent/medicine/albuterol,
+		/datum/reagent/medicine/coagulant, //Bubber edit: adds coagulant
 		)
 	var/allergy_string
 

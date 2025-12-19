@@ -1,7 +1,7 @@
 /obj/effect/overlay/status_indicator/
 	icon = 'modular_zubbers/icons/mob/status_indicators.dmi'
 	pixel_z = 16
-	plane = POINT_PLANE
+	plane = ABOVE_GAME_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	alpha = 0
 
@@ -18,7 +18,8 @@
 	if(!indicator_fakeouts() && \
 	attached_mob.IsKnockdown() || \
 	HAS_TRAIT(attached_mob, TRAIT_FLOORED) && \
-	!HAS_TRAIT_FROM(attached_mob, TRAIT_FLOORED, BUCKLED_TRAIT)
+	!HAS_TRAIT_FROM(attached_mob, TRAIT_FLOORED, BUCKLED_TRAIT) && \
+	!HAS_TRAIT(attached_mob, TRAIT_PRONE) // voluntary flooring
 	)
 		return TRUE
 

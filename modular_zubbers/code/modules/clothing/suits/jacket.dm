@@ -378,56 +378,99 @@
 	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
 	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/paramedic
+/obj/item/clothing/suit/toggle/labcoat/paramedic/doctor_tailcoat
 	name = "paramedic's tailcoat"
 	desc = "A heavy duty coat worn by bunny themed paramedics. Marked with high visibility lines for emergency operations in the dark."
 	icon_state = "paramedic"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/chemist
+/obj/item/clothing/suit/toggle/labcoat/chemist/doctor_tailcoat
 	name = "chemist's tailcoat"
 	desc = "A sterile white and orange coat worn by bunny themed chemists. The open chest isn't the greatest when working with dangerous substances."
 	icon_state = "chem"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	post_init_icon_state = null
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/pathologist
+/obj/item/clothing/suit/toggle/labcoat/virologist/doctor_tailcoat
 	name = "pathologist's tailcoat"
 	desc = "A sterile white and green coat worn by bunny themed pathologists. The more stylish and ineffective alternative to a biosuit."
 	icon_state = "virologist"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	post_init_icon_state = null
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/coroner
+/obj/item/clothing/suit/toggle/labcoat/coroner/doctor_tailcoat
 	name = "coroner's tailcoat"
 	desc = "A sterile black and white coat worn by bunny themed coroners. Adorned with a skull on the back."
 	icon_state = "coroner"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	post_init_icon_state = null
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/cmo
+/obj/item/clothing/suit/toggle/labcoat/cmo/doctor_tailcoat
 	name = "chief medical officer's tailcoat"
 	desc = "A sterile blue coat worn by bunny themed chief medical officers. The blue helps both the wearer and bloodstains stand out from other, lower ranked, and cleaner doctors."
 	icon_state = "cmo"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
 
 //SCIENCE
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/science
+/obj/item/clothing/suit/toggle/labcoat/science/doctor_tailcoat
 	name = "scientist's tailcoat"
 	desc = "A smart white coat worn by bunny themed scientists. Decent protection against slimes."
 	icon_state = "science"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	post_init_icon_state = null
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/science/robotics
+/obj/item/clothing/suit/toggle/labcoat/roboticist/doctor_tailcoat
 	name = "roboticist's tailcoat"
 	desc = "A smart white coat with red pauldrons worn by bunny themed roboticists. Looks surprisingly good with oil stains on it."
 	icon_state = "roboticist"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	post_init_icon_state = null
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/science/genetics
+/obj/item/clothing/suit/toggle/labcoat/genetics/doctor_tailcoat
 	name = "geneticist's tailcoat"
 	desc = "A smart white and blue coat worn by bunny themed geneticists. Nearly looks like a real doctor's lab coat."
 	icon_state = "genetics"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	post_init_icon_state = null
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 
-/obj/item/clothing/suit/jacket/research_director/tailcoat
+/obj/item/clothing/suit/toggle/labcoat/research_director/tailcoat
 	name = "research director's tailcoat"
 	desc = "A smart purple coat worn by bunny themed head researchers. Created from captured abductor technology, what looks like a coat is actually an advanced hologram emitted from the pauldrons. Feels exactly like the real thing, too."
 	icon_state = "rd"
 	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
 	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
-	body_parts_covered = CHEST|ARMS|GROIN
+	post_init_icon_state = null
+	greyscale_config = null
+	greyscale_config_worn = null
+	greyscale_colors = null
 
 //SECURITY
 
@@ -454,10 +497,14 @@
 	desc = "A reinforced tailcoat worn by bunny themed wardens. Stylishly holds hidden flak plates."
 	icon_state = "warden"
 
-/obj/item/clothing/suit/toggle/labcoat/doctor_tailcoat/sec
+/obj/item/clothing/suit/toggle/labcoat/skyrat/security_medic/doctor_tailcoat
 	name = "brig physician's tailcoat"
 	desc = "A mostly sterile red and grey coat worn by bunny themed brig physicians. It lacks the padding of the \"standard\" security tailcoat."
 	icon_state = "brig_phys"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	blood_overlay_type = "coat"
+
 
 /obj/item/clothing/suit/jacket/det_suit/tailcoat
 	name = "detective's tailcoat"
@@ -484,6 +531,7 @@
 	dog_fashion = null
 	armor_type = /datum/armor/armor_hos
 	strip_delay = 80
+
 //SERVICE
 
 /obj/item/clothing/suit/armor/hop_tailcoat
@@ -696,3 +744,314 @@
 	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
 	icon_state = "galfed"
 	body_parts_covered = CHEST|ARMS|GROIN
+
+//Doppler Hoodies, sprites seemingly by kittysmooch of who woulda guessed, Doppler.
+
+/obj/item/clothing/suit/hooded/big_hoodie
+	name = "oversized hoodie"
+	desc = "Cotton fibres grown in vertical aeroponic farming systems were ringspun and knit into a continuous loop fleece with \
+	a soft pile and little stretch. This fabric was cut oversized with soft sloping shoulders and cuffs that fall right at the first knuckle."
+	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon_state = "/obj/item/clothing/suit/hooded/big_hoodie"
+	post_init_icon_state = "big_hoodie"
+	greyscale_config = /datum/greyscale_config/big_hoodie
+	greyscale_config_worn = /datum/greyscale_config/big_hoodie/worn
+	greyscale_colors = "#5d6161"
+	hoodtype = /obj/item/clothing/head/hooded/big_hoodie_hood
+	flags_1 = IS_PLAYER_COLORABLE_1
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+
+/obj/item/clothing/head/hooded/big_hoodie_hood
+	name = "oversized hood"
+	desc = "Cotton fibres grown in vertical aeroponic farming systems were ringspun and knit into a continuous loop fleece with \
+	a soft pile and little stretch. The hood was cut comfortably oversized."
+	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon_state = "/obj/item/clothing/head/hooded/big_hoodie_hood"
+	post_init_icon_state = "big_hoodie_hood"
+	body_parts_covered = HEAD
+	cold_protection = HEAD
+	flags_inv = HIDEEARS|HIDEHAIR
+	flags_1 = IS_PLAYER_COLORABLE_1
+	hair_mask = /datum/hair_mask/winterhood
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	greyscale_config = /datum/greyscale_config/big_hoodie_hood
+	greyscale_config_worn = /datum/greyscale_config/big_hoodie_hood/worn
+	greyscale_colors = "#5d6161"
+
+/obj/item/clothing/suit/hooded/big_hoodie/set_greyscale(list/colors, new_config, new_worn_config, new_inhand_left, new_inhand_right)
+	. = ..()
+	if(!hood)
+		return
+	var/list/hoodie_colors = SSgreyscale.ParseColorString(greyscale_colors)
+	var/list/new_hoodie_colors = hoodie_colors.Copy(1)
+	hood.set_greyscale(new_hoodie_colors)
+	hood.update_slot_icon()
+
+/obj/item/clothing/suit/hooded/big_hoodie/on_hood_created(obj/item/clothing/head/hooded/hood)
+	. = ..()
+	var/list/hoodie_colors = (SSgreyscale.ParseColorString(greyscale_colors))
+	var/list/new_hoodie_colors = hoodie_colors.Copy(1)
+	hood.set_greyscale(new_hoodie_colors)
+
+/obj/item/clothing/suit/hooded/twee_hoodie
+	name = "disconcertingly twee hoodie"
+	desc = "A sweatshirt of heavy and soft ringspun fleece has been adorned with a fabric simulation of ears."
+	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon_state = "/obj/item/clothing/suit/hooded/twee_hoodie"
+	post_init_icon_state = "twee_hoodie"
+	greyscale_config = /datum/greyscale_config/twee_hoodie
+	greyscale_config_worn = /datum/greyscale_config/twee_hoodie/worn
+	greyscale_colors = "#dbc0e0"
+	hoodtype = /obj/item/clothing/head/hooded/twee_hoodie_hood
+	flags_1 = IS_PLAYER_COLORABLE_1
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+
+/obj/item/clothing/head/hooded/twee_hoodie_hood
+	name = "disconcertingly twee hood"
+	desc = "A hood of heavy and soft ringspun fleece has been adorned with a fabric simulation of ears."
+	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon_state = "/obj/item/clothing/head/hooded/twee_hoodie_hood"
+	post_init_icon_state = "twee_hoodie_hood"
+	body_parts_covered = HEAD
+	cold_protection = HEAD
+	flags_inv = HIDEEARS|HIDEHAIR
+	flags_1 = IS_PLAYER_COLORABLE_1
+	hair_mask = /datum/hair_mask/winterhood
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	greyscale_config = /datum/greyscale_config/twee_hoodie_hood
+	greyscale_config_worn = /datum/greyscale_config/twee_hoodie_hood/worn
+	greyscale_colors = "#dbc0e0"
+
+/obj/item/clothing/suit/hooded/twee_hoodie/set_greyscale(list/colors, new_config, new_worn_config, new_inhand_left, new_inhand_right)
+	. = ..()
+	if(!hood)
+		return
+	var/list/hoodie_colors = SSgreyscale.ParseColorString(greyscale_colors)
+	var/list/new_hoodie_colors = hoodie_colors.Copy(1,2)
+	hood.set_greyscale(new_hoodie_colors)
+	hood.update_slot_icon()
+
+/obj/item/clothing/suit/hooded/twee_hoodie/on_hood_created(obj/item/clothing/head/hooded/hood)
+	. = ..()
+	var/list/hoodie_colors = (SSgreyscale.ParseColorString(greyscale_colors))
+	var/list/new_hoodie_colors = hoodie_colors.Copy(1,2)
+	hood.set_greyscale(new_hoodie_colors)
+
+//Bombers by Christasmurf, Synth of Paradice & Soljurn respectively.
+
+//Base so we don't need to keep putting icon/worn over and over
+/obj/item/clothing/suit/toggle/jacket/zubber
+	name = "please stop spawning me"
+	desc = "one down, cmon now"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	icon_state = "bomber"
+
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber
+	name = "three piece bomber jacket"
+	desc = "People love these things. Seriously. Three seperate versions? Come on now."
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+
+
+//Engineering
+
+/obj/item/clothing/suit/utility/fire/atmosbomber
+	name = "atmos technician bomber jacket"
+	desc = "You might be shocked that this fur lined jacket is fireproof! I am too!"
+	icon_state = "bomberatmos"
+	icon = 'modular_zubbers/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = 'modular_zubbers/icons/mob/clothing/suits/jacket.dmi'
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	w_class = WEIGHT_CLASS_NORMAL
+	body_parts_covered = CHEST|ARMS
+	slowdown = 0
+	armor_type = /datum/armor/atmos_tech_tailcoat
+	flags_inv = null
+	clothing_flags = null
+	min_cold_protection_temperature = null
+	max_heat_protection_temperature = null
+	strip_delay = 30
+	equip_delay_other = 30
+
+
+/obj/item/clothing/suit/utility/fire/atmosbomber/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/toggle_clothes, "bomberatmos_t")
+
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/engi
+	name = "engineering bomber jacket"
+	desc = "You can still carry your gear on this! Shocking, I know."
+	icon_state = "bomberengi"
+	allowed = list(
+		/obj/item/fireaxe/metal_h2_axe,
+		/obj/item/flashlight,
+		/obj/item/radio,
+		/obj/item/storage/bag/construction,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		/obj/item/t_scanner,
+		/obj/item/gun/ballistic/rifle/boltaction/pipegun/prime,
+	)
+
+//Cargo
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/cargo
+	name = "cargo bomber jacket"
+	desc = "Keep your rifle close, Cargonia isn't lost yet."
+	icon_state = "bombercargo"
+	allowed = list(
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		/obj/item/boxcutter,
+		/obj/item/dest_tagger,
+		/obj/item/stamp,
+		/obj/item/storage/bag/mail,
+		/obj/item/universal_scanner,
+	)
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/cargo/smith
+	name = "blacksmith bomber jacket"
+	desc = "1940s fashion mixed with 1140s typhoid."
+	icon_state = "bombersmith"
+	allowed = list(
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/forging/hammer,
+		/obj/item/forging/tongs,
+		/obj/item/forging/billow,
+	)
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/mining
+	name = "mining bomber jacket"
+	desc = "For a second, you swore this had a hood. Must be your brain playing tricks. You can glue plates onto it, too!"
+	icon_state = "bombermining"
+	cold_protection = CHEST|GROIN|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|ARMS
+	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
+	armor_type = /datum/armor/hooded_explorer
+	allowed = list(
+		/obj/item/flashlight,
+		/obj/item/gun/energy/recharge/kinetic_accelerator,
+		/obj/item/mining_scanner,
+		/obj/item/pickaxe,
+		/obj/item/resonator,
+		/obj/item/storage/bag/ore,
+		/obj/item/t_scanner/adv_mining_scanner,
+		/obj/item/tank/internals,
+		)
+	resistance_flags = FIRE_PROOF
+	clothing_traits = list(TRAIT_SNOWSTORM_IMMUNE)
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/mining/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+//Science
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/science
+	name = "science bomber jacket"
+	desc = "Trade in your, and these are not my words, 'pussy repellent labcoat' for something with some more style!"
+	icon_state = "bombersci"
+	allowed = list(
+		/obj/item/analyzer,
+		/obj/item/biopsy_tool,
+		/obj/item/dnainjector,
+		/obj/item/flashlight/pen,
+		/obj/item/healthanalyzer,
+		/obj/item/paper,
+		/obj/item/reagent_containers/dropper,
+		/obj/item/reagent_containers/cup/beaker,
+		/obj/item/reagent_containers/cup/bottle,
+		/obj/item/reagent_containers/cup/tube,
+		/obj/item/reagent_containers/hypospray,
+		/obj/item/reagent_containers/applicator,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/gun/syringe,
+		/obj/item/sensor_device,
+		/obj/item/soap,
+		/obj/item/stack/medical,
+		/obj/item/storage/pill_bottle,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		)
+	armor_type = /datum/armor/toggle_labcoat
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/science/robotics
+	name = "roboticist bomber jacket"
+	desc = "Those terrifying dog creatures treating your lab like a kennel might show you some respect if you wear the skin of their originators."
+	icon_state = "bomberrobo"
+
+
+//Medical
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/science/med
+	name = "medical bomber jacket"
+	desc = "Let's be honest here, we threw out sterility the second we hired anything with fur."
+	icon_state = "bombermed"
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/science/chem
+	name = "chemistry bomber jacket"
+	desc = "<b>STOP AURA FARMING AND GET US SYNTHFLESH!</b>"
+	icon_state = "bomberchem"
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/science/coroner
+	name = "black bomber jacket"
+	desc = "A pitch black, tar bomber jacket. If all your friends weren't dead, they'd think you're the coolest person around."
+	icon_state = "bombercoroner"
+
+//Misc
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/hydro
+	name = "botanical bomber blazer"
+	desc = "Not actually a blazer! But, to quote the designer 'Alliteration, an art.'"
+	icon_state = "bomberhydro"
+	allowed = list(
+		/obj/item/cultivator,
+		/obj/item/geneshears,
+		/obj/item/graft,
+		/obj/item/hatchet,
+		/obj/item/plant_analyzer,
+		/obj/item/reagent_containers/cup/beaker,
+		/obj/item/reagent_containers/cup/bottle,
+		/obj/item/reagent_containers/spray/pestspray,
+		/obj/item/reagent_containers/spray/plantbgone,
+		/obj/item/secateurs,
+		/obj/item/seeds,
+		/obj/item/storage/bag/plants,
+	)
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/sec
+	name = "security bomber jacket"
+	desc = "Our clothing company keeps out of any 'blue/red' related debates after <b>THE INCIDENT</b>, sorry."
+	icon_state = "bombersec"
+	armor_type = /datum/armor/suit_armor
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/sec/Initialize(mapload)
+	. = ..()
+	allowed += GLOB.security_vest_allowed
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/syndicate
+	name = "suspicious bomber jacket"
+	desc = "If the Bomber Harris book isn't a giveaway, someone's taking 'bomber' to heart."
+	icon_state = "bombersyndie"
+	armor_type = /datum/armor/wintercoat_syndicate
+
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/syndicate/Initialize(mapload)
+	. = ..()
+	allowed += list(
+		/obj/item/ammo_box,
+		/obj/item/ammo_casing,
+		/obj/item/gun/ballistic,
+		/obj/item/gun/energy,
+		/obj/item/restraints/handcuffs,
+		/obj/item/knife/combat,
+		/obj/item/melee/baton,
+	)
+
+/obj/item/clothing/suit/toggle/jacket/zubber/bomber/syndicate/fake
+	armor_type = /datum/armor/hooded_wintercoat
