@@ -198,3 +198,13 @@
 	name = "yellow trencher officer cap"
 	desc = "An army officer cap with yellow pin."
 	icon_state = "goner_offcap_y"
+
+/obj/item/clothing/head/helmet/old/oldstation
+	name = "degrading SWAT helmet"
+	desc = "A formerly robust helmet with the Nanotrasen logo emblazoned on the top. Due to degradation the helmet's visor obstructs the users ability to see long distances."
+	icon_state = "swat"
+
+/obj/item/clothing/head/hooded/winterhood/security/redsec/oldstation
+	desc = "A red winter hood. Definitely not bulletproof, letalone armored either, especially not the part where your face goes."
+	icon_state = "hood_security"
+	armor_type = null

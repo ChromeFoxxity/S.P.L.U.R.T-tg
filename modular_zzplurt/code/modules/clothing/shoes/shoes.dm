@@ -110,3 +110,13 @@
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/feet.dmi'
 	worn_icon_digi = 'modular_skyrat/master_files/icons/mob/clothing/feet_digi.dmi'
 	icon_state = "combat"
+
+/obj/item/clothing/shoes/combat/old
+	name = "degrading combat boots"
+	desc = "High speed, low drag combat boots, or at least they used to be.. Now they're basically jackboots.."
+	strip_delay = 3 SECONDS
+	equip_delay_other = 5 SECONDS
+	resistance_flags = NONE
+	armor_type = /datum/armor/shoes_jackboots
+	body_parts_covered = FEET|LEGS
+	lace_time = 12 SECONDS

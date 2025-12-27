@@ -100,3 +100,9 @@
 	icon_state = "widehat_red"
 	icon = 'modular_zzplurt/icons/obj/clothing/hats.dmi'
 	worn_icon = 'modular_zzplurt/icons/mob/clothing/hats.dmi'
+
+/obj/item/clothing/head/beret/blueshield/bridgeofficer
+	name = "bridge officer's beret"
+	desc = "A blue beret with a silver badge, denoting its owner as a Lieutenant. It's nothing special, as one would've wanted."
+	greyscale_colors = "#3A4E7D#D4D7DF"
+	armor_type = null

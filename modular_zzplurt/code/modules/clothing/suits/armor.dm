@@ -124,3 +124,15 @@
 	icon_state = "hat_transparent"
 	worn_icon_state = "none"
 	flags_inv = NONE
+
+/obj/item/clothing/suit/armor/vest/old/oldstation
+	name = "degrading armor vest"
+	desc = "Older generation slim Type I armored vest. Due to degradation over time the vest is far less maneuverable to move in."
+	icon_state = "armoralt"
+	slowdown = 0.8
+
+/obj/item/clothing/suit/hooded/wintercoat/security/redsec/oldstation
+	name = "security winter jacket"
+	desc = "A red winter coat, an older variant with no added armor. It glitters with a mild ablative coating and a robust air of authority. The zipper tab is a pair of jingly little handcuffs that get annoying after the first ten seconds."
+	armor_type = null
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/security/redsec/oldstation

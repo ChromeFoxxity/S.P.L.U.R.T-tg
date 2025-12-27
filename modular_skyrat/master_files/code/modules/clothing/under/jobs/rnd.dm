@@ -71,7 +71,7 @@
 *	OVERRIDES
 *	ORION TODO: look over these when TG finishes their science resprites (any day now...)
 */
-
+/*  Deleting because that's the case now. -- SPLURT EDIT
 /obj/item/clothing/under/rank/rnd/scientist
 	icon = 'modular_skyrat/master_files/icons/obj/clothing/under/rnd.dmi'
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/under/rnd.dmi'
@@ -95,3 +95,4 @@
 
 /obj/item/clothing/under/rank/rnd/geneticist/skirt
 	icon_state = "geneticswhite_skirt_new"
+*/
