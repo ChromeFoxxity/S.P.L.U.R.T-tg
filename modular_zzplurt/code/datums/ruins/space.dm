@@ -15,3 +15,11 @@
 
 /datum/map_template/ruin/space/interdyne
 	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // TG Map Edit
+
+// Re-adding this, fuck you Bubberstation
+/datum/map_template/ruin/space/forgottenship
+	id = "forgottenship"
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // TG Map Edit
+	suffix = "forgottenship.dmm"
+	name = "Space-Ruin Syndicate Battlecruiser Ironclad"
+	description = "One of Gorlex Marauder's top tier Battlecruisers is in nearby Nanotrasen space, not here for them however. They're on stand-by for missions from Command."
