@@ -546,29 +546,36 @@
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
-"eb" = (
+"ec" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200;
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/closet/secure_closet/wall/syndicate{
 	pixel_y = -32;
-	name = "Lieutenant's Locker";
-	req_access = list("syndicate_leader")
+	name = "Pilot's Locker"
 	},
 /obj/item/storage/backpack/satchel/sec/redsec,
 /obj/item/clothing/shoes/combat,
-/obj/item/clothing/under/syndicate/gorlex/officer,
-/obj/item/clothing/suit/armor/gorlex/lieutenant,
-/obj/item/clothing/head/gorlex/peaked,
+/obj/item/clothing/under/syndicate/gorlex/fatigues,
+/obj/item/storage/belt/security/webbing/gorlex,
+/obj/item/clothing/head/helmet/gorlex/pilot,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
 /obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/clothing/mask/balaclava,
-/obj/item/megaphone/sec{
-	name = "syndicate megaphone"
+/obj/item/radio/headset/syndicate/alt,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 1
 	},
-/obj/item/clothing/glasses/hud/security/sunglasses/redsec,
-/obj/item/clothing/glasses/hud/security/sunglasses/gorlex,
-/obj/item/storage/toolbox/guncase/skyrat/pistol/aps,
-/obj/item/radio/headset/syndicate/alt/leader,
-/obj/item/storage/belt/holster/nukie,
-/turf/open/floor/carpet/black,
-/area/ruin/space/has_grav/forgottenship/officerquarters)
+/area/ruin/space/has_grav/forgottenship/bridge)
 "ei" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
@@ -950,36 +957,6 @@
 	},
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
-"gV" = (
-/obj/effect/turf_decal/tile/yellow/half{
-	color = "#A99671";
-	alpha = 200;
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
-	color = "#A27E5F";
-	alpha = 200
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/closet/secure_closet/wall/syndicate{
-	pixel_y = -32;
-	name = "Pilot's Locker"
-	},
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/clothing/shoes/combat,
-/obj/item/clothing/under/syndicate/gorlex/fatigues,
-/obj/item/storage/belt/security/webbing/gorlex,
-/obj/item/clothing/head/helmet/gorlex/pilot,
-/obj/item/clothing/head/gorlex,
-/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
-/obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/radio/headset/syndicate/alt,
-/turf/open/floor/iron/dark/smooth_edge{
-	dir = 1
-	},
-/area/ruin/space/has_grav/forgottenship/bridge)
 "gX" = (
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 8;
@@ -1581,6 +1558,7 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
+/obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "kk" = (
@@ -2291,6 +2269,7 @@
 /obj/machinery/shower/directional/south,
 /obj/structure/drain,
 /obj/structure/curtain,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "oL" = (
@@ -2585,27 +2564,6 @@
 	dir = 1
 	},
 /area/ruin/space/has_grav/forgottenship/bridge)
-"qj" = (
-/obj/structure/closet/secure_closet/wall/syndicate{
-	name = "Wrecker's Locker";
-	pixel_x = 33
-	},
-/obj/item/clothing/shoes/workboots,
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
-/obj/item/clothing/suit/hazardvest/gorlex,
-/obj/item/clothing/head/hardhat/gorlex,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/head/gorlex/flap,
-/obj/item/clothing/head/gorlex,
-/obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
-/obj/item/storage/belt/mining,
-/obj/item/clothing/glasses/meson,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/clothing/accessory/armband/cargo/nonsec,
-/turf/open/floor/iron/dark,
-/area/ruin/space/has_grav/forgottenship/cargo)
 "qp" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -4021,28 +3979,6 @@
 	dir = 1
 	},
 /area/ruin/space/has_grav/forgottenship/bridge)
-"zv" = (
-/obj/effect/turf_decal/tile/yellow/full{
-	color = "#A99671";
-	alpha = 200
-	},
-/obj/effect/turf_decal/box/red,
-/obj/structure/closet/secure_closet/wall/syndicate{
-	pixel_x = -32;
-	name = "Operative's Locker"
-	},
-/obj/item/clothing/shoes/combat,
-/obj/item/clothing/under/syndicate/gorlex,
-/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/clothing/head/gorlex/flap,
-/obj/item/clothing/head/gorlex,
-/obj/item/clothing/gloves/tackler/combat/insulated,
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/radio/headset/syndicate/alt,
-/turf/open/floor/iron/dark/smooth_large,
-/area/ruin/space/has_grav/forgottenship/briefing)
 "zz" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -4910,6 +4846,7 @@
 	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex/armored;
 	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex/armored
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/operations)
 "Ec" = (
@@ -5929,7 +5866,19 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/directional/north,
 /turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/has_grav/forgottenship/operations)
+"LU" = (
+/obj/structure/railing,
+/obj/machinery/suit_storage_unit/industrial{
+	mask_type = /obj/item/clothing/mask/gas/syndicate;
+	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
+	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex/armored;
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex/armored
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/operations)
 "LZ" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -6302,6 +6251,29 @@
 /obj/item/healthanalyzer/advanced,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
+"Pb" = (
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = -32;
+	name = "Lieutenant's Locker";
+	req_access = list("syndicate_leader")
+	},
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex/officer,
+/obj/item/clothing/suit/armor/gorlex/lieutenant,
+/obj/item/clothing/head/gorlex/peaked,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/mask/balaclava,
+/obj/item/megaphone/sec{
+	name = "syndicate megaphone"
+	},
+/obj/item/clothing/glasses/hud/security/sunglasses/redsec,
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/aps,
+/obj/item/radio/headset/syndicate/alt/leader,
+/obj/item/storage/belt/holster/nukie,
+/turf/open/floor/carpet/black,
+/area/ruin/space/has_grav/forgottenship/officerquarters)
 "Pe" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -6378,6 +6350,28 @@
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
+"PH" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/effect/turf_decal/box/red,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_x = -32;
+	name = "Operative's Locker"
+	},
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/gloves/tackler/combat/insulated,
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/radio/headset/syndicate/alt,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/briefing)
 "PK" = (
 /obj/machinery/camera/autoname/directional/west{
 	network = list("sbc44")
@@ -6772,6 +6766,27 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
+"Sz" = (
+/obj/structure/closet/secure_closet/wall/syndicate{
+	name = "Wrecker's Locker";
+	pixel_x = 33
+	},
+/obj/item/clothing/shoes/workboots,
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
+/obj/item/clothing/suit/hazardvest/gorlex,
+/obj/item/clothing/head/hardhat/gorlex,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/storage/belt/mining,
+/obj/item/clothing/glasses/meson,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/clothing/accessory/armband/cargo/nonsec,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "SG" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/tile/red/real_red/half{
@@ -9767,7 +9782,7 @@ JC
 uc
 Rl
 Fh
-gV
+ec
 Yt
 pm
 pm
@@ -10146,7 +10161,7 @@ AN
 Kv
 FN
 HD
-eb
+Pb
 oQ
 EJ
 bp
@@ -10652,7 +10667,7 @@ ye
 FE
 dp
 dp
-zv
+PH
 UC
 Cb
 rr
@@ -11268,7 +11283,7 @@ YU
 YU
 eA
 YG
-DW
+LU
 ou
 eA
 oG
@@ -12002,7 +12017,7 @@ cF
 Ht
 Sd
 Fc
-qj
+Sz
 Zr
 qy
 bQ
