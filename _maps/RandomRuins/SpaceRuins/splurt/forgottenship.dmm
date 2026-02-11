@@ -1,9 +1,22 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 1;
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/dark/smooth_edge,
+/area/ruin/space/has_grav/forgottenship/cafeteria)
 "aj" = (
 /obj/effect/turf_decal/tile/red/real_red/full,
 /obj/machinery/button/door/directional/north{
 	name = "Window Shutters Control";
-	req_access = list("syndicate_leader");
+	req_access = list("syndicate");
 	id = "sbc44_armoryoffice";
 	pixel_x = -5
 	},
@@ -25,6 +38,14 @@
 /obj/item/radio/intercom/syndicate/directional/north,
 /turf/open/floor/iron/dark/textured_edge,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
+"av" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/has_grav/forgottenship/engineering/engine1)
 "aw" = (
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 8;
@@ -56,6 +77,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/shrink_ccw{
 	dir = 4
 	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "aC" = (
@@ -75,10 +99,17 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "aH" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/operations)
 "aL" = (
@@ -90,12 +121,16 @@
 	alpha = 200
 	},
 /obj/machinery/light/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "aP" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "aT" = (
@@ -107,17 +142,30 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "aV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/stairs{
 	dir = 1
 	},
 /area/ruin/space/has_grav/forgottenship/engineering)
 "aW" = (
 /obj/structure/extinguisher_cabinet/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
+"bb" = (
+/obj/effect/turf_decal/tile/red/real_red/full,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/armory)
 "bg" = (
 /obj/effect/turf_decal/tile/yellow/half{
 	color = "#A99671";
@@ -161,7 +209,20 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/has_grav/forgottenship/medical)
+"by" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#477C69";
+	alpha = 200
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/medical)
 "bz" = (
 /obj/structure/ore_box,
@@ -205,6 +266,9 @@
 	alpha = 200;
 	dir = 4
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -228,8 +292,21 @@
 	},
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "bY" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/space/has_grav/forgottenship/custodial)
+"bZ" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/crewquarters)
 "ce" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	color = "#A27E5F";
@@ -246,6 +323,9 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/custodial)
 "cq" = (
@@ -260,6 +340,16 @@
 /obj/item/soap/syndie,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/forgottenship/restroom)
+"cA" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/briefing)
 "cE" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 4
@@ -272,6 +362,17 @@
 "cF" = (
 /turf/open/floor/engine/hull,
 /area/ruin/space/has_grav/forgottenship/external)
+"cM" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/trimline/dark_red/filled/line,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/hallway)
 "cU" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -325,12 +426,14 @@
 /obj/item/food/fishmeat,
 /obj/item/food/meat/slab/chicken,
 /obj/item/food/meat/slab/chicken,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "do" = (
 /obj/effect/turf_decal/stripes/full,
 /obj/effect/turf_decal/box/red,
 /obj/structure/tank_dispenser,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "dp" = (
@@ -339,6 +442,20 @@
 	alpha = 200
 	},
 /obj/effect/turf_decal/box/red,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/gloves/tackler/combat/insulated,
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_x = -32;
+	name = "Operative's Locker"
+	},
+/obj/item/radio/headset/syndicate/alt,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/briefing)
 "dr" = (
@@ -346,11 +463,32 @@
 	dir = 8
 	},
 /obj/machinery/door/poddoor{
-	name = "Operations Airlock Blast Door";
+	name = "Hangar Blast Door";
 	id = "sbc44_security"
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/operations)
+"du" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200;
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 8;
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/trimline/dark_red/line{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 4
+	},
+/area/ruin/space/has_grav/forgottenship/crewquarters)
 "dB" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
 /area/ruin/space/has_grav/forgottenship/external_port)
@@ -377,6 +515,7 @@
 	},
 /obj/structure/railing/corner/end,
 /obj/structure/noticeboard/directional/north,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "dX" = (
@@ -407,6 +546,29 @@
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
+"eb" = (
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = -32;
+	name = "Lieutenant's Locker";
+	req_access = list("syndicate_leader")
+	},
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex/officer,
+/obj/item/clothing/suit/armor/gorlex/lieutenant,
+/obj/item/clothing/head/gorlex/peaked,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/mask/balaclava,
+/obj/item/megaphone/sec{
+	name = "syndicate megaphone"
+	},
+/obj/item/clothing/glasses/hud/security/sunglasses/redsec,
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/aps,
+/obj/item/radio/headset/syndicate/alt/leader,
+/obj/item/storage/belt/holster/nukie,
+/turf/open/floor/carpet/black,
+/area/ruin/space/has_grav/forgottenship/officerquarters)
 "ei" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
@@ -434,6 +596,7 @@
 	color = "#A99671";
 	alpha = 200
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "ev" = (
@@ -450,6 +613,7 @@
 /obj/structure/cargo_shelf,
 /obj/structure/closet/crate/freezer/surplus_limbs,
 /obj/structure/closet/crate/secure/freezer/pizza,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "eA" = (
@@ -457,6 +621,9 @@
 /area/ruin/space/has_grav/forgottenship/operations)
 "eB" = (
 /obj/machinery/firealarm/directional/south,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "eD" = (
@@ -467,14 +634,14 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
+/obj/machinery/camera/autoname/directional/east{
+	network = list("sbc44")
+	},
 /obj/machinery/suit_storage_unit/industrial{
 	mask_type = /obj/item/clothing/mask/gas/syndicate;
 	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
-	suit_type = /obj/item/clothing/suit/space/syndicate;
-	helmet_type = /obj/item/clothing/head/helmet/space/syndicate
-	},
-/obj/machinery/camera/autoname/directional/east{
-	network = list("sbc44")
+	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex;
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
@@ -482,6 +649,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "eJ" = (
@@ -500,6 +669,7 @@
 /area/ruin/space/has_grav/forgottenship/bridge)
 "fb" = (
 /obj/machinery/light/small/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron/shuttle/exploration/doubleside{
 	dir = 8
 	},
@@ -525,6 +695,7 @@
 	color = "#A99671";
 	alpha = 200
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "fr" = (
@@ -540,10 +711,19 @@
 /area/ruin/space/has_grav/forgottenship/bridge)
 "fz" = (
 /obj/machinery/firealarm/directional/south,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/stairs{
 	dir = 4
 	},
 /area/ruin/space/has_grav/forgottenship/bridge)
+"fE" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/external_starboard)
 "fF" = (
 /obj/effect/turf_decal/tile/yellow/half{
 	color = "#A99671";
@@ -583,6 +763,12 @@
 	},
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
+"fU" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/engineering)
 "fV" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
@@ -603,6 +789,7 @@
 	alpha = 200
 	},
 /obj/structure/weightmachine,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/gym)
 "fX" = (
@@ -671,6 +858,17 @@
 /obj/machinery/light_switch/directional/south,
 /turf/open/floor/engine/hull/reinforced/air,
 /area/ruin/space/has_grav/forgottenship/custodial)
+"gl" = (
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 8
+	},
+/area/ruin/space/has_grav/forgottenship/cargo)
 "gm" = (
 /obj/machinery/button/door/directional/east{
 	name = "Engine Access Control";
@@ -685,6 +883,14 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
+"gx" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/cafeteria)
 "gD" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	color = "#A27E5F";
@@ -705,12 +911,18 @@
 /obj/effect/turf_decal/stripes/full,
 /obj/effect/turf_decal/box/red,
 /obj/structure/cargo_shelf,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "gJ" = (
 /obj/machinery/computer/operating,
 /obj/machinery/camera/autoname/directional/north{
 	network = list("sbc44")
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
@@ -721,6 +933,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/firealarm/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "gU" = (
@@ -732,11 +945,41 @@
 /obj/machinery/suit_storage_unit/industrial{
 	mask_type = /obj/item/clothing/mask/gas/syndicate;
 	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
-	suit_type = /obj/item/clothing/suit/space/syndicate/black/engie;
-	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/black/engie
+	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex;
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex
 	},
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
+"gV" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200;
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = -32;
+	name = "Pilot's Locker"
+	},
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex/fatigues,
+/obj/item/storage/belt/security/webbing/gorlex,
+/obj/item/clothing/head/helmet/gorlex/pilot,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/radio/headset/syndicate/alt,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 1
+	},
+/area/ruin/space/has_grav/forgottenship/bridge)
 "gX" = (
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 8;
@@ -764,6 +1007,9 @@
 	alpha = 200;
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "hi" = (
@@ -789,8 +1035,22 @@
 	pixel_x = -5;
 	pixel_y = -25
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/bridge)
+"hm" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/structure/table,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/cafeteria)
 "hn" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Briefing Room"
@@ -798,8 +1058,22 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/briefing)
+"ht" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/trimline/dark_red/line,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/hallway)
 "hA" = (
 /obj/structure/railing{
 	dir = 1
@@ -813,6 +1087,7 @@
 	dir = 1
 	},
 /obj/machinery/power/smes/magical/cybersun,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 1
 	},
@@ -821,6 +1096,24 @@
 /obj/effect/turf_decal/syndicateemblem/bottom/middle,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
+"hS" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 8;
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200;
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 4
+	},
+/area/ruin/space/has_grav/forgottenship/cafeteria)
 "hU" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
@@ -845,12 +1138,18 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "if" = (
 /obj/effect/turf_decal/stripes/full,
 /obj/effect/turf_decal/box/red,
 /obj/machinery/autolathe,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "ip" = (
@@ -878,6 +1177,19 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
+"iu" = (
+/obj/structure/bed{
+	dir = 1
+	},
+/obj/structure/curtain/bounty,
+/obj/item/bedsheet/red{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav/forgottenship/crewquarters)
 "ix" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1;
@@ -891,6 +1203,9 @@
 	dir = 4
 	},
 /obj/machinery/light_switch/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "iA" = (
@@ -906,6 +1221,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/shrink_ccw{
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "iJ" = (
@@ -923,6 +1241,7 @@
 	name = "Lounge Window Shutters";
 	id = "sbc44_lounge"
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "iM" = (
@@ -939,6 +1258,7 @@
 	id = "sbc44_southengine";
 	req_access = list("syndicate")
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/shuttle/exploration/corner{
 	dir = 1
 	},
@@ -949,18 +1269,31 @@
 /obj/effect/turf_decal/tile/red/real_red/half{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "iT" = (
 /obj/machinery/light/floor,
 /turf/open/floor/engine/hull,
 /area/ruin/space/has_grav/forgottenship/external)
+"iW" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A27E5F";
+	alpha = 200;
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red/real_red/half,
+/obj/structure/cable,
+/turf/open/floor/iron/dark/smooth_half,
+/area/ruin/space/has_grav/forgottenship/briefing)
 "iZ" = (
+/obj/structure/cable,
 /turf/open/floor/iron/shuttle/exploration/uside,
 /area/ruin/space/has_grav/forgottenship/engineering/engine2)
 "ja" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_edge,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "jd" = (
@@ -978,10 +1311,14 @@
 	dir = 4
 	},
 /obj/item/radio/intercom/syndicate/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "jg" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "jh" = (
@@ -995,8 +1332,14 @@
 	alpha = 200
 	},
 /obj/structure/weightmachine/weightlifter,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/gym)
+"jn" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/engineering)
 "jq" = (
 /obj/structure/bed{
 	dir = 1
@@ -1014,6 +1357,7 @@
 	id = "sbc44_cafe";
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "ju" = (
@@ -1033,10 +1377,17 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
+"jx" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "jy" = (
 /obj/machinery/airalarm/directional/north,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
 /obj/structure/table/optable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
 "jz" = (
@@ -1058,6 +1409,7 @@
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
 /obj/item/folder/syndicate,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -1066,6 +1418,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "jG" = (
@@ -1073,6 +1426,10 @@
 	dir = 6
 	},
 /obj/structure/sign/flag/syndicate/directional/south,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/forgottenship/capquarters)
 "jH" = (
@@ -1097,6 +1454,9 @@
 /obj/machinery/camera/autoname/directional/east{
 	network = list("sbc44")
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 8
+	},
 /turf/open/floor/engine/hull/reinforced/air,
 /area/ruin/space/has_grav/forgottenship/custodial)
 "jS" = (
@@ -1116,6 +1476,7 @@
 	pixel_y = 7;
 	pixel_x = -5
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "kb" = (
@@ -1128,6 +1489,7 @@
 	color = "#A99671";
 	alpha = 200
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "kc" = (
@@ -1141,6 +1503,7 @@
 	dir = 8
 	},
 /obj/machinery/vending/cigarette/syndicate,
+/obj/structure/cable,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "kg" = (
@@ -1151,23 +1514,72 @@
 /obj/structure/guncase{
 	name = "equipment locker"
 	},
-/obj/item/knife/combat,
-/obj/item/knife/combat,
-/obj/item/knife/combat,
-/obj/item/knife/combat,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/glasses/night,
-/obj/item/clothing/glasses/night,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
 /obj/machinery/firealarm/directional/south,
 /obj/machinery/camera/autoname/directional/south{
 	network = list("sbc44")
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex{
+	pixel_y = -7;
+	pixel_x = 6
+	},
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex{
+	pixel_y = -7;
+	pixel_x = 6
+	},
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex{
+	pixel_y = -7;
+	pixel_x = 6
+	},
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex{
+	pixel_y = -7;
+	pixel_x = 6
+	},
+/obj/item/clothing/mask/gas/syndicate{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/item/clothing/mask/gas/syndicate{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/item/clothing/mask/gas/syndicate{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/item/clothing/mask/gas/syndicate{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/item/knife/combat{
+	pixel_x = -2
+	},
+/obj/item/knife/combat{
+	pixel_x = -2
+	},
+/obj/item/knife/combat{
+	pixel_x = -2
+	},
+/obj/item/knife/combat{
+	pixel_x = -2
+	},
+/obj/item/radio/headset/syndicate/alt{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/radio/headset/syndicate/alt{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/radio/headset/syndicate/alt{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/radio/headset/syndicate/alt{
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
@@ -1207,6 +1619,17 @@
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
+"lc" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/trimline/dark_red/line,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/hallway/central)
 "ll" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1;
@@ -1217,6 +1640,9 @@
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "lt" = (
@@ -1230,6 +1656,9 @@
 	},
 /obj/item/radio/intercom/syndicate/directional/north,
 /obj/machinery/light/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "lu" = (
@@ -1279,6 +1708,9 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood/tile,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
 "lN" = (
@@ -1290,11 +1722,16 @@
 /obj/effect/turf_decal/trimline/dark_red/arrow_ccw{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "lP" = (
 /obj/effect/turf_decal/tile/red/real_red/fourcorners,
 /obj/machinery/light/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "lS" = (
@@ -1316,10 +1753,25 @@
 /obj/item/radio/intercom/syndicate/directional/south,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/armory)
+"lT" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Cafeteria"
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/has_grav/forgottenship/cafeteria)
 "mb" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/forgottenship/capquarters)
 "mf" = (
@@ -1333,6 +1785,7 @@
 	color = "#A99671";
 	alpha = 200
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "mh" = (
@@ -1345,6 +1798,9 @@
 	color = "#A27E5F";
 	alpha = 200
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/briefing)
 "mj" = (
@@ -1353,6 +1809,8 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/medical)
 "mp" = (
@@ -1432,6 +1890,7 @@
 /obj/item/sign/flag/syndicate,
 /obj/item/sign/flag/syndicate,
 /obj/item/sign/flag/syndicate,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "mI" = (
@@ -1452,6 +1911,9 @@
 	color = "#A99671";
 	alpha = 200
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "mO" = (
@@ -1459,6 +1921,7 @@
 	dir = 8
 	},
 /obj/machinery/firealarm/directional/east,
+/obj/structure/cable,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "mR" = (
@@ -1470,6 +1933,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/corner{
 	dir = 4
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "mS" = (
@@ -1486,6 +1952,7 @@
 /obj/structure/railing/corner/end{
 	dir = 4
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -1495,6 +1962,7 @@
 	dir = 9
 	},
 /obj/machinery/power/smes/magical/cybersun,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_corner,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "mX" = (
@@ -1526,6 +1994,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "ne" = (
@@ -1545,6 +2016,7 @@
 	pixel_x = 6
 	},
 /obj/machinery/firealarm/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/armory)
 "no" = (
@@ -1553,16 +2025,16 @@
 	dir = 1
 	},
 /obj/machinery/button/door/directional/north{
-	name = "Blast Door Control";
+	name = "Hangar Blast Door Control";
 	req_access = list("syndicate_leader");
 	id = "sbc44_security";
 	pixel_x = -1
 	},
 /obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/c20r,
-/obj/item/gun/ballistic/automatic/c20r,
-/obj/item/gun/ballistic/automatic/c20r,
-/obj/item/gun/ballistic/automatic/c20r,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "nq" = (
@@ -1575,6 +2047,9 @@
 	dir = 1
 	},
 /obj/structure/sign/departments/restroom/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "nu" = (
@@ -1596,6 +2071,9 @@
 /obj/structure/closet/emcloset/wall{
 	pixel_y = 32
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "ny" = (
@@ -1625,10 +2103,16 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 4
 	},
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "nU" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "nV" = (
@@ -1640,6 +2124,9 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 4
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "nY" = (
@@ -1705,10 +2192,14 @@
 "on" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/machinery/griddle,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "op" = (
 /obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
 /turf/open/floor/mineral/titanium/white,
@@ -1727,6 +2218,22 @@
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/operations)
+"oy" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 8;
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200;
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 4
+	},
+/area/ruin/space/has_grav/forgottenship/cafeteria)
 "oB" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 5
@@ -1743,6 +2250,9 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "oG" = (
@@ -1753,13 +2263,14 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
 	},
-/obj/machinery/button/door/directional/north{
-	name = "Blast Door Control";
-	req_access = list("syndicate");
-	id = "sbc44_security"
-	},
 /obj/structure/sign/warning/vacuum/external/directional/north{
 	pixel_x = 32
+	},
+/obj/machinery/button/door/directional/north{
+	name = "Hangar Blast Door Control";
+	req_access = list("syndicate_leader");
+	id = "sbc44_security";
+	pixel_x = -1
 	},
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
@@ -1772,6 +2283,7 @@
 	id = "sbc44_engineering";
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "oK" = (
@@ -1787,8 +2299,29 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/cryo)
+"oM" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 4;
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A27E5F";
+	alpha = 200;
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 8
+	},
+/area/ruin/space/has_grav/forgottenship/briefing)
 "oQ" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
@@ -1802,6 +2335,8 @@
 	color = "#477C69";
 	alpha = 200
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/medical)
 "oW" = (
@@ -1817,6 +2352,7 @@
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "oY" = (
 /obj/effect/turf_decal/tile/red/real_red/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "oZ" = (
@@ -1828,6 +2364,9 @@
 /obj/effect/turf_decal/tile/yellow/half{
 	color = "#A99671";
 	alpha = 200;
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
 	dir = 8
 	},
 /turf/open/floor/iron/dark/smooth_edge{
@@ -1861,11 +2400,18 @@
 	},
 /obj/item/healthanalyzer/advanced{
 	pixel_y = -3;
-	pixel_x = 4
+	pixel_x = -5
 	},
 /obj/item/stack/medical/gauze/twelve{
 	pixel_y = 13;
 	pixel_x = -4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/obj/item/sensor_device{
+	pixel_x = 10;
+	pixel_y = 8
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
@@ -1894,6 +2440,9 @@
 /obj/structure/closet/firecloset/wall{
 	pixel_y = 32
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "pp" = (
@@ -1927,10 +2476,16 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "pz" = (
 /obj/effect/turf_decal/tile/red/real_red/fourcorners,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/briefing)
 "pC" = (
@@ -1963,6 +2518,7 @@
 	name = "Armory Office Window Shutters";
 	id = "sbc44_armoryoffice"
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/armory)
 "pQ" = (
@@ -1996,6 +2552,7 @@
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "pX" = (
 /obj/machinery/light_switch/directional/east,
+/obj/structure/cable,
 /turf/open/floor/iron/shuttle/exploration/corner{
 	dir = 8
 	},
@@ -2006,6 +2563,7 @@
 	},
 /obj/machinery/pipedispenser,
 /obj/effect/turf_decal/box/red,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "qh" = (
@@ -2027,6 +2585,27 @@
 	dir = 1
 	},
 /area/ruin/space/has_grav/forgottenship/bridge)
+"qj" = (
+/obj/structure/closet/secure_closet/wall/syndicate{
+	name = "Wrecker's Locker";
+	pixel_x = 33
+	},
+/obj/item/clothing/shoes/workboots,
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
+/obj/item/clothing/suit/hazardvest/gorlex,
+/obj/item/clothing/head/hardhat/gorlex,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/storage/belt/mining,
+/obj/item/clothing/glasses/meson,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/clothing/accessory/armband/cargo/nonsec,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "qp" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -2035,50 +2614,65 @@
 /obj/structure/guncase{
 	name = "gear locker"
 	},
-/obj/item/clothing/head/helmet/swat/ds{
-	pixel_x = -9;
-	pixel_y = -8
-	},
-/obj/item/clothing/head/helmet/swat/ds{
-	pixel_x = -9;
-	pixel_y = -5
-	},
-/obj/item/clothing/head/helmet/swat/ds{
-	pixel_x = -9;
-	pixel_y = -2
-	},
-/obj/item/clothing/head/helmet/swat/ds{
-	pixel_x = -9;
-	pixel_y = 1
-	},
-/obj/item/storage/belt/security/webbing/ds{
-	pixel_y = -6;
-	pixel_x = 6
-	},
-/obj/item/storage/belt/security/webbing/ds{
-	pixel_y = -2;
-	pixel_x = 6
-	},
-/obj/item/storage/belt/security/webbing/ds{
-	pixel_y = 2;
-	pixel_x = 6
-	},
-/obj/item/storage/belt/security/webbing/ds{
-	pixel_y = 6;
-	pixel_x = 6
-	},
 /obj/structure/extinguisher_cabinet/directional/south,
-/obj/item/clothing/suit/armor/vest/alt{
+/obj/item/clothing/head/helmet/gorlex{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/item/clothing/head/helmet/gorlex{
+	pixel_x = -9
+	},
+/obj/item/clothing/head/helmet/gorlex{
+	pixel_x = -9;
+	pixel_y = -4
+	},
+/obj/item/clothing/head/helmet/gorlex{
+	pixel_x = -9;
 	pixel_y = -8
 	},
-/obj/item/clothing/suit/armor/vest/alt{
-	pixel_y = -5
+/obj/item/clothing/suit/armor/gorlex{
+	pixel_x = 7;
+	pixel_y = 4
 	},
-/obj/item/clothing/suit/armor/vest/alt{
-	pixel_y = -2
+/obj/item/clothing/suit/armor/gorlex{
+	pixel_x = 7;
+	pixel_y = 4
 	},
-/obj/item/clothing/suit/armor/vest/alt{
-	pixel_y = 1
+/obj/item/clothing/suit/armor/gorlex{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/item/clothing/suit/armor/gorlex{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/item/storage/belt/security/webbing/gorlex{
+	pixel_y = -4;
+	pixel_x = 6
+	},
+/obj/item/storage/belt/security/webbing/gorlex{
+	pixel_y = -4;
+	pixel_x = 6
+	},
+/obj/item/storage/belt/security/webbing/gorlex{
+	pixel_y = -4;
+	pixel_x = 6
+	},
+/obj/item/storage/belt/security/webbing/gorlex{
+	pixel_y = -4;
+	pixel_x = 6
+	},
+/obj/item/storage/belt/security/webbing/gorlex/alt{
+	pixel_y = -8
+	},
+/obj/item/storage/belt/security/webbing/gorlex/alt{
+	pixel_y = -8
+	},
+/obj/item/storage/belt/security/webbing/gorlex/alt{
+	pixel_y = -8
+	},
+/obj/item/storage/belt/security/webbing/gorlex/alt{
+	pixel_y = -8
 	},
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
@@ -2087,6 +2681,7 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "qx" = (
@@ -2109,6 +2704,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "qA" = (
@@ -2123,10 +2719,22 @@
 /obj/machinery/camera/autoname/directional/north{
 	network = list("sbc44")
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
+"qB" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "qC" = (
 /obj/structure/extinguisher_cabinet/directional/south,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "qD" = (
@@ -2143,6 +2751,7 @@
 	name = "Armory Window Shutters";
 	id = "sbc44_armory"
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/armory)
 "qG" = (
@@ -2184,6 +2793,16 @@
 	},
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
+"qU" = (
+/obj/effect/turf_decal/tile/red/real_red/fourcorners,
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/briefing)
 "qW" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
@@ -2227,6 +2846,9 @@
 /obj/item/stack/sheet/plastic{
 	amount = 20
 	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "rn" = (
@@ -2234,6 +2856,9 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/broken_flooring/singular/directional/east,
 /obj/machinery/status_display/evac/directional/south,
+/obj/machinery/camera/autoname/directional/south{
+	network = list("sbc44")
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "rp" = (
@@ -2241,13 +2866,15 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/space/has_grav/forgottenship/custodial)
 "rr" = (
 /obj/effect/turf_decal/tile/red/real_red/full,
 /obj/structure/table/reinforced,
-/obj/item/modular_computer/laptop/preset/syndicate{
-	pixel_y = 2
+/obj/machinery/computer/records/security/laptop/syndie{
+	dir = 1
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/armory)
@@ -2268,12 +2895,14 @@
 /obj/machinery/camera/autoname/directional/south{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "rz" = (
 /obj/structure/railing/corner/end/flip{
 	dir = 8
 	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/operations)
 "rE" = (
@@ -2300,6 +2929,9 @@
 	},
 /obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -2309,6 +2941,9 @@
 	dir = 5
 	},
 /obj/machinery/firealarm/directional/north,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
 /turf/open/floor/wood/tile,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
 "rO" = (
@@ -2371,6 +3006,9 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "sg" = (
@@ -2402,8 +3040,14 @@
 /obj/structure/lattice/catwalk,
 /turf/open/floor/engine/hull,
 /area/ruin/space/has_grav/forgottenship/external)
+"so" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "sp" = (
 /obj/structure/sign/warning/no_smoking/circle/directional/north,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "ss" = (
@@ -2434,6 +3078,7 @@
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "sR" = (
 /obj/machinery/light/small/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "sV" = (
@@ -2448,6 +3093,7 @@
 	},
 /obj/structure/table,
 /obj/machinery/light/directional/south,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -2467,11 +3113,14 @@
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "tj" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Command Hallway"
+	name = "Command Deck"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "tl" = (
@@ -2516,6 +3165,9 @@
 	},
 /obj/effect/turf_decal/trimline/dark_red/line,
 /obj/machinery/light/directional/south,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "tw" = (
@@ -2523,14 +3175,18 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/machinery/suit_storage_unit/industrial/bloodredsuit,
 /obj/machinery/airalarm/directional/south,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
+/obj/machinery/suit_storage_unit/industrial/bloodredsuit,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "ty" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_port)
@@ -2541,18 +3197,21 @@
 /obj/machinery/suit_storage_unit/industrial{
 	mask_type = /obj/item/clothing/mask/gas/syndicate;
 	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
-	suit_type = /obj/item/clothing/suit/space/syndicate;
-	helmet_type = /obj/item/clothing/head/helmet/space/syndicate
+	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex;
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_port)
 "tS" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/restroom)
 "tT" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
 /area/ruin/space/has_grav/forgottenship/restroom)
 "tX" = (
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "ub" = (
@@ -2584,7 +3243,8 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/machinery/computer/camera_advanced/syndie,
+/obj/structure/cable,
+/obj/machinery/computer/monitor,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -2611,6 +3271,9 @@
 	color = "#477C69";
 	alpha = 200
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/medical)
 "uh" = (
@@ -2634,10 +3297,19 @@
 	dir = 8
 	},
 /area/ruin/space/has_grav/forgottenship/operations)
+"uk" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "ur" = (
 /obj/effect/turf_decal/tile/red/real_red/fourcorners,
 /obj/item/radio/intercom/syndicate/directional/east,
 /obj/machinery/light/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "uy" = (
@@ -2649,12 +3321,16 @@
 	pixel_y = 3
 	},
 /obj/machinery/newscaster/directional/south,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 8
+	},
 /turf/open/floor/wood/tile,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
 "uE" = (
 /obj/structure/railing/corner/end{
 	dir = 4
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/operations)
 "uP" = (
@@ -2682,6 +3358,9 @@
 /obj/machinery/light_switch/directional/north{
 	pixel_x = 12
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "ve" = (
@@ -2713,6 +3392,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "vt" = (
@@ -2748,6 +3428,7 @@
 	pixel_x = -5;
 	pixel_y = -25
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -2805,6 +3486,9 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "vU" = (
@@ -2869,10 +3553,18 @@
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "wp" = (
 /obj/machinery/firealarm/directional/west,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/space/has_grav/forgottenship/custodial)
 "ws" = (
 /obj/machinery/light_switch/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "wt" = (
@@ -2902,6 +3594,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/shrink_cw{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "wB" = (
@@ -2943,6 +3638,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "wL" = (
@@ -2964,10 +3660,14 @@
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "wN" = (
 /obj/machinery/light/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/restroom)
 "wO" = (
@@ -2989,7 +3689,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/machinery/computer/security/forgottenship,
+/obj/machinery/computer/cargo/express/interdyne,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -3006,6 +3706,7 @@
 	id = "sbc44_bridge";
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "wZ" = (
@@ -3038,6 +3739,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/external_port)
 "xf" = (
@@ -3054,6 +3758,7 @@
 	dir = 9
 	},
 /obj/machinery/washing_machine,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "xg" = (
@@ -3066,6 +3771,9 @@
 	alpha = 200;
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -3080,6 +3788,8 @@
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "xz" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "xA" = (
@@ -3115,6 +3825,8 @@
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
 /obj/effect/mapping_helpers/dead_body_placer,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
 "ye" = (
@@ -3128,6 +3840,9 @@
 	alpha = 200;
 	dir = 4
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -3154,8 +3869,11 @@
 	name = "Bridge"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "yq" = (
@@ -3185,12 +3903,15 @@
 /obj/machinery/camera/autoname/directional/south{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "yP" = (
 /obj/structure/railing,
 /obj/machinery/power/port_gen/pacman/super,
 /obj/effect/turf_decal/box/red,
+/obj/structure/cable,
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "yS" = (
@@ -3227,6 +3948,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -3236,6 +3958,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 1
 	},
@@ -3274,6 +3997,9 @@
 /obj/machinery/camera/autoname/directional/north{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "zs" = (
@@ -3288,10 +4014,35 @@
 	},
 /obj/machinery/light/directional/south,
 /obj/structure/sign/departments/restroom/directional/south,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
 /area/ruin/space/has_grav/forgottenship/bridge)
+"zv" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/effect/turf_decal/box/red,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_x = -32;
+	name = "Operative's Locker"
+	},
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/gloves/tackler/combat/insulated,
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/radio/headset/syndicate/alt,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/briefing)
 "zz" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -3335,6 +4086,11 @@
 	pixel_y = -8;
 	pixel_x = -3
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "zB" = (
@@ -3360,10 +4116,14 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/armory)
 "zE" = (
 /obj/structure/sign/warning/vacuum/external/directional/north,
+/obj/structure/handrail,
 /turf/open/floor/iron/stairs{
 	dir = 8
 	},
@@ -3381,6 +4141,9 @@
 /obj/item/food/sandwich/grilled_cheese{
 	pixel_y = 3
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "zR" = (
@@ -3397,6 +4160,9 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 4
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -3424,6 +4190,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/iron/shuttle/exploration/side{
 	dir = 8
 	},
@@ -3441,6 +4208,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/iron/shuttle/exploration/side{
 	dir = 8
 	},
@@ -3452,6 +4220,9 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/gym)
 "An" = (
@@ -3466,6 +4237,7 @@
 /obj/machinery/camera/autoname/directional/east{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_port)
 "Ar" = (
@@ -3482,16 +4254,22 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 5
 	},
-/obj/structure/closet/syndicate{
-	desc = "It's a personal storage unit for operative gear.";
-	name = "syndicate closet"
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = 32;
+	name = "clothes locker"
 	},
-/obj/item/clothing/under/syndicate/skyrat/tactical,
-/obj/item/clothing/under/syndicate/skyrat/tactical,
-/obj/item/clothing/under/syndicate/skyrat/tactical/skirt,
-/obj/item/clothing/under/syndicate/skyrat/tactical/skirt,
-/obj/item/clothing/shoes/combat,
-/obj/item/clothing/shoes/combat,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "Av" = (
@@ -3515,6 +4293,7 @@
 "Ax" = (
 /obj/structure/chair/sofa/right/maroon,
 /obj/machinery/newscaster/directional/north,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "AA" = (
@@ -3540,8 +4319,36 @@
 	},
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
+"AH" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/engineering)
 "AN" = (
 /obj/machinery/light/directional/south,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = -32;
+	name = "Captain's Locker";
+	req_access = list("syndicate_leader")
+	},
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex/officer,
+/obj/item/clothing/suit/armor/gorlex/captain,
+/obj/item/clothing/gloves/kaza_ruk/combatglovesplus,
+/obj/item/clothing/head/gorlex/peaked,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/mask/balaclava,
+/obj/item/megaphone/sec{
+	name = "syndicate megaphone"
+	},
+/obj/item/computer_disk/command/captain,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/syndie_revolver,
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex,
+/obj/item/radio/headset/syndicate/alt/leader,
+/obj/item/storage/belt/holster/nukie,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/capquarters)
 "AR" = (
@@ -3580,6 +4387,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "Be" = (
@@ -3618,6 +4428,7 @@
 	alpha = 200;
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -3650,6 +4461,9 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "Bt" = (
@@ -3679,6 +4493,9 @@
 	alpha = 200
 	},
 /obj/machinery/firealarm/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/medical)
 "BB" = (
@@ -3695,6 +4512,9 @@
 "BD" = (
 /obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "BE" = (
@@ -3708,6 +4528,9 @@
 	alpha = 200;
 	color = "#A99671"
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 4
 	},
@@ -3724,6 +4547,7 @@
 "BN" = (
 /obj/effect/turf_decal/tile/red/real_red/fourcorners,
 /obj/machinery/holopad/secure,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "BP" = (
@@ -3735,6 +4559,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/line{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "BS" = (
@@ -3751,6 +4578,7 @@
 /obj/machinery/camera/autoname/directional/north{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/gym)
 "BV" = (
@@ -3806,6 +4634,9 @@
 	},
 /obj/machinery/airalarm/directional/east,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -3831,8 +4662,19 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/armory)
+"CE" = (
+/obj/effect/turf_decal/tile/red/real_red/fourcorners,
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/briefing)
 "CI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3853,11 +4695,16 @@
 	pixel_x = 11;
 	pixel_y = -24
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/restroom)
 "CW" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 1
 	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
@@ -3866,6 +4713,24 @@
 "CX" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
+"CZ" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200;
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/trimline/dark_red/line,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 1
+	},
+/area/ruin/space/has_grav/forgottenship/crewquarters)
 "Dc" = (
 /obj/structure/table/reinforced,
 /obj/structure/railing{
@@ -3885,6 +4750,21 @@
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cargo)
+"Dd" = (
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured_half{
+	dir = 8
+	},
+/area/ruin/space/has_grav/forgottenship/operations)
 "Dj" = (
 /obj/structure/fans/tiny/forcefield{
 	dir = 1
@@ -3915,6 +4795,9 @@
 /obj/item/towel,
 /obj/item/soap/syndie,
 /obj/item/soap/syndie,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/restroom)
 "Dw" = (
@@ -3922,6 +4805,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/engineering/engine2)
 "DB" = (
@@ -3937,6 +4821,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "DG" = (
@@ -3950,6 +4839,7 @@
 	alpha = 200;
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "DJ" = (
@@ -3965,6 +4855,9 @@
 /obj/structure/sign/departments/morgue/directional/west{
 	pixel_y = 32
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
 "DO" = (
@@ -3983,6 +4876,7 @@
 	},
 /obj/machinery/light_switch/directional/west,
 /obj/machinery/vending/dorms,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "DQ" = (
@@ -4009,8 +4903,13 @@
 	},
 /area/ruin/space/has_grav/forgottenship/cargo)
 "DW" = (
-/obj/machinery/suit_storage_unit/industrial/bloodredsuit,
 /obj/structure/railing,
+/obj/machinery/suit_storage_unit/industrial{
+	mask_type = /obj/item/clothing/mask/gas/syndicate;
+	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
+	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex/armored;
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex/armored
+	},
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/operations)
 "Ec" = (
@@ -4033,6 +4932,9 @@
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "Ek" = (
 /obj/structure/sign/warning/vacuum/external/directional/south,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/open/floor/iron/stairs{
 	dir = 8
 	},
@@ -4063,6 +4965,7 @@
 	},
 /obj/machinery/light/directional/south,
 /obj/machinery/computer/security/telescreen/entertainment/directional/south,
+/obj/structure/cable,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "EJ" = (
@@ -4074,6 +4977,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/shrink_ccw{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "EO" = (
@@ -4113,6 +5019,7 @@
 	},
 /obj/machinery/holopad/secure,
 /obj/effect/turf_decal/box/red,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "Fj" = (
@@ -4129,6 +5036,7 @@
 	pixel_y = 1
 	},
 /obj/structure/sign/flag/syndicate/directional/south,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood/tile,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
 "Fk" = (
@@ -4145,6 +5053,7 @@
 	dir = 8
 	},
 /obj/item/radio/intercom/syndicate/directional/east,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "Fs" = (
@@ -4154,15 +5063,25 @@
 /obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
 /obj/machinery/light/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "Fv" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/effect/mapping_helpers/apc/syndicate_access,
+/obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "FB" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/stairs/right{
 	dir = 4
 	},
@@ -4200,6 +5119,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/red/real_red/half,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/briefing)
 "FL" = (
@@ -4217,16 +5139,45 @@
 /area/ruin/space/has_grav/forgottenship/briefing)
 "FN" = (
 /obj/machinery/light/directional/north,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = 32;
+	name = "Ensign's Locker";
+	req_access = list("syndicate_leader")
+	},
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex/officer,
+/obj/item/clothing/suit/armor/gorlex/lieutenant,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/mask/balaclava,
+/obj/item/megaphone/sec{
+	name = "syndicate megaphone"
+	},
+/obj/item/clothing/glasses/sunglasses,
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/storage/belt/holster/nukie,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
 /turf/open/floor/carpet/black,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
 "FO" = (
 /obj/effect/turf_decal/tile/red/real_red/full,
 /obj/machinery/newscaster/directional/south,
-/obj/machinery/computer/records/security/syndie{
+/obj/machinery/modular_computer/preset/command{
 	dir = 1
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/armory)
+"FT" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/external_starboard)
 "FX" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -4255,6 +5206,9 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "FZ" = (
@@ -4269,6 +5223,10 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "Gf" = (
@@ -4310,6 +5268,17 @@
 "GC" = (
 /turf/open/floor/iron/shuttle/exploration/corner,
 /area/ruin/space/has_grav/forgottenship/engineering/engine1)
+"GH" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/effect/turf_decal/trimline/dark_red/filled/shrink_cw,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/hallway/central)
 "GN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/broken_floor,
@@ -4324,6 +5293,9 @@
 /obj/machinery/door/airlock/hatch{
 	name = "Crew Quarters"
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "GU" = (
@@ -4336,6 +5308,8 @@
 	color = "#A27E5F";
 	alpha = 200
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/item/kirbyplants/organic/plant21,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "Hd" = (
@@ -4351,6 +5325,12 @@
 	dir = 4
 	},
 /area/ruin/space/has_grav/forgottenship/bridge)
+"Hp" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/engineering)
 "Hq" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
@@ -4377,6 +5357,10 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/armory)
 "HP" = (
@@ -4397,12 +5381,15 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/capquarters)
 "Ie" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/button/door/directional/south{
-	name = "Blast Door Control";
+	name = "Cargo Bay Starboard Blast Door Control";
 	id = "sbc44_cargosouth";
 	req_access = list("syndicate")
 	},
@@ -4420,10 +5407,8 @@
 	},
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
-/obj/item/weaponcrafting/gunkit/nuclear{
-	pixel_y = 7;
-	pixel_x = -15
-	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "Ip" = (
@@ -4440,6 +5425,12 @@
 	dir = 8
 	},
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
+"Iq" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/bridge)
 "Iw" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -4493,6 +5484,8 @@
 	alpha = 200;
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -4505,6 +5498,20 @@
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/capquarters)
+"IG" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/cafeteria)
+"IH" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "II" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 8;
@@ -4514,6 +5521,9 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "IM" = (
@@ -4532,6 +5542,9 @@
 	alpha = 200;
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
 "IN" = (
@@ -4575,6 +5588,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/medical)
 "Jc" = (
@@ -4626,6 +5642,9 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 9
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "Jx" = (
@@ -4639,6 +5658,7 @@
 	dir = 8
 	},
 /obj/machinery/light/directional/south,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "JC" = (
@@ -4647,6 +5667,7 @@
 	name = "Bridge Window Shutters";
 	id = "sbc44_bridge"
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "JJ" = (
@@ -4667,9 +5688,13 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "Kb" = (
+/obj/structure/cable,
 /turf/open/floor/iron/stairs,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "Kc" = (
@@ -4688,11 +5713,8 @@
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "Kf" = (
-/obj/structure/closet/secure_closet/personal/cabinet{
-	req_access = list("syndicate_leader")
-	},
 /obj/machinery/button/door/directional/north{
-	name = "Blast Door Control";
+	name = "Door Blast Door Control";
 	req_access = list("syndicate_leader");
 	id = "sbc44_captain"
 	},
@@ -4700,11 +5722,13 @@
 /area/ruin/space/has_grav/forgottenship/capquarters)
 "Kh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "Kn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "Ko" = (
@@ -4729,6 +5753,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/shrink_ccw,
 /obj/machinery/airalarm/directional/south,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "Ku" = (
@@ -4740,6 +5767,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/line{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "Kv" = (
@@ -4760,6 +5790,15 @@
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
+"KF" = (
+/obj/effect/turf_decal/tile/red/real_red/full,
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/armory)
 "KM" = (
 /obj/effect/turf_decal/tile/yellow{
 	color = "#A27E5F";
@@ -4782,15 +5821,17 @@
 "KV" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/button/door/directional/north{
-	name = "Blast Door Control";
+	name = "Cargo Bay Port Blast Door Control";
 	req_access = list("syndicate");
 	id = "sbc44_cargonorth"
 	},
+/obj/structure/handrail,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "Lc" = (
 /obj/machinery/griddle,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "Ld" = (
@@ -4807,7 +5848,18 @@
 /obj/structure/sign/flag/syndicate/directional/south,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/briefing)
+"Ls" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/cafeteria)
 "Lx" = (
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "LL" = (
@@ -4835,8 +5887,19 @@
 /obj/structure/sign/warning/vacuum/external/directional/west{
 	pixel_y = 32
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
+"LO" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/cafeteria)
 "LQ" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -4853,6 +5916,7 @@
 	pixel_x = 3
 	},
 /obj/machinery/light_switch/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood/tile,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
 "LS" = (
@@ -4862,6 +5926,9 @@
 /obj/machinery/light_switch/directional/north{
 	pixel_x = -13
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/space/has_grav/forgottenship/operations)
 "LZ" = (
@@ -4874,6 +5941,9 @@
 	dir = 1
 	},
 /obj/structure/sign/departments/custodian/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "Mb" = (
@@ -4883,6 +5953,9 @@
 /area/ruin/space/has_grav/forgottenship/cargo)
 "Md" = (
 /obj/machinery/light/directional/west,
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "Me" = (
@@ -4892,6 +5965,7 @@
 	id = "sbc44_crew";
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "Mi" = (
@@ -4899,12 +5973,18 @@
 	name = "Armory Office"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/armory)
 "Mj" = (
 /obj/machinery/newscaster/directional/south,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "Mk" = (
@@ -4981,6 +6061,9 @@
 	color = "#477C69";
 	alpha = 200
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/medical)
 "Nc" = (
@@ -5026,6 +6109,9 @@
 	},
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/trimline/dark_red/line,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "Nl" = (
@@ -5039,10 +6125,25 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/cryo)
+"Np" = (
+/obj/machinery/door/airlock/mining/glass{
+	name = "Cargo Bay"
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "Ny" = (
 /obj/effect/turf_decal/tile/red/real_red/full,
 /obj/machinery/photocopier,
 /obj/item/radio/intercom/syndicate/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/armory)
 "NA" = (
@@ -5051,6 +6152,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -5078,6 +6180,7 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -5091,6 +6194,8 @@
 	color = "#477C69";
 	alpha = 200
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/medical)
 "NZ" = (
@@ -5105,6 +6210,11 @@
 "Of" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
 /area/ruin/space/has_grav/forgottenship/custodial)
+"Oj" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/has_grav/forgottenship/operations)
 "Ol" = (
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
@@ -5135,6 +6245,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "Oz" = (
@@ -5153,11 +6264,21 @@
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "OP" = (
 /turf/closed/indestructible/syndicate,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
+"OZ" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "Pa" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -5188,11 +6309,15 @@
 /obj/machinery/suit_storage_unit/industrial{
 	mask_type = /obj/item/clothing/mask/gas/syndicate;
 	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
-	suit_type = /obj/item/clothing/suit/space/syndicate;
-	helmet_type = /obj/item/clothing/head/helmet/space/syndicate
+	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex;
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
+"Pj" = (
+/obj/structure/cable,
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/engineering)
 "Pk" = (
 /obj/structure/railing/corner/end{
 	dir = 8
@@ -5209,6 +6334,7 @@
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "Po" = (
 /obj/machinery/light_switch/directional/east,
+/obj/structure/cable,
 /turf/open/floor/iron/shuttle/exploration/corner{
 	dir = 1
 	},
@@ -5223,6 +6349,9 @@
 	dir = 8
 	},
 /obj/structure/sign/departments/med/directional/west,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "PG" = (
@@ -5243,11 +6372,18 @@
 	pixel_x = 8;
 	pixel_y = 6
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "PK" = (
 /obj/machinery/camera/autoname/directional/west{
 	network = list("sbc44")
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cargo)
@@ -5260,6 +6396,7 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/briefing)
 "Qb" = (
@@ -5268,6 +6405,7 @@
 	name = "Gym Window Shutters";
 	id = "sbc44_gym"
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/gym)
 "Qc" = (
@@ -5336,10 +6474,33 @@
 	alpha = 200;
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	name = "Doctor's Locker";
+	pixel_y = -32
+	},
+/obj/item/storage/backpack/duffelbag/syndie/med,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/suit/apron/surgical/gorlex,
+/obj/item/clothing/head/gorlex/surgical,
+/obj/item/clothing/glasses/hud/health/sunglasses,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/storage/belt/medical/ert,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
 /area/ruin/space/has_grav/forgottenship/medical)
+"Qy" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav/forgottenship/crewquarters)
 "QB" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/frame/computer{
@@ -5362,6 +6523,9 @@
 /obj/machinery/suit_storage_unit/industrial/bloodredsuit{
 	mod_type = /obj/item/mod/control/pre_equipped/traitor_elite
 	},
+/obj/machinery/camera/autoname/directional/east{
+	network = list("sbc44")
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
 "QI" = (
@@ -5370,6 +6534,7 @@
 	},
 /obj/machinery/autolathe,
 /obj/effect/turf_decal/box/red,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "QL" = (
@@ -5390,6 +6555,7 @@
 	},
 /obj/structure/bed/dogbed/cayenne,
 /mob/living/basic/carp/pet/cayenne,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -5417,8 +6583,23 @@
 	id = "sbc44_engineering";
 	req_access = list("syndicate")
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
+"Rl" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 1;
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/dark/smooth_edge,
+/area/ruin/space/has_grav/forgottenship/bridge)
 "Rw" = (
 /obj/machinery/camera/directional/south{
 	c_tag = "Cargo Bay External Port";
@@ -5431,6 +6612,8 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/stairs/left{
 	dir = 1
 	},
@@ -5464,6 +6647,9 @@
 /obj/effect/turf_decal/trimline/dark_red/corner{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "RS" = (
@@ -5473,6 +6659,9 @@
 	},
 /obj/effect/turf_decal/trimline/dark_red/filled/line,
 /obj/item/radio/intercom/syndicate/directional/south,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "RV" = (
@@ -5491,6 +6680,7 @@
 	id = "sbc44_atmos";
 	req_access = list("syndicate")
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 1
 	},
@@ -5537,6 +6727,15 @@
 	},
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/forgottenship/capquarters)
+"Sj" = (
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/ruin/space/has_grav/forgottenship/officerlounge)
+"Sp" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "Sq" = (
 /obj/effect/turf_decal/tile/red/real_red/half,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -5548,11 +6747,16 @@
 	announcement_channel = "Syndicate";
 	radio = /obj/item/radio/headset/syndicate/alt
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "St" = (
 /obj/structure/sink/directional/north,
 /obj/structure/mirror/directional/south,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "Sv" = (
@@ -5570,11 +6774,29 @@
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "SG" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
-/obj/structure/closet/secure_closet/interdynefob/engie_locker,
 /obj/effect/turf_decal/tile/red/real_red/half{
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/south,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_x = 32;
+	name = "Mechanic's Locker"
+	},
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/shoes/workboots,
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/suit/hazardvest/gorlex,
+/obj/item/clothing/head/hardhat/gorlex,
+/obj/item/storage/belt/utility/syndicate,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/clothing/gloves/combat,
+/obj/item/inducer/syndicate,
+/obj/item/storage/backpack/duffelbag/engineering,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/accessory/armband/engine/nonsec,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "SJ" = (
@@ -5592,6 +6814,9 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "SN" = (
@@ -5604,6 +6829,9 @@
 /obj/machinery/camera/autoname/directional/west{
 	network = list("sbc44")
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "SP" = (
@@ -5613,10 +6841,14 @@
 	id = "sbc44_hall";
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "SR" = (
 /obj/structure/railing/corner/end/flip,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "SZ" = (
@@ -5631,6 +6863,12 @@
 "Ta" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/light/small/directional/west,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_port)
 "Td" = (
@@ -5640,6 +6878,9 @@
 	},
 /obj/effect/turf_decal/trimline/dark_red/filled/line,
 /obj/structure/sign/departments/engineering/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "Te" = (
@@ -5653,6 +6894,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/restroom)
 "Tm" = (
@@ -5665,6 +6909,7 @@
 	pixel_x = 7
 	},
 /obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "Tr" = (
@@ -5679,7 +6924,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/machinery/computer/records/medical/syndie{
+/obj/machinery/computer/security/forgottenship{
 	dir = 8
 	},
 /turf/open/floor/iron/dark/smooth_edge{
@@ -5698,6 +6943,7 @@
 	color = "#477C69";
 	alpha = 200
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/medical)
 "TE" = (
@@ -5708,6 +6954,7 @@
 	},
 /obj/machinery/airalarm/directional/south,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "TF" = (
@@ -5716,7 +6963,9 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/obj/item/storage/toolbox/guncase/m90gl,
+/obj/item/storage/toolbox/guncase/skyrat{
+	pixel_y = 5
+	},
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "TG" = (
@@ -5725,6 +6974,9 @@
 	alpha = 200
 	},
 /obj/effect/turf_decal/trimline/dark_red/filled/shrink_ccw,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway)
 "TN" = (
@@ -5734,6 +6986,9 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
 "TR" = (
@@ -5753,6 +7008,9 @@
 	color = "#A27E5F";
 	alpha = 200
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -5764,6 +7022,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/engineering/engine2)
 "Ul" = (
@@ -5832,6 +7091,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -5843,6 +7103,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 1
 	},
@@ -5858,6 +7120,9 @@
 	alpha = 200;
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -5866,6 +7131,9 @@
 /obj/structure/bodycontainer/morgue,
 /obj/machinery/camera/autoname/directional/north{
 	network = list("sbc44")
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
@@ -5940,6 +7208,7 @@
 	name = "Atmospherics Window Shutters";
 	id = "sbc44_atmos"
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "VD" = (
@@ -5983,6 +7252,10 @@
 /obj/machinery/camera/autoname/directional/north{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "VL" = (
@@ -6018,6 +7291,9 @@
 /obj/machinery/camera/autoname/directional/south{
 	network = list("sbc44")
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
 "VW" = (
@@ -6033,11 +7309,14 @@
 /obj/structure/chair{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "Wb" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/stairs{
 	dir = 8
 	},
@@ -6070,6 +7349,7 @@
 /obj/machinery/camera/autoname/directional/south{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -6102,11 +7382,13 @@
 	},
 /area/ruin/space/has_grav/forgottenship/medical)
 "Ws" = (
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/airlock/hatch{
 	name = "Restroom"
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/bridge)
 "Wt" = (
@@ -6118,6 +7400,9 @@
 /obj/structure/railing/corner/end,
 /obj/machinery/light/directional/north,
 /obj/machinery/firealarm/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "Wx" = (
@@ -6134,6 +7419,11 @@
 /obj/item/ammo_box/c9mm,
 /obj/item/ammo_box/c9mm,
 /obj/item/ammo_box/c9mm,
+/obj/item/storage/toolbox/guncase/c20r,
+/obj/item/storage/toolbox/guncase/c20r,
+/obj/item/storage/toolbox/guncase/c20r,
+/obj/item/storage/toolbox/guncase/c20r,
+/obj/item/storage/toolbox/guncase/m90gl,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
 "WA" = (
@@ -6206,9 +7496,15 @@
 	},
 /obj/item/radio/intercom/syndicate/directional/west,
 /obj/machinery/light/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "WP" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "WS" = (
@@ -6222,19 +7518,20 @@
 	dir = 8
 	},
 /obj/machinery/button/door{
-	name = "Blast Door Control";
+	name = "Cargo Bay Port Blast Door Control";
 	pixel_x = -5;
 	pixel_y = 7;
 	req_access = list("syndicate");
 	id = "sbc44_cargonorth"
 	},
 /obj/machinery/button/door{
-	name = "Blast Door Control";
+	name = "Cargo Bay Starboard Blast Door Control";
 	pixel_x = -5;
 	pixel_y = -3;
 	req_access = list("syndicate");
 	id = "sbc44_cargosouth"
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "WW" = (
@@ -6253,6 +7550,7 @@
 	alpha = 200;
 	color = "#A99671"
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 1
 	},
@@ -6260,12 +7558,21 @@
 "Xb" = (
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
+"Xc" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/briefing)
 "Xi" = (
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/yellow/full{
 	color = "#A99671";
 	alpha = 200
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
 "Xj" = (
@@ -6290,6 +7597,7 @@
 	pixel_y = 4;
 	pixel_x = -6
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/gym)
 "Xo" = (
@@ -6324,6 +7632,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "Xx" = (
@@ -6374,6 +7683,9 @@
 	},
 /obj/item/defibrillator/loaded,
 /obj/machinery/firealarm/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/medical)
 "XJ" = (
@@ -6383,6 +7695,8 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "XQ" = (
@@ -6405,11 +7719,39 @@
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 1
 	},
-/obj/machinery/vending/wardrobe/sec_wardrobe/red,
 /obj/machinery/light/directional/north,
-/obj/machinery/firealarm/directional/north,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = 32;
+	name = "clothes locker"
+	},
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/under/syndicate/gorlex,
+/obj/item/clothing/under/syndicate/gorlex/fatigues,
+/obj/item/clothing/under/syndicate/gorlex/fatigues,
+/obj/item/clothing/under/syndicate/gorlex/fatigues,
+/obj/item/clothing/under/syndicate/gorlex/fatigues,
+/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
+/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
+/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
+/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/under/plasmaman/gorlex,
+/obj/item/clothing/under/plasmaman/gorlex,
+/obj/item/clothing/head/helmet/space/plasmaman/gorlex,
+/obj/item/clothing/head/helmet/space/plasmaman/gorlex,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
+"XX" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/shuttle/cargo,
+/area/ruin/space/has_grav/forgottenship/operations)
 "Ya" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -6419,6 +7761,9 @@
 /obj/machinery/camera/autoname/directional/south{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -6451,6 +7796,9 @@
 	color = "#A99671";
 	alpha = 200
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/gym)
 "Ys" = (
@@ -6479,13 +7827,43 @@
 	},
 /obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
-/obj/machinery/vending/wardrobe/syndie_wardrobe,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = 32;
+	name = "clothes locker"
+	},
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/mask/balaclava,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/syndicate/alt,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "YG" = (
-/obj/machinery/suit_storage_unit/industrial/bloodredsuit,
+/obj/machinery/suit_storage_unit/industrial{
+	mask_type = /obj/item/clothing/mask/gas/syndicate;
+	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
+	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex/armored;
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex/armored
+	},
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/operations)
+"YH" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured,
+/area/ruin/space/has_grav/forgottenship/restroom)
 "YO" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
 /area/ruin/space/has_grav/forgottenship/cafeteria)
@@ -6496,6 +7874,17 @@
 "YU" = (
 /turf/template_noop,
 /area/template_noop)
+"YV" = (
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 4
+	},
+/area/ruin/space/has_grav/forgottenship/cargo)
 "Zb" = (
 /obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -6527,6 +7916,9 @@
 /obj/effect/turf_decal/trimline/dark_red/filled/shrink_cw{
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "Zd" = (
@@ -6542,6 +7934,7 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "Zm" = (
@@ -6552,6 +7945,10 @@
 /obj/machinery/light_switch/directional/north,
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
 	},
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/forgottenship/capquarters)
@@ -6587,6 +7984,14 @@
 	},
 /turf/open/floor/engine/o2,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
+"ZI" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#A99671";
+	alpha = 200
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/gym)
 "ZK" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1;
@@ -6599,6 +8004,9 @@
 /obj/machinery/camera/autoname/directional/north{
 	network = list("sbc44")
 	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "ZO" = (
@@ -7436,7 +8844,7 @@ Ds
 gm
 zV
 Po
-Ds
+av
 Lx
 aW
 sR
@@ -7620,14 +9028,14 @@ ja
 Kh
 Kh
 Kh
-Kh
+jx
 RV
 to
 SR
 QI
 hN
-BM
-BM
+AH
+Pj
 yP
 Wb
 sO
@@ -7679,7 +9087,7 @@ YU
 YU
 to
 as
-IZ
+OZ
 IZ
 Xz
 Ld
@@ -7688,7 +9096,7 @@ to
 jg
 aV
 UI
-BM
+jn
 xz
 xz
 eI
@@ -7750,9 +9158,9 @@ to
 Wv
 Vh
 eJ
+fU
 BM
-BM
-BM
+Hp
 xB
 Hq
 Jh
@@ -7941,7 +9349,7 @@ SN
 FJ
 vE
 Wn
-Xb
+FT
 Md
 Xb
 go
@@ -7989,8 +9397,8 @@ YU
 YU
 iL
 Tm
-ay
-ay
+Sj
+Sj
 kb
 zd
 Xi
@@ -8004,7 +9412,7 @@ BF
 Nl
 Wn
 sp
-Xb
+fE
 eG
 Pe
 Wn
@@ -8185,7 +9593,7 @@ py
 WG
 DB
 sg
-bU
+hS
 NN
 MK
 EH
@@ -8244,14 +9652,14 @@ ea
 qC
 Do
 py
-WG
-DB
+cM
+lT
 mM
 UN
 UN
 UN
 BE
-WD
+Ls
 Om
 Ec
 jd
@@ -8313,7 +9721,7 @@ wC
 nU
 QM
 AF
-WD
+LO
 zN
 Vg
 sV
@@ -8357,9 +9765,9 @@ YU
 YU
 JC
 uc
-sh
+Rl
 Fh
-Ub
+gV
 Yt
 pm
 pm
@@ -8493,13 +9901,13 @@ az
 KR
 qA
 mR
-iM
+ht
 ss
 dl
 nU
 on
-AF
-WD
+ac
+IG
 wI
 wI
 UB
@@ -8559,10 +9967,10 @@ Re
 ss
 wj
 bU
-bU
+oy
 WZ
-WD
-Vg
+gx
+hm
 Vg
 sV
 YO
@@ -8669,7 +10077,7 @@ JC
 yX
 vs
 tX
-tX
+Iq
 Id
 mb
 jG
@@ -8738,17 +10146,17 @@ AN
 Kv
 FN
 HD
-HD
+eb
 oQ
 EJ
 bp
 ip
 Yu
-bg
+du
 DO
 Zi
 WO
-jq
+iu
 jq
 ip
 YU
@@ -8806,11 +10214,11 @@ ie
 rE
 ip
 XS
-Yk
-fF
+bZ
+CZ
 aP
 WP
-WP
+Qy
 jC
 Me
 YU
@@ -8930,7 +10338,7 @@ nq
 IN
 ip
 xf
-bg
+du
 bg
 bg
 VL
@@ -8986,13 +10394,13 @@ Ji
 tT
 Ab
 tS
-tS
+YH
 Tl
 aT
 ce
 ip
 rf
-Yk
+bZ
 Yk
 Yk
 fF
@@ -9054,10 +10462,10 @@ OH
 IN
 ip
 gh
-Yk
-Yk
-Yk
-fF
+bZ
+bZ
+bZ
+CZ
 aP
 zA
 PG
@@ -9113,7 +10521,7 @@ Um
 Um
 Um
 aT
-IN
+lc
 ip
 rS
 zR
@@ -9244,7 +10652,7 @@ ye
 FE
 dp
 dp
-dp
+zv
 UC
 Cb
 rr
@@ -9295,18 +10703,18 @@ jy
 NT
 mj
 oV
-Ty
+by
 Qw
 Um
 ZK
 Nj
 zK
 FL
-TR
+cA
 xH
 TR
-TR
-FK
+Xc
+iW
 pP
 Cb
 lS
@@ -9361,13 +10769,13 @@ Wq
 IM
 Um
 aT
-dk
+GH
 hn
 mh
 pz
 pz
 pz
-TR
+cA
 Lj
 UC
 aj
@@ -9426,14 +10834,14 @@ aT
 Yi
 zK
 FL
+qU
 Ye
-Ye
-Ye
-TR
+CE
+cA
 FK
 Mi
-Cb
-Cb
+bb
+bb
 FO
 UC
 YU
@@ -9491,11 +10899,11 @@ ER
 Ye
 Ye
 Ye
-TR
+cA
 oi
 UC
 nh
-Cb
+bb
 Ny
 UC
 YU
@@ -9553,7 +10961,7 @@ ve
 Xx
 zB
 AT
-AT
+oM
 Av
 UC
 UC
@@ -9615,7 +11023,7 @@ eA
 eA
 eA
 eA
-lv
+Dd
 lv
 UC
 zz
@@ -9737,9 +11145,9 @@ YU
 eA
 tl
 rz
-aH
+XX
 RB
-pf
+Oj
 pf
 qE
 Il
@@ -9805,7 +11213,7 @@ pf
 pf
 qE
 TF
-CA
+KF
 qp
 UC
 YU
@@ -9973,10 +11381,10 @@ YU
 YU
 Qb
 fW
-Yn
+ZI
 vt
 vi
-SZ
+Np
 SZ
 Ht
 YU
@@ -10162,7 +11570,7 @@ vr
 bz
 BD
 PK
-Zq
+IH
 Zq
 BZ
 Ht
@@ -10221,11 +11629,11 @@ YU
 Rw
 Ht
 KV
-Zq
-Zq
-Zq
-Zq
-Zq
+Sp
+so
+so
+IH
+uk
 Ie
 Ht
 HP
@@ -10286,7 +11694,7 @@ BB
 fr
 fr
 fr
-fr
+gl
 fr
 wt
 Dj
@@ -10348,7 +11756,7 @@ VJ
 su
 su
 su
-su
+qB
 su
 Tw
 Dj
@@ -10410,7 +11818,7 @@ wO
 DS
 DS
 DS
-DS
+YV
 DS
 vl
 Dj
@@ -10594,7 +12002,7 @@ cF
 Ht
 Sd
 Fc
-Zq
+qj
 Zr
 qy
 bQ

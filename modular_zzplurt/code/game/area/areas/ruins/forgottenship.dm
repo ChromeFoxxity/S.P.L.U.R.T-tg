@@ -41,7 +41,7 @@
 	icon_state = "centralhall"
 
 /area/ruin/space/has_grav/forgottenship/hallway/command
-	name = "\improper SBC Ironclad Command Hallway"
+	name = "\improper SBC Ironclad Command Deck"
 	icon_state = "bridge_hallway"
 
 /area/ruin/space/has_grav/forgottenship/officerlounge
@@ -85,7 +85,7 @@
 	icon_state = "armory"
 
 /area/ruin/space/has_grav/forgottenship/operations
-	name = "\improper SBC Ironclad Operations Airlock"
+	name = "\improper SBC Ironclad Hangar"
 	icon = 'icons/area/areas_station.dmi'
 	icon_state = "sec_eva"
 
@@ -142,3 +142,4 @@
 	icon = 'icons/area/areas_centcom.dmi'
 	icon_state = "syndie-control"
 	requires_power = FALSE
+	area_flags = NOTELEPORT
