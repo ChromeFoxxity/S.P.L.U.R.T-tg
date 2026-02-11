@@ -26,7 +26,8 @@
 	},
 /obj/machinery/light/directional/north,
 /obj/machinery/camera/autoname/directional/north{
-	network = list("sbc44")
+	network = list("sbc44");
+	c_tag = "SBC Ironclad Armory Office #1"
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/armory)
@@ -190,7 +191,8 @@
 /obj/structure/broken_flooring/side/directional/east,
 /obj/machinery/mineral/ore_redemption{
 	ore_multiplier = 4;
-	req_access = list("syndicate")
+	req_access = list("syndicate");
+	name = "Syndicate-brand ore redemption machine"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
@@ -449,13 +451,13 @@
 /obj/item/clothing/neck/shemagh/gorlex,
 /obj/item/clothing/head/gorlex/flap,
 /obj/item/clothing/head/gorlex,
-/obj/item/clothing/gloves/tackler/combat/insulated,
+/obj/item/clothing/gloves/combat,
 /obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/radio/headset/syndicate/alt,
 /obj/structure/closet/secure_closet/wall/syndicate{
 	pixel_x = -32;
 	name = "Operative's Locker"
 	},
-/obj/item/radio/headset/syndicate/alt,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/briefing)
 "dr" = (
@@ -546,36 +548,6 @@
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
-"ec" = (
-/obj/effect/turf_decal/tile/yellow/half{
-	color = "#A99671";
-	alpha = 200;
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
-	color = "#A27E5F";
-	alpha = 200
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/closet/secure_closet/wall/syndicate{
-	pixel_y = -32;
-	name = "Pilot's Locker"
-	},
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/clothing/shoes/combat,
-/obj/item/clothing/under/syndicate/gorlex/fatigues,
-/obj/item/storage/belt/security/webbing/gorlex,
-/obj/item/clothing/head/helmet/gorlex/pilot,
-/obj/item/clothing/head/gorlex,
-/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
-/obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/radio/headset/syndicate/alt,
-/turf/open/floor/iron/dark/smooth_edge{
-	dir = 1
-	},
-/area/ruin/space/has_grav/forgottenship/bridge)
 "ei" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
@@ -609,9 +581,10 @@
 "ev" = (
 /obj/effect/turf_decal/vg_decals/atmos/oxygen,
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/monitored/oxygen_output{
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/engine/o2,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "ey" = (
@@ -817,9 +790,9 @@
 "ge" = (
 /obj/machinery/camera/directional/south{
 	network = list("sbc44");
-	c_tag = "Airlock External Port"
+	c_tag = "SBC Ironclad Airlock External Port"
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/ruin/space/has_grav/forgottenship/external)
 "gg" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -888,6 +861,7 @@
 /area/ruin/space/has_grav/forgottenship/engineering/engine1)
 "go" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "gx" = (
@@ -924,9 +898,12 @@
 /turf/open/floor/iron/shuttle/cargo,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "gJ" = (
-/obj/machinery/computer/operating,
+/obj/machinery/computer/operating{
+	icon_keyboard = "syndie_key"
+	},
 /obj/machinery/camera/autoname/directional/north{
-	network = list("sbc44")
+	network = list("sbc44");
+	c_tag = "SBC Ironclad Operating Room #1"
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -1063,8 +1040,8 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/machinery/power/smes/magical/cybersun,
 /obj/structure/cable,
+/obj/machinery/power/smes/magical/cybersun,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 1
 	},
@@ -1163,6 +1140,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
+	dir = 4
+	},
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders{
 	dir = 4
 	},
 /turf/open/floor/carpet/red,
@@ -1324,6 +1304,9 @@
 /obj/structure/curtain/bounty,
 /obj/item/bedsheet/red{
 	dir = 1
+	},
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/pilot{
+	dir = 4
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
@@ -1493,7 +1476,8 @@
 	},
 /obj/machinery/firealarm/directional/south,
 /obj/machinery/camera/autoname/directional/south{
-	network = list("sbc44")
+	network = list("sbc44");
+	c_tag = "SBC Ironclad Armory #1"
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
 	dir = 1
@@ -1561,9 +1545,54 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
+"ki" = (
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = -32;
+	name = "Lieutenant's Locker";
+	req_access = list("syndicate_leader")
+	},
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex/officer,
+/obj/item/clothing/suit/armor/gorlex/lieutenant,
+/obj/item/clothing/head/gorlex/peaked,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/gloves/tackler/combat/insulated,
+/obj/item/megaphone/sec{
+	name = "syndicate megaphone"
+	},
+/obj/item/clothing/glasses/hud/security/sunglasses/redsec,
+/obj/item/clothing/glasses/hud/security/sunglasses/gorlex,
+/obj/item/storage/toolbox/guncase/skyrat/pistol/aps,
+/obj/item/radio/headset/syndicate/alt/leader,
+/obj/item/storage/belt/holster/nukie,
+/turf/open/floor/carpet/black,
+/area/ruin/space/has_grav/forgottenship/officerquarters)
 "kk" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
 /area/ruin/space/has_grav/forgottenship/engineering/engine2)
+"kt" = (
+/obj/structure/closet/secure_closet/wall/syndicate{
+	name = "Wrecker's Locker";
+	pixel_x = 33
+	},
+/obj/item/clothing/shoes/workboots,
+/obj/item/storage/backpack/satchel/explorer,
+/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
+/obj/item/clothing/suit/hazardvest/gorlex,
+/obj/item/clothing/head/hardhat/gorlex,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/head/gorlex/flap,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/storage/belt/mining,
+/obj/item/clothing/glasses/meson,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/storage/backpack/duffelbag/explorer,
+/obj/item/clothing/accessory/armband/cargo,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/forgottenship/cargo)
 "kK" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -1572,10 +1601,13 @@
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/structure/fans/tiny,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "kM" = (
-/obj/structure/closet/secure_closet/engineering_welding,
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_access = list("syndicate")
+	},
 /obj/machinery/camera/autoname/directional/east{
 	network = list("sbc44")
 	},
@@ -1589,6 +1621,7 @@
 "kR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/old,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "kY" = (
@@ -1939,8 +1972,8 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 9
 	},
-/obj/machinery/power/smes/magical/cybersun,
 /obj/structure/cable,
+/obj/machinery/power/smes/magical/cybersun,
 /turf/open/floor/iron/dark/textured_corner,
 /area/ruin/space/has_grav/forgottenship/engineering)
 "mX" = (
@@ -2304,6 +2337,15 @@
 "oQ" = (
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
+"oS" = (
+/obj/structure/bed,
+/obj/item/bedsheet/black,
+/obj/structure/curtain/cloth/fancy,
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/ensign{
+	dir = 8
+	},
+/turf/open/floor/carpet/black,
+/area/ruin/space/has_grav/forgottenship/officerquarters)
 "oV" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	color = "#A99671";
@@ -2473,7 +2515,7 @@
 	name = "Weapons Crate"
 	},
 /obj/item/melee/energy/sword/saber/red,
-/obj/item/switchblade,
+/obj/item/melee/energy/sword/saber/red,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
 "pN" = (
@@ -2517,9 +2559,6 @@
 	req_access = list("syndicate");
 	name = "refrigerator"
 	},
-/obj/item/storage/cans/sixbeer,
-/obj/item/storage/cans/sixbeer,
-/obj/item/storage/cans/sixbeer,
 /obj/item/pizzabox/random,
 /obj/item/pizzabox/random,
 /obj/item/pizzabox/random,
@@ -2527,6 +2566,9 @@
 /obj/item/pizzabox/random,
 /obj/item/pizzabox/random,
 /obj/machinery/light/directional/east,
+/obj/item/storage/cans/sixsoda,
+/obj/item/storage/cans/sixsoda,
+/obj/item/storage/cans/sixsoda,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "pX" = (
@@ -2795,17 +2837,19 @@
 /obj/structure/closet/crate{
 	name = "surplus materials"
 	},
-/obj/item/stack/sheet/iron/twenty,
 /obj/item/stack/sheet/glass{
 	amount = 20;
 	pixel_x = 2;
 	pixel_y = -2
 	},
-/obj/item/stack/sheet/plastic{
-	amount = 20
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
+	},
+/obj/item/stack/sheet/iron/twenty,
+/obj/item/stack/sheet/plastic{
+	amount = 20;
+	pixel_y = 2;
+	pixel_x = -3
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering)
@@ -2815,7 +2859,8 @@
 /obj/structure/broken_flooring/singular/directional/east,
 /obj/machinery/status_display/evac/directional/south,
 /obj/machinery/camera/autoname/directional/south{
-	network = list("sbc44")
+	network = list("sbc44");
+	c_tag = "Nanotrasen Survival Pod"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
@@ -2870,7 +2915,9 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/machinery/computer/monitor,
+/obj/machinery/computer/monitor{
+	icon_keyboard = "syndie_key"
+	},
 /obj/effect/turf_decal/tile/red/real_red/half,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
@@ -3006,6 +3053,8 @@
 /obj/structure/sign/warning/no_smoking/circle/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/directional/north,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "ss" = (
@@ -3102,7 +3151,7 @@
 "tn" = (
 /obj/machinery/camera/directional/west{
 	network = list("sbc44");
-	c_tag = "Operations External"
+	c_tag = "SBC Ironclad Hangar External"
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/forgottenship/external)
@@ -3158,6 +3207,7 @@
 	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex;
 	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex
 	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_port)
 "tS" = (
@@ -3202,7 +3252,9 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/obj/machinery/computer/monitor,
+/obj/machinery/computer/monitor{
+	icon_keyboard = "syndie_key"
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -3232,6 +3284,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/medicaldoctor,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/ruin/space/has_grav/forgottenship/medical)
 "uh" = (
@@ -3268,6 +3321,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/mechanic{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "uy" = (
@@ -3284,6 +3340,11 @@
 	},
 /turf/open/floor/wood/tile,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
+"uB" = (
+/obj/structure/lattice,
+/obj/structure/cable,
+/turf/template_noop,
+/area/space/nearstation)
 "uE" = (
 /obj/structure/railing/corner/end{
 	dir = 4
@@ -3424,7 +3485,7 @@
 /obj/machinery/cryopod{
 	dir = 1
 	},
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/dark/small,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "vG" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -3496,7 +3557,9 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/machinery/computer/atmos_alert,
+/obj/machinery/computer/atmos_alert{
+	icon_keyboard = "syndie_key"
+	},
 /obj/effect/turf_decal/tile/red/real_red/half,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
@@ -3540,7 +3603,7 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 1
 	},
-/obj/machinery/light/warm/directional/north,
+/obj/machinery/light/broken/directional/north,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "ww" = (
@@ -3564,6 +3627,7 @@
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "wC" = (
@@ -3647,7 +3711,9 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/machinery/computer/cargo/express/interdyne,
+/obj/machinery/computer/cargo/express/interdyne{
+	icon_keyboard = "syndie_key"
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -3752,7 +3818,7 @@
 /area/ruin/space/has_grav/forgottenship/engineering)
 "xA" = (
 /obj/structure/lattice,
-/turf/open/space/basic,
+/turf/template_noop,
 /area/space/nearstation)
 "xB" = (
 /obj/machinery/firealarm/directional/south,
@@ -3765,6 +3831,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom/syndicate,
+/obj/item/paper/fluff/ruins/forgottenship/missionobj/remade,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/forgottenship/briefing)
 "xJ" = (
@@ -3836,13 +3903,16 @@
 /area/ruin/space/has_grav/forgottenship/bridge)
 "yq" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "yu" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/engineering_electrical,
+/obj/structure/closet/secure_closet/engineering_electrical{
+	req_access = list("syndicate")
+	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 1
 	},
@@ -4041,6 +4111,9 @@
 	dir = 8
 	},
 /obj/machinery/firealarm/directional/east,
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/operative{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -4235,7 +4308,7 @@
 "AA" = (
 /obj/structure/lattice,
 /obj/structure/billboard/nanotrasen/defaced,
-/turf/open/space/basic,
+/turf/template_noop,
 /area/space/nearstation)
 "AE" = (
 /obj/structure/mop_bucket,
@@ -4303,6 +4376,9 @@
 	alpha = 200;
 	dir = 8
 	},
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/operative{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -4314,7 +4390,7 @@
 /obj/machinery/cryopod{
 	dir = 1
 	},
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/dark/small,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "Ba" = (
 /obj/machinery/door/airlock/external,
@@ -4475,7 +4551,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 1
+	},
 /area/ruin/space/has_grav/forgottenship/cryo)
 "BM" = (
 /turf/open/floor/iron/dark/textured,
@@ -4867,6 +4945,21 @@
 	dir = 4
 	},
 /area/ruin/space/has_grav/forgottenship/cafeteria)
+"Ee" = (
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 4
+	},
+/obj/machinery/computer/old{
+	name = "SBC Ironclad Navigation Computer";
+	desc = "Used to designate a precise transit location for the SBC Ironclad.";
+	icon_keyboard = "syndie_key";
+	icon_screen = "syndishuttle";
+	dir = 8
+	},
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 4
+	},
+/area/ruin/space/has_grav/forgottenship/bridge)
 "Ek" = (
 /obj/structure/sign/warning/vacuum/external/directional/south,
 /obj/structure/handrail{
@@ -4876,6 +4969,17 @@
 	dir = 8
 	},
 /area/ruin/space/has_grav/forgottenship/cargo)
+"Er" = (
+/obj/structure/railing,
+/obj/machinery/suit_storage_unit/industrial{
+	mask_type = /obj/item/clothing/mask/gas/syndicate;
+	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
+	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex/armored;
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex/armored
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/shuttle/cargo,
+/area/ruin/space/has_grav/forgottenship/operations)
 "Ey" = (
 /turf/closed/mineral/random/high_chance,
 /area/ruin/space)
@@ -5047,7 +5151,9 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/west,
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 1
+	},
 /area/ruin/space/has_grav/forgottenship/cryo)
 "FK" = (
 /obj/effect/turf_decal/tile/yellow/half{
@@ -5087,7 +5193,7 @@
 /obj/item/clothing/suit/armor/gorlex/lieutenant,
 /obj/item/clothing/head/gorlex,
 /obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/gloves/combat,
 /obj/item/megaphone/sec{
 	name = "syndicate megaphone"
 	},
@@ -5113,6 +5219,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "FX" = (
@@ -5164,6 +5271,11 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/item/implant/radio,
+/obj/item/implant/radio,
+/obj/item/implant/radio,
+/obj/item/implant/radio,
+/obj/item/implant/radio,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "Gf" = (
@@ -5258,6 +5370,13 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 4
 	},
+/obj/machinery/computer/old{
+	name = "SBC Ironclad Shuttle Console";
+	desc = "Used to control the SBC Ironclad.";
+	icon_keyboard = "syndie_key";
+	icon_screen = "syndishuttle";
+	dir = 8
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -5303,7 +5422,7 @@
 "HP" = (
 /obj/machinery/camera/directional/north{
 	network = list("sbc44");
-	c_tag = "Cargo Bay External Starboard"
+	c_tag = "SBC Ironclad Cargo Bay External Starboard"
 	},
 /turf/open/floor/engine/hull,
 /area/ruin/space/has_grav/forgottenship/external)
@@ -5351,10 +5470,6 @@
 "Ip" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
-	},
-/obj/machinery/computer/atmos_control/oxygen_tank{
-	dir = 8;
-	atmos_chambers = list("sbc44_o2" = "Oxygen Supply")
 	},
 /obj/machinery/airalarm/directional/east,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
@@ -5433,6 +5548,9 @@
 /obj/structure/curtain/cloth/fancy,
 /obj/machinery/airalarm/directional/east,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/captain{
+	dir = 8
+	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/capquarters)
 "IG" = (
@@ -5513,6 +5631,9 @@
 /obj/structure/bed,
 /obj/item/bedsheet/black,
 /obj/structure/curtain/cloth/fancy,
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/lieutenant{
+	dir = 8
+	},
 /turf/open/floor/carpet/black,
 /area/ruin/space/has_grav/forgottenship/officerquarters)
 "IZ" = (
@@ -5591,9 +5712,6 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
-/obj/machinery/computer/atmos_control/nitrogen_tank{
-	dir = 8
-	},
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
@@ -5610,9 +5728,10 @@
 "JJ" = (
 /obj/effect/turf_decal/vg_decals/atmos/nitrogen,
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/monitored/nitrogen_output{
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/engine/n2,
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "JM" = (
@@ -5763,6 +5882,7 @@
 	id = "sbc44_cargonorth"
 	},
 /obj/structure/handrail,
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/wrecker,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/cargo)
 "Lc" = (
@@ -5813,6 +5933,36 @@
 /obj/structure/sign/flag/syndicate/directional/east,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
+"LM" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	color = "#A99671";
+	alpha = 200;
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	color = "#A27E5F";
+	alpha = 200
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/closet/secure_closet/wall/syndicate{
+	pixel_y = -32;
+	name = "Pilot's Locker"
+	},
+/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/syndicate/gorlex/fatigues,
+/obj/item/storage/belt/security/webbing/gorlex,
+/obj/item/clothing/head/helmet/gorlex/pilot,
+/obj/item/clothing/head/gorlex,
+/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
+/obj/item/clothing/neck/shemagh/gorlex,
+/obj/item/radio/headset/syndicate/alt,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 1
+	},
+/area/ruin/space/has_grav/forgottenship/bridge)
 "LN" = (
 /obj/effect/turf_decal/tile/yellow/fourcorners{
 	alpha = 200;
@@ -5869,17 +6019,6 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/space/has_grav/forgottenship/operations)
-"LU" = (
-/obj/structure/railing,
-/obj/machinery/suit_storage_unit/industrial{
-	mask_type = /obj/item/clothing/mask/gas/syndicate;
-	storage_type = /obj/item/tank/internals/emergency_oxygen/double;
-	suit_type = /obj/item/clothing/suit/space/syndicate/gorlex/armored;
-	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex/armored
-	},
-/obj/machinery/light/directional/east,
-/turf/open/floor/iron/shuttle/cargo,
-/area/ruin/space/has_grav/forgottenship/operations)
 "LZ" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1;
@@ -5901,10 +6040,10 @@
 	},
 /area/ruin/space/has_grav/forgottenship/cargo)
 "Md" = (
-/obj/machinery/light/directional/west,
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "Me" = (
@@ -5975,6 +6114,7 @@
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/clothing/glasses/welding,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "MK" = (
@@ -6072,7 +6212,7 @@
 /obj/machinery/cryopod{
 	dir = 1
 	},
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/dark/small,
 /area/ruin/space/has_grav/forgottenship/cryo)
 "Np" = (
 /obj/machinery/door/airlock/mining/glass{
@@ -6199,9 +6339,10 @@
 /area/ruin/space/has_grav/forgottenship/engineering/atmospherics)
 "Oz" = (
 /obj/machinery/camera/directional/north{
-	c_tag = "Airlock External Starboard"
+	c_tag = "SBC Ironclad Airlock External Starboard";
+	network = list("sbc44")
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/ruin/space/has_grav/forgottenship/external)
 "OH" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -6251,29 +6392,6 @@
 /obj/item/healthanalyzer/advanced,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
-"Pb" = (
-/obj/structure/closet/secure_closet/wall/syndicate{
-	pixel_y = -32;
-	name = "Lieutenant's Locker";
-	req_access = list("syndicate_leader")
-	},
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/clothing/shoes/combat,
-/obj/item/clothing/under/syndicate/gorlex/officer,
-/obj/item/clothing/suit/armor/gorlex/lieutenant,
-/obj/item/clothing/head/gorlex/peaked,
-/obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/clothing/mask/balaclava,
-/obj/item/megaphone/sec{
-	name = "syndicate megaphone"
-	},
-/obj/item/clothing/glasses/hud/security/sunglasses/redsec,
-/obj/item/clothing/glasses/hud/security/sunglasses/gorlex,
-/obj/item/storage/toolbox/guncase/skyrat/pistol/aps,
-/obj/item/radio/headset/syndicate/alt/leader,
-/obj/item/storage/belt/holster/nukie,
-/turf/open/floor/carpet/black,
-/area/ruin/space/has_grav/forgottenship/officerquarters)
 "Pe" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -6302,6 +6420,7 @@
 	icon_state = "small"
 	},
 /obj/effect/decal/cleanable/glass,
+/obj/structure/cable,
 /turf/open/misc/asteroid/airless,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "Po" = (
@@ -6350,28 +6469,6 @@
 	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
-"PH" = (
-/obj/effect/turf_decal/tile/yellow/full{
-	color = "#A99671";
-	alpha = 200
-	},
-/obj/effect/turf_decal/box/red,
-/obj/structure/closet/secure_closet/wall/syndicate{
-	pixel_x = -32;
-	name = "Operative's Locker"
-	},
-/obj/item/clothing/shoes/combat,
-/obj/item/clothing/under/syndicate/gorlex,
-/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/clothing/head/gorlex/flap,
-/obj/item/clothing/head/gorlex,
-/obj/item/clothing/gloves/tackler/combat/insulated,
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/radio/headset/syndicate/alt,
-/turf/open/floor/iron/dark/smooth_large,
-/area/ruin/space/has_grav/forgottenship/briefing)
 "PK" = (
 /obj/machinery/camera/autoname/directional/west{
 	network = list("sbc44")
@@ -6456,6 +6553,7 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "Qw" = (
@@ -6507,7 +6605,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/machinery/light/small/dim/directional/west,
+/obj/machinery/light/small/burned/directional/west,
 /turf/open/misc/asteroid/airless,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "QD" = (
@@ -6518,7 +6616,8 @@
 	mod_type = /obj/item/mod/control/pre_equipped/traitor_elite
 	},
 /obj/machinery/camera/autoname/directional/east{
-	network = list("sbc44")
+	network = list("sbc44");
+	c_tag = "Nanotrasen Survival Pod Syndicate Cache"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
@@ -6596,7 +6695,7 @@
 /area/ruin/space/has_grav/forgottenship/bridge)
 "Rw" = (
 /obj/machinery/camera/directional/south{
-	c_tag = "Cargo Bay External Port";
+	c_tag = "SBC Ironclad Cargo Bay External Port";
 	network = list("sbc44")
 	},
 /turf/open/floor/engine/hull,
@@ -6646,6 +6745,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
+"RO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/ruin/space/has_grav/forgottenship/survival_pod)
 "RS" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	color = "#A27E5F";
@@ -6726,6 +6830,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/forgottenship/officerlounge)
+"Sn" = (
+/obj/effect/bluespace_stream,
+/turf/template_noop,
+/area/template_noop)
 "Sp" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
 /turf/open/floor/iron/dark,
@@ -6766,27 +6874,6 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/central)
-"Sz" = (
-/obj/structure/closet/secure_closet/wall/syndicate{
-	name = "Wrecker's Locker";
-	pixel_x = 33
-	},
-/obj/item/clothing/shoes/workboots,
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/clothing/under/syndicate/gorlex/jumpsuit,
-/obj/item/clothing/suit/hazardvest/gorlex,
-/obj/item/clothing/head/hardhat/gorlex,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/head/gorlex/flap,
-/obj/item/clothing/head/gorlex,
-/obj/item/clothing/neck/shemagh/gorlex,
-/obj/item/clothing/suit/hooded/wintercoat/security/gorlex,
-/obj/item/storage/belt/mining,
-/obj/item/clothing/glasses/meson,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/clothing/accessory/armband/cargo/nonsec,
-/turf/open/floor/iron/dark,
-/area/ruin/space/has_grav/forgottenship/cargo)
 "SG" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/tile/red/real_red/half{
@@ -6797,7 +6884,7 @@
 	pixel_x = 32;
 	name = "Mechanic's Locker"
 	},
-/obj/item/storage/backpack/satchel/sec/redsec,
+/obj/item/storage/backpack/satchel/eng,
 /obj/item/clothing/shoes/workboots,
 /obj/item/clothing/under/syndicate/gorlex,
 /obj/item/clothing/suit/hazardvest/gorlex,
@@ -6811,7 +6898,7 @@
 /obj/item/inducer/syndicate,
 /obj/item/storage/backpack/duffelbag/engineering,
 /obj/item/clothing/glasses/welding,
-/obj/item/clothing/accessory/armband/engine/nonsec,
+/obj/item/clothing/accessory/armband/engine,
 /turf/open/floor/iron/dark/smooth_half,
 /area/ruin/space/has_grav/forgottenship/engineering/office)
 "SJ" = (
@@ -6877,7 +6964,6 @@
 /area/ruin/space/has_grav/forgottenship/cargo)
 "Ta" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/light/small/directional/west,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4,
@@ -7039,7 +7125,7 @@
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
-/area/ruin/space/has_grav/forgottenship/engineering/engine2)
+/area/ruin/space/has_grav/forgottenship/engineering/office)
 "Ul" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7145,7 +7231,8 @@
 "UQ" = (
 /obj/structure/bodycontainer/morgue,
 /obj/machinery/camera/autoname/directional/north{
-	network = list("sbc44")
+	network = list("sbc44");
+	c_tag = "SBC Ironclad Morgue #1"
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -7177,7 +7264,8 @@
 /area/ruin/space/has_grav/forgottenship/armory)
 "UZ" = (
 /obj/structure/lattice/catwalk,
-/turf/open/space/basic,
+/obj/structure/cable,
+/turf/template_noop,
 /area/space/nearstation)
 "Vg" = (
 /obj/effect/turf_decal/tile/yellow/full{
@@ -7197,7 +7285,9 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 1
+	},
 /area/ruin/space/has_grav/forgottenship/cryo)
 "Vk" = (
 /obj/machinery/door/airlock/grunge{
@@ -7206,6 +7296,7 @@
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "Vs" = (
@@ -7304,7 +7395,8 @@
 	alpha = 200
 	},
 /obj/machinery/camera/autoname/directional/south{
-	network = list("sbc44")
+	network = list("sbc44");
+	c_tag = "SBC Ironclad Medical Bay #1"
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on/layer4{
 	dir = 4
@@ -7427,18 +7519,23 @@
 /obj/structure/closet/crate/secure/syndicate/gorlex/weapons{
 	name = "Firearms Crate"
 	},
-/obj/item/storage/toolbox/guncase/bulldog,
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
-/obj/item/storage/toolbox/guncase/c20r,
-/obj/item/storage/toolbox/guncase/c20r,
-/obj/item/storage/toolbox/guncase/c20r,
-/obj/item/storage/toolbox/guncase/c20r,
-/obj/item/storage/toolbox/guncase/m90gl,
+/obj/item/gun/ballistic/shotgun/bulldog,
+/obj/item/ammo_box/advanced/s12gauge/buckshot,
+/obj/item/ammo_box/advanced/s12gauge/buckshot,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/gun/ballistic/automatic/c20r,
+/obj/item/ammo_box/magazine/m12g,
+/obj/item/ammo_box/magazine/m12g,
+/obj/item/ammo_box/magazine/m12g,
+/obj/item/gun/ballistic/automatic/m90,
+/obj/item/ammo_box/magazine/m223,
+/obj/item/ammo_box/magazine/m223,
+/obj/item/ammo_box/magazine/m223,
+/obj/item/gun/ballistic/rifle/sniper_rifle/syndicate,
+/obj/item/ammo_box/magazine/sniper_rounds,
+/obj/item/ammo_box/magazine/sniper_rounds,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/forgottenship/survival_pod/vault)
 "WA" = (
@@ -7514,6 +7611,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders{
+	dir = 4
+	},
 /turf/open/floor/carpet/red,
 /area/ruin/space/has_grav/forgottenship/crewquarters)
 "WP" = (
@@ -7571,6 +7671,7 @@
 	},
 /area/ruin/space/has_grav/forgottenship/cafeteria)
 "Xb" = (
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/external_starboard)
 "Xc" = (
@@ -7662,6 +7763,9 @@
 	dir = 8
 	},
 /obj/structure/extinguisher_cabinet/directional/east,
+/obj/effect/mob_spawn/ghost_role/human/gorlexmarauders/operative{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
@@ -7850,10 +7954,10 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/shoes/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/color/black,
+/obj/item/clothing/gloves/color/black,
+/obj/item/clothing/gloves/color/black,
+/obj/item/clothing/gloves/color/black,
 /obj/item/clothing/mask/balaclava,
 /obj/item/clothing/mask/balaclava,
 /obj/item/clothing/mask/balaclava,
@@ -8026,6 +8130,7 @@
 /area/ruin/space/has_grav/forgottenship/hallway/central)
 "ZO" = (
 /obj/structure/lattice,
+/obj/structure/cable,
 /turf/open/misc/asteroid/airless,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 
@@ -8929,12 +9034,12 @@ qD
 kk
 kk
 kk
-kk
-kk
-kk
+Hq
+Hq
+Hq
 Uc
-kk
-kk
+Hq
+Hq
 YU
 YU
 YU
@@ -9370,11 +9475,11 @@ Xb
 go
 kK
 UZ
-xA
+uB
 UZ
 UZ
 UZ
-xA
+uB
 UZ
 UZ
 Pk
@@ -9383,7 +9488,7 @@ Vk
 Qu
 yq
 kR
-wi
+RO
 rn
 EO
 Ey
@@ -9782,7 +9887,7 @@ JC
 uc
 Rl
 Fh
-ec
+LM
 Yt
 pm
 pm
@@ -10153,7 +10258,7 @@ YU
 JC
 JC
 Hn
-Hn
+Ee
 Cp
 Kv
 Kf
@@ -10161,7 +10266,7 @@ AN
 Kv
 FN
 HD
-Pb
+ki
 oQ
 EJ
 bp
@@ -10221,7 +10326,7 @@ Kv
 IS
 IF
 Kv
-IT
+oS
 Iz
 IT
 oQ
@@ -10667,7 +10772,7 @@ ye
 FE
 dp
 dp
-PH
+dp
 UC
 Cb
 rr
@@ -11283,7 +11388,7 @@ YU
 YU
 eA
 YG
-LU
+Er
 ou
 eA
 oG
@@ -12017,7 +12122,7 @@ cF
 Ht
 Sd
 Fc
-Sz
+kt
 Zr
 qy
 bQ
@@ -12657,7 +12762,7 @@ YU
 YU
 YU
 YU
-YU
+Sn
 YU
 YU
 YU

@@ -94,7 +94,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	slowdown = 0.5
 	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75, "wound" = 15)
-	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gm/armored
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex/armored
 
 /obj/item/clothing/head/helmet/space/syndicate/gorlex
 
@@ -112,4 +112,4 @@
 	worn_icon = 'modular_zzplurt/icons/mob/clothing/suit.dmi'
 	desc = "A space suit made of durable fabric. This is one of the versions that isn't armored, all it's really good for is vaccum survival."
 	armor = /datum/armor/suit_space
-	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gm
+	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex
