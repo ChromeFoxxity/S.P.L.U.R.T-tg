@@ -41,7 +41,7 @@
 	desc = "A well-armored helmet utilized by the Gorlex Marauders, far better at protecting one's head than the softer caps."
 	icon = 'modular_zzplurt/icons/obj/clothing/hats.dmi'
 	worn_icon = 'modular_zzplurt/icons/mob/clothing/hats.dmi'
-	armor = list("melee" = 40, "bullet" = 60, "laser" = 35, "energy" = 35, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50) // The guys who specialize in ballistics would probably have better bullet armor. Maybe.
+	armor_type = list("melee" = 40, "bullet" = 60, "laser" = 35, "energy" = 35, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50) // The guys who specialize in ballistics would probably have better bullet armor. Maybe.
 	icon_state = "gm_x11"
 
 /obj/item/clothing/head/helmet/gorlex/pilot

@@ -6,7 +6,7 @@
 	name = "\improper Gorlex uniform"
 	desc = "A button-up in a tasteful beige with black pants, used as the basic uniform of the Gorlex Marauders."
 	icon_state = "gm"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40)
+	armor_type = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40)
 	icon = 'modular_zzplurt/icons/obj/clothing/under/syndicate.dmi'
 	worn_icon = 'modular_zzplurt/icons/mob/clothing/under/syndicate.dmi'
 	worn_icon_digi = 'modular_zzplurt/icons/mob/clothing/under/syndicate_digi.dmi'

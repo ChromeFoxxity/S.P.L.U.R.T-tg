@@ -23,3 +23,12 @@
 	suffix = "forgottenship.dmm"
 	name = "Space-Ruin Syndicate Battlecruiser Ironclad"
 	description = "One of Gorlex Marauder's top tier Battlecruisers is in nearby Nanotrasen space, not here for them however. They're on stand-by for missions from Command."
+	never_spawn_with = list(/datum/map_template/ruin/space/forgottenship_wrecked)
+
+/datum/map_template/ruin/space/forgottenship_wrecked
+	id = "forgottenship_wrecked"
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
+	suffix = "forgottenship_wrecked.dmm"
+	name = "Space-Ruin Destryoed Syndicate Battlecruiser Ironclad"
+	description = "One of Gorlex Marauder's top tier Battlecruisers is in nearby Nanotrasen space, it's been raided by Nanotrasen Private Security forces, and had been snuffed out entirely."
+	never_spawn_with = list(/datum/map_template/ruin/space/forgottenship)

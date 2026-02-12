@@ -22,6 +22,24 @@
 	name = "Mission Objectives"
 	default_raw_text = "Greetings, operatives. You are assigned to Syndicate Battlecruiser Ironclad to be on stand-by for your next mission. Whilst on stand-by, you are to prepare for missions. The Captain may give temporary objectives for each operative, <b>you must</b> obey their orders.<br><br>Remember, disobeying high-ranking officer orders is a reason for termination."
 
+/obj/item/radio/headset/syndicate/alt/empty
+	keyslot = null
+	keyslot2 = null
+
+/obj/item/radio/headset/syndicate/alt/empty/leader
+	name = "team leader headset"
+	command = TRUE
+
+/obj/item/ammo_casing/c9mm/spent
+	projectile_type = null
+
+/obj/item/ammo_casing/c46x30mm/spent
+	projectile_type = null
+
+/obj/machinery/suit_storage_unit/industrial/open
+	state_open = TRUE
+	density = FALSE
+
 /obj/effect/mob_spawn/ghost_role/human/gorlexmarauders
 	name = "SBC Ironclad Crewman"
 	icon = 'icons/obj/machines/sleeper.dmi'
@@ -112,17 +130,27 @@
 
 	implants = list(/obj/item/implant/weapons_auth)
 
-/datum/outfit/gorlexmarauders/post_equip(mob/living/carbon/human/syndie_scum)
-	syndie_scum.faction |= ROLE_SYNDICATE
+/datum/outfit/gorlexmarauders/post_equip(mob/living/carbon/human/syndicate, visualsOnly = FALSE)
+	var/obj/item/card/id/id_card = syndicate.wear_id
+	if(istype(id_card))
+		id_card.registered_name = syndicate.real_name
+		id_card.update_label()
+		id_card.update_icon()
+	syndicate.apply_pref_name(/datum/preference/name/syndicate, syndicate.client)
+	handlebank(syndicate)
+	syndicate.faction |= ROLE_SYNDICATE
+	return ..()
 
 /datum/outfit/gorlexmarauders/crewman
 	name = "Gorlex Marauder Crewman"
 	gloves = /obj/item/clothing/gloves/color/black
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/crewman
 
 /datum/outfit/gorlexmarauders/operative
 	name = "Gorlex Marauder Operative"
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/operative
 
 /datum/outfit/gorlexmarauders/operative/geared
 	name = "Gorlex Marauder Operative - Geared"
@@ -149,6 +177,7 @@
 	name = "Gorlex Marauder Shuttle Pilot"
 	head = /obj/item/clothing/head/helmet/gorlex/pilot
 	uniform = /obj/item/clothing/under/syndicate/gorlex/fatigues
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/shuttlepilot
 
 /datum/outfit/gorlexmarauders/wrecker
 	name = "Gorlex Marauder Wrecker"
@@ -159,11 +188,12 @@
 	accessory = /obj/item/clothing/accessory/armband/cargo
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/storage/bag/ore
+	back = /obj/item/storage/backpack/satchel/explorer
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/wrecker
 	backpack_contents = list(
 		/obj/item/flashlight/seclite,
 		/obj/item/stack/marker_beacon/ten,
 	)
-	back = /obj/item/storage/backpack/satchel/explorer
 
 /datum/outfit/gorlexmarauders/mechanic
 	name = "Gorlex Marauder Mechanic"
@@ -175,6 +205,7 @@
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/t_scanner
 	back = /obj/item/storage/backpack/satchel/eng
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/mechanic
 
 /datum/outfit/gorlexmarauders/medicaldoctor
 	name = "Gorlex Marauder Medical Doctor"
@@ -183,6 +214,7 @@
 	gloves = /obj/item/clothing/gloves/latex/nitrile/ntrauma
 	glasses = /obj/item/clothing/glasses/hud/health
 	l_pocket = /obj/item/knife/combat/survival
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/medicaldoctor
 
 /datum/outfit/gorlexmarauders/foreman
 	name = "Gorlex Marauder Foreman"
@@ -193,8 +225,10 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	l_pocket = /obj/item/knife/combat/survival
 	ears = /obj/item/radio/headset/syndicate/alt/leader
-	backpack_contents = list(/obj/item/melee/baton/telescopic/silver = 1)
 	back = /obj/item/storage/backpack/satchel/eng
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/foreman
+	backpack_contents = list(/obj/item/melee/baton/telescopic/silver = 1)
+
 
 /datum/outfit/gorlexmarauders/ensign
 	name = "Gorlex Marauder Ensign"
@@ -203,6 +237,7 @@
 	suit = /obj/item/clothing/suit/armor/gorlex/lieutenant
 	glasses = /obj/item/clothing/glasses/sunglasses
 	l_pocket = /obj/item/knife/combat/survival
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/ensign
 	backpack_contents = list(/obj/item/melee/baton/telescopic/bronze = 1)
 
 /datum/outfit/gorlexmarauders/lieutenant
@@ -214,6 +249,7 @@
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	l_pocket = /obj/item/knife/combat/survival
 	ears = /obj/item/radio/headset/syndicate/alt/leader
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/lieutenant
 	backpack_contents = list(/obj/item/melee/baton/telescopic/silver = 1)
 
 /datum/outfit/gorlexmarauders/captain
@@ -226,7 +262,154 @@
 	gloves = /obj/item/clothing/gloves/kaza_ruk/combatglovesplus
 	l_pocket = /obj/item/knife/combat/survival
 	ears = /obj/item/radio/headset/syndicate/alt/leader
+	id_trim = /datum/id_trim/syndicom/splurt/gorlex/captain
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic/gold,
 		/obj/item/paper/fluff/ruins/forgottenship/password_remade,
+	)
+
+/datum/id_trim/syndicom/splurt/gorlex
+	trim_state = "trim_unknown"
+	department_color = COLOR_ASSEMBLY_BLACK
+	subdepartment_color = COLOR_SYNDIE_RED
+
+/datum/id_trim/syndicom/splurt/gorlex/crewman
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Crewman"
+	trim_state = "trim_gmcrewman"
+	sechud_icon_state = SECHUD_GORLEX_CREWMAN
+	access = list(ACCESS_SYNDICATE)
+
+/datum/id_trim/syndicom/splurt/gorlex/operative
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Operative"
+	trim_state = "trim_gmoperative"
+	sechud_icon_state = SECHUD_GORLEX_OPERATIVE
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
+
+/datum/id_trim/syndicom/splurt/gorlex/wrecker
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Wrecker"
+	trim_state = "trim_gmwrecker"
+	sechud_icon_state = SECHUD_GORLEX_WRECKER
+	access = list(ACCESS_SYNDICATE, ACCESS_MINERAL_STOREROOM)
+
+/datum/id_trim/syndicom/splurt/gorlex/mechanic
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Mechanic"
+	trim_state = "trim_gmmechanic"
+	sechud_icon_state = SECHUD_GORLEX_MECHANIC
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
+
+/datum/id_trim/syndicom/splurt/gorlex/medicaldoctor
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Medical Doctor"
+	trim_state = "trim_gmmedicaldoctor"
+	sechud_icon_state = SECHUD_GORLEX_MEDICALDOCTOR
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
+
+/datum/id_trim/syndicom/splurt/gorlex/shuttlepilot
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Shuttle Pilot"
+	trim_state = "trim_gmshuttlepilot"
+	sechud_icon_state = SECHUD_GORLEX_SHUTTLEPILOT
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
+
+/datum/id_trim/syndicom/splurt/gorlex/ensign
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Ensign"
+	trim_state = "trim_gmensign"
+	sechud_icon_state = SECHUD_GORLEX_ENSIGN
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS, ACCESS_SYNDICATE_LEADER)
+
+/datum/id_trim/syndicom/splurt/gorlex/foreman
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Foreman"
+	trim_state = "trim_gmforeman"
+	sechud_icon_state = SECHUD_GORLEX_FOREMAN
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS, ACCESS_SYNDICATE_LEADER)
+
+/datum/id_trim/syndicom/splurt/gorlex/lieutenant
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Lieutenant"
+	trim_state = "trim_gmlieutenant"
+	sechud_icon_state = SECHUD_GORLEX_LIEUTENANT
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS, ACCESS_SYNDICATE_LEADER)
+
+/datum/id_trim/syndicom/splurt/gorlex/captain
+	trim_icon = 'modular_zzplurt/icons/obj/card.dmi'
+	assignment = "Captain"
+	trim_state = "trim_gmcaptain"
+	sechud_icon_state = SECHUD_GORLEX_CAPTAIN
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS, ACCESS_SYNDICATE_LEADER)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders
+	name = "Crewman Corpse"
+	outfit = /datum/outfit/gorlexmarauders/crewman
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/operative
+	name = "Operative Corpse"
+	outfit = /datum/outfit/gorlexmarauders/operative
+	outfit_override = list(ears = /obj/item/radio/headset/syndicate/alt/empty)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/operative/geared
+	name = "Operative Corpse - Geared"
+	outfit = /datum/outfit/gorlexmarauders/operative/geared
+	outfit_override = list(ears = /obj/item/radio/headset/syndicate/alt/empty)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/operative/geared_space
+	name = "Operative Corpse - Spacesuit Geared"
+	outfit = /datum/outfit/gorlexmarauders/operative/geared/spacesuit
+	outfit_override = list(ears = /obj/item/radio/headset/syndicate/alt/empty)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/wrecker
+	name = "Wrecker Corspe"
+	outfit = /datum/outfit/gorlexmarauders/wrecker
+	outfit_override = list(ears = /obj/item/radio/headset/syndicate/alt/empty)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/mechanic
+	name = "Mechanic Corpse"
+	outfit = /datum/outfit/gorlexmarauders/mechanic
+	outfit_override = list(ears = /obj/item/radio/headset/syndicate/alt/empty)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/medicaldoctor
+	name = "Medical Doctor Corpse"
+	outfit = /datum/outfit/gorlexmarauders/medicaldoctor
+	outfit_override = list(ears = /obj/item/radio/headset/syndicate/alt/empty)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/shuttlepilot
+	name = "Shuttle Pilot Corpse"
+	outfit = /datum/outfit/gorlexmarauders/pilot
+	outfit_override = list(ears = /obj/item/radio/headset/syndicate/alt/empty)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/ensign
+	name = "Ensign Corpse"
+	outfit = /datum/outfit/gorlexmarauders/ensign
+	outfit_override = list(
+		ears = /obj/item/radio/headset/syndicate/alt/empty/leader,
+		backpack_contents = list(/obj/item/melee/baton/telescopic = 1),
+	)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/foreman
+	name = "Foreman Corpse"
+	outfit = /datum/outfit/gorlexmarauders/foreman
+	outfit_override = list(
+		ears = /obj/item/radio/headset/syndicate/alt/empty/leader,
+		backpack_contents = list(/obj/item/melee/baton/telescopic = 1),
+	)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/lieutenant
+	name = "Lieutenant Corpse"
+	outfit = /datum/outfit/gorlexmarauders/lieutenant
+	outfit_override = list(
+		ears = /obj/item/radio/headset/syndicate/alt/empty/leader,
+		backpack_contents = list(/obj/item/melee/baton/telescopic = 1),
+	)
+
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders/captain
+	name = "Captain Corpse"
+	outfit = /datum/outfit/gorlexmarauders/captain
+	outfit_override = list(
+		ears = /obj/item/radio/headset/syndicate/alt/empty/leader,
+		backpack_contents = list(/obj/item/melee/baton/telescopic = 1),
 	)

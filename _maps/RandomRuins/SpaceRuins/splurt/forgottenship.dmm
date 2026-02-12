@@ -214,6 +214,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/medical)
 "by" = (
@@ -1292,6 +1293,13 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/gym)
+"ji" = (
+/obj/effect/turf_decal/tile/red/real_red/full,
+/obj/machinery/vending/security/noaccess{
+	all_products_free = 1
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/forgottenship/armory)
 "jn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1471,9 +1479,6 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/structure/guncase{
-	name = "equipment locker"
-	},
 /obj/machinery/firealarm/directional/south,
 /obj/machinery/camera/autoname/directional/south{
 	network = list("sbc44");
@@ -1543,6 +1548,9 @@
 	pixel_y = 5
 	},
 /obj/machinery/light/directional/south,
+/obj/structure/closet/syndicate{
+	name = "equipment closet"
+	},
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "ki" = (
@@ -1822,6 +1830,7 @@
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/medical)
 "mp" = (
@@ -2041,11 +2050,13 @@
 	id = "sbc44_security";
 	pixel_x = -1
 	},
-/obj/structure/guncase,
 /obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
 /obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
 /obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
 /obj/item/storage/toolbox/guncase/skyrat/pistol/opfor/makarov,
+/obj/structure/closet/syndicate{
+	name = "weapons closet"
+	},
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "nq" = (
@@ -2105,7 +2116,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/survival_pod)
 "nJ" = (
-/obj/structure/fireaxecabinet/empty/directional/east,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 4;
 	color = "#A27E5F";
@@ -2117,6 +2127,7 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+/obj/structure/fireaxecabinet/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/has_grav/forgottenship/hallway/command)
 "nU" = (
@@ -2611,9 +2622,6 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/structure/guncase{
-	name = "gear locker"
-	},
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/item/clothing/head/helmet/gorlex{
 	pixel_x = -9;
@@ -2673,6 +2681,9 @@
 	},
 /obj/item/storage/belt/security/webbing/gorlex/alt{
 	pixel_y = -8
+	},
+/obj/structure/closet/syndicate{
+	name = "gear closet"
 	},
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
@@ -3849,9 +3860,10 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/mapping_helpers/apc/syndicate_access,
 /obj/effect/mapping_helpers/apc/cut_AI_wire,
-/obj/effect/mapping_helpers/dead_body_placer,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/closet/body_bag,
+/obj/effect/mob_spawn/corpse/human/gorlexmarauders,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/forgottenship/medical)
 "ye" = (
@@ -4054,21 +4066,21 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/structure/guncase{
-	name = "ammo locker"
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/c45,
+/obj/item/ammo_box/c45,
+/obj/item/ammo_box/c45,
+/obj/item/ammo_box/c45,
+/obj/structure/closet/syndicate{
+	name = "ammunitions closet"
 	},
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "zA" = (
@@ -5228,12 +5240,12 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/obj/item/storage/box/firingpins/syndicate{
-	pixel_y = 10;
-	pixel_x = -7
-	},
 /obj/item/storage/box/flashbangs{
 	pixel_x = 7;
+	pixel_y = 10
+	},
+/obj/item/storage/box/stingbangs{
+	pixel_x = -7;
 	pixel_y = 10
 	},
 /obj/item/storage/backpack/duffelbag/syndie/c4{
@@ -5462,9 +5474,16 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/obj/machinery/recharger,
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/item/disk/ammo_workbench/advanced{
+	pixel_x = 6;
+	pixel_y = 1
+	},
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = 2
+	},
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "Ip" = (
@@ -5649,6 +5668,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/forgottenship/medical)
 "Jc" = (
@@ -7063,10 +7083,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
-/obj/structure/table/reinforced,
-/obj/item/storage/toolbox/guncase/skyrat{
-	pixel_y = 5
-	},
+/obj/machinery/ammo_workbench,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/forgottenship/armory)
 "TG" = (
@@ -10774,7 +10791,7 @@ dp
 dp
 dp
 UC
-Cb
+ji
 rr
 UC
 YU

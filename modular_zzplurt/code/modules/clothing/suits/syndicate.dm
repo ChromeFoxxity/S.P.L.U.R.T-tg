@@ -57,7 +57,7 @@
 	icon_state = "gm_vest"
 	icon = 'modular_zzplurt/icons/obj/clothing/suits.dmi'
 	worn_icon = 'modular_zzplurt/icons/mob/clothing/suit.dmi'
-	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10) // 5. additional. bullet armor.
+	armor_type = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10) // 5. additional. bullet armor.
 
 /obj/item/clothing/suit/armor/gorlex/lieutenant
 	name = "\improper Gorlex overcoat"
@@ -65,7 +65,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	icon_state = "gm_lieutenant"
 	blood_overlay_type = "coat"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+	armor_type = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
 
 /obj/item/clothing/suit/armor/gorlex/captain
 	name = "\improper Gorlex greatcoat"
@@ -73,7 +73,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	icon_state = "gm_captain"
 	blood_overlay_type = "coat"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+	armor_type = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
 
 ///////////////
 //Spacesuits//
@@ -84,7 +84,7 @@
 	name = "armored biege-red space helmet"
 	icon_state = "syndicate-helm-gm"
 	desc = "An advanced, lightweight space helmet made of durable composites. Almost matches integrated hardsuit helmets for protection. Almost."
-	armor = list("melee" = 30, "bullet" = 35, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75, "wound" = 15)
+	armor_type = list("melee" = 30, "bullet" = 35, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75, "wound" = 15)
 
 /obj/item/clothing/suit/space/syndicate/gorlex/armored
 
@@ -93,7 +93,7 @@
 	desc = "A space suit made of high-grade ballistic fabric with integrated armor plates. More compact than a normal space suit while almost matching powered hardsuits for protection. Almost."
 	w_class = WEIGHT_CLASS_NORMAL
 	slowdown = 0.5
-	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75, "wound" = 15)
+	armor_type = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75, "wound" = 15)
 	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex/armored
 
 /obj/item/clothing/head/helmet/space/syndicate/gorlex
@@ -111,5 +111,5 @@
 	icon = 'modular_zzplurt/icons/obj/clothing/suits.dmi'
 	worn_icon = 'modular_zzplurt/icons/mob/clothing/suit.dmi'
 	desc = "A space suit made of durable fabric. This is one of the versions that isn't armored, all it's really good for is vaccum survival."
-	armor = /datum/armor/suit_space
+	armor_type = /datum/armor/suit_space
 	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/gorlex
