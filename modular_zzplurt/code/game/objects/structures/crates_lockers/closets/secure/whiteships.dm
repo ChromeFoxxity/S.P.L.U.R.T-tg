@@ -6,6 +6,10 @@
 	name = "cargo wardrobe"
 	icon_door = "cargo_wardrobe"
 
+/obj/structure/closet/wardrobe/whiteship/robotics_black
+	name = "robotics wardrobe"
+	icon_door = "robo_wardrobe"
+
 /obj/structure/closet/secure_closet/whiteship/miner
 	name = "miner's equipment locker"
 	icon_state = "mining"

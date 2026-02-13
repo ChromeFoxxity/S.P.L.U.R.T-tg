@@ -1,35 +1,35 @@
 /area/shuttle/abandoned/meta/bridge
-	name = "Meta-Class Frigate Bridge"
+	name = "Meta-Class Freighter Bridge"
 
 /area/shuttle/abandoned/meta/qmoffice
-	name = "Meta-Class Frigate Supply Director's Office"
+	name = "Meta-Class Freighter Supply Director's Office"
 
 /area/shuttle/abandoned/meta/central
-	name = "Meta-Class Frigate Central Hallway"
+	name = "Meta-Class Freighter Central Hallway"
 
 /area/shuttle/abandoned/meta/crew
-	name = "Meta-Class Frigate Crew Quarters"
+	name = "Meta-Class Freighter Crew Quarters"
 
 /area/shuttle/abandoned/meta/cryo
-	name = "Meta-Class Frigate Cryogenics"
+	name = "Meta-Class Freighter Cryogenics"
 
 /area/shuttle/abandoned/meta/cabin
-	name = "Meta-Class Frigate Cabin 1"
+	name = "Meta-Class Freighter Cabin 1"
 
 /area/shuttle/abandoned/meta/cabin2
-	name = "Meta-Class Frigate Cabin 2"
+	name = "Meta-Class Freighter Cabin 2"
 
 /area/shuttle/abandoned/meta/storage
-	name = "Meta-Class Frigate Storage Bay"
+	name = "Meta-Class Freighter Storage Bay"
 
 /area/shuttle/abandoned/meta/lobby
-	name = "Meta-Class Frigate Lobby"
+	name = "Meta-Class Freighter Lobby"
 
 /area/shuttle/abandoned/meta/cargo
-	name = "Meta-Class Frigate Cargo Bay"
+	name = "Meta-Class Freighter Cargo Bay"
 
 /area/shuttle/abandoned/meta/engineering
-	name = "Meta-Class Frigate Engineering"
+	name = "Meta-Class Freighter Engineering"
 
 /area/shuttle/abandoned/meta/restroom
-	name = "Meta-Class Frigate Restroom"
+	name = "Meta-Class Freighter Restroom"

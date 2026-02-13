@@ -1,10 +1,10 @@
-/obj/effect/mob_spawn/corpse/human/nsl_deckhand
-	name = "N+S Deckhand"
+/obj/effect/mob_spawn/corpse/human/deckhand
+	name = "Deckhand"
 	outfit = /datum/outfit/deckhand
 	icon_state = "corpsegreytider"
 
 /datum/outfit/deckhand
-	name = "N+S Deckhand"
+	name = "Deckhand"
 
 	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/away/deckhand
@@ -15,7 +15,7 @@
 	box = /obj/item/storage/box/survival
 
 /datum/id_trim/away/deckhand
-	assignment = "N+S Deckhand"
+	assignment = "Deckhand"
 	trim_state = "trim_assistant"
 	department_color = COLOR_ASSISTANT_GRAY
 	subdepartment_color = COLOR_TAN_ORANGE

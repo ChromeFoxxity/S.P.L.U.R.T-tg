@@ -1,0 +1,2700 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ao" = (
+/obj/machinery/computer/mech_bay_power_console,
+/obj/machinery/button/door/directional/north{
+	name = "Robotics Bay Blast Door Control";
+	id = "delta_robotics"
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"aB" = (
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/tank/air/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 8
+	},
+/area/shuttle/abandoned/delta/engineering)
+"aN" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/machinery/firealarm/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"bf" = (
+/obj/machinery/power/smes/full,
+/obj/effect/turf_decal/bot,
+/obj/structure/sign/warning/electric_shock/directional/north,
+/obj/structure/cable,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"bl" = (
+/obj/machinery/door/airlock/highsecurity{
+	name = "Bridge"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/bridge)
+"bm" = (
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 1
+	},
+/obj/structure/table/glass,
+/obj/item/folder/white{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/obj/item/mmi{
+	pixel_x = -6;
+	pixel_y = 9
+	},
+/obj/item/mmi{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/item/storage/medkit/regular{
+	pixel_x = 6;
+	pixel_y = -9
+	},
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron/white/side,
+/area/shuttle/abandoned/delta/medical)
+"bO" = (
+/obj/structure/bed{
+	dir = 1
+	},
+/obj/item/bedsheet/qm{
+	dir = 1
+	},
+/obj/structure/curtain/bounty,
+/obj/machinery/airalarm/directional/north,
+/obj/machinery/light_switch/directional/west,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"bQ" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/medical)
+"cj" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new/corner{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/crew)
+"cQ" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/binary/pump/on/supply/hidden/layer4{
+	name = "air distribution pump"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"cY" = (
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 8
+	},
+/area/shuttle/abandoned/delta/engineering)
+"dd" = (
+/obj/effect/turf_decal/tile/nslogistics/half/contrasted{
+	dir = 1
+	},
+/obj/structure/closet/wardrobe/whiteship/cargotech,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/under/rank/nanotrasen/supply,
+/obj/item/clothing/under/rank/nanotrasen/supply,
+/obj/item/clothing/under/rank/nanotrasen/supply,
+/obj/item/clothing/suit/hooded/wintercoat/cargo,
+/obj/item/clothing/suit/hooded/wintercoat/cargo,
+/obj/item/clothing/suit/hooded/wintercoat/cargo,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/clothing/head/soft,
+/obj/item/clothing/head/soft,
+/obj/item/clothing/head/soft,
+/obj/structure/extinguisher_cabinet/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"dh" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 5
+	},
+/obj/structure/table,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/flashlight{
+	pixel_y = 4
+	},
+/obj/item/clothing/head/utility/welding{
+	pixel_y = 6
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"dn" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor{
+	id = "delta_windows";
+	name = "Crew Quarters Window Blast Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/crew)
+"do" = (
+/obj/effect/turf_decal/nanotrasen/ns/bottom{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"dw" = (
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"eh" = (
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 8
+	},
+/area/shuttle/abandoned/delta/engineering)
+"et" = (
+/obj/effect/turf_decal/bot_white,
+/mob/living/basic/mining_drone{
+	name = "\improper B0S-O"
+	},
+/obj/machinery/camera/directional/east{
+	network = list("delta_whiteship");
+	c_tag = "Mining Bay - Drone Bay"
+	},
+/obj/machinery/airalarm/directional/east,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/pod,
+/area/shuttle/abandoned/delta/mining)
+"eV" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/crew)
+"fd" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"fl" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"fq" = (
+/obj/machinery/door/airlock/bathroom{
+	name = "Restroom"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"fv" = (
+/obj/structure/table/optable,
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/medical)
+"fE" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/obj/machinery/recharge_station,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"fJ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/ntspaceworks_small/right{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"fW" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/mining)
+"gb" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor{
+	id = "delta_windows";
+	name = "Central Hallway Window Blast Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/central)
+"gG" = (
+/obj/effect/turf_decal/tile/green/opposingcorners,
+/obj/structure/mop_bucket,
+/obj/item/mop,
+/obj/item/clothing/suit/caution,
+/obj/item/clothing/suit/caution,
+/obj/item/clothing/suit/caution,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/port)
+"gK" = (
+/obj/effect/spawner/random/vending/snackvend,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/central)
+"gX" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor{
+	id = "delta_windows";
+	name = "Mining Bay Window Blast Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/mining)
+"gZ" = (
+/obj/effect/turf_decal/nanotrasen/ns/center_left{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"hg" = (
+/obj/structure/bed{
+	dir = 1
+	},
+/obj/item/bedsheet/orange{
+	dir = 1
+	},
+/obj/structure/curtain/bounty,
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/machinery/airalarm/directional/south,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"hr" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/central)
+"hu" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/structure/sign/departments/custodian/directional/north{
+	pixel_x = -32
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"hz" = (
+/obj/structure/railing/corner/end/flip{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"hC" = (
+/obj/effect/turf_decal/vg_decals/numbers/eight{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/abandoned/delta/robotics)
+"hF" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/machinery/airalarm/directional/south,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"hM" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/medical)
+"id" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 10
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"iE" = (
+/obj/effect/turf_decal/tile/nslogistics/half/contrasted{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet/directional/east,
+/obj/structure/closet/secure_closet/whiteship/supplydirector,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/under/rank/nanotrasen/supply/qm,
+/obj/item/clipboard,
+/obj/item/megaphone/cargo,
+/obj/item/clothing/glasses/sunglasses,
+/obj/item/storage/lockbox/medal/cargo,
+/obj/item/radio/headset/headset_cargo,
+/obj/item/gun/energy/disabler,
+/obj/item/computer_disk/quartermaster,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"ji" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/nslogistics,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"ju" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"jB" = (
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/mining)
+"jW" = (
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"kd" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 6
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"ki" = (
+/obj/machinery/door/window/right/directional/east{
+	name = "Processing Belt Access"
+	},
+/obj/machinery/door/window/left/directional/west{
+	name = "Processing Belt Access"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/mining)
+"ks" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"kw" = (
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"kC" = (
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"kS" = (
+/obj/machinery/mineral/processing_unit,
+/obj/machinery/conveyor{
+	id = "delta_mining";
+	dir = 1
+	},
+/turf/open/floor/pod/dark,
+/area/shuttle/abandoned/delta/mining)
+"lk" = (
+/obj/effect/turf_decal/tile/green,
+/obj/structure/closet/generic/wall/empty{
+	pixel_x = -32
+	},
+/turf/open/floor/iron/white/side{
+	dir = 4
+	},
+/area/shuttle/abandoned/delta/crew)
+"lo" = (
+/turf/open/floor/pod/dark,
+/area/shuttle/abandoned/delta/mining)
+"lA" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/port)
+"mq" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"na" = (
+/obj/machinery/conveyor{
+	id = "delta_mining";
+	dir = 1
+	},
+/turf/open/floor/pod/dark,
+/area/shuttle/abandoned/delta/mining)
+"nm" = (
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wideplating_new,
+/obj/structure/closet/wardrobe/whiteship/robotics_black,
+/obj/item/clothing/under/rank/rnd/roboticist/alt,
+/obj/item/clothing/under/rank/rnd/roboticist/alt,
+/obj/item/clothing/glasses/hud/diagnostic,
+/obj/item/clothing/glasses/hud/diagnostic,
+/obj/item/clothing/suit/toggle/labcoat/roboticist,
+/obj/item/clothing/suit/toggle/labcoat/roboticist,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/clothing/head/soft/black,
+/obj/item/clothing/head/soft/black,
+/obj/item/clothing/suit/hooded/wintercoat/science/robotics,
+/obj/item/clothing/suit/hooded/wintercoat/science/robotics,
+/obj/machinery/airalarm/directional/north,
+/obj/machinery/firealarm/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/medical)
+"np" = (
+/obj/effect/turf_decal/trimline/white/filled/warning,
+/obj/structure/table,
+/obj/effect/turf_decal/siding/wideplating_new/corner{
+	dir = 4
+	},
+/obj/item/radio/intercom/directional/east,
+/obj/item/paper_bin{
+	pixel_y = 4;
+	pixel_x = 5
+	},
+/obj/item/folder/yellow{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/multitool{
+	pixel_x = -9;
+	pixel_y = 11
+	},
+/obj/item/stamp/nanotrasen/ns{
+	pixel_x = -7;
+	pixel_y = 1
+	},
+/obj/item/paper/fluff{
+	default_raw_text = "As a reminder, older ore processing lines may come unlinked from their control terminals. In such cases simply use a multitool to restore the data link.";
+	name = "Memo - Processor Reliability"
+	},
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/mining)
+"nD" = (
+/obj/structure/railing/corner/end{
+	dir = 4
+	},
+/obj/effect/turf_decal/nanotrasen/ns/bottom_right{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"nI" = (
+/obj/machinery/power/shuttle_engine/propulsion/right{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/passive_vent/layer2{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/abandoned/delta/engineering)
+"nM" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"nX" = (
+/obj/machinery/mineral/stacking_machine,
+/obj/machinery/door/window/left/directional/west{
+	name = "Processing Belt Access"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/mining)
+"oB" = (
+/obj/machinery/conveyor_switch/oneway{
+	id = "delta_mining"
+	},
+/obj/structure/extinguisher_cabinet/directional/west,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"pf" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"pr" = (
+/obj/structure/fans/tiny/forcefield{
+	dir = 1
+	},
+/obj/machinery/door/poddoor{
+	id = "delta_cargo";
+	name = "Mining Bay Blast Door"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/mining)
+"py" = (
+/obj/effect/turf_decal/tile/green/opposingcorners,
+/obj/machinery/cryopod{
+	dir = 8
+	},
+/obj/machinery/light_switch/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/crew)
+"pG" = (
+/obj/structure/table,
+/obj/machinery/fax{
+	fax_name = "Delta-Class Frigate"
+	},
+/obj/machinery/button/door/directional/west{
+	name = "Bridge Window Lockdown Control";
+	id = "delta_bridge";
+	pixel_y = 5
+	},
+/obj/machinery/button/door/directional/west{
+	name = "Ship Window Lockdown Control";
+	id = "delta_windows";
+	pixel_y = -5
+	},
+/obj/machinery/turretid{
+	lethal = 1;
+	name = "Ship Turret Control";
+	system_id = "delta_turrets";
+	req_access = null;
+	pixel_y = -25
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"pO" = (
+/obj/effect/turf_decal/tile/nslogistics/half/contrasted,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/port)
+"qk" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/engineering)
+"qo" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor{
+	id = "delta_windows";
+	name = "Medical Bay Window Blast Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/medical)
+"qr" = (
+/obj/structure/table,
+/obj/effect/turf_decal/tile/nslogistics/half/contrasted{
+	dir = 4
+	},
+/obj/item/pen/fountain/captain{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/item/stack/spacecash/c1000{
+	pixel_y = 12;
+	pixel_x = -3
+	},
+/obj/item/stack/spacecash/c1000{
+	pixel_y = 14;
+	pixel_x = -3
+	},
+/obj/item/stamp/nanotrasen/ns/captain{
+	pixel_y = 1;
+	pixel_x = -7
+	},
+/obj/item/paper_bin{
+	pixel_y = 4;
+	pixel_x = 5
+	},
+/obj/item/folder/yellow{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"qt" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/robotics)
+"qx" = (
+/obj/effect/turf_decal/nanotrasen/ns/center_right{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"qD" = (
+/obj/structure/toilet{
+	pixel_y = 8
+	},
+/obj/structure/sink/directional/west,
+/obj/structure/mirror/directional/east,
+/turf/open/floor/iron/showroomfloor,
+/area/shuttle/abandoned/delta/port)
+"qM" = (
+/obj/machinery/mineral/processing_unit_console{
+	pixel_y = 25;
+	output_dir = 6
+	},
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 4
+	},
+/obj/effect/turf_decal/loading_area/white{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/mining)
+"qR" = (
+/obj/effect/turf_decal/stripes/corner,
+/obj/machinery/mech_bay_recharge_port{
+	dir = 8
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"qY" = (
+/obj/machinery/door/airlock/multi_tile/public/glass{
+	name = "Crew Quarters"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/crew)
+"rn" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/turf_decal/bot,
+/obj/machinery/firealarm/directional/north,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"rs" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/obj/machinery/button/door/directional/east{
+	name = "Engine Access Control";
+	id = "delta_engine"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"rM" = (
+/obj/machinery/door/airlock/highsecurity{
+	name = "Synthetic Upload Chamber"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"rO" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured,
+/area/shuttle/abandoned/delta/bridge)
+"sf" = (
+/obj/effect/turf_decal/bot_white,
+/mob/living/basic/mining_drone{
+	name = "\improper B3T-C"
+	},
+/turf/open/floor/pod,
+/area/shuttle/abandoned/delta/mining)
+"si" = (
+/obj/structure/railing{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"sl" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor{
+	id = "delta_windows";
+	name = "Robotics Bay Window Blast Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/robotics)
+"sD" = (
+/obj/machinery/porta_turret/syndicate/energy/ruin{
+	req_access = list("security");
+	name = "old laser turret";
+	desc = "A turret built with substandard parts and run down further with age. Still capable of delivering lethal lasers to the odd space carp, but not much else.";
+	lethal_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	lethal_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	faction = list("neutral","silicon","turret");
+	system_id = "delta_turrets";
+	dir = 10
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/crew)
+"sN" = (
+/obj/machinery/vending/robotics,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"sQ" = (
+/obj/machinery/computer/shuttle/white_ship/bridge{
+	dir = 8;
+	name = "Delta-Class Frigate Bridge Console";
+	desc = "Used to control the Delta-Class Frigate from the bridge. Emits a faint GPS signal."
+	},
+/obj/effect/turf_decal/tile/nslogistics/anticorner/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"sT" = (
+/obj/structure/sign/ns,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/engineering)
+"tE" = (
+/obj/machinery/porta_turret/syndicate/energy/ruin{
+	req_access = list("security");
+	name = "old laser turret";
+	desc = "A turret built with substandard parts and run down further with age. Still capable of delivering lethal lasers to the odd space carp, but not much else.";
+	lethal_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	lethal_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	faction = list("neutral","silicon","turret");
+	system_id = "delta_turrets";
+	dir = 6
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/robotics)
+"tJ" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/bot,
+/obj/item/wrench,
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/machinery/power/port_gen/pacman/pre_loaded,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"tL" = (
+/obj/machinery/computer/operating{
+	dir = 1
+	},
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/medical)
+"tP" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"ud" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/mining)
+"ul" = (
+/obj/effect/turf_decal/trimline/white/filled/warning,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/mining)
+"up" = (
+/obj/machinery/shower/directional/south,
+/obj/structure/curtain,
+/obj/structure/drain,
+/obj/machinery/door/window/right/directional/east{
+	name = "Shower"
+	},
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/iron/showroomfloor,
+/area/shuttle/abandoned/delta/port)
+"uu" = (
+/obj/machinery/suit_storage_unit/spaceruin,
+/obj/effect/turf_decal/delivery/white{
+	color = "#FF6600"
+	},
+/obj/structure/extinguisher_cabinet/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/port)
+"uQ" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/structure/sign/departments/cargo/directional/east{
+	pixel_y = 32
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"uT" = (
+/obj/machinery/porta_turret/syndicate/energy/ruin{
+	req_access = list("security");
+	name = "old laser turret";
+	desc = "A turret built with substandard parts and run down further with age. Still capable of delivering lethal lasers to the odd space carp, but not much else.";
+	lethal_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	lethal_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	faction = list("neutral","silicon","turret");
+	system_id = "delta_turrets";
+	dir = 9
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/port)
+"uV" = (
+/obj/machinery/conveyor_switch/oneway{
+	id = "delta_mining";
+	pixel_x = -10
+	},
+/turf/open/floor/pod/dark,
+/area/shuttle/abandoned/delta/mining)
+"uW" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"uY" = (
+/obj/machinery/vending/boozeomat,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/central)
+"va" = (
+/obj/machinery/power/shuttle_engine/propulsion/left{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/abandoned/delta/engineering)
+"vc" = (
+/obj/machinery/door/airlock{
+	name = "Crew Quarters"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/crew)
+"vn" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"vI" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 4
+	},
+/obj/structure/chair,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"vT" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/yellow/corner{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"vU" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"vY" = (
+/turf/template_noop,
+/area/template_noop)
+"wc" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"wn" = (
+/obj/effect/turf_decal/tile/green,
+/obj/machinery/computer/cryopod/directional/south,
+/obj/structure/closet/generic/wall/empty{
+	pixel_x = -32
+	},
+/turf/open/floor/iron/white/side{
+	dir = 4
+	},
+/area/shuttle/abandoned/delta/crew)
+"wt" = (
+/obj/effect/turf_decal/vg_decals/numbers/three{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/abandoned/delta/robotics)
+"wz" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/engineering)
+"wT" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 9
+	},
+/obj/effect/turf_decal/siding/thinplating_new/corner,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"xa" = (
+/obj/machinery/rnd/production/circuit_imprinter/offstation,
+/obj/structure/extinguisher_cabinet/directional/south,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"xj" = (
+/obj/machinery/door/airlock/external/ruin,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"xm" = (
+/obj/structure/table,
+/obj/item/kitchen/fork{
+	pixel_x = 7
+	},
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"xw" = (
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/item/radio/intercom/directional/west,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/abandoned/delta/bridge)
+"xB" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/effect/turf_decal/bot,
+/obj/machinery/light_switch/directional/east,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"xD" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Medical Bay"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/medical)
+"xL" = (
+/obj/effect/turf_decal/tile/green/opposingcorners,
+/obj/machinery/cryopod{
+	dir = 8
+	},
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/crew)
+"xR" = (
+/obj/structure/table,
+/obj/item/aicard{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/pai_card{
+	pixel_x = -8;
+	pixel_y = 1
+	},
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"yn" = (
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/sign/departments/aisat/directional/west,
+/obj/machinery/camera/directional/west{
+	network = list("delta_whiteship");
+	c_tag = "Bridge"
+	},
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/abandoned/delta/bridge)
+"yz" = (
+/obj/machinery/door/airlock/mining{
+	name = "Mining Bay"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/mining)
+"yC" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/machinery/door/window/survival_pod/left/directional/east{
+	name = "Engine Access"
+	},
+/obj/machinery/door/poddoor{
+	id = "delta_engine";
+	name = "Engine Access Blast Door"
+	},
+/turf/open/floor/iron/dark/textured_half{
+	dir = 8
+	},
+/area/shuttle/abandoned/delta/engineering)
+"yE" = (
+/obj/effect/turf_decal/recharge,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"yO" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/ntspaceworks_small{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"zm" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"zv" = (
+/obj/structure/bed{
+	dir = 1
+	},
+/obj/item/bedsheet/orange{
+	dir = 1
+	},
+/obj/structure/curtain/bounty,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"zR" = (
+/obj/machinery/computer/camera_advanced/shuttle_docker/whiteship{
+	view_range = 14;
+	x_offset = -4;
+	y_offset = -8;
+	desc = "Used to designate a precise transit location for the Delta-Class Frigate.";
+	name = "Delta-Class Frigate Navigation Computer"
+	},
+/obj/effect/turf_decal/tile/nslogistics/half/contrasted{
+	dir = 4
+	},
+/obj/machinery/firealarm/directional/east,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"AS" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/crew)
+"AU" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/engineering)
+"AX" = (
+/obj/machinery/atmospherics/components/binary/pump/on/scrubbers/hidden/layer2{
+	dir = 8;
+	name = "waste disposal pump"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"Bp" = (
+/obj/machinery/door/airlock/research{
+	name = "Robotics"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/robotics)
+"BA" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/computer/rdconsole{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"BE" = (
+/obj/machinery/door/airlock/external/ruin,
+/obj/structure/fans/tiny,
+/obj/docking_port/mobile{
+	callTime = 250;
+	can_move_docking_ports = 1;
+	dir = 2;
+	shuttle_id = "whiteship";
+	launch_status = 0;
+	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
+	name = "Delta-Class Frigate";
+	port_direction = 8;
+	preferred_direction = 4
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"BR" = (
+/obj/effect/turf_decal/siding/yellow/corner,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"BU" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/portable_atmospherics/pump,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"BY" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor{
+	id = "delta_windows";
+	name = "Port Hallway Window Blast Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/port)
+"CE" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/ntspaceworks_small/left{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"CF" = (
+/obj/machinery/airalarm/directional/north,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/abandoned/delta/port)
+"CQ" = (
+/obj/effect/turf_decal/bot_white,
+/mob/living/basic/mining_drone{
+	name = "\improper D0T-T"
+	},
+/turf/open/floor/pod,
+/area/shuttle/abandoned/delta/mining)
+"CR" = (
+/obj/structure/sign/ns,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/bridge)
+"CT" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/bridge)
+"DM" = (
+/obj/machinery/holopad/secure,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"Ea" = (
+/obj/machinery/door/airlock/mining/glass{
+	name = "Port Hallway"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"Ed" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/robotics)
+"Ee" = (
+/obj/machinery/mineral/unloading_machine,
+/obj/machinery/conveyor{
+	id = "delta_mining";
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/pod/dark,
+/area/shuttle/abandoned/delta/mining)
+"Ex" = (
+/obj/effect/turf_decal/nanotrasen/ns/top{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"EI" = (
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wideplating_new,
+/obj/structure/closet/crate{
+	name = "materials crate"
+	},
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/sheet/iron/twenty,
+/obj/item/stack/sheet/iron/five,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/plasteel/twenty,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/medical)
+"EY" = (
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"Fb" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"Fd" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new/corner{
+	dir = 8
+	},
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"Ff" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/central)
+"Fw" = (
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wideplating_new,
+/obj/structure/rack/shelf,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 7
+	},
+/obj/item/storage/toolbox/mechanical,
+/obj/item/multitool,
+/obj/item/clothing/glasses/welding{
+	pixel_y = 7
+	},
+/obj/item/clothing/glasses/hud/diagnostic{
+	pixel_y = 3
+	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_y = -2
+	},
+/obj/machinery/light_switch/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/camera/directional/north{
+	network = list("delta_whiteship");
+	c_tag = "Medical Bay"
+	},
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/medical)
+"FB" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/structure/sign/departments/aiupload/directional/north{
+	pixel_x = 32
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"Gc" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/machinery/door/window/survival_pod/left/directional/east{
+	name = "Engine Access"
+	},
+/obj/machinery/door/poddoor{
+	id = "delta_engine";
+	name = "Engine Access Blast Door"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_half{
+	dir = 8
+	},
+/area/shuttle/abandoned/delta/engineering)
+"Gn" = (
+/obj/machinery/computer/security{
+	dir = 8;
+	network = list("meta_whiteship");
+	desc = "Used to access the various cameras on the Meta-Class Freighter.";
+	name = "ship camera console"
+	},
+/obj/effect/turf_decal/tile/nslogistics/anticorner/contrasted,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"Gs" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 6
+	},
+/obj/effect/turf_decal/siding/thinplating_new/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/obj/machinery/light/small/directional/east,
+/obj/structure/sign/warning/vacuum/external/directional/east,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"Gx" = (
+/obj/machinery/autolathe,
+/obj/effect/turf_decal/bot,
+/obj/machinery/light_switch/directional/east,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"GU" = (
+/obj/effect/turf_decal/tile/nslogistics/half/contrasted{
+	dir = 1
+	},
+/obj/structure/sign/departments/engineering/directional/west,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"He" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/crew)
+"Hs" = (
+/obj/structure/ai_core,
+/obj/item/circuitboard/aicore,
+/obj/item/stack/sheet/rglass{
+	amount = 5
+	},
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	name = "AI Core Access"
+	},
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/abandoned/delta/bridge)
+"Ht" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/engineering)
+"HA" = (
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 1
+	},
+/obj/structure/sign/departments/science/directional/east,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/white/side,
+/area/shuttle/abandoned/delta/medical)
+"HQ" = (
+/obj/machinery/porta_turret/syndicate/energy/ruin{
+	req_access = list("security");
+	name = "old laser turret";
+	desc = "A turret built with substandard parts and run down further with age. Still capable of delivering lethal lasers to the odd space carp, but not much else.";
+	lethal_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	lethal_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	faction = list("neutral","silicon","turret");
+	system_id = "delta_turrets";
+	dir = 5
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/mining)
+"Ij" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"Il" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/central)
+"Iy" = (
+/obj/effect/turf_decal/siding/yellow,
+/obj/effect/turf_decal/siding/yellow/corner{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"IC" = (
+/obj/machinery/porta_turret/syndicate/energy/ruin{
+	req_access = list("security");
+	name = "old laser turret";
+	desc = "A turret built with substandard parts and run down further with age. Still capable of delivering lethal lasers to the odd space carp, but not much else.";
+	lethal_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	lethal_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	faction = list("neutral","silicon","turret");
+	system_id = "delta_turrets";
+	dir = 6
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/mining)
+"IJ" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 4
+	},
+/obj/machinery/firealarm/directional/east,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"JU" = (
+/obj/machinery/door/airlock/multi_tile/public/glass{
+	name = "Port Hallway"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"JV" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/pod/dark,
+/area/shuttle/abandoned/delta/mining)
+"Ka" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/stairs{
+	dir = 4
+	},
+/area/shuttle/abandoned/delta/robotics)
+"Kp" = (
+/obj/machinery/mecha_part_fabricator,
+/obj/machinery/airalarm/directional/north,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"Kz" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 4
+	},
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"KN" = (
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/portables_connector/layer4{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 8
+	},
+/area/shuttle/abandoned/delta/engineering)
+"KO" = (
+/obj/machinery/suit_storage_unit/spaceruin,
+/obj/effect/turf_decal/delivery/white{
+	color = "#FF6600"
+	},
+/obj/machinery/airalarm/directional/south,
+/obj/machinery/firealarm/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/port)
+"LX" = (
+/obj/structure/tank_dispenser,
+/obj/effect/turf_decal/bot_white{
+	color = "#FF6600"
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/port)
+"Ml" = (
+/obj/effect/turf_decal/nanotrasen/ns/top_right{
+	dir = 4
+	},
+/obj/machinery/light_switch/directional/west,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"Mm" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 4
+	},
+/obj/structure/table,
+/obj/item/toy/cards/deck{
+	pixel_y = 6
+	},
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/camera/directional/east{
+	network = list("delta_whiteship");
+	c_tag = "Central Hallway"
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"My" = (
+/obj/machinery/light_switch/directional/west,
+/obj/machinery/camera/directional/west{
+	network = list("delta_whiteship");
+	c_tag = "Mining Bay - Control"
+	},
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"MB" = (
+/obj/structure/ore_box,
+/obj/effect/turf_decal/bot_white{
+	color = "#FF6600"
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"Nd" = (
+/obj/structure/table/glass,
+/obj/effect/spawner/surgery_tray/full,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/medical)
+"NG" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"NQ" = (
+/obj/machinery/porta_turret/syndicate/energy/ruin{
+	req_access = list("security");
+	name = "old laser turret";
+	desc = "A turret built with substandard parts and run down further with age. Still capable of delivering lethal lasers to the odd space carp, but not much else.";
+	lethal_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile = /obj/projectile/beam/weak/penetrator;
+	stun_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	lethal_projectile_sound = 'sound/items/weapons/plasma_cutter.ogg';
+	faction = list("neutral","silicon","turret");
+	system_id = "delta_turrets";
+	dir = 5
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/delta/robotics)
+"Ol" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/turf_decal/bot_white,
+/obj/structure/closet/crate/cargo/mining{
+	name = "surplus mining supplies"
+	},
+/obj/item/pickaxe,
+/obj/item/mining_scanner,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"OC" = (
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/abandoned/delta/robotics)
+"OD" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor{
+	id = "delta_bridge";
+	name = "Bridge Window Blast Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/bridge)
+"Pr" = (
+/obj/machinery/door/airlock{
+	name = "Janitorial Closet"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"PV" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new/corner{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/crew)
+"Qq" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet/directional/east,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"Qw" = (
+/turf/template_noop,
+/area/space)
+"Qy" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"QE" = (
+/obj/machinery/mineral/stacking_unit_console{
+	pixel_y = 25;
+	output_dir = 8
+	},
+/obj/machinery/button/door/directional/west{
+	name = "Mining Bay Blast Door Control";
+	id = "delta_cargo"
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/mining)
+"Rg" = (
+/obj/effect/turf_decal/nanotrasen/ns/center{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"Ru" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 4
+	},
+/obj/machinery/airalarm/directional/east,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"RU" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/nslogistics{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/bridge)
+"Sb" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/mining)
+"Sd" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"Sn" = (
+/obj/machinery/power/shuttle_engine/propulsion/right{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/abandoned/delta/engineering)
+"SO" = (
+/obj/structure/table,
+/obj/machinery/microwave,
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/machinery/camera/directional/east{
+	network = list("delta_whiteship");
+	c_tag = "Crew Quarters"
+	},
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"Tj" = (
+/obj/structure/rack/shelf,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	name = "AI Module Storage"
+	},
+/obj/item/ai_module/reset/purge,
+/obj/item/borg/upgrade/ai,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/abandoned/delta/port)
+"Tw" = (
+/obj/effect/turf_decal/siding/wideplating_new{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/white/side,
+/area/shuttle/abandoned/delta/medical)
+"TQ" = (
+/obj/machinery/conveyor/inverted{
+	id = "delta_mining";
+	dir = 6
+	},
+/turf/open/floor/pod/dark,
+/area/shuttle/abandoned/delta/mining)
+"TU" = (
+/obj/structure/railing{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"Ua" = (
+/obj/effect/turf_decal/bot_white,
+/obj/structure/closet/crate,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"Ub" = (
+/obj/structure/railing/corner/end/flip{
+	dir = 4
+	},
+/obj/effect/turf_decal/nanotrasen/ns/bottom_left{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"Ul" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet/directional/east,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"UQ" = (
+/obj/machinery/vending/coffee,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/central)
+"Vd" = (
+/obj/structure/table,
+/obj/item/toy/talking/ai{
+	pixel_y = 11;
+	pixel_x = -4
+	},
+/obj/item/phone{
+	pixel_y = -3;
+	pixel_x = 6
+	},
+/obj/machinery/firealarm/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/abandoned/delta/port)
+"Vi" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/crew)
+"VB" = (
+/obj/effect/turf_decal/trimline/white/filled/warning,
+/obj/structure/chair/office/light{
+	dir = 4;
+	pixel_y = 3
+	},
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/mining)
+"VC" = (
+/obj/structure/sign/departments/medbay/alt,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/medical)
+"VJ" = (
+/obj/structure/table,
+/obj/effect/turf_decal/bot,
+/obj/machinery/cell_charger,
+/obj/item/multitool{
+	pixel_x = -9;
+	pixel_y = 11
+	},
+/obj/item/stack/cable_coil/thirty,
+/obj/machinery/firealarm/directional/south,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"VM" = (
+/obj/structure/fans/tiny/forcefield{
+	dir = 8
+	},
+/obj/machinery/door/poddoor{
+	id = "delta_robotics";
+	name = "Robotics Bay Blast Door"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/robotics)
+"VQ" = (
+/obj/effect/turf_decal/vg_decals/numbers/four{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/abandoned/delta/robotics)
+"VX" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
+"Wa" = (
+/obj/effect/turf_decal/nanotrasen/ns/top_left{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"Wj" = (
+/obj/structure/closet/secure_closet/freezer/empty/open{
+	name = "refrigerator"
+	},
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/storage/cans/sixbeer,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/turf_decal/tile/bar/opposingcorners,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/crew)
+"WD" = (
+/obj/effect/turf_decal/bot_white,
+/obj/machinery/airalarm/directional/south,
+/obj/machinery/firealarm/directional/east,
+/obj/structure/closet/crate/preopen,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"WO" = (
+/obj/effect/turf_decal/tile/nslogistics/half/contrasted,
+/obj/structure/sign/departments/engineering/directional/west,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron,
+/area/shuttle/abandoned/delta/port)
+"Xh" = (
+/obj/machinery/rnd/production/protolathe/offstation,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"Xp" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/yellow/corner,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"XF" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/structure/extinguisher_cabinet/directional/south,
+/obj/structure/sign/departments/restroom/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"XT" = (
+/obj/effect/turf_decal/siding/yellow{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer4{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/engineering)
+"Yi" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new/corner,
+/obj/machinery/light_switch/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/port)
+"Yl" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/table,
+/obj/item/mmi/posibrain{
+	pixel_y = 12
+	},
+/obj/item/mmi/posibrain{
+	pixel_y = 4;
+	pixel_x = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/camera/directional/north{
+	network = list("delta_whiteship");
+	c_tag = "Robotics Bay"
+	},
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+"YO" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/turf_decal/bot_white,
+/obj/structure/closet/crate/freezer/food{
+	name = "pizza crate"
+	},
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/item/pizzabox/random,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/mining)
+"YR" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/machinery/light_switch/directional/north,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/crew)
+"YW" = (
+/obj/structure/rack,
+/obj/item/weldingtool/hugetank,
+/obj/item/clothing/head/utility/welding,
+/obj/item/borg/upgrade/modkit/cooldown/minebot,
+/obj/item/borg/upgrade/modkit/cooldown/minebot,
+/obj/item/borg/upgrade/modkit/cooldown/minebot,
+/obj/machinery/button/door/directional/west{
+	name = "Mining Bay Blast Door Control";
+	id = "delta_cargo"
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/pod/dark,
+/area/shuttle/abandoned/delta/mining)
+"Zx" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/bot,
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"ZD" = (
+/obj/machinery/rnd/destructive_analyzer,
+/obj/item/radio/intercom/directional/south,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/iron/white,
+/area/shuttle/abandoned/delta/robotics)
+
+(1,1,1) = {"
+vY
+vY
+vY
+vY
+AU
+va
+Sn
+AU
+Qw
+AU
+va
+nI
+AU
+vY
+vY
+vY
+vY
+"}
+(2,1,1) = {"
+vY
+AU
+wz
+wz
+wz
+yC
+yC
+wz
+wz
+wz
+yC
+Gc
+wz
+wz
+wz
+AU
+vY
+"}
+(3,1,1) = {"
+vY
+wz
+aB
+KN
+wc
+ks
+ks
+Zx
+wz
+tJ
+ks
+nM
+NG
+eh
+cY
+wz
+vY
+"}
+(4,1,1) = {"
+vY
+sT
+Qy
+Qy
+cQ
+fl
+kC
+BU
+wz
+bf
+kC
+AX
+tP
+ks
+ks
+sT
+vY
+"}
+(5,1,1) = {"
+vY
+wz
+rn
+XT
+BR
+Qq
+rs
+vn
+qk
+zm
+Fb
+Ul
+vT
+id
+VJ
+wz
+vY
+"}
+(6,1,1) = {"
+vY
+wz
+xB
+Xp
+kd
+CT
+CT
+CT
+CT
+CT
+CT
+CT
+dh
+Iy
+Gx
+wz
+vY
+"}
+(7,1,1) = {"
+uT
+wz
+wz
+Ht
+wz
+CT
+bO
+yn
+Hs
+xw
+pG
+CT
+wz
+qk
+wz
+wz
+sD
+"}
+(8,1,1) = {"
+lA
+gG
+Pr
+hu
+WO
+bl
+rO
+rO
+rO
+rO
+rO
+bl
+GU
+eV
+lk
+wn
+Vi
+"}
+(9,1,1) = {"
+lA
+lA
+lA
+aN
+pO
+CR
+zR
+RU
+DM
+ji
+iE
+CR
+dd
+eV
+py
+xL
+Vi
+"}
+(10,1,1) = {"
+lA
+up
+lA
+XF
+lA
+CT
+CT
+sQ
+qr
+Gn
+CT
+CT
+Vi
+vc
+Vi
+Vi
+Vi
+"}
+(11,1,1) = {"
+lA
+qD
+fq
+hF
+lA
+Il
+OD
+OD
+OD
+OD
+OD
+UQ
+Vi
+YR
+zv
+hg
+Vi
+"}
+(12,1,1) = {"
+lA
+lA
+lA
+Fd
+JU
+uW
+VX
+uW
+uW
+uW
+ju
+uW
+qY
+cj
+jW
+EY
+dn
+"}
+(13,1,1) = {"
+BY
+Vd
+lA
+Yi
+fd
+pf
+Ru
+vI
+Mm
+Kz
+IJ
+pf
+AS
+PV
+Ij
+Wj
+Vi
+"}
+(14,1,1) = {"
+lA
+CF
+rM
+FB
+lA
+gK
+Ff
+gb
+Ff
+gb
+Ff
+uY
+Vi
+He
+xm
+SO
+dn
+"}
+(15,1,1) = {"
+BY
+Tj
+lA
+Ea
+lA
+lA
+hr
+vY
+vY
+vY
+hr
+Ff
+bQ
+xD
+VC
+bQ
+bQ
+"}
+(16,1,1) = {"
+lA
+lA
+lA
+vU
+uu
+lA
+vY
+vY
+vY
+vY
+vY
+bQ
+Fw
+hM
+bm
+Nd
+bQ
+"}
+(17,1,1) = {"
+BY
+wT
+xj
+vU
+LX
+BY
+vY
+vY
+vY
+vY
+vY
+qo
+EI
+hM
+Tw
+fv
+qo
+"}
+(18,1,1) = {"
+BE
+Gs
+lA
+uQ
+KO
+lA
+vY
+vY
+vY
+vY
+vY
+bQ
+nm
+hM
+HA
+tL
+bQ
+"}
+(19,1,1) = {"
+ud
+ud
+ud
+yz
+ud
+ud
+fW
+vY
+vY
+vY
+Ed
+qt
+qt
+Bp
+qt
+qt
+qt
+"}
+(20,1,1) = {"
+ud
+QE
+ul
+hz
+My
+oB
+ud
+vY
+vY
+vY
+qt
+xR
+Ml
+Ex
+Wa
+xa
+qt
+"}
+(21,1,1) = {"
+gX
+jB
+VB
+YO
+kw
+Ua
+gX
+vY
+vY
+vY
+sl
+sN
+qx
+Rg
+gZ
+Xh
+sl
+"}
+(22,1,1) = {"
+ud
+qM
+np
+Ol
+Sd
+WD
+ud
+vY
+vY
+vY
+qt
+Kp
+nD
+do
+Ub
+ZD
+qt
+"}
+(23,1,1) = {"
+ud
+nX
+ud
+ud
+ki
+ud
+ud
+vY
+vY
+vY
+qt
+Yl
+TU
+Ka
+si
+BA
+qt
+"}
+(24,1,1) = {"
+ud
+TQ
+na
+kS
+na
+Ee
+pr
+vY
+vY
+vY
+qt
+ao
+dw
+OC
+dw
+mq
+qt
+"}
+(25,1,1) = {"
+ud
+ud
+Sb
+Sb
+Sb
+Sb
+pr
+vY
+vY
+vY
+sl
+yE
+dw
+OC
+dw
+MB
+sl
+"}
+(26,1,1) = {"
+ud
+YW
+lo
+uV
+lo
+JV
+pr
+vY
+vY
+vY
+qt
+qR
+fJ
+yO
+CE
+fE
+qt
+"}
+(27,1,1) = {"
+HQ
+ud
+CQ
+et
+sf
+ud
+IC
+vY
+vY
+vY
+NQ
+qt
+VM
+VM
+VM
+qt
+tE
+"}
+(28,1,1) = {"
+vY
+fW
+ud
+ud
+ud
+fW
+vY
+vY
+vY
+vY
+vY
+Ed
+hC
+VQ
+wt
+Ed
+vY
+"}

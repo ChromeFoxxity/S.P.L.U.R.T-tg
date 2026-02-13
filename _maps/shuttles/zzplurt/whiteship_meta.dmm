@@ -6,7 +6,7 @@
 /obj/machinery/computer/security{
 	dir = 8;
 	network = list("meta_whiteship");
-	desc = "Used to access the various cameras on the Meta-Class Frigate.";
+	desc = "Used to access the various cameras on the Meta-Class Freighter.";
 	name = "ship camera console"
 	},
 /obj/machinery/status_display/department_balance{
@@ -616,6 +616,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
+"gc" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mob_spawn/corpse/human/engineer,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/abandoned/meta/engineering)
 "gh" = (
 /obj/item/radio/intercom/directional/east,
 /obj/effect/decal/cleanable/plastic,
@@ -1077,6 +1083,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/central)
+"lT" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/abandoned/meta/engineering)
 "lZ" = (
 /obj/effect/turf_decal/nanotrasen/ns/bottom_left{
 	dir = 4
@@ -1339,7 +1350,7 @@
 	name = "Ship Turret Control";
 	system_id = "meta_turrets";
 	req_access = null;
-	pixel_y = -32
+	pixel_y = -25
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -1518,10 +1529,10 @@
 /turf/open/floor/iron/large,
 /area/shuttle/abandoned/meta/cargo)
 "sC" = (
-/obj/machinery/door/airlock{
+/obj/structure/cable,
+/obj/machinery/door/airlock/bathroom{
 	name = "Restroom"
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/meta/restroom)
 "sH" = (
@@ -1817,6 +1828,11 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/meta/lobby)
+"wr" = (
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/meta/engineering)
 "wt" = (
 /obj/structure/railing{
 	dir = 1
@@ -2297,8 +2313,8 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/abandoned/meta/engineering)
 "DI" = (
-/obj/effect/mob_spawn/corpse/human/nsl_deckhand,
 /obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/deckhand,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/central)
 "DK" = (
@@ -2332,7 +2348,7 @@
 	shuttle_id = "whiteship";
 	launch_status = 0;
 	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
-	name = "Meta-Class Frigate";
+	name = "Meta-Class Freighter";
 	port_direction = 8;
 	preferred_direction = 4
 	},
@@ -2789,8 +2805,8 @@
 	view_range = 14;
 	x_offset = -4;
 	y_offset = -8;
-	desc = "Used to designate a precise transit location for the Meta-Class Frigate.";
-	name = "Meta-Class Frigate Navigation Computer"
+	desc = "Used to designate a precise transit location for the Meta-Class Freighter.";
+	name = "Meta-Class Freighter Navigation Computer"
 	},
 /obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron/dark,
@@ -3461,8 +3477,8 @@
 	},
 /obj/machinery/computer/shuttle/white_ship/bridge{
 	dir = 8;
-	name = "Meta-Class Frigate Bridge Console";
-	desc = "Used to control the Meta-Class Frigate from the bridge. Emits a faint GPS signal."
+	name = "Meta-Class Freighter Bridge Console";
+	desc = "Used to control the Meta-Class Freighter from the bridge. Emits a faint GPS signal."
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/bridge)
@@ -3499,6 +3515,13 @@
 	pixel_x = 9
 	},
 /turf/open/floor/plating/foam,
+/area/shuttle/abandoned/meta/engineering)
+"Sq" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/abandoned/meta/engineering)
 "Sv" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -3582,6 +3605,10 @@
 /area/shuttle/abandoned/meta/crew)
 "TW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/abandoned/meta/engineering)
 "TY" = (
@@ -3611,8 +3638,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/mob_spawn/corpse/human/nsl_deckhand,
 /obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/deckhand,
 /turf/open/floor/wood,
 /area/shuttle/abandoned/meta/crew)
 "UC" = (
@@ -3948,6 +3975,10 @@
 /obj/item/sign/flag/nanotrasen{
 	pixel_x = 11
 	},
+/obj/machinery/camera/directional/north{
+	network = list("meta_whiteship");
+	c_tag = "Bridge"
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/bridge)
 "ZA" = (
@@ -4088,7 +4119,7 @@ LZ
 AV
 ix
 sH
-TW
+lT
 rS
 nH
 mW
@@ -4113,7 +4144,7 @@ LZ
 gU
 qG
 dB
-TW
+Sq
 dH
 gU
 Xl
@@ -4163,8 +4194,8 @@ LZ
 LZ
 Pl
 GE
-TW
-rS
+gc
+wr
 gU
 gU
 gU
