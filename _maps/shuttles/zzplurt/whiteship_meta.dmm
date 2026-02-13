@@ -736,8 +736,8 @@
 /obj/structure/closet/wardrobe/cargotech,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/shoes/sneakers/black,
-/obj/item/clothing/under/rank/cargo/tech/skyrat/long,
-/obj/item/clothing/under/rank/cargo/tech/skyrat/long,
+/obj/item/clothing/under/rank/nanotrasen/supply,
+/obj/item/clothing/under/rank/nanotrasen/supply,
 /obj/item/clothing/suit/hooded/wintercoat/cargo,
 /obj/item/clothing/suit/hooded/wintercoat/cargo,
 /obj/item/clothing/gloves/fingerless,
@@ -1617,7 +1617,8 @@
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/storage/backpack/satchel/leather/withwallet,
-/obj/item/clothing/under/suit/black,
+/obj/item/clothing/under/rank/nanotrasen,
+/obj/item/clothing/under/rank/nanotrasen,
 /turf/open/floor/wood,
 /area/shuttle/abandoned/meta/cabin)
 "tW" = (
@@ -1955,7 +1956,7 @@
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/meta/lobby)
 "yk" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small/broken/directional/north,
 /turf/open/floor/iron/stairs{
 	dir = 4
 	},
@@ -2072,7 +2073,8 @@
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/storage/backpack/satchel/leather/withwallet,
-/obj/item/clothing/under/suit/navy,
+/obj/item/clothing/under/rank/nanotrasen,
+/obj/item/clothing/under/rank/nanotrasen,
 /turf/open/floor/wood,
 /area/shuttle/abandoned/meta/cabin2)
 "AT" = (
@@ -2378,8 +2380,8 @@
 /obj/structure/closet/wardrobe/cargotech,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/shoes/sneakers/black,
-/obj/item/clothing/under/rank/cargo/tech/skyrat/long,
-/obj/item/clothing/under/rank/cargo/tech/skyrat/long,
+/obj/item/clothing/under/rank/nanotrasen/supply,
+/obj/item/clothing/under/rank/nanotrasen/supply,
 /obj/item/clothing/suit/hooded/wintercoat/cargo,
 /obj/item/clothing/suit/hooded/wintercoat/cargo,
 /obj/item/clothing/gloves/fingerless,
@@ -2911,15 +2913,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/whiteship/supplydirector,
-/obj/item/clothing/under/rank/cargo/qm/skyrat/formal{
-	name = "supply director's jumpsuit"
-	},
-/obj/item/clothing/under/rank/cargo/qm/skyrat/formal/skirt{
-	name = "supply director's jumpskirt"
-	},
-/obj/item/clothing/head/beret/cargo/qm/alt{
-	name = "supply director's beret"
-	},
+/obj/item/clothing/under/rank/nanotrasen/supply/qm,
 /obj/item/clipboard,
 /obj/item/megaphone/cargo,
 /obj/item/clothing/glasses/sunglasses,
@@ -2951,7 +2945,7 @@
 "Nj" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/reagent_dispensers/fueltank,
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small/broken/directional/east,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/meta/engineering)
 "Np" = (
@@ -3219,7 +3213,7 @@
 /area/shuttle/abandoned/meta/central)
 "Qu" = (
 /obj/effect/decal/cleanable/blood/oil/slippery,
-/obj/machinery/light/directional/east,
+/obj/machinery/light/broken/directional/east,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/meta/engineering)
 "Qw" = (
@@ -3284,7 +3278,6 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "Ro" = (
-/obj/machinery/light/small/directional/south,
 /obj/structure/cable,
 /obj/machinery/power/terminal{
 	dir = 4
@@ -3292,6 +3285,7 @@
 /obj/machinery/power/terminal{
 	dir = 8
 	},
+/obj/machinery/light/small/broken/directional/south,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/abandoned/meta/engineering)
 "Rs" = (
@@ -3325,6 +3319,7 @@
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/lobby)
 "RG" = (
+/obj/machinery/holopad/secure,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/crew)
 "RW" = (

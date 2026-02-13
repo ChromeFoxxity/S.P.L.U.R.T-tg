@@ -10262,6 +10262,7 @@
 #include "modular_zzplurt\code\modules\clothing\suits\wintercoats.dm"
 #include "modular_zzplurt\code\modules\clothing\under\misc.dm"
 #include "modular_zzplurt\code\modules\clothing\under\nanotrasen.dm"
+#include "modular_zzplurt\code\modules\clothing\under\syndicate.dm"
 #include "modular_zzplurt\code\modules\clothing\under\uniform.dm"
 #include "modular_zzplurt\code\modules\clothing\under\jobs\medical.dm"
 #include "modular_zzplurt\code\modules\clothing\under\jobs\rnd.dm"

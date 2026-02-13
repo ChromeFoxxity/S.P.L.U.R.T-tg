@@ -85,3 +85,18 @@
 	worn_icon_digi = 'modular_zzplurt/icons/mob/clothing/under/costume_digi.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS
 	alt_covers_chest = TRUE
+
+/obj/item/clothing/under/rank/nanotrasen
+	name = "deckhand's uniform"
+	desc = "A plain grey work uniform with a Nanotrasen, Inc. logo embroidered on the front. Typical of entry-level employees."
+	icon_state = "deckhand"
+
+/obj/item/clothing/under/rank/nanotrasen/supply
+	name = "cargo handler shorts"
+	desc = "A cheap work shirt and black shorts, typical of cargo handlers and clerks at N+S Logistics."
+	icon_state = "supply"
+
+/obj/item/clothing/under/rank/nanotrasen/supply/qm
+	name = "supply director slacks"
+	desc = "Crisp slacks and a pressed brown shirt that any supply director could be proud of. N+S Logistics' compass rose logo is embossed on every button."
+	icon_state = "supply_director"
