@@ -79,8 +79,8 @@
 
 /datum/id_trim/away/supply_director
 	assignment = "N+S Supply Director"
-	trim_state = "trim_quartermaster"
-	department_color = COLOR_CARGO_BROWN
+	trim_state = "trim_cargotechnician"
+	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_TAN_ORANGE
 	sechud_icon_state = SECHUD_QUARTERMASTER
 	big_pointer = TRUE

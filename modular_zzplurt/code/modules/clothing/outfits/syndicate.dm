@@ -17,7 +17,7 @@
 
 	id = /obj/item/card/id/advanced/chameleon/black
 	id_trim = /datum/id_trim/syndicom/agent
-	uniform = /obj/item/clothing/under/rank/syndicate/operative
+	uniform = /obj/item/clothing/under/rank/syndicate
 	mask = /obj/item/clothing/mask/gas/syndicate
 	ears = /obj/item/radio/headset/syndicateciv
 	gloves = /obj/item/clothing/gloves/combat
@@ -39,7 +39,7 @@
 /datum/outfit/syndicate_new/operative/hardsuit
 	name = "Syndicate Agent - Space Field Operative"
 
-	uniform = /obj/item/clothing/under/rank/syndicate/tactical
+	uniform = /obj/item/clothing/under/rank/syndicate/operative/tactical
 	suit = /obj/item/clothing/suit/hooded/syndicate
 	head = null
 	belt = /obj/item/storage/belt/military/syndicate
