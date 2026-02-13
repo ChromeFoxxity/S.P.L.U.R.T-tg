@@ -179,4 +179,3 @@ TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/tile/nslogistics)
 TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/trimline/nslogistics)
 
 #undef TRIMLINE_SUBTYPE_HELPER
-#undef DECAL_ALPHA

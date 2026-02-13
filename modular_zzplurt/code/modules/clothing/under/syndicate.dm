@@ -18,5 +18,15 @@
 
 /obj/item/clothing/under/rank/syndicate/operative/tactical
 	name = "tactical operative jumpsuit"
-	desc = "A tactical jumpsuit with syndicate insignia on the shoulder, a modern uniform for missions you don't plan on coming back from, spacious to git!"
+	desc = "A tactical jumpsuit with syndicate insignia on the shoulder, a modern uniform for missions you don't plan on coming back from, spacious and manueverable to git!"
 	icon_state = "operative_tactical"
+
+/obj/item/clothing/under/rank/syndicate/officer
+	name = "officer's turtleneck"
+	desc = "A dusty dark red turtleneck with silver markings on the shoulders, it has black trousers with silver stripes on the sides. How formally snazzy."
+	icon_state = "officer_turtleneck"
+
+/obj/item/clothing/under/rank/syndicate/officer/senior
+	name = "senior officer's turtleneck"
+	desc = "A dusty dark red turtleneck with golden markings on the shoulders, it has black trousers with golden stripes on the sides. How formally snazzy."
+	icon_state = "captain_turtleneck"

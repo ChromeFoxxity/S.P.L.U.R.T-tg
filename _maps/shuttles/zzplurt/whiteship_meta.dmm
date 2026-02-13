@@ -575,17 +575,33 @@
 /obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron/large,
 /area/shuttle/abandoned/meta/cargo)
+"fE" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/trail_holder,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/meta/central)
 "fF" = (
 /obj/structure/chair/sofa/bench{
 	dir = 8
 	},
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/lobby)
+"fH" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/meta/central)
 "fM" = (
 /obj/effect/turf_decal/nanotrasen/ns/center_right{
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "fN" = (
@@ -733,7 +749,6 @@
 	color = "#FF6600"
 	},
 /obj/machinery/light/small/directional/north,
-/obj/structure/closet/wardrobe/cargotech,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/under/rank/nanotrasen/supply,
@@ -743,6 +758,9 @@
 /obj/item/clothing/gloves/fingerless,
 /obj/item/clothing/gloves/fingerless,
 /obj/machinery/status_display/evac/directional/west,
+/obj/structure/closet/wardrobe/whiteship/cargotech,
+/obj/item/clothing/head/soft,
+/obj/item/clothing/head/soft,
 /turf/open/floor/iron/large,
 /area/shuttle/abandoned/meta/cargo)
 "hM" = (
@@ -940,6 +958,7 @@
 	dir = 8
 	},
 /obj/machinery/status_display/evac/directional/east,
+/obj/effect/decal/cleanable/blood/trail_holder,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/central)
 "jU" = (
@@ -1078,10 +1097,10 @@
 /obj/item/flashlight/glowstick/orange,
 /obj/item/toy/crayon/orange,
 /obj/item/toy/crayon/orange,
-/obj/structure/closet/crate/eva{
+/obj/effect/spawner/random/maintenance/three,
+/obj/structure/closet/crate/internals{
 	name = "surplus survival supplies crate"
 	},
-/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "ml" = (
@@ -1460,6 +1479,7 @@
 	network = list("meta_whiteship");
 	c_tag = "Central Hallway - Port"
 	},
+/obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/central)
 "rQ" = (
@@ -1494,9 +1514,7 @@
 /obj/item/pickaxe,
 /obj/item/clothing/suit/hooded/explorer,
 /obj/item/flashlight/seclite,
-/obj/structure/closet/secure_closet/miner{
-	req_access = null
-	},
+/obj/structure/closet/secure_closet/whiteship/miner,
 /turf/open/floor/iron/large,
 /area/shuttle/abandoned/meta/cargo)
 "sC" = (
@@ -1865,6 +1883,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
 /turf/open/floor/iron/textured_edge{
 	dir = 4
 	},
@@ -1884,6 +1905,8 @@
 /turf/open/floor/iron/large,
 /area/shuttle/abandoned/meta/cargo)
 "xx" = (
+/obj/effect/mob_spawn/corpse/human/nsl_quartermaster,
+/obj/effect/decal/cleanable/blood,
 /turf/open/floor/iron/dark/herringbone,
 /area/shuttle/abandoned/meta/qmoffice)
 "xy" = (
@@ -1994,6 +2017,21 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/carpet/orange,
 /area/shuttle/abandoned/meta/crew)
+"yX" = (
+/obj/effect/turf_decal/siding/thinplating/dark,
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/gun/energy/laser/pistol,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/abandoned/meta/qmoffice)
 "yY" = (
 /obj/machinery/portable_atmospherics/pump,
 /obj/effect/turf_decal/bot,
@@ -2056,6 +2094,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "Al" = (
@@ -2195,6 +2234,10 @@
 /obj/effect/turf_decal/trimline/nslogistics/warning{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/clipboard{
+	pixel_y = 4
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "CI" = (
@@ -2215,6 +2258,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/meta/qmoffice)
 "CV" = (
@@ -2250,6 +2296,11 @@
 "DB" = (
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/abandoned/meta/engineering)
+"DI" = (
+/obj/effect/mob_spawn/corpse/human/nsl_deckhand,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/meta/central)
 "DK" = (
 /obj/effect/turf_decal/trimline/nslogistics/warning{
 	dir = 1
@@ -2377,7 +2428,6 @@
 /obj/effect/turf_decal/delivery/white{
 	color = "#FF6600"
 	},
-/obj/structure/closet/wardrobe/cargotech,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/under/rank/nanotrasen/supply,
@@ -2390,6 +2440,9 @@
 	network = list("meta_whiteship");
 	c_tag = "Cargo Bay - Port"
 	},
+/obj/structure/closet/wardrobe/whiteship/cargotech,
+/obj/item/clothing/head/soft,
+/obj/item/clothing/head/soft,
 /turf/open/floor/iron/large,
 /area/shuttle/abandoned/meta/cargo)
 "Fs" = (
@@ -2457,6 +2510,8 @@
 /area/shuttle/abandoned/meta/cargo)
 "Gc" = (
 /obj/effect/turf_decal/box/white/corners,
+/obj/effect/mob_spawn/corpse/human/nsl_cargotech,
+/obj/effect/decal/cleanable/blood,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "Gm" = (
@@ -2520,6 +2575,19 @@
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/crew)
+"Hl" = (
+/obj/effect/turf_decal/siding/thinplating/dark,
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/abandoned/meta/qmoffice)
 "Hu" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -2750,6 +2818,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 5
+	},
 /turf/open/floor/iron/dark/diagonal,
 /area/shuttle/abandoned/meta/qmoffice)
 "Ko" = (
@@ -2856,6 +2927,10 @@
 /obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
+"LX" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/meta/cargo)
 "LY" = (
 /obj/structure/chair/sofa/bench/right{
 	dir = 8
@@ -2891,9 +2966,6 @@
 /obj/machinery/light_switch/directional/west,
 /obj/item/gun/energy/laser/pistol{
 	pixel_x = -5
-	},
-/obj/item/gun/energy/laser/pistol{
-	pixel_x = 4
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/bridge)
@@ -3052,6 +3124,7 @@
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/effect/decal/cleanable/blood/trail_holder,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "OC" = (
@@ -3125,6 +3198,12 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/meta/engineering)
+"Pp" = (
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 10
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/meta/cargo)
 "Ps" = (
 /obj/structure/railing/corner/end,
 /obj/effect/turf_decal/trimline/nslogistics/filled/line{
@@ -3162,9 +3241,7 @@
 	dir = 4
 	},
 /obj/structure/table/reinforced,
-/obj/item/radio/intercom{
-	pixel_x = -3
-	},
+/obj/item/radio/intercom,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
@@ -3312,6 +3389,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/wood,
 /area/shuttle/abandoned/meta/crew)
 "RB" = (
@@ -3528,6 +3606,15 @@
 "Uv" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/meta/lobby)
+"Uz" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mob_spawn/corpse/human/nsl_deckhand,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/wood,
+/area/shuttle/abandoned/meta/crew)
 "UC" = (
 /obj/effect/turf_decal/trimline/nslogistics/filled/line{
 	dir = 8
@@ -3771,6 +3858,9 @@
 /obj/effect/turf_decal/trimline/nslogistics/warning{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 5
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "YO" = (
@@ -3794,6 +3884,8 @@
 /obj/effect/turf_decal/trimline/nslogistics/warning{
 	dir = 4
 	},
+/obj/effect/mob_spawn/corpse/human/nsl_cargotech,
+/obj/effect/decal/cleanable/blood,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "Zc" = (
@@ -3817,6 +3909,13 @@
 "Zh" = (
 /turf/open/floor/iron/stairs/left,
 /area/shuttle/abandoned/meta/cargo)
+"Zq" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/meta/cargo)
 "Zr" = (
 /obj/machinery/power/port_gen/pacman{
 	anchored = 1
@@ -3827,16 +3926,9 @@
 /area/shuttle/abandoned/meta/engineering)
 "Zx" = (
 /obj/structure/table/reinforced,
-/obj/item/radio/intercom{
-	pixel_x = 10
-	},
 /obj/machinery/recharger{
 	pixel_y = 4;
 	pixel_x = -7
-	},
-/obj/item/gps/spaceruin{
-	pixel_y = 2;
-	pixel_x = 3
 	},
 /obj/machinery/button/door/directional/north{
 	pixel_x = -6;
@@ -3849,6 +3941,13 @@
 	id = "meta_windows"
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/item/gps{
+	pixel_x = 5;
+	pixel_y = 11
+	},
+/obj/item/sign/flag/nanotrasen{
+	pixel_x = 11
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/bridge)
 "ZA" = (
@@ -4192,8 +4291,8 @@ Fp
 jU
 Nh
 De
-tW
-tW
+LX
+Pp
 dZ
 fd
 fN
@@ -4268,7 +4367,7 @@ OG
 qa
 iT
 iT
-kR
+Zq
 OB
 fM
 tm
@@ -4443,10 +4542,10 @@ eM
 dO
 rO
 jR
+fE
+DI
 kp
-kp
-kp
-dO
+fH
 kp
 kp
 kp
@@ -4521,7 +4620,7 @@ IO
 Ws
 ip
 nO
-dM
+Hl
 cL
 ul
 wa
@@ -4546,7 +4645,7 @@ Gm
 Ws
 xR
 jn
-dM
+yX
 Io
 ZT
 wa
@@ -4652,7 +4751,7 @@ Ws
 Be
 Fi
 xG
-Oc
+Uz
 Vu
 Xu
 if
