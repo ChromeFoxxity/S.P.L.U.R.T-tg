@@ -454,8 +454,12 @@
 "lk" = (
 /obj/effect/turf_decal/tile/green,
 /obj/structure/closet/generic/wall/empty{
-	pixel_x = -32
+	pixel_x = -32;
+	name = "weapons closet"
 	},
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
 /turf/open/floor/iron/white/side{
 	dir = 4
 	},
@@ -769,6 +773,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark/textured,
 /area/shuttle/abandoned/delta/bridge)
+"sc" = (
+/obj/structure/sign/ns,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/mining)
 "sf" = (
 /obj/effect/turf_decal/bot_white,
 /mob/living/basic/mining_drone{
@@ -888,13 +896,11 @@
 /area/shuttle/abandoned/delta/port)
 "uu" = (
 /obj/machinery/suit_storage_unit/spaceruin,
-/obj/effect/turf_decal/delivery/white{
-	color = "#FF6600"
-	},
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/effect/turf_decal/delivery,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/port)
 "uQ" = (
@@ -1020,8 +1026,19 @@
 /obj/effect/turf_decal/tile/green,
 /obj/machinery/computer/cryopod/directional/south,
 /obj/structure/closet/generic/wall/empty{
-	pixel_x = -32
+	pixel_x = -32;
+	name = "comms closet"
 	},
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/open/floor/iron/white/side{
 	dir = 4
 	},
@@ -1059,10 +1076,14 @@
 /area/shuttle/abandoned/delta/port)
 "xm" = (
 /obj/structure/table,
-/obj/item/kitchen/fork{
-	pixel_x = 7
-	},
 /obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/item/plate{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/kitchen/fork{
+	pixel_x = 9
+	},
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/crew)
 "xw" = (
@@ -1212,6 +1233,10 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
+"Bh" = (
+/obj/structure/sign/ns,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/abandoned/delta/robotics)
 "Bp" = (
 /obj/machinery/door/airlock/research{
 	name = "Robotics"
@@ -1369,6 +1394,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "Fd" = (
@@ -1644,21 +1670,17 @@
 /area/shuttle/abandoned/delta/engineering)
 "KO" = (
 /obj/machinery/suit_storage_unit/spaceruin,
-/obj/effect/turf_decal/delivery/white{
-	color = "#FF6600"
-	},
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/firealarm/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
+/obj/effect/turf_decal/delivery,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/port)
 "LX" = (
 /obj/structure/tank_dispenser,
-/obj/effect/turf_decal/bot_white{
-	color = "#FF6600"
-	},
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/port)
 "Ml" = (
@@ -1697,9 +1719,7 @@
 /area/shuttle/abandoned/delta/mining)
 "MB" = (
 /obj/structure/ore_box,
-/obj/effect/turf_decal/bot_white{
-	color = "#FF6600"
-	},
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/robotics)
 "Nd" = (
@@ -2585,23 +2605,23 @@ ZD
 qt
 "}
 (23,1,1) = {"
-ud
+sc
 nX
 ud
 ud
 ki
 ud
-ud
+sc
 vY
 vY
 vY
-qt
+Bh
 Yl
 TU
 Ka
 si
 BA
-qt
+Bh
 "}
 (24,1,1) = {"
 ud
