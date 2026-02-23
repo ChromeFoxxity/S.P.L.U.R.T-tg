@@ -819,9 +819,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/bot,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/med,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "dC" = (
@@ -7575,16 +7575,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/ruin/space/ancientstation/beta/hall)
-"Gm" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/jani,
-/turf/open/floor/iron/dark,
-/area/ruin/space/ancientstation/charlie/dorms)
 "Gn" = (
 /obj/structure/alien/weeds/node,
 /obj/effect/decal/cleanable/dirt,
@@ -9036,7 +9026,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/sec_senior,
+/obj/machinery/cryopod,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "Mq" = (
@@ -10261,9 +10251,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/med,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/cryopod,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "Rz" = (
@@ -12147,7 +12137,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/cryopod,
+/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/sec_senior,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "Zh" = (
@@ -16119,7 +16109,7 @@ ZC
 tw
 dB
 Cn
-Gm
+Mo
 Cn
 zn
 Da
