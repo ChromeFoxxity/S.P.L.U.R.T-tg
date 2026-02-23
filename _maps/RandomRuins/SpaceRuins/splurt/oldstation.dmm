@@ -32,7 +32,6 @@
 /obj/machinery/door/airlock/science{
 	name = "Science Department"
 	},
-/obj/machinery/door/firedoor,
 /obj/machinery/duct,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
@@ -40,6 +39,7 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/firedoor/closed,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/delta/hall)
 "ah" = (
@@ -199,6 +199,10 @@
 /obj/structure/grille/broken,
 /obj/item/shard,
 /obj/effect/decal/cleanable/glass,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "aG" = (
@@ -280,13 +284,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/oldstation/captain,
-/obj/item/clothing/accessory/medal/gold/captain,
-/obj/item/clothing/neck/mantle/capmantle,
-/obj/item/pen/fountain/captain,
-/obj/item/storage/backpack/duffelbag/captain,
-/obj/item/storage/backpack/satchel/cap,
-/obj/item/storage/backpack/messenger/cap,
-/obj/item/assembly/flash/handheld,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/bridge)
 "bj" = (
@@ -295,7 +292,7 @@
 	pixel_y = 15;
 	pixel_x = -5;
 	name = "old wine";
-	desc = "This bottle of wine looks nearly centuries old. However the tabel is long gone, can you really trust it?"
+	desc = "This bottle of wine looks nearly centuries old. However the label is long gone, can you really trust it?"
 	},
 /obj/item/cigarette/cigar/premium{
 	pixel_y = 5;
@@ -508,9 +505,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/chef,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/srv,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "ci" = (
@@ -612,6 +609,10 @@
 "cF" = (
 /obj/structure/grille,
 /obj/structure/inflatable/window_airbag,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "cG" = (
@@ -829,6 +830,7 @@
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron/white,
 /area/ruin/space/ancientstation/delta/rnd)
 "dE" = (
@@ -882,6 +884,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/brown/fourcorners,
 /obj/effect/mapping_helpers/airlock/access/all/away/supply,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/mining)
 "dX" = (
@@ -912,6 +918,10 @@
 "dY" = (
 /obj/structure/grille/broken,
 /obj/effect/decal/cleanable/glass,
+/obj/machinery/door/poddoor/preopen{
+	name = "Beta Station Lockdown Blast Door";
+	id = "oldstation_beta"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "dZ" = (
@@ -936,6 +946,10 @@
 "ed" = (
 /obj/structure/grille,
 /obj/structure/inflatable/window_airbag,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/medbay)
 "eh" = (
@@ -961,11 +975,13 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
 	},
-/obj/structure/closet/crate/bin,
-/obj/effect/spawner/random/trash/garbage,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/clock/directional/east,
+/obj/machinery/vending/clothing{
+	density = 0;
+	all_products_free = 1
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/dorms)
 "ep" = (
@@ -1116,6 +1132,10 @@
 /obj/structure/grille/broken,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "fi" = (
@@ -1203,9 +1223,13 @@
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/weldingtool/mini/empty,
 /obj/item/card/id/away/old/oldstation/robo{
 	pixel_y = -9;
-	pixel_x = -11
+	pixel_x = -11;
+	registered_age = "27";
+	registered_name = "Frank Linton";
+	name = "Frank Linton's ID card"
 	},
 /turf/open/floor/plating{
 	initial_gas_mix = "co2=6;o2=16;n2=82;TEMP=293.15"
@@ -1362,6 +1386,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door/directional/east{
+	name = "Delta Station Lockdown Control";
+	id = "oldstation_beta";
+	req_access = list("away_general")
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "fX" = (
@@ -1455,6 +1484,10 @@
 "gt" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/mapping_helpers/damaged_window,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "gv" = (
@@ -1531,6 +1564,10 @@
 "gI" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/mapping_helpers/damaged_window,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/beta/gravity)
 "gK" = (
@@ -1595,9 +1632,6 @@
 	dir = 4
 	},
 /obj/machinery/light/small/directional/east,
-/obj/machinery/computer/old{
-	dir = 8
-	},
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1657,6 +1691,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/glass/plasma,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "hf" = (
@@ -1672,6 +1707,7 @@
 	},
 /obj/item/kirbyplants/random/dead,
 /obj/machinery/light_switch/directional/west,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white,
 /area/ruin/space/ancientstation/delta/rnd)
 "hl" = (
@@ -1855,6 +1891,10 @@
 /area/ruin/space/ancientstation/delta/hall)
 "hZ" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/beta/gravity)
 "ib" = (
@@ -2088,6 +2128,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/dorms)
+"jf" = (
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/space/basic,
+/area/space/nearstation)
 "jh" = (
 /obj/effect/turf_decal/stripes/end{
 	dir = 8
@@ -2102,8 +2147,8 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
-/obj/machinery/firealarm/directional/north,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "jj" = (
@@ -2129,20 +2174,18 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/lt,
+/obj/machinery/cryopod,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "jp" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
-/obj/machinery/vending/clothing{
-	density = 0;
-	all_products_free = 1
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/official/boombox/directional/east,
+/obj/structure/closet/crate/bin,
+/obj/effect/spawner/random/trash/garbage,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/dorms)
 "jt" = (
@@ -2217,6 +2260,9 @@
 /obj/effect/decal/cleanable/glass,
 /obj/item/stack/rods,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron/airless,
 /area/space/nearstation)
 "jK" = (
@@ -2371,6 +2417,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/medical,
+/obj/item/circuitboard/machine/sleeper,
+/obj/item/paper/fluff/ruins/oldstation/protosleep{
+	default_raw_text = "<b>*Prototype Sleeper*</b><br><br>We have deliverted the lastest in medical technology to the medical bay for your use."
+	},
 /turf/open/floor/iron/white,
 /area/ruin/space/ancientstation/beta/medbay)
 "kv" = (
@@ -2624,6 +2675,9 @@
 /obj/structure/broken_flooring/singular/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "lB" = (
@@ -2650,6 +2704,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/glass/plasma,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "lJ" = (
@@ -2723,6 +2778,7 @@
 /obj/structure/broken_flooring/side/directional/south,
 /obj/machinery/light/small/broken/directional/south,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "lW" = (
@@ -2744,6 +2800,13 @@
 "lY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
+/obj/item/clothing/suit/apron/chef{
+	pixel_x = 7
+	},
+/obj/item/clothing/head/utility/chefhat{
+	pixel_x = -6;
+	pixel_y = 4
+	},
 /turf/open/floor/iron/cafeteria,
 /area/ruin/space/ancientstation/charlie/kitchen)
 "lZ" = (
@@ -2801,7 +2864,12 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/engineering,
 /obj/effect/mapping_helpers/broken_floor,
-/turf/open/floor/engine/airless,
+/obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
+/turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/supermatter)
 "mj" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted{
@@ -3031,6 +3099,9 @@
 	},
 /obj/effect/decal/cleanable/glass,
 /obj/item/shard,
+/obj/machinery/door/poddoor/preopen{
+	name = "Alpha Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating,
 /area/space/nearstation)
 "ng" = (
@@ -3133,6 +3204,10 @@
 /area/ruin/space/ancientstation/delta/proto)
 "nw" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/beta/mining)
 "nx" = (
@@ -3141,9 +3216,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light_switch/directional/north,
-/obj/machinery/vending/wardrobe/hydro_wardrobe{
-	all_products_free = 1
-	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/hydro)
 "nA" = (
@@ -3333,7 +3405,6 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/sec)
 "ol" = (
-/obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/away_general_access,
 /obj/item/defibrillator{
 	pixel_y = 9
@@ -3428,6 +3499,10 @@
 "oz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/mapping_helpers/damaged_window,
+/obj/machinery/door/poddoor/shutters{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall1"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/beta/hall)
 "oA" = (
@@ -3543,9 +3618,7 @@
 	pixel_y = 6
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/vending/wardrobe/jani_wardrobe{
-	all_products_free = 1
-	},
+/obj/structure/table,
 /turf/open/floor/plating/rust,
 /area/ruin/space/ancientstation/delta/hall)
 "oY" = (
@@ -3612,13 +3685,7 @@
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat/nanotrasen,
 /obj/item/clothing/shoes/combat,
-/obj/item/clothing/shoes/combat,
-/obj/item/clothing/suit/armor/vest,
-/obj/item/clothing/head/helmet/swat/nanotrasen/hr,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/gun/ballistic/automatic/pistol/m1911,
-/obj/item/ammo_box/magazine/m45,
-/obj/item/ammo_box/magazine/m45,
 /turf/open/floor/plating/rust,
 /area/ruin/space/ancientstation/delta/hall)
 "pi" = (
@@ -3626,6 +3693,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/spawner/random/maintenance,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "pm" = (
@@ -3645,7 +3715,6 @@
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/hall)
 "pq" = (
-/obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/science{
 	name = "Science Department"
 	},
@@ -3655,6 +3724,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/firedoor/closed,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/delta/hall)
 "ps" = (
@@ -3747,7 +3817,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/mine,
+/obj/machinery/cryopod,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "pW" = (
@@ -3764,6 +3834,10 @@
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/decal/cleanable/glass,
 /obj/item/shard,
+/obj/machinery/door/poddoor/preopen{
+	name = "Beta Station Lockdown Blast Door";
+	id = "oldstation_beta"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/medbay)
 "pY" = (
@@ -4114,6 +4188,7 @@
 /obj/effect/mapping_helpers/broken_floor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/broken_flooring/singular/directional/north,
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "rM" = (
@@ -4168,6 +4243,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/away/engineering,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/atmos)
 "rV" = (
@@ -4227,6 +4306,10 @@
 "si" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/mapping_helpers/damaged_window,
+/obj/machinery/door/poddoor{
+	id = "oldstation";
+	name = "Charlie Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/charlie/dorms)
 "sk" = (
@@ -4281,6 +4364,10 @@
 /obj/effect/mapping_helpers/broken_floor,
 /obj/item/stack/rods,
 /obj/effect/decal/cleanable/glass,
+/obj/machinery/door/poddoor/preopen{
+	name = "Beta Station Lockdown Blast Door";
+	id = "oldstation_beta"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "sq" = (
@@ -4463,12 +4550,29 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/hall)
+"tb" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall1";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/space/ancientstation/beta/hall)
 "tc" = (
 /obj/machinery/duct,
 /obj/effect/turf_decal/tile/purple/diagonal_centre,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark/diagonal,
 /area/ruin/space/ancientstation/delta/rnd)
+"te" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/ancientstation/beta/hall)
 "tk" = (
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/atmospherics/components/unary/outlet_injector/monitored{
@@ -4497,6 +4601,10 @@
 /area/ruin/space/ancientstation/delta/rnd)
 "ts" = (
 /obj/structure/grille/broken,
+/obj/machinery/door/poddoor/preopen{
+	name = "Beta Station Lockdown Blast Door";
+	id = "oldstation_beta"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "tt" = (
@@ -4614,6 +4722,11 @@
 /obj/structure/barricade/sandbags,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door/directional/south{
+	name = "Window Shutters Control";
+	id = "oldstation_hall2";
+	req_access = list("away_general")
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/delta/hall)
 "tX" = (
@@ -4831,12 +4944,20 @@
 /area/ruin/space/ancientstation/delta/hall)
 "uD" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "uE" = (
 /obj/machinery/door/firedoor/closed,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor/preopen{
+	name = "Beta Station Lockdown Blast Door";
+	id = "oldstation_beta"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "uF" = (
@@ -5203,15 +5324,13 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
-/obj/machinery/computer/old{
-	dir = 8
-	},
-/obj/item/paper/fluff/ruins/oldstation,
 /obj/machinery/computer/cryopod/directional/east{
 	req_one_access = list("away_command")
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/paper/fluff/ruins/oldstation,
+/obj/structure/table,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/dorms)
 "we" = (
@@ -5537,6 +5656,9 @@
 "xu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/glass,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron/airless,
 /area/space/nearstation)
 "xv" = (
@@ -5583,6 +5705,12 @@
 "xF" = (
 /obj/structure/door_assembly/door_assembly_min,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/door/poddoor{
+	name = "Alpha Station Lockdown Blast Door"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "xG" = (
@@ -5902,11 +6030,9 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/sec)
 "zi" = (
-/obj/effect/decal/cleanable/glass/plasma,
 /obj/machinery/atmospherics/components/unary/vent_pump,
-/turf/open/floor/plating/foam{
-	initial_gas_mix = "TEMP=2.7"
-	},
+/obj/structure/lattice,
+/turf/open/space/basic,
 /area/ruin/space/ancientstation/beta/supermatter)
 "zj" = (
 /obj/effect/decal/cleanable/glass,
@@ -5914,6 +6040,9 @@
 	icon_state = "medium"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron/airless,
 /area/space/nearstation)
 "zk" = (
@@ -5941,8 +6070,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/robo,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/cryopod,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "zp" = (
@@ -6036,9 +6165,8 @@
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "zB" = (
-/turf/open/floor/plating/foam{
-	initial_gas_mix = "TEMP=2.7"
-	},
+/obj/structure/lattice,
+/turf/open/space/basic,
 /area/ruin/space/ancientstation/beta/supermatter)
 "zD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6109,9 +6237,9 @@
 /obj/machinery/door/airlock/science{
 	name = "Science Department"
 	},
-/obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/firedoor/closed,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/delta/hall)
 "Ab" = (
@@ -6246,6 +6374,15 @@
 /obj/structure/sign/poster/official/bless_this_spess/directional/south,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/hall)
+"Aw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door/directional/south{
+	name = "Window Shutters Control";
+	id = "oldstation_hall2";
+	req_access = list("away_general")
+	},
+/turf/open/floor/iron,
+/area/ruin/space/ancientstation/delta/hall)
 "Ay" = (
 /obj/structure/rack,
 /obj/item/stack/cable_coil/thirty{
@@ -6489,9 +6626,6 @@
 "BG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light_switch/directional/south,
-/obj/machinery/vending/wardrobe/chef_wardrobe{
-	all_products_free = 1
-	},
 /turf/open/floor/iron/cafeteria,
 /area/ruin/space/ancientstation/charlie/kitchen)
 "BH" = (
@@ -6578,10 +6712,10 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/firealarm/directional/south,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "BX" = (
@@ -6738,6 +6872,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/away/engineering,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/atmos)
 "CG" = (
@@ -6776,6 +6914,11 @@
 "CQ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/decal/cleanable/blood/splatter/over_window,
+/obj/machinery/door/poddoor/shutters{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall2";
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/delta/hall)
 "CS" = (
@@ -6930,6 +7073,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/away/science,
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor{
+	id = "oldstation_delta";
+	name = "Delta Station Lockdown Blast Door"
+	},
 /turf/open/floor/iron/white/side,
 /area/ruin/space/ancientstation/delta/proto)
 "Dq" = (
@@ -7130,6 +7277,7 @@
 /obj/effect/decal/cleanable/greenglow,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/glass/plasma,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "Ep" = (
@@ -7345,6 +7493,9 @@
 "Ff" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "Fg" = (
@@ -7414,6 +7565,10 @@
 /area/ruin/space/ancientstation/delta/hall)
 "Fw" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall2"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/delta/hall)
 "Fx" = (
@@ -7575,6 +7730,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/ruin/space/ancientstation/beta/hall)
+"Gm" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/cryopod,
+/turf/open/floor/iron/dark,
+/area/ruin/space/ancientstation/charlie/dorms)
 "Gn" = (
 /obj/structure/alien/weeds/node,
 /obj/effect/decal/cleanable/dirt,
@@ -7611,6 +7776,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/hall)
+"Gt" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall3"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/ancientstation/delta/hall)
 "Gu" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -7626,11 +7799,12 @@
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/delta/hall)
 "Gv" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/newscaster/directional/south,
+/obj/machinery/button/door/directional/north{
+	req_access = list("away_general");
+	name = "Window Shutters Control";
+	id = "oldstation_hall1"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "Gy" = (
@@ -8037,6 +8211,16 @@
 /obj/structure/sign/warning/secure_area/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/ruin/space/ancientstation/delta/proto)
+"Ig" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door/directional/north{
+	req_access = list("away_general");
+	name = "Window Shutters Control";
+	id = "oldstation_hall1"
+	},
+/turf/open/floor/iron,
+/area/ruin/space/ancientstation/beta/hall)
 "Ih" = (
 /obj/machinery/light/broken/directional/east,
 /obj/structure/alien/egg/burst,
@@ -8147,13 +8331,13 @@
 /turf/open/floor/circuit/green,
 /area/ruin/space/ancientstation/delta/ai)
 "IB" = (
-/obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/science{
 	name = "Science Department"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/firedoor/closed,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/delta/hall)
 "IE" = (
@@ -8257,7 +8441,13 @@
 	name = "Supermatter Chamber"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/engineering,
-/turf/open/floor/engine/airless,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
+/turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/supermatter)
 "Jc" = (
 /obj/item/stack/rods,
@@ -8278,11 +8468,9 @@
 /obj/item/grenade/flashbang,
 /obj/item/restraints/handcuffs,
 /obj/item/assembly/flash/handheld,
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/storage/backpack/duffelbag/sec/redsec,
-/obj/item/storage/backpack/messenger/sec/redsec,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
+/obj/item/spess_knife,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/sec)
 "Jh" = (
@@ -8337,15 +8525,6 @@
 /obj/effect/turf_decal/tile/red/real_red/half/contrasted{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/oldstation/security,
-/obj/item/spess_knife,
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/taperecorder,
-/obj/item/tape,
-/obj/item/camera,
-/obj/item/storage/backpack/satchel/sec/redsec,
-/obj/item/storage/backpack/duffelbag/sec/redsec,
-/obj/item/storage/backpack/messenger/sec/redsec,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
@@ -8392,6 +8571,9 @@
 /obj/item/stack/rods,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron/airless,
 /area/space/nearstation)
 "JE" = (
@@ -8450,6 +8632,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/away/engineering,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/gravity)
 "JP" = (
@@ -8491,6 +8677,10 @@
 /area/ruin/space/ancientstation/charlie/kitchen)
 "JS" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/beta/atmos)
 "JV" = (
@@ -8744,10 +8934,19 @@
 /obj/structure/barricade/sandbags,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door/directional/north{
+	req_access = list("away_general");
+	name = "Window Shutters Control";
+	id = "oldstation_hall3"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/delta/hall)
 "KW" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall1"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/beta/hall)
 "KY" = (
@@ -8802,6 +9001,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "Lk" = (
@@ -8972,6 +9175,7 @@
 /obj/item/gun/energy/laser/retro/old,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/delta/hall)
 "Me" = (
@@ -9020,15 +9224,13 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/delta/rnd)
 "Mo" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes/line,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/cryopod,
-/turf/open/floor/iron/dark,
-/area/ruin/space/ancientstation/charlie/dorms)
+/obj/structure/extinguisher_cabinet/directional/south,
+/turf/open/floor/iron,
+/area/ruin/space/ancientstation/beta/hall)
 "Mq" = (
 /obj/structure/alien/weeds/node,
 /obj/effect/decal/cleanable/dirt,
@@ -9115,6 +9317,10 @@
 "MF" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/mapping_helpers/damaged_window,
+/obj/machinery/door/poddoor/shutters/preopen{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall3"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/delta/hall)
 "MG" = (
@@ -9370,19 +9576,17 @@
 "NK" = (
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor/preopen{
+	name = "Beta Station Lockdown Blast Door";
+	id = "oldstation_beta"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "NL" = (
-/obj/structure/closet/crate/medical,
-/obj/item/skillchip/bonsai,
-/obj/item/circuitboard/machine/sleeper,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/paper/fluff/ruins/oldstation/protosleep{
-	default_raw_text = "<b>*Prototype Sleeper*</b><br><br>We have deliverted the lastest in medical technology to the medical bay for your use."
-	},
 /obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/white,
 /area/ruin/space/ancientstation/beta/medbay)
@@ -9512,6 +9716,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor/preopen{
+	name = "Beta Station Lockdown Blast Door";
+	id = "oldstation_beta"
+	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/hall)
 "Oh" = (
@@ -9746,6 +9954,11 @@
 /obj/structure/grille/broken,
 /obj/effect/decal/cleanable/glass,
 /obj/structure/inflatable/window_airbag,
+/obj/machinery/door/poddoor/shutters/preopen{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall3";
+	dir = 1
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/delta/hall)
 "Pk" = (
@@ -9780,12 +9993,13 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "Ps" = (
-/obj/effect/decal/cleanable/glass/plasma,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/foam{
-	initial_gas_mix = "TEMP=2.7"
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	name = "Hallway Window Shutters";
+	dir = 1
 	},
-/area/ruin/space/ancientstation/beta/supermatter)
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
 "Pt" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering/glass{
@@ -9853,6 +10067,10 @@
 /obj/effect/decal/cleanable/glass,
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/mapping_helpers/damaged_window,
+/obj/machinery/door/poddoor/shutters/preopen{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall3"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/delta/hall)
 "PI" = (
@@ -9984,6 +10202,9 @@
 /area/template_noop)
 "Qm" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	name = "Alpha Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "Qn" = (
@@ -10128,6 +10349,7 @@
 /obj/item/stack/sheet/mineral/sandbags,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/delta/hall)
 "QQ" = (
@@ -10209,6 +10431,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/spawner/random/maintenance,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "Rq" = (
@@ -10462,6 +10687,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/mapping_helpers/damaged_window,
 /obj/effect/decal/cleanable/blood/splatter/over_window,
+/obj/machinery/door/poddoor/shutters/preopen{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall3"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/delta/hall)
 "Sk" = (
@@ -10638,6 +10867,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/delta/ai)
+"ST" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/iron,
+/area/ruin/space/ancientstation/beta/hall)
 "SV" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/floor/grass,
@@ -10710,6 +10945,9 @@
 /area/ruin/space/ancientstation/beta/medbay)
 "To" = (
 /obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor{
+	name = "Alpha Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating,
 /area/space/nearstation)
 "Tr" = (
@@ -10903,6 +11141,10 @@
 /obj/item/stack/rods,
 /obj/item/stack/rods,
 /obj/effect/decal/cleanable/glass,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/medbay)
 "Uj" = (
@@ -10950,10 +11192,10 @@
 "Ut" = (
 /obj/effect/turf_decal/tile/dark_blue/half/contrasted,
 /obj/structure/table/reinforced,
-/obj/item/storage/briefcase/central_command{
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/briefcase{
 	pixel_y = 5
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/bridge)
 "Uv" = (
@@ -10969,12 +11211,6 @@
 	},
 /obj/structure/sign/poster/official/obey/directional/west,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/oldstation/bridge,
-/obj/item/storage/backpack/messenger/blueshield,
-/obj/item/storage/backpack/satchel/blueshield,
-/obj/item/storage/backpack/duffelbag/blueshield,
-/obj/item/clothing/suit/armor/vest/bridge,
-/obj/item/assembly/flash/handheld,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/bridge)
 "Ux" = (
@@ -11040,6 +11276,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/hall)
+"UD" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	name = "Hallway Window Shutters";
+	id = "oldstation_hall2";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/space/ancientstation/delta/hall)
 "UF" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -11144,6 +11389,7 @@
 /obj/item/stack/rods,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/effect/decal/cleanable/glass/plasma,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "UV" = (
@@ -11266,6 +11512,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/glass/plasma,
 /turf/open/floor/engine/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "VB" = (
@@ -11432,21 +11679,23 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/table,
-/obj/item/stock_parts/power_store/cell/high{
-	pixel_y = 9;
-	pixel_x = -6
+/obj/item/clothing/gloves/color/fyellow/old{
+	pixel_y = -5;
+	pixel_x = -2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stock_parts/power_store/cell/empty{
+	pixel_x = -4;
+	pixel_y = 13
+	},
+/obj/item/stock_parts/power_store/cell/empty{
+	pixel_x = -1;
+	pixel_y = 7
 	},
 /obj/item/clothing/suit/hazardvest{
 	pixel_y = -12;
 	pixel_x = 6
 	},
-/obj/item/stock_parts/power_store/cell/high{
-	pixel_x = -6
-	},
-/obj/item/clothing/gloves/color/fyellow/old{
-	pixel_y = -11
-	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/engie)
 "Ws" = (
@@ -11455,6 +11704,9 @@
 /obj/item/shard,
 /obj/item/stack/rods,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/door/poddoor/preopen{
+	name = "Alpha Station Lockdown Blast Door"
+	},
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "Ww" = (
@@ -12013,6 +12265,14 @@
 /obj/machinery/vending/wardrobe/robo_wardrobe,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/delta/rnd)
+"YD" = (
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor{
+	id = "oldstation_beta";
+	name = "Beta Station Lockdown Blast Door"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/ancientstation/beta/medbay)
 "YE" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -12041,6 +12301,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
 /turf/open/floor/iron/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "YO" = (
@@ -12137,7 +12398,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/mob_spawn/ghost_role/human/splurt/oldstation/sec_senior,
+/obj/machinery/cryopod,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/charlie/dorms)
 "Zh" = (
@@ -12187,10 +12448,8 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/vending/wardrobe/medi_wardrobe{
-	all_products_free = 1
-	},
 /obj/structure/sign/poster/official/work_for_a_future/directional/north,
+/obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/white,
 /area/ruin/space/ancientstation/beta/medbay)
 "Zx" = (
@@ -12241,7 +12500,6 @@
 /obj/structure/table/glass,
 /obj/item/surgery_tray/full,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/extinguisher_cabinet/directional/south,
 /obj/structure/sign/poster/official/plasma_effects/directional/west,
 /turf/open/floor/iron/white,
 /area/ruin/space/ancientstation/beta/medbay)
@@ -12410,7 +12668,7 @@ Tf
 Tf
 Bb
 Tf
-Bb
+jf
 Tf
 Tf
 Tf
@@ -12636,7 +12894,7 @@ Tf
 To
 Sk
 zj
-Qm
+Ps
 Tf
 Tf
 Bb
@@ -13240,7 +13498,7 @@ dQ
 rK
 Nx
 Nx
-Nx
+YD
 ed
 pX
 Nx
@@ -13690,7 +13948,7 @@ qK
 zz
 zK
 fW
-yI
+ST
 gM
 Rq
 vm
@@ -14149,7 +14407,7 @@ xD
 RK
 Jc
 zB
-Ps
+zB
 Em
 Bn
 be
@@ -14286,7 +14544,7 @@ Tf
 Tf
 Tf
 aQ
-Rq
+Gv
 oe
 yU
 WP
@@ -14437,12 +14695,12 @@ PD
 gT
 Xj
 Rq
-GO
+Mo
 aQ
 Ac
 Ac
-KW
-KW
+te
+te
 aQ
 kM
 uD
@@ -14513,7 +14771,7 @@ VG
 uy
 ab
 GO
-KW
+tb
 Tf
 Tf
 Tf
@@ -14588,7 +14846,7 @@ YS
 nw
 mj
 GO
-KW
+tb
 Tf
 Tf
 Tf
@@ -14663,7 +14921,7 @@ Ar
 dV
 JZ
 PO
-KW
+tb
 Tf
 Tf
 hn
@@ -14738,7 +14996,7 @@ vF
 nw
 mj
 GO
-KW
+tb
 Tf
 Tf
 Tf
@@ -14813,7 +15071,7 @@ Fc
 Xj
 ji
 zz
-KW
+tb
 Tf
 Tf
 Tf
@@ -14962,7 +15220,7 @@ uy
 uy
 uy
 TI
-Gv
+GO
 Ac
 Tf
 Tf
@@ -15036,7 +15294,7 @@ Tf
 Tf
 Tf
 aQ
-yI
+Ig
 zz
 Ac
 Tf
@@ -16109,7 +16367,7 @@ ZC
 tw
 dB
 Cn
-Mo
+Gm
 Cn
 zn
 Da
@@ -16257,7 +16515,7 @@ Nh
 De
 ZC
 Yb
-Mo
+Gm
 Cn
 ch
 oF
@@ -17004,7 +17262,7 @@ Fk
 qQ
 YW
 ho
-Nl
+Aw
 aC
 Tf
 Tf
@@ -17080,7 +17338,7 @@ PI
 YW
 ec
 iF
-Fw
+UD
 Tf
 Tf
 Tf
@@ -17155,7 +17413,7 @@ Tf
 bS
 XW
 QR
-Fw
+UD
 Tf
 Tf
 Tf
@@ -17305,7 +17563,7 @@ Tf
 Fw
 Gu
 Mk
-Fw
+UD
 Tf
 Tf
 Tf
@@ -17455,7 +17713,7 @@ Tf
 Fw
 uC
 oH
-Fw
+UD
 Tf
 Tf
 Tf
@@ -17530,7 +17788,7 @@ Tf
 aC
 Mc
 RP
-Fw
+UD
 Tf
 Tf
 Tf
@@ -17605,7 +17863,7 @@ Tf
 bS
 ke
 QR
-Fw
+UD
 Tf
 Tf
 Tf
@@ -17660,7 +17918,7 @@ Tf
 Tf
 Tf
 Tf
-Fw
+Gt
 pf
 Et
 aC
@@ -17680,7 +17938,7 @@ Tf
 bS
 uP
 vo
-Fw
+UD
 Tf
 Tf
 Tf
