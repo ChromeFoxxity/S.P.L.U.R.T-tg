@@ -41,6 +41,11 @@
 	icon_file = 'modular_zzplurt/icons/mob/clothing/hands.dmi'
 	json_config = 'modular_zzplurt/code/datums/greyscale/json_configs/maid_arms.json'
 
+//Donor thing for fabricator
+/obj/item/clothing/gloves/tactical_maid/donor
+	name = "tactical maid sleeves"
+	desc = "'Tactical' cleaning gloves modified to fit certain shadekins."
+
 /obj/item/clothing/gloves/captain/old
 	name = "old captain's gloves"
 	desc = "Regal blue gloves, with a nice gold trim.. These pair seem to lack most of what modern captain gloves would have.. Still swanky."

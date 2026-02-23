@@ -1,3 +1,6 @@
+/obj/item/gun/energy/laser/carbine
+	projectile_speed_multiplier = 1.15 // it'd be REALLY fast otherwise
+
 /obj/item/gun/energy/laser/retro
 	name ="\improper Type 1 laser gun"
 	desc = "The NT Type 1 Heat Delivery System, developed by Nanotrasen. A vintage laser gun that was one of the first mass-produced laser guns, at first \

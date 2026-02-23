@@ -101,6 +101,11 @@
 	icon = 'modular_zzplurt/icons/obj/clothing/hats.dmi'
 	worn_icon = 'modular_zzplurt/icons/mob/clothing/hats.dmi'
 
+//donor thing for fabricator
+/obj/item/clothing/head/costume/maid_headband/syndicate/donor
+	name = "tactical maid headband"
+	desc = "Tacticute modified to fit certain shadekins."
+
 /obj/item/clothing/head/beret/blueshield/bridgeofficer
 	name = "bridge officer's beret"
 	desc = "A blue beret with a silver badge, denoting its owner as a Lieutenant. It's nothing special, as one would've wanted."
