@@ -475,6 +475,38 @@ required_map = "moonstation.dmm"
 coordinates = [101, 154, 3]
 trait_name = "Station"
 
+# Moonstation Science Secpost
+[templates.moonstation_sci_secpost]
+map_files = ["moonstation_sci_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/moonstation/"
+required_map = "moonstation.dmm"
+coordinates = [185, 83, 3]
+trait_name = "Station"
+
+# Moonstation Medical Secpost
+[templates.moonstation_med_secpost]
+map_files = ["moonstation_med_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/moonstation/"
+required_map = "moonstation.dmm"
+coordinates = [136, 99, 3]
+trait_name = "Station"
+
+# Moonstation Cargo Secpost
+[templates.moonstation_crg_secpost]
+map_files = ["moonstation_crg_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/moonstation/"
+required_map = "moonstation.dmm"
+coordinates = [105, 68, 3]
+trait_name = "Station"
+
+# Moonstation Engineering Secpost
+[templates.moonstation_eng_secpost]
+map_files = ["moonstation_eng_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/moonstation/"
+required_map = "moonstation.dmm"
+coordinates = [122, 65, 3]
+trait_name = "Station"
+
 # NEBULASTATION MAP EDITS
 # Nebulastation Armory
 [templates.nebulastation_armory]
@@ -931,6 +963,38 @@ required_map = "Blueshift.dmm"
 coordinates = [88, 160, 2]
 trait_name = "Station"
 
+# Blueshift Science Secpost
+[templates.blueshift_sci_secpost]
+map_files = ["blueshift_sci_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/blueshift/"
+required_map = "Blueshift.dmm"
+coordinates = [79, 103, 2]
+trait_name = "Station"
+
+# Blueshift Medical Secpost
+[templates.blueshift_med_secpost]
+map_files = ["blueshift_med_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/blueshift/"
+required_map = "Blueshift.dmm"
+coordinates = [138, 155, 2]
+trait_name = "Station"
+
+# Blueshift Cargo Secpost
+[templates.blueshift_crg_secpost]
+map_files = ["blueshift_crg_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/blueshift/"
+required_map = "Blueshift.dmm"
+coordinates = [138, 107, 1]
+trait_name = "Station"
+
+# Blueshift Engineering Secpost
+[templates.blueshift_eng_secpost]
+map_files = ["blueshift_eng_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/blueshift/"
+required_map = "Blueshift.dmm"
+coordinates = [106, 78, 1]
+trait_name = "Station"
+
 # VoidRaptor Infinidorm
 [templates.voidraptor_infinidorm]
 map_files = ["infinidorm.dmm"]
@@ -945,6 +1009,38 @@ map_files = ["voidraptor_ntrep_office.dmm"]
 directory = "_maps/splurt/automapper/templates/voidraptor/"
 required_map = "VoidRaptor.dmm"
 coordinates = [136, 200, 1]
+trait_name = "Station"
+
+# VoidRaptor Science Secpost
+[templates.voidraptor_sci_secpost]
+map_files = ["voidraptor_sci_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/voidraptor/"
+required_map = "VoidRaptor.dmm"
+coordinates = [108, 165, 1]
+trait_name = "Station"
+
+# VoidRaptor Medical Secpost
+[templates.voidraptor_med_secpost]
+map_files = ["voidraptor_med_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/voidraptor/"
+required_map = "VoidRaptor.dmm"
+coordinates = [106, 116, 1]
+trait_name = "Station"
+
+# VoidRaptor Cargo Secpost
+[templates.voidraptor_crg_secpost]
+map_files = ["voidraptor_crg_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/voidraptor/"
+required_map = "VoidRaptor.dmm"
+coordinates = [163, 85, 1]
+trait_name = "Station"
+
+# VoidRaptor Engineering Secpost
+[templates.voidraptor_eng_secpost]
+map_files = ["voidraptor_eng_secpost.dmm"]
+directory = "_maps/splurt/automapper/templates/voidraptor/"
+required_map = "VoidRaptor.dmm"
+coordinates = [119, 81, 1]
 trait_name = "Station"
 
 # Interlink Infinidorm (might be redundant aka one here one on station)

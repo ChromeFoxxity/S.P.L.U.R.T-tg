@@ -74,26 +74,26 @@
 //Engineering
 #define JOB_STATION_ENGINEER "Station Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
-#define JOB_ENGINEERING_GUARD "Engineering Guard" // SKYRAT EDIT ADDITION
+// #define JOB_ENGINEERING_GUARD "Engineering Guard" // SKYRAT EDIT ADDITION // SPLURT REMOVAL, DEPT GUARDS.
 #define JOB_TELECOMMS_SPECIALIST "Telecomms Specialist" // SKYRAT EDIT ADDITION
 //Medical
 #define JOB_CORONER "Coroner"
 #define JOB_MEDICAL_DOCTOR "Medical Doctor"
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
-#define JOB_ORDERLY "Orderly" // SKYRAT EDIT ADDITION
+// #define JOB_ORDERLY "Orderly" // SKYRAT EDIT ADDITION // SPLURT REMOVAL, DEPT GUARDS.
 //Science
 #define JOB_SCIENTIST "Scientist"
 #define JOB_ROBOTICIST "Roboticist"
 #define JOB_GENETICIST "Geneticist"
-#define JOB_SCIENCE_GUARD "Science Guard"
+// #define JOB_SCIENCE_GUARD "Science Guard" // SKYRAT EDIT ADDITION // SPLURT REMOVAL, DEPT GUARDS.
 //Supply
 #define JOB_QUARTERMASTER "Quartermaster"
 #define JOB_CARGO_TECHNICIAN "Cargo Technician"
 #define JOB_CARGO_GORILLA "Cargo Gorilla"
 #define JOB_SHAFT_MINER "Shaft Miner"
 #define JOB_BITRUNNER "Bitrunner"
-#define JOB_CUSTOMS_AGENT "Customs Agent" // SKYRAT EDIT ADDITION
+// #define JOB_CUSTOMS_AGENT "Customs Agent" // SKYRAT EDIT ADDITION // SPLURT REMOVAL, DEPT GUARDS.
 //Service
 #define JOB_BARTENDER "Bartender"
 #define JOB_BOTANIST "Botanist"
@@ -107,7 +107,7 @@
 #define JOB_CHAPLAIN "Chaplain"
 #define JOB_PSYCHOLOGIST "Psychologist"
 #define JOB_BARBER "Barber" // SKYRAT EDIT ADDITION
-#define JOB_BOUNCER "Bouncer" // SKYRAT EDIT ADDITION
+#define JOB_BOUNCER "Bouncer" // SKYRAT EDIT ADDITION // You can stay I guess.
 #define JOB_PUN_PUN "Pun Pun"
 //ERTs
 #define JOB_ERT_DEATHSQUAD "Death Commando"

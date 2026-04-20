@@ -52,8 +52,8 @@
 			return new /obj/item/modular_computer/pda/engineering
 		if(JOB_ATMOSPHERIC_TECHNICIAN)
 			return new /obj/item/modular_computer/pda/atmos
-		if(JOB_ENGINEERING_GUARD)
-			return new /obj/item/modular_computer/pda/engineering
+		// if(JOB_ENGINEERING_GUARD) // SPLURT REMOVAL, DEPT GUARDS.
+			// return new /obj/item/modular_computer/pda/engineering
 		if(JOB_TELECOMMS_SPECIALIST)
 			return new /obj/item/modular_computer/pda/telecomms
 		if(JOB_MEDICAL_DOCTOR) //MEDICAL
@@ -64,24 +64,24 @@
 			return new /obj/item/modular_computer/pda/chemist
 		if(JOB_PARAMEDIC)
 			return new /obj/item/modular_computer/pda/medical/paramedic
-		if(JOB_ORDERLY)
-			return new /obj/item/modular_computer/pda/medical
+		// if(JOB_ORDERLY) // SPLURT REMOVAL, DEPT GUARDS.
+			// return new /obj/item/modular_computer/pda/medical
 		if(JOB_SCIENTIST) // SCI
 			return new /obj/item/modular_computer/pda/science
 		if(JOB_ROBOTICIST)
 			return new /obj/item/modular_computer/pda/roboticist
 		if(JOB_GENETICIST)
 			return new /obj/item/modular_computer/pda/geneticist
-		if(JOB_SCIENCE_GUARD)
-			return new /obj/item/modular_computer/pda/science
+		// if(JOB_SCIENCE_GUARD) // SPLURT REMOVAL, DEPT GUARDS.
+			// return new /obj/item/modular_computer/pda/science
 		if(JOB_CARGO_TECHNICIAN) // CARGO
 			return new /obj/item/modular_computer/pda/cargo
 		if(JOB_SHAFT_MINER)
 			return new /obj/item/modular_computer/pda/shaftminer
 		if(JOB_BITRUNNER)
 			return new /obj/item/modular_computer/pda/bitrunner
-		if(JOB_CUSTOMS_AGENT)
-			return new /obj/item/modular_computer/pda/cargo
+		// if(JOB_CUSTOMS_AGENT) // SPLURT REMOVAL, DEPT GUARDS.
+			// return new /obj/item/modular_computer/pda/cargo
 		if(JOB_BARTENDER) // SERVICE
 			return new /obj/item/modular_computer/pda/bar
 		if(JOB_BOTANIST)

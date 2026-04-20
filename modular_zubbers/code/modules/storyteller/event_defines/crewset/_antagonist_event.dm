@@ -28,13 +28,6 @@
 		JOB_CORRECTIONS_OFFICER,
 		JOB_PRISONER,
 		JOB_SECURITY_MEDIC,
-
-		// Department Guards-Additional
-		JOB_BOUNCER,
-		JOB_ORDERLY,
-		JOB_CUSTOMS_AGENT,
-		JOB_ENGINEERING_GUARD,
-		JOB_SCIENCE_GUARD,
 		)
 
 	/// Restricted roles from the antag roll

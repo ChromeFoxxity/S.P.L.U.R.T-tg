@@ -1,0 +1,307 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/r_wall,
+/area/station/security/checkpoint/science/research)
+"b" = (
+/turf/template_noop,
+/area/template_noop)
+"d" = (
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	id = "scicell";
+	name = "Science Cell";
+	req_access = list("security")
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/red/anticorner/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"f" = (
+/obj/machinery/requests_console/directional/north{
+	department = "Security";
+	name = "Security Requests Console"
+	},
+/obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/supplies,
+/obj/machinery/computer/security,
+/obj/effect/mapping_helpers/requests_console/information,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"g" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/station/security/checkpoint/science/research)
+"k" = (
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red/anticorner/contrasted,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"n" = (
+/obj/structure/chair/office{
+	dir = 1
+	},
+/obj/effect/landmark/start/depsec/science,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"q" = (
+/obj/machinery/light/small/directional/west,
+/obj/structure/sign/nanotrasen{
+	pixel_x = -32
+	},
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"r" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/item/radio/intercom/directional/west,
+/obj/machinery/status_display/ai/directional/south,
+/obj/effect/turf_decal/tile/red/anticorner/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"s" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red{
+	dir = 1
+	},
+/obj/machinery/status_display/door_timer{
+	id = "scicell";
+	name = "Science Cell";
+	pixel_x = -32
+	},
+/obj/item/kirbyplants/random,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"w" = (
+/obj/structure/chair/office,
+/obj/effect/landmark/start/depsec/science,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"x" = (
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"z" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/holopad,
+/obj/effect/landmark/start/depsec/science,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/bot,
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"A" = (
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"D" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/machinery/door/airlock/security/glass{
+	name = "Security Post - Science"
+	},
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"I" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"K" = (
+/obj/machinery/airalarm/directional/north,
+/obj/machinery/computer/mecha,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"L" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"M" = (
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/obj/structure/table/reinforced,
+/obj/item/restraints/handcuffs{
+	pixel_y = 6
+	},
+/obj/item/screwdriver{
+	pixel_y = -4;
+	pixel_x = -1
+	},
+/obj/structure/reagent_dispensers/wall/peppertank/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"O" = (
+/obj/structure/table/reinforced,
+/obj/item/folder/red,
+/obj/machinery/camera/directional/south{
+	c_tag = "Security Post - Science";
+	network = list("ss13","rd")
+	},
+/obj/machinery/light/directional/south,
+/obj/item/paper_bin{
+	pixel_y = 3
+	},
+/obj/item/pen{
+	pixel_y = 3
+	},
+/obj/item/book/manual/wiki/security_space_law{
+	pixel_x = -14
+	},
+/obj/item/radio{
+	pixel_x = 10;
+	pixel_y = 11
+	},
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"R" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science/research)
+"S" = (
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"T" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "scicell";
+	name = "Science Cell locker"
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/obj/machinery/status_display/evac/directional/north,
+/obj/effect/turf_decal/tile/red/anticorner/contrasted{
+	dir = 1
+	},
+/obj/effect/turf_decal/bot,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"U" = (
+/obj/machinery/light_switch/directional/north,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/obj/machinery/computer/records/security,
+/obj/machinery/newscaster/directional/west,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+"V" = (
+/obj/machinery/firealarm/directional/south{
+	pixel_x = 6
+	},
+/obj/machinery/light_switch/directional/south{
+	pixel_x = -5
+	},
+/obj/structure/closet/secure_closet/security/science,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science/research)
+
+(1,1,1) = {"
+b
+b
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+b
+b
+a
+T
+q
+r
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+d
+S
+k
+a
+"}
+(4,1,1) = {"
+a
+U
+s
+L
+A
+M
+a
+"}
+(5,1,1) = {"
+a
+f
+n
+z
+w
+O
+a
+"}
+(6,1,1) = {"
+a
+K
+R
+I
+x
+V
+a
+"}
+(7,1,1) = {"
+a
+g
+g
+D
+g
+g
+a
+"}

@@ -1,0 +1,215 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/cable,
+/obj/structure/chair/office,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red{
+	dir = 6
+	},
+/obj/effect/landmark/start/depsec/science,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science)
+"d" = (
+/obj/machinery/status_display/evac/directional/north,
+/obj/item/book/manual/wiki/security_space_law{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/item/paper_bin{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/item/pen{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/item/folder/red{
+	pixel_x = 9;
+	pixel_y = 4
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/requests_console/directional/east{
+	department = "Security";
+	name = "Security Requests Console"
+	},
+/obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/supplies,
+/obj/effect/mapping_helpers/requests_console/information,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science)
+"k" = (
+/obj/structure/cable,
+/turf/closed/wall/r_wall,
+/area/station/security/checkpoint/science)
+"m" = (
+/obj/structure/closet/secure_closet/security/science,
+/obj/machinery/status_display/ai/directional/west,
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science)
+"r" = (
+/turf/closed/wall/r_wall,
+/area/station/security/checkpoint/science)
+"t" = (
+/obj/machinery/firealarm/directional/west{
+	pixel_y = -6
+	},
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/machinery/vending/wardrobe/sec_wardrobe,
+/obj/machinery/light_switch/directional/west{
+	pixel_y = 7
+	},
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science)
+"v" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/light/cold/directional/south,
+/obj/machinery/computer/security{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science)
+"x" = (
+/obj/machinery/airalarm/directional/south,
+/obj/machinery/camera/directional/south{
+	c_tag = "Security Post - Science";
+	network = list("ss13","rd")
+	},
+/obj/machinery/computer/mecha{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science)
+"A" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating/airless,
+/area/station/security/checkpoint/science)
+"D" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/machinery/holopad,
+/obj/effect/turf_decal/bot,
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science)
+"G" = (
+/obj/machinery/computer/security/telescreen/research/directional/east,
+/obj/structure/table/reinforced,
+/obj/item/book/manual/wiki/security_space_law{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/radio{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/screwdriver{
+	pixel_y = -4;
+	pixel_x = -1
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science)
+"K" = (
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/obj/effect/landmark/start/depsec/science,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science)
+"N" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Security Post - Science"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/turf/open/floor/iron/large,
+/area/station/security/checkpoint/science)
+"O" = (
+/obj/machinery/computer/records/security{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/wall/peppertank/directional/south,
+/obj/machinery/newscaster/directional/east,
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/science)
+"R" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red,
+/obj/effect/landmark/start/depsec/science,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science)
+"W" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/obj/structure/sign/nanotrasen{
+	pixel_x = -32
+	},
+/obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/effect/turf_decal/siding/red,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/science)
+
+(1,1,1) = {"
+r
+r
+r
+r
+r
+"}
+(2,1,1) = {"
+A
+t
+W
+m
+r
+"}
+(3,1,1) = {"
+N
+D
+R
+x
+r
+"}
+(4,1,1) = {"
+A
+K
+a
+v
+r
+"}
+(5,1,1) = {"
+r
+d
+G
+O
+r
+"}
+(6,1,1) = {"
+r
+k
+r
+r
+r
+"}

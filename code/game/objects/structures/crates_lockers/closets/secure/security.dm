@@ -122,51 +122,34 @@
 	..()
 	new /obj/item/storage/belt/security/full(src)
 
-// SKYRAT EDIT CHANGE -- GOOFSEC DEP GUARDS
 /obj/structure/closet/secure_closet/security/cargo
-	name = "\proper customs agent's locker"
-	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_CARGO)
-	icon_state = "qm"
-	icon = 'icons/obj/storage/closet.dmi'
 
+// SPLURT revert, dept security.
 /obj/structure/closet/secure_closet/security/cargo/PopulateContents()
-	new /obj/item/storage/bag/garment/customs_agent(src)
-	new /obj/item/restraints/handcuffs/cable/orange(src)
-	new /obj/item/assembly/flash/handheld(src)
+	..()
+	new /obj/item/clothing/accessory/armband/cargo(src)
+	new /obj/item/encryptionkey/headset_cargo(src)
 
 /obj/structure/closet/secure_closet/security/engine
-	name = "\proper engineering guard's locker"
-	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_ENGINEERING)
-	icon_state = "eng_secure"
-	icon = 'icons/obj/storage/closet.dmi'
 
 /obj/structure/closet/secure_closet/security/engine/PopulateContents()
-	new /obj/item/restraints/handcuffs/cable/yellow(src)
-	new /obj/item/storage/bag/garment/engineering_guard(src)
-	new /obj/item/assembly/flash/handheld(src)
+	..()
+	new /obj/item/clothing/accessory/armband/engine(src)
+	new /obj/item/encryptionkey/headset_eng(src)
 
 /obj/structure/closet/secure_closet/security/science
-	name = "\proper science guard's locker"
-	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_RESEARCH)
-	icon_state = "science"
-	icon = 'icons/obj/storage/closet.dmi'
 
 /obj/structure/closet/secure_closet/security/science/PopulateContents()
-	new /obj/item/restraints/handcuffs/cable/pink(src)
-	new /obj/item/storage/bag/garment/science_guard(src)
-	new /obj/item/assembly/flash/handheld(src)
+	..()
+	new /obj/item/clothing/accessory/armband/science(src)
+	new /obj/item/encryptionkey/headset_sci(src)
 
 /obj/structure/closet/secure_closet/security/med
-	name = "\proper orderly's locker"
-	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_MEDICAL)
-	icon_state = "med_secure"
-	icon = 'icons/obj/storage/closet.dmi'
 
 /obj/structure/closet/secure_closet/security/med/PopulateContents()
-	new /obj/item/restraints/handcuffs/cable/blue(src)
-	new /obj/item/storage/bag/garment/orderly(src)
-	new /obj/item/assembly/flash/handheld(src)
-// SKYRAT EDIT CHANGE END -- GOOFSEC DEP GUARDS
+	..()
+	new /obj/item/clothing/accessory/armband/medblue(src)
+	new /obj/item/encryptionkey/headset_med(src)
 
 /obj/structure/closet/secure_closet/detective
 	name = "\improper detective's cabinet"

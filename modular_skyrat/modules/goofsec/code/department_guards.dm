@@ -157,6 +157,7 @@
 /*
 	SCIENCE GUARD DATUMS
 */
+/* // SPLURT REMOVAL, DEPT GUARDS.
 /datum/job/science_guard
 	title = JOB_SCIENCE_GUARD
 	rpg_title = "Secrets Keeper"
@@ -575,6 +576,7 @@
 	)
 	template_access = list(ACCESS_CAPTAIN, ACCESS_QM, ACCESS_CHANGE_IDS)
 	job = /datum/job/customs_agent
+*/
 
 /*
 	SERVICE GUARD DATUMS

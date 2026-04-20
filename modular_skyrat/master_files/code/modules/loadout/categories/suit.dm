@@ -644,17 +644,17 @@
 /datum/loadout_item/suit/med_jacket_light
 	name = "Medical Jacket (Light)"
 	item_path = /obj/item/clothing/suit/toggle/labcoat/skyrat/medical
-	restricted_roles = list (JOB_MEDICAL_DOCTOR, JOB_SECURITY_MEDIC, JOB_CHEMIST, JOB_PARAMEDIC, JOB_ORDERLY, JOB_CHIEF_MEDICAL_OFFICER)
+	restricted_roles = list (JOB_MEDICAL_DOCTOR, JOB_SECURITY_MEDIC, JOB_CHEMIST, JOB_PARAMEDIC, JOB_CHIEF_MEDICAL_OFFICER)
 
 /datum/loadout_item/suit/med_jacket_dark
 	name = "Medical Jacket (Dark)"
 	item_path = /obj/item/clothing/suit/toggle/labcoat/skyrat/medical/dark
-	restricted_roles = list (JOB_MEDICAL_DOCTOR, JOB_SECURITY_MEDIC, JOB_CHEMIST, JOB_PARAMEDIC, JOB_ORDERLY, JOB_CHIEF_MEDICAL_OFFICER)
+	restricted_roles = list (JOB_MEDICAL_DOCTOR, JOB_SECURITY_MEDIC, JOB_CHEMIST, JOB_PARAMEDIC, JOB_CHIEF_MEDICAL_OFFICER)
 
 /datum/loadout_item/suit/med_jacket_orderly
 	name = "Medical Jacket (Orderly/SecMed)"
 	item_path = /obj/item/clothing/suit/toggle/jacket/sec/medical
-	restricted_roles = list (JOB_ORDERLY, JOB_SECURITY_MEDIC, JOB_CHIEF_MEDICAL_OFFICER)
+	restricted_roles = list (JOB_SECURITY_MEDIC, JOB_CHIEF_MEDICAL_OFFICER)
 
 /datum/loadout_item/suit/labcoat/doctor_tailcoat
 	name = "Brig Physician's tailcoat"

@@ -10562,6 +10562,7 @@
 #include "modular_zzplurt\code\modules\resize\sizegun.dm"
 #include "modular_zzplurt\code\modules\resize\smallsprite_action.dm"
 #include "modular_zzplurt\code\modules\sec_haul\code\guncrafting.dm"
+#include "modular_zzplurt\code\modules\sec_haul\code\sec_color_remote.dm"
 #include "modular_zzplurt\code\modules\sec_haul\code\technode\all_nodes.dm"
 #include "modular_zzplurt\code\modules\secborg\comms_console_secborg.dm"
 #include "modular_zzplurt\code\modules\secborg\sec_borg_overrides.dm"

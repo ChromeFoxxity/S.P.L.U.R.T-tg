@@ -72,7 +72,7 @@
 /datum/loadout_item/suit/armor/vest/nri_police
 	name = "Imperial Police Vest"
 	item_path = /obj/item/clothing/suit/armor/vest/nri_police
-	restricted_roles = list(ALL_JOBS_SEC, JOB_CUSTOMS_AGENT)
+	restricted_roles = list(ALL_JOBS_SEC)
 
 /datum/loadout_item/suit/jacket/fedsec
 	name = "Modern Security Federation Jacket"

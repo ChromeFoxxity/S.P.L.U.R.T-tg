@@ -92,7 +92,7 @@
 /datum/loadout_item/head/security_cap/colonial
 	name = "Imperial Police Cap"
 	item_path = /obj/item/clothing/head/hats/colonial/nri_police
-	restricted_roles = list(ALL_JOBS_SEC, JOB_CUSTOMS_AGENT)
+	restricted_roles = list(ALL_JOBS_SEC)
 	loadout_flags = parent_type::loadout_flags & ~LOADOUT_FLAG_ALLOW_RESKIN
 
 /datum/loadout_item/head/security_beanie
@@ -129,7 +129,7 @@
 /datum/loadout_item/head/helmet/nri_police
 	name = "Imperial Police Helmet"
 	item_path = /obj/item/clothing/head/helmet/nri_police
-	restricted_roles = list(ALL_JOBS_SEC, JOB_CUSTOMS_AGENT)
+	restricted_roles = list(ALL_JOBS_SEC)
 
 /datum/loadout_item/head/hats/security_kepi
 	name = "Security Kepi"

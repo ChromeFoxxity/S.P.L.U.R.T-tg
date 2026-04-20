@@ -101,7 +101,7 @@
 /datum/loadout_item/suit/trekmedscimov
 	name = "Fed (movie) uniform, Blue"
 	item_path = /obj/item/clothing/suit/storage/fluff/fedcoat/medsci
-	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_MEDICAL_DOCTOR, JOB_PARAMEDIC, JOB_CHEMIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_ORDERLY)
+	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_MEDICAL_DOCTOR, JOB_PARAMEDIC, JOB_CHEMIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
 
 /datum/loadout_item/suit/trekengmov
 	name = "Fed (movie) uniform, Yellow"
@@ -121,7 +121,7 @@
 /datum/loadout_item/suit/trekmedscimod
 	name = "Fed (Modern) uniform, Blue"
 	item_path = /obj/item/clothing/suit/storage/fluff/modernfedcoat/medsci
-	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_MEDICAL_DOCTOR, JOB_PARAMEDIC, JOB_CHEMIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_ORDERLY)
+	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_MEDICAL_DOCTOR, JOB_PARAMEDIC, JOB_CHEMIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
 
 /datum/loadout_item/suit/trekengmod
 	name = "Fed (Modern) uniform, Yellow"
@@ -131,4 +131,4 @@
 /datum/loadout_item/suit/armored_harness
 	name = "Armored Harness"
 	item_path = /obj/item/clothing/suit/armor/vest/harness
-	restricted_roles = list(ALL_JOBS_SEC, ALL_JOBS_CENTRAL, JOB_CAPTAIN, JOB_ORDERLY, JOB_CUSTOMS_AGENT, JOB_ENGINEERING_GUARD, JOB_BOUNCER, JOB_SCIENCE_GUARD)
+	restricted_roles = list(ALL_JOBS_SEC, ALL_JOBS_CENTRAL, JOB_CAPTAIN, JOB_BOUNCER)
