@@ -198,3 +198,13 @@
 	name = "yellow trencher officer cap"
 	desc = "An army officer cap with yellow pin."
 	icon_state = "goner_offcap_y"
+
+/obj/item/clothing/head/utility/hardhat/nanotrasen
+	name = "black heavy-duty hat"
+	desc = "A tough plastic helmet with a suspension rig, designed to protect against blunt impacts. This one is a sober shade of black, with a Nanotrasen logo on the front."
+	icon = 'modular_zzplurt/icons/obj/clothing/hats.dmi'
+	worn_icon = 'modular_zzplurt/icons/mob/clothing/hats.dmi'
+	icon_state = "hardhat0_black"
+	inhand_icon_state = null
+	hat_type = "black"
+	dog_fashion = null

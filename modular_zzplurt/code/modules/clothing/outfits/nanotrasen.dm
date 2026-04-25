@@ -12,6 +12,7 @@
 	belt = /obj/item/modular_computer/pda/assistant
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/sneakers/black
+	back = /obj/item/storage/backpack/satchel
 	box = /obj/item/storage/box/survival
 
 /datum/id_trim/away/deckhand
@@ -37,6 +38,7 @@
 	ears = /obj/item/radio/headset/headset_cargo
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	l_pocket = /obj/item/universal_scanner
+	back = /obj/item/storage/backpack/satchel
 	box = /obj/item/storage/box/survival
 	backpack_contents = list(
 		/obj/item/boxcutter = 1,
@@ -56,6 +58,45 @@
 		ACCESS_SHIPPING,
 		)
 
+/obj/effect/mob_spawn/corpse/human/nsl_salvager
+	name = "N+S Salvage Technician"
+	outfit = /datum/outfit/salvage_technician
+	icon_state = "corpsecargotech"
+
+/datum/outfit/salvage_technician
+	name = "N+S Salvage Technician"
+
+	id = /obj/item/card/id/advanced
+	id_trim = /datum/id_trim/away/salvage_technician
+	uniform = /obj/item/clothing/under/rank/nanotrasen/supply/miner
+	suit = /obj/item/clothing/suit/hazardvest/nanotrasen
+	head = /obj/item/clothing/head/utility/hardhat/nanotrasen
+	belt = /obj/item/modular_computer/pda/shaftminer
+	ears = /obj/item/radio/headset/headset_cargo/mining
+	shoes = /obj/item/clothing/shoes/workboots/mining
+	l_pocket = /obj/item/knife/combat/survival
+	back = /obj/item/storage/backpack/satchel/explorer
+	box = /obj/item/storage/box/survival/mining
+	backpack_contents = list(
+		/obj/item/mining_voucher = 1,
+		/obj/item/reagent_containers/hypospray/medipen/survival = 1,
+	)
+
+/datum/id_trim/away/salvage_technician
+	assignment = "N+S Salvage Technician"
+	trim_state = "trim_shaftminer"
+	department_color = COLOR_CARGO_BROWN
+	subdepartment_color = COLOR_TAN_ORANGE
+	sechud_icon_state = SECHUD_SHAFT_MINER
+	access = list(
+		ACCESS_CARGO,
+		ACCESS_MINING,
+		ACCESS_MINING_STATION,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_MINING,
+		ACCESS_MINERAL_STOREROOM,
+		)
+
 /obj/effect/mob_spawn/corpse/human/nsl_quartermaster
 	name = "N+S Supply Director"
 	outfit = /datum/outfit/job/supply_director
@@ -72,6 +113,7 @@
 	ears = /obj/item/radio/headset/headset_cargo
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	l_pocket = /obj/item/clipboard
+	back = /obj/item/storage/backpack/satchel/leather
 	box = /obj/item/storage/box/survival
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,

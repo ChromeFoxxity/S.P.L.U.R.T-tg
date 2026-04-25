@@ -83,3 +83,12 @@
 	inhand_icon_state = "b_suit"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	armor_type = /datum/armor/vest_capcarapace
+
+/obj/item/clothing/suit/hazardvest/nanotrasen
+	name = "black hazard vest"
+	desc = "A thin black vest with reflective markings, worn to guarantee visibility when operating around industrial equipment or in dark or dusty conditions. Property of Nanotrasen, Inc."
+	icon = 'modular_zzplurt/icons/obj/clothing/suits.dmi'
+	worn_icon = 'modular_zzplurt/icons/mob/clothing/suit.dmi'
+	worn_icon_digi = 'modular_zzplurt/icons/mob/clothing/suit.dmi'
+	icon_state = "black_hazard"
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON

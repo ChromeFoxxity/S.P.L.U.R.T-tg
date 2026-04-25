@@ -96,6 +96,11 @@
 	desc = "A cheap work shirt and black shorts, typical of cargo handlers and clerks at N+S Logistics."
 	icon_state = "supply"
 
+/obj/item/clothing/under/rank/nanotrasen/supply/miner
+	name = "mining overalls"
+	desc = "Cheap brown overalls over a grey jumpsuit, already slightly frayed and saturated with rock dust. N+S Logistics logos are prominently sewn on in several places."
+	icon_state = "supply_miner"
+
 /obj/item/clothing/under/rank/nanotrasen/supply/qm
 	name = "supply director slacks"
 	desc = "Crisp slacks and a pressed brown shirt that any supply director could be proud of. N+S Logistics' compass rose logo is embossed on every button."
