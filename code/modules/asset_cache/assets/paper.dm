@@ -28,6 +28,7 @@
 		"stamp-ns" = 'icons/stamp_icons/large_stamp-ns_generic.png',
 		"stamp-ns_cap" = 'icons/stamp_icons/large_stamp-ns_captain.png',
 		"stamp-ns_supdir" = 'icons/stamp_icons/large_stamp-ns_sup_dir.png',
+		"stamp-kiss" = 'modular_zzplurt/icons/effects/kissmark.png',
 		//SPLURT ADDITION: END - Splurt Stamp Icons
 
 		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
