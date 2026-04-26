@@ -69,6 +69,7 @@
 	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/away/salvage_technician
 	uniform = /obj/item/clothing/under/rank/nanotrasen/supply/miner
+	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/hazardvest/nanotrasen
 	head = /obj/item/clothing/head/utility/hardhat/nanotrasen
 	belt = /obj/item/modular_computer/pda/shaftminer
@@ -107,6 +108,7 @@
 
 	suit = /obj/item/clothing/suit/hooded/wintercoat/miner
 	head = null
+	mask = /obj/item/clothing/mask/gas/explorer
 	shoes = /obj/item/clothing/shoes/winterboots/ice_boots
 
 /obj/effect/mob_spawn/corpse/human/nsl_quartermaster
@@ -120,6 +122,7 @@
 	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/away/supply_director
 	uniform = /obj/item/clothing/under/rank/nanotrasen/supply/qm
+	gloves = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/soft
 	belt = /obj/item/modular_computer/pda/heads/quartermaster
 	ears = /obj/item/radio/headset/headset_cargo
@@ -141,6 +144,7 @@
 
 	suit = /obj/item/clothing/suit/hooded/wintercoat/cargo/qm
 	head = null
+	mask = /obj/item/clothing/mask/gas/alt
 	shoes = /obj/item/clothing/shoes/winterboots/ice_boots/eva
 
 /datum/id_trim/away/supply_director
