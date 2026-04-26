@@ -97,6 +97,18 @@
 		ACCESS_MINERAL_STOREROOM,
 		)
 
+/obj/effect/mob_spawn/corpse/human/nsl_salvager/icemoon
+	name = "N+S Winter Salvage Technician"
+	outfit = /datum/outfit/salvage_technician/winter
+	icon_state = "corpsecargotech"
+
+/datum/outfit/salvage_technician/winter
+	name = "N+S Salvage Technician - Icemoon"
+
+	suit = /obj/item/clothing/suit/hooded/wintercoat/miner
+	head = null
+	shoes = /obj/item/clothing/shoes/winterboots/ice_boots
+
 /obj/effect/mob_spawn/corpse/human/nsl_quartermaster
 	name = "N+S Supply Director"
 	outfit = /datum/outfit/job/supply_director
@@ -118,6 +130,18 @@
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,
 	)
+
+/obj/effect/mob_spawn/corpse/human/nsl_quartermaster/icemoon
+	name = "N+S Winter Supply Director"
+	outfit = /datum/outfit/job/supply_director/winter
+	icon_state = "corpsecargotech"
+
+/datum/outfit/job/supply_director/winter
+	name = "N+S Supply Director - Icemoon"
+
+	suit = /obj/item/clothing/suit/hooded/wintercoat/cargo/qm
+	head = null
+	shoes = /obj/item/clothing/shoes/winterboots/ice_boots/eva
 
 /datum/id_trim/away/supply_director
 	assignment = "N+S Supply Director"

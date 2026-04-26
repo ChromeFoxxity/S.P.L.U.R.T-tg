@@ -124,3 +124,8 @@
 
 /obj/projectile/bullet/c46x30mm/ap
 	armour_penetration = 45
+
+// Spent casings
+
+/obj/item/ammo_casing/c9mm/spent
+	projectile_type = null

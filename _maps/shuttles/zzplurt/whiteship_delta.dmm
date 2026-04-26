@@ -27,6 +27,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "bf" = (
@@ -35,6 +37,7 @@
 /obj/structure/sign/warning/electric_shock/directional/north,
 /obj/structure/cable,
 /obj/machinery/light/small/directional/north,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "bl" = (
@@ -44,6 +47,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/bridge)
 "bm" = (
@@ -68,6 +73,7 @@
 	pixel_y = -9
 	},
 /obj/machinery/light/small/directional/west,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white/side,
 /area/shuttle/abandoned/delta/medical)
 "bO" = (
@@ -80,6 +86,8 @@
 /obj/structure/curtain/bounty,
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/light_switch/directional/west,
+/obj/structure/spider/stickyweb,
+/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "bQ" = (
@@ -93,6 +101,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/crew)
 "cQ" = (
@@ -102,6 +111,7 @@
 /obj/machinery/atmospherics/components/binary/pump/on/supply/hidden/layer4{
 	name = "air distribution pump"
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "cY" = (
@@ -109,6 +119,7 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
@@ -154,6 +165,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "dn" = (
@@ -170,17 +182,34 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "dw" = (
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/robotics)
+"dQ" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/medical)
 "eh" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/light/small/directional/west,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
@@ -198,6 +227,18 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/pod,
 /area/shuttle/abandoned/delta/mining)
+"eF" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/spikes,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/medical)
 "eV" = (
 /obj/effect/turf_decal/siding/thinplating_new,
 /obj/effect/turf_decal/siding/thinplating_new{
@@ -206,27 +247,53 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/scout,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/crew)
+"eZ" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
 "fd" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/port)
+"fi" = (
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 6
+	},
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/hunter,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/abandoned/delta/robotics)
 "fl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/guard,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "fq" = (
 /obj/machinery/door/airlock/bathroom{
 	name = "Restroom"
 	},
+/obj/effect/mapping_helpers/airlock/welded,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/port)
 "fv" = (
 /obj/structure/table/optable,
 /obj/structure/cable,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/medical)
 "fE" = (
@@ -244,6 +311,11 @@
 /obj/effect/turf_decal/ntspaceworks_small/right{
 	dir = 4
 	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
+"fN" = (
+/obj/effect/mob_spawn/corpse/human/roboticist,
+/obj/effect/decal/cleanable/blood,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/robotics)
 "fW" = (
@@ -265,13 +337,21 @@
 /obj/item/clothing/suit/caution,
 /obj/item/clothing/suit/caution,
 /obj/machinery/light/small/directional/north,
+/obj/effect/landmark/firealarm_sanity,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/port)
 "gK" = (
 /obj/effect/spawner/random/vending/snackvend,
 /obj/machinery/light/small/directional/east,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/central)
+"gP" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/spikes,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
 "gX" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
@@ -284,6 +364,8 @@
 /obj/effect/turf_decal/nanotrasen/ns/center_left{
 	dir = 4
 	},
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/guard,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "hg" = (
@@ -314,6 +396,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/cobweb,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "hz" = (
@@ -341,6 +425,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/directional/south,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "hM" = (
@@ -360,8 +445,26 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/hunter,
+/obj/item/food/spidereggs,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
+"ip" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
+/turf/open/floor/iron/dark/textured,
+/area/shuttle/abandoned/delta/bridge)
 "iE" = (
 /obj/effect/turf_decal/tile/nslogistics/half/contrasted{
 	dir = 4
@@ -378,6 +481,15 @@
 /obj/item/gun/energy/disabler,
 /obj/item/computer_disk/quartermaster,
 /obj/machinery/light/small/directional/east,
+/obj/item/clothing/suit/space/syndicate/black/orange{
+	desc = "An old N+S brand space suit, accompanied by N+S's classic orange theme, this time with a more darker, menacing theme! It's slightly cumbersome. But it has some built-in armor padding, and the technology is a little aged. But it keeps you safe, and alive in the vaccum of space. Brought to you by Nanotrasen!";
+	name = "N+S command space suit"
+	},
+/obj/item/clothing/head/helmet/space/syndicate/black/orange{
+	desc = "An old N+S brand space helmet, accompanied by N+S's classic orange theme, this time with a more menacing theme! It has a tinted visor, useful for welding. But it also has some built-in armor padding, the technology is a little aged. But it keeps you safe, and alive in the vaccum of space. Brought to you by Nanotrasen!";
+	name = "N+S command space helmet"
+	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "ji" = (
@@ -388,6 +500,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "ju" = (
@@ -400,9 +513,15 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 9
+	},
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/central)
 "jB" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/deckhand,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/mining)
 "jW" = (
@@ -437,10 +556,26 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
+"ku" = (
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/spider/stickyweb,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/crew)
 "kw" = (
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/scout,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/mining)
 "kC" = (
+/obj/structure/spider/stickyweb,
+/obj/item/food/spidereggs,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "kS" = (
@@ -460,6 +595,7 @@
 /obj/item/ammo_box/magazine/m45,
 /obj/item/ammo_box/magazine/m45,
 /obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white/side{
 	dir = 4
 	},
@@ -470,6 +606,17 @@
 "lA" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/delta/port)
+"lW" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
 "mq" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/iron/dark,
@@ -504,6 +651,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/firealarm/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/medical)
 "np" = (
@@ -533,6 +681,7 @@
 	default_raw_text = "As a reminder, older ore processing lines may come unlinked from their control terminals. In such cases simply use a multitool to restore the data link.";
 	name = "Memo - Processor Reliability"
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/mining)
 "nD" = (
@@ -542,6 +691,7 @@
 /obj/effect/turf_decal/nanotrasen/ns/bottom_right{
 	dir = 4
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "nI" = (
@@ -558,6 +708,8 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/spikes,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "nX" = (
@@ -567,12 +719,24 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/mining)
+"or" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/engineering)
 "oB" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "delta_mining"
 	},
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/machinery/light/small/directional/west,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/mining)
 "pf" = (
@@ -609,7 +773,8 @@
 "pG" = (
 /obj/structure/table,
 /obj/machinery/fax{
-	fax_name = "Delta-Class Frigate"
+	fax_name = "Delta-Class Frigate";
+	name = "Delta-Class Frigate's Fax Machine"
 	},
 /obj/machinery/button/door/directional/west{
 	name = "Bridge Window Lockdown Control";
@@ -628,6 +793,7 @@
 	req_access = null;
 	pixel_y = -25
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "pO" = (
@@ -636,6 +802,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/port)
 "qk" = (
@@ -645,6 +812,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/engineering)
 "qo" = (
@@ -684,6 +852,7 @@
 	pixel_x = 5;
 	pixel_y = 3
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "qt" = (
@@ -693,6 +862,8 @@
 /obj/effect/turf_decal/nanotrasen/ns/center_right{
 	dir = 4
 	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "qD" = (
@@ -701,6 +872,8 @@
 	},
 /obj/structure/sink/directional/west,
 /obj/structure/mirror/directional/east,
+/obj/effect/mob_spawn/corpse/human/engineer,
+/obj/effect/landmark/firealarm_sanity,
 /turf/open/floor/iron/showroomfloor,
 /area/shuttle/abandoned/delta/port)
 "qM" = (
@@ -714,6 +887,7 @@
 /obj/effect/turf_decal/loading_area/white{
 	dir = 8
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/mining)
 "qR" = (
@@ -728,6 +902,7 @@
 /obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Crew Quarters"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/crew)
 "rn" = (
@@ -751,6 +926,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/item/food/spidereggs,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "rM" = (
@@ -759,6 +936,8 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/port)
 "rO" = (
@@ -771,6 +950,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark/textured,
 /area/shuttle/abandoned/delta/bridge)
 "sc" = (
@@ -789,6 +969,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "sl" = (
@@ -816,6 +997,7 @@
 /area/shuttle/abandoned/delta/crew)
 "sN" = (
 /obj/machinery/vending/robotics,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "sQ" = (
@@ -827,6 +1009,7 @@
 /obj/effect/turf_decal/tile/nslogistics/anticorner/contrasted{
 	dir = 4
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "sT" = (
@@ -859,6 +1042,7 @@
 	dir = 4
 	},
 /obj/machinery/power/port_gen/pacman/pre_loaded,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "tL" = (
@@ -872,6 +1056,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "ud" = (
@@ -884,6 +1069,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/mining)
+"uo" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/guard,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
 "up" = (
 /obj/machinery/shower/directional/south,
 /obj/structure/curtain,
@@ -901,6 +1097,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/delivery,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/port)
 "uQ" = (
@@ -946,6 +1143,7 @@
 /obj/effect/turf_decal/trimline/nslogistics/filled/line{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/central)
 "uY" = (
@@ -966,8 +1164,23 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/crew)
+"vk" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder,
+/obj/structure/spider/stickyweb,
+/turf/open/floor/iron/dark/textured,
+/area/shuttle/abandoned/delta/bridge)
 "vn" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
@@ -978,6 +1191,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/viper,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "vI" = (
@@ -988,6 +1203,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/central)
 "vT" = (
@@ -1000,6 +1216,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "vU" = (
@@ -1039,6 +1256,11 @@
 /obj/item/radio/headset,
 /obj/item/radio/headset,
 /obj/item/radio/headset,
+/obj/item/crowbar,
+/obj/item/crowbar,
+/obj/item/crowbar,
+/obj/item/crowbar,
+/obj/item/crowbar,
 /turf/open/floor/iron/white/side{
 	dir = 4
 	},
@@ -1059,6 +1281,8 @@
 /obj/effect/turf_decal/siding/thinplating_new/corner,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/landmark/firealarm_sanity,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "xa" = (
@@ -1066,6 +1290,7 @@
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "xj" = (
@@ -1084,6 +1309,7 @@
 /obj/item/kitchen/fork{
 	pixel_x = 9
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/crew)
 "xw" = (
@@ -1105,6 +1331,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/medical)
 "xL" = (
@@ -1126,8 +1353,25 @@
 	pixel_y = 1
 	},
 /obj/machinery/firealarm/directional/west,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
+"xS" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 9
+	},
+/obj/structure/spider/stickyweb,
+/turf/open/floor/iron/dark/textured,
+/area/shuttle/abandoned/delta/bridge)
 "yn" = (
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/east,
@@ -1145,6 +1389,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/mining)
 "yC" = (
@@ -1187,6 +1432,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "zv" = (
@@ -1215,12 +1461,15 @@
 	},
 /obj/machinery/firealarm/directional/east,
 /obj/machinery/light/small/directional/east,
+/obj/structure/spider/stickyweb,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "AS" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/crew)
 "AU" = (
@@ -1231,6 +1480,8 @@
 	dir = 8;
 	name = "waste disposal pump"
 	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/stickyweb/sealed/tough,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "Bh" = (
@@ -1244,6 +1495,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/robotics)
 "BA" = (
@@ -1256,6 +1509,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "BE" = (
@@ -1274,6 +1528,14 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/port)
+"BP" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
 "BR" = (
 /obj/effect/turf_decal/siding/yellow/corner,
 /obj/effect/turf_decal/siding/yellow{
@@ -1288,6 +1550,7 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/portable_atmospherics/pump,
 /obj/machinery/light/small/directional/south,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "BY" = (
@@ -1312,6 +1575,10 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/directional/north,
+/mob/living/basic/pet/dog/corgi/exoticcorgi{
+	name = "Ronnie";
+	desc = "N+S Logistic's trusty pet corgi, has he seen a ghost or something?"
+	},
 /turf/open/floor/iron/shuttle/cargo,
 /area/shuttle/abandoned/delta/port)
 "CQ" = (
@@ -1330,6 +1597,9 @@
 /area/shuttle/abandoned/delta/bridge)
 "DM" = (
 /obj/machinery/holopad/secure,
+/obj/effect/mob_spawn/corpse/human/nsl_quartermaster,
+/obj/effect/decal/cleanable/blood,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "Ea" = (
@@ -1339,6 +1609,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/port)
 "Ed" = (
@@ -1360,6 +1632,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "EI" = (
@@ -1377,11 +1651,14 @@
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/stack/sheet/plasteel/twenty,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/medical)
 "EY" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/structure/cable,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/crew)
 "Fb" = (
@@ -1395,6 +1672,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light_switch/directional/east,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "Fd" = (
@@ -1408,6 +1686,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/deckhand,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "Ff" = (
@@ -1454,6 +1735,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/spikes,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "Gc" = (
@@ -1481,6 +1764,7 @@
 	name = "ship camera console"
 	},
 /obj/effect/turf_decal/tile/nslogistics/anticorner/contrasted,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "Gs" = (
@@ -1501,6 +1785,7 @@
 /obj/machinery/autolathe,
 /obj/effect/turf_decal/bot,
 /obj/machinery/light_switch/directional/east,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "GU" = (
@@ -1512,6 +1797,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/directional/west,
+/obj/effect/decal/cleanable/blood/trail_holder,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/crew)
 "He" = (
@@ -1526,16 +1812,12 @@
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/crew)
 "Hs" = (
-/obj/structure/ai_core,
-/obj/item/circuitboard/aicore,
-/obj/item/stack/sheet/rglass{
-	amount = 5
-	},
 /obj/machinery/door/window/brigdoor/left/directional/east{
 	name = "AI Core Access"
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/structure/ai_core/deactivated,
 /turf/open/floor/iron/shuttle/cargo,
 /area/shuttle/abandoned/delta/bridge)
 "Ht" = (
@@ -1545,6 +1827,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/engineering)
 "HA" = (
@@ -1553,6 +1836,9 @@
 	},
 /obj/structure/sign/departments/science/directional/east,
 /obj/machinery/light/small/directional/east,
+/obj/effect/mob_spawn/corpse/human/roboticist,
+/obj/effect/decal/cleanable/blood,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white/side,
 /area/shuttle/abandoned/delta/medical)
 "HQ" = (
@@ -1578,10 +1864,13 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/hunter,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/crew)
 "Il" = (
 /obj/machinery/vending/cigarette,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/central)
 "Iy" = (
@@ -1592,6 +1881,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "IC" = (
@@ -1617,12 +1907,25 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/corpse/human/deckhand,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/central)
+"Jx" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/nurse,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
 "JU" = (
 /obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Port Hallway"
 	},
+/obj/structure/spider/stickyweb,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/abandoned/delta/port)
 "JV" = (
@@ -1633,6 +1936,11 @@
 "Ka" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/spikes,
 /turf/open/floor/iron/stairs{
 	dir = 4
 	},
@@ -1641,6 +1949,7 @@
 /obj/machinery/mecha_part_fabricator,
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/light/small/directional/north,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "Kz" = (
@@ -1653,6 +1962,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/central)
 "KN" = (
@@ -1681,6 +1991,7 @@
 "LX" = (
 /obj/structure/tank_dispenser,
 /obj/effect/turf_decal/bot,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/port)
 "Ml" = (
@@ -1688,6 +1999,7 @@
 	dir = 4
 	},
 /obj/machinery/light_switch/directional/west,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "Mm" = (
@@ -1707,6 +2019,7 @@
 	c_tag = "Central Hallway"
 	},
 /obj/machinery/light/small/directional/east,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/central)
 "My" = (
@@ -1715,8 +2028,15 @@
 	network = list("delta_whiteship");
 	c_tag = "Mining Bay - Control"
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/mining)
+"Mz" = (
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 9
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/abandoned/delta/robotics)
 "MB" = (
 /obj/structure/ore_box,
 /obj/effect/turf_decal/bot,
@@ -1734,6 +2054,8 @@
 	dir = 10
 	},
 /obj/machinery/airalarm/directional/west,
+/obj/structure/spider/stickyweb,
+/obj/item/food/spidereggs,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "NQ" = (
@@ -1763,6 +2085,14 @@
 /obj/item/mining_scanner,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light/small/directional/east,
+/obj/item/clothing/suit/space/syndicate/orange{
+	desc = "An old N+S brand space suit, accompanied by N+S's classic orange theme! It's slightly cumbersome. But it has some built-in armor padding, and the technology is a little aged. But it keeps you safe, and alive in the vaccum of space. Brought to you by Nanotrasen!";
+	name = "N+S space suit"
+	},
+/obj/item/clothing/head/helmet/space/syndicate/orange{
+	desc = "An old N+S brand space helmet, accompanied by N+S's classic orange theme! It has a tinted visor, useful for welding. But it also has some built-in armor padding, the technology is a little aged. But it keeps you safe, and alive in the vaccum of space. Brought to you by Nanotrasen!";
+	name = "N+S space helmet"
+	},
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/mining)
 "OC" = (
@@ -1776,11 +2106,33 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/bridge)
+"Pi" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
 "Pr" = (
 /obj/machinery/door/airlock{
 	name = "Janitorial Closet"
 	},
 /turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/port)
+"PJ" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/guard,
+/turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "PV" = (
 /obj/effect/turf_decal/siding/thinplating_new,
@@ -1803,8 +2155,24 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/stickyweb/sealed/tough,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
+"Qs" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/tarantula,
+/turf/open/floor/iron/dark/textured,
+/area/shuttle/abandoned/delta/bridge)
 "Qw" = (
 /turf/template_noop,
 /area/space)
@@ -1826,14 +2194,35 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/machinery/light/small/directional/west,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/mining)
+"QI" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/hunter,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
+"Rc" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/stickyweb/sealed,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/delta/engineering)
 "Rg" = (
 /obj/effect/turf_decal/nanotrasen/ns/center{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/trail_holder{
+	dir = 4
+	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "Ru" = (
@@ -1844,6 +2233,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/stickyweb/sealed,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/central)
 "RU" = (
@@ -1856,6 +2247,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "Sb" = (
@@ -1898,6 +2290,9 @@
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/nurse,
 /turf/open/floor/iron/white/side,
 /area/shuttle/abandoned/delta/medical)
 "TQ" = (
@@ -1912,6 +2307,7 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "Ua" = (
@@ -1926,6 +2322,8 @@
 /obj/effect/turf_decal/nanotrasen/ns/bottom_left{
 	dir = 4
 	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "Ul" = (
@@ -1939,6 +2337,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/stickyweb/sealed/tough,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
 "UQ" = (
@@ -1955,10 +2355,10 @@
 	pixel_y = -3;
 	pixel_x = 6
 	},
-/obj/machinery/firealarm/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/shuttle/cargo,
 /area/shuttle/abandoned/delta/port)
 "Vi" = (
@@ -1970,6 +2370,7 @@
 	dir = 4;
 	pixel_y = 3
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/mining)
 "VC" = (
@@ -1989,6 +2390,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "VM" = (
@@ -2017,6 +2419,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/spikes,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/central)
 "Wa" = (
@@ -2024,6 +2428,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "Wj" = (
@@ -2036,6 +2441,7 @@
 /obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/crew)
 "WD" = (
@@ -2055,10 +2461,12 @@
 	dir = 4
 	},
 /obj/machinery/light/small/directional/west,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/port)
 "Xh" = (
 /obj/machinery/rnd/production/protolathe/offstation,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "Xp" = (
@@ -2071,6 +2479,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/engineering)
+"XA" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/obj/structure/spider/stickyweb,
+/obj/item/food/spidereggs,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/delta/central)
 "XF" = (
 /obj/effect/turf_decal/siding/thinplating_new{
 	dir = 1
@@ -2081,6 +2500,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/spider/stickyweb,
+/mob/living/basic/spider/giant/viper,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "XT" = (
@@ -2103,6 +2524,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/delta/port)
 "Yl" = (
@@ -2122,6 +2545,7 @@
 	network = list("delta_whiteship");
 	c_tag = "Robotics Bay"
 	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 "YO" = (
@@ -2171,18 +2595,30 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/pod/dark,
 /area/shuttle/abandoned/delta/mining)
+"Za" = (
+/obj/machinery/door/airlock/highsecurity{
+	name = "Bridge"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron/dark/textured_large,
+/area/shuttle/abandoned/delta/bridge)
 "Zx" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/portable_atmospherics/scrubber,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/delta/engineering)
 "ZD" = (
 /obj/machinery/rnd/destructive_analyzer,
 /obj/item/radio/intercom/directional/south,
 /obj/machinery/light/small/directional/south,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/robotics)
 
@@ -2231,11 +2667,11 @@ aB
 KN
 wc
 ks
-ks
+Rc
 Zx
 wz
 tJ
-ks
+QI
 nM
 NG
 eh
@@ -2250,15 +2686,15 @@ Qy
 Qy
 cQ
 fl
-kC
+gP
 BU
 wz
 bf
 kC
 AX
 tP
-ks
-ks
+BP
+Jx
 sT
 vY
 "}
@@ -2271,7 +2707,7 @@ BR
 Qq
 rs
 vn
-qk
+or
 zm
 Fb
 Ul
@@ -2325,15 +2761,15 @@ gG
 Pr
 hu
 WO
-bl
+Za
 rO
-rO
-rO
-rO
-rO
+Qs
+xS
+ip
+vk
 bl
 GU
-eV
+ku
 lk
 wn
 Vi
@@ -2401,11 +2837,11 @@ lA
 lA
 Fd
 JU
-uW
+XA
 VX
-uW
-uW
-uW
+lW
+uo
+eZ
 ju
 uW
 qY
@@ -2420,7 +2856,7 @@ Vd
 lA
 Yi
 fd
-pf
+Pi
 Ru
 vI
 Mm
@@ -2475,7 +2911,7 @@ bQ
 lA
 lA
 lA
-vU
+PJ
 uu
 lA
 vY
@@ -2504,7 +2940,7 @@ vY
 vY
 qo
 EI
-hM
+dQ
 Tw
 fv
 qo
@@ -2523,7 +2959,7 @@ vY
 vY
 bQ
 nm
-hM
+eF
 HA
 tL
 bQ
@@ -2636,8 +3072,8 @@ vY
 vY
 qt
 ao
-dw
-OC
+Mz
+fi
 dw
 mq
 qt
@@ -2655,7 +3091,7 @@ vY
 vY
 sl
 yE
-dw
+fN
 OC
 dw
 MB

@@ -125,6 +125,8 @@
 /area/shuttle/abandoned/meta/cargo)
 "bh" = (
 /obj/effect/turf_decal/nanotrasen/ns/center,
+/obj/item/ammo_casing/c9mm/spent,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/cargo)
 "bl" = (
@@ -405,6 +407,7 @@
 /obj/effect/turf_decal/trimline/nslogistics/filled/line{
 	dir = 4
 	},
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/crew)
 "dE" = (
@@ -495,6 +498,16 @@
 /obj/effect/turf_decal/box/white/corners,
 /turf/open/floor/iron/dark/textured,
 /area/shuttle/abandoned/meta/cargo)
+"ep" = (
+/obj/effect/turf_decal/trimline/nslogistics/line{
+	dir = 4
+	},
+/mob/living/basic/pet/dog/corgi/exoticcorgi{
+	name = "Ronnie";
+	desc = "N+S Logistic's trusty pet corgi, has he seen a ghost or something?"
+	},
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/meta/lobby)
 "ez" = (
 /obj/structure/table,
 /obj/structure/window/reinforced/unanchored/spawner/directional/north,
@@ -835,6 +848,16 @@
 /obj/structure/sign/poster/contraband/power/directional/east,
 /turf/open/floor/plating/foam,
 /area/shuttle/abandoned/meta/engineering)
+"ht" = (
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c45/spent,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/meta/central)
 "hy" = (
 /obj/item/radio/intercom/directional/south,
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -868,6 +891,13 @@
 	},
 /turf/open/floor/iron/large,
 /area/shuttle/abandoned/meta/cargo)
+"hI" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/shotgun/buckshot/spent,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/abandoned/meta/engineering)
 "hM" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 8
@@ -1215,6 +1245,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c9mm/spent,
+/obj/item/ammo_casing/c9mm/spent,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/crew)
 "lu" = (
@@ -1237,6 +1270,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c45/spent,
+/obj/item/ammo_casing/c45/spent,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/central)
 "lT" = (
@@ -1522,6 +1557,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c9mm/spent,
+/obj/item/ammo_casing/c9mm/spent,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/cargo)
 "pe" = (
@@ -1579,6 +1617,8 @@
 /area/shuttle/abandoned/meta/bridge)
 "pZ" = (
 /obj/effect/turf_decal/nanotrasen/ns/top,
+/obj/item/ammo_casing/c9mm/spent,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/cargo)
 "qa" = (
@@ -1592,6 +1632,7 @@
 /obj/effect/turf_decal/nanotrasen/ns/top{
 	dir = 4
 	},
+/obj/item/ammo_casing/c45/spent,
 /obj/item/ammo_casing/c45/spent,
 /obj/item/ammo_casing/c45/spent,
 /obj/item/ammo_casing/c45/spent,
@@ -1747,6 +1788,7 @@
 /obj/effect/turf_decal/trimline/nslogistics/filled/line{
 	dir = 4
 	},
+/obj/item/ammo_casing/c45/spent,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/central)
 "rQ" = (
@@ -1906,6 +1948,7 @@
 	},
 /obj/structure/cable,
 /obj/item/ammo_casing/c45/spent,
+/obj/item/ammo_casing/c45/spent,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "tu" = (
@@ -2039,6 +2082,14 @@
 	pixel_y = 4
 	},
 /turf/open/floor/carpet/orange,
+/area/shuttle/abandoned/meta/crew)
+"uO" = (
+/obj/effect/turf_decal/trimline/nslogistics/filled/line,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c9mm/spent,
+/turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/crew)
 "uQ" = (
 /obj/effect/turf_decal/nanotrasen/ns{
@@ -2337,6 +2388,7 @@
 "ya" = (
 /obj/effect/turf_decal/nanotrasen/ns/center_right,
 /mob/living/basic/trooper/syndicate/ranged,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/cargo)
 "yh" = (
@@ -2424,6 +2476,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/dark/diagonal_centre,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/dark/diagonal,
 /area/shuttle/abandoned/meta/qmoffice)
 "yY" = (
@@ -2600,10 +2653,11 @@
 /area/shuttle/abandoned/meta/engineering)
 "Bx" = (
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Meta-Class Freighter"
-	},
 /obj/machinery/firealarm/directional/east,
+/obj/machinery/fax{
+	fax_name = "Meta-Class Freighter";
+	name = "Meta-Class Freighter's Fax Machine"
+	},
 /turf/open/floor/iron/dark/herringbone,
 /area/shuttle/abandoned/meta/qmoffice)
 "BA" = (
@@ -3079,6 +3133,8 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/dark/diagonal_centre,
+/obj/item/ammo_casing/c9mm/spent,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/dark/diagonal,
 /area/shuttle/abandoned/meta/qmoffice)
 "Hr" = (
@@ -3363,6 +3419,8 @@
 	dir = 5
 	},
 /obj/effect/turf_decal/tile/dark/diagonal_centre,
+/obj/item/ammo_casing/c9mm/spent,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/dark/diagonal,
 /area/shuttle/abandoned/meta/qmoffice)
 "Ko" = (
@@ -3418,6 +3476,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c45/spent,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/central)
 "Lt" = (
@@ -3438,6 +3497,22 @@
 	},
 /turf/open/floor/iron/large,
 /area/shuttle/abandoned/meta/cargo)
+"LK" = (
+/obj/item/ammo_casing/c45/spent,
+/obj/item/ammo_casing/c45/spent,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/meta/central)
+"LM" = (
+/obj/effect/turf_decal/trimline/nslogistics/filled/line{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c45/spent,
+/obj/item/ammo_casing/c45/spent,
+/turf/open/floor/iron/textured,
+/area/shuttle/abandoned/meta/central)
 "LO" = (
 /obj/effect/turf_decal/trimline/nslogistics/warning{
 	dir = 1
@@ -3942,6 +4017,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/stairs/left{
 	dir = 4
 	},
@@ -4025,6 +4101,7 @@
 /area/shuttle/abandoned/meta/lobby)
 "RG" = (
 /obj/machinery/holopad/secure,
+/obj/item/ammo_casing/c9mm/spent,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/crew)
 "RW" = (
@@ -4216,6 +4293,14 @@
 	dir = 4
 	},
 /area/shuttle/abandoned/meta/central)
+"Tv" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/shotgun/buckshot/spent,
+/obj/item/ammo_casing/shotgun/buckshot/spent,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/abandoned/meta/engineering)
 "TG" = (
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/meta/engineering)
@@ -4291,6 +4376,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/ammo_casing/c45/spent,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/central)
 "UV" = (
@@ -4456,6 +4542,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
 	},
+/obj/item/ammo_casing/c45/spent,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/meta/cargo)
 "Xl" = (
@@ -4917,8 +5004,8 @@ LZ
 LZ
 Pl
 yY
-VH
-VH
+Tv
+hI
 VH
 VH
 VH
@@ -4942,7 +5029,7 @@ LZ
 LZ
 Pl
 rd
-VH
+hI
 HT
 CI
 PT
@@ -5246,9 +5333,9 @@ dO
 Lh
 lE
 UC
-LS
-LS
-LS
+LM
+ht
+ht
 LS
 LS
 LS
@@ -5273,7 +5360,7 @@ rO
 jR
 fE
 DI
-kp
+LK
 fH
 xu
 kp
@@ -5380,7 +5467,7 @@ ZT
 wa
 Iu
 RG
-Py
+uO
 nl
 uM
 Bh
@@ -5643,7 +5730,7 @@ LZ
 Uv
 Qe
 oq
-pE
+ep
 pE
 lu
 Uv
