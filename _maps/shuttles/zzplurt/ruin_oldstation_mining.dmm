@@ -1,0 +1,584 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/turf_decal/stripes/white/full,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/machinery/door/poddoor{
+	id = "charliefreighter1";
+	name = "Cargo Blast Door"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/ruin/oldstation_mining)
+"b" = (
+/turf/closed/wall/mineral/titanium/interior,
+/area/shuttle/ruin/oldstation_mining)
+"c" = (
+/obj/effect/turf_decal/bot_white,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"d" = (
+/obj/effect/turf_decal/bot_white,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/cargo,
+/obj/item/stack/package_wrap,
+/obj/item/hand_labeler,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"e" = (
+/obj/effect/turf_decal/box/white/corners{
+	dir = 1
+	},
+/obj/effect/turf_decal/box/white/corners{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/mineral/unloading_machine{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"f" = (
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"g" = (
+/obj/machinery/power/shuttle_engine/propulsion/burst/left{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/ruin/oldstation_mining)
+"h" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/plating/airless,
+/area/shuttle/ruin/oldstation_mining)
+"i" = (
+/obj/machinery/button/door/directional/north{
+	name = "Cargo Bay Door Control";
+	id = "charliefreighter2";
+	req_access = list("away_general")
+	},
+/obj/effect/turf_decal/bot_white/right,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/light/small/directional/north,
+/obj/effect/mapping_helpers/apc/away_general_access,
+/obj/effect/mapping_helpers/apc/no_charge,
+/obj/effect/mapping_helpers/apc/unlocked,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/emcloset,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"j" = (
+/obj/effect/turf_decal/tile/brown/anticorner/contrasted{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/crew{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"k" = (
+/obj/effect/turf_decal/box/white/corners{
+	dir = 4
+	},
+/obj/effect/turf_decal/box/white/corners,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/mineral/processing_unit{
+	dir = 1;
+	input_dir = 8;
+	output_dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"l" = (
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/shuttle/oldstation{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"m" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/effect/turf_decal/tile/brown/anticorner/contrasted{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/camera_advanced/shuttle_docker/oldstation{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"n" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"o" = (
+/obj/effect/turf_decal/bot_white,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"p" = (
+/obj/machinery/airalarm/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airalarm/away_general_access,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/preopen,
+/turf/open/floor/iron,
+/area/shuttle/ruin/oldstation_mining)
+"q" = (
+/obj/effect/turf_decal/bot_white,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"r" = (
+/obj/machinery/power/shuttle_engine/propulsion/burst{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/ruin/oldstation_mining)
+"s" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/broken_flooring/singular/directional/north,
+/turf/open/floor/plating,
+/area/shuttle/ruin/oldstation_mining)
+"t" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/status_display/shuttle/directional/west{
+	shuttle_id = "oldstation_mining"
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"u" = (
+/obj/machinery/door/airlock/external/ruin{
+	name = "Mining Freighter External Airlock"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/effect/mapping_helpers/airlock/access/all/away/general,
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/ruin/oldstation_mining)
+"v" = (
+/obj/effect/turf_decal/stripes/white/full,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/machinery/door/poddoor{
+	id = "charliefreighter2";
+	name = "Cargo Blast Door"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/ruin/oldstation_mining)
+"w" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron,
+/area/shuttle/ruin/oldstation_mining)
+"x" = (
+/obj/machinery/button/door/directional/south{
+	req_access = list("away_general");
+	name = "Cargo Bay Door Control";
+	id = "charliefreighter1"
+	},
+/obj/effect/turf_decal/bot_white,
+/obj/machinery/light/small/directional/south,
+/obj/structure/closet/crate,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/maintenance/eight,
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"y" = (
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"z" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/conveyor_switch/oneway{
+	id = "charlie_shuttle";
+	name = "smelter conveyor"
+	},
+/turf/open/floor/iron,
+/area/shuttle/ruin/oldstation_mining)
+"A" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/ore_box,
+/turf/open/floor/iron,
+/area/shuttle/ruin/oldstation_mining)
+"B" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/broken_flooring/pile/directional/north,
+/turf/open/floor/plating,
+/area/shuttle/ruin/oldstation_mining)
+"C" = (
+/turf/template_noop,
+/area/template_noop)
+"D" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/turf/open/floor/plating,
+/area/shuttle/ruin/oldstation_mining)
+"E" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/broken_flooring/pile/directional/east,
+/obj/machinery/status_display/shuttle/directional/east{
+	shuttle_id = "oldstation_mining"
+	},
+/turf/open/floor/plating,
+/area/shuttle/ruin/oldstation_mining)
+"F" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"G" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 4
+	},
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/obj/item/wrench,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shuttle/ruin/oldstation_mining)
+"H" = (
+/obj/machinery/light/small/directional/west,
+/obj/structure/sign/warning/vacuum/directional/west{
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster/directional/west,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"I" = (
+/obj/machinery/door/airlock/external/ruin{
+	name = "Mining Freighter External Airlock"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/effect/mapping_helpers/airlock/access/all/away/general,
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/docking_port/mobile{
+	shuttle_id = "oldstation_mining";
+	name = "Beta Station Mining Shuttle";
+	port_direction = 2
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/ruin/oldstation_mining)
+"J" = (
+/obj/effect/turf_decal/bot_white,
+/obj/structure/closet/crate/cargo/mining,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/bag/ore,
+/obj/item/mining_scanner,
+/obj/item/gps/mining,
+/obj/item/pickaxe,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"K" = (
+/obj/machinery/button/door/directional/south{
+	req_access = list("away_general");
+	name = "Cargo Bay Door Control";
+	id = "charliefreighter1"
+	},
+/obj/effect/turf_decal/bot_white/left,
+/obj/machinery/light/small/directional/south,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/order_console/mining,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"L" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/machinery/door/airlock/mining{
+	name = "Mining Freighter Cockpit"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/away/general,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/ruin/oldstation_mining)
+"M" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "charlie_shuttle"
+	},
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"N" = (
+/obj/structure/rack,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 6
+	},
+/obj/item/flashlight,
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"P" = (
+/obj/machinery/airalarm/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/mapping_helpers/airalarm/away_general_access,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"Q" = (
+/obj/structure/broken_flooring/side/directional/north,
+/turf/open/floor/plating,
+/area/shuttle/ruin/oldstation_mining)
+"R" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron,
+/area/shuttle/ruin/oldstation_mining)
+"S" = (
+/obj/machinery/light/small/directional/west,
+/obj/machinery/light_switch/directional/west,
+/obj/structure/sign/warning/vacuum/directional/west{
+	pixel_y = 32
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"T" = (
+/obj/effect/turf_decal/bot_white,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/preopen,
+/obj/item/storage/medkit/ancient,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"U" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 6
+	},
+/obj/machinery/atmospherics/components/tank/air{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shuttle/ruin/oldstation_mining)
+"V" = (
+/obj/machinery/power/shuttle_engine/propulsion/burst/right{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/ruin/oldstation_mining)
+"W" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/ruin/oldstation_mining)
+"X" = (
+/obj/machinery/button/door/directional/north{
+	name = "Cargo Bay Door Control";
+	id = "charliefreighter2";
+	req_access = list("away_general")
+	},
+/obj/effect/turf_decal/bot_white,
+/obj/machinery/light/small/directional/north,
+/obj/machinery/mineral/processing_unit_console{
+	pixel_x = 28
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"Y" = (
+/obj/structure/rack,
+/obj/item/tank/internals/oxygen/yellow,
+/obj/item/clothing/mask/gas,
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark,
+/area/shuttle/ruin/oldstation_mining)
+"Z" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 5
+	},
+/obj/structure/cable,
+/obj/machinery/power/smes/engineering{
+	charge = 0
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shuttle/ruin/oldstation_mining)
+
+(1,1,1) = {"
+b
+g
+r
+r
+r
+V
+b
+"}
+(2,1,1) = {"
+W
+W
+h
+h
+h
+W
+W
+"}
+(3,1,1) = {"
+W
+i
+Z
+G
+U
+K
+W
+"}
+(4,1,1) = {"
+v
+q
+B
+R
+R
+J
+a
+"}
+(5,1,1) = {"
+v
+T
+R
+e
+Q
+q
+a
+"}
+(6,1,1) = {"
+v
+d
+R
+M
+z
+c
+a
+"}
+(7,1,1) = {"
+v
+q
+s
+k
+A
+o
+a
+"}
+(8,1,1) = {"
+W
+X
+w
+p
+E
+x
+W
+"}
+(9,1,1) = {"
+W
+W
+L
+W
+W
+W
+W
+"}
+(10,1,1) = {"
+u
+S
+F
+P
+t
+H
+I
+"}
+(11,1,1) = {"
+D
+N
+y
+n
+f
+Y
+D
+"}
+(12,1,1) = {"
+D
+D
+m
+l
+j
+D
+D
+"}
+(13,1,1) = {"
+C
+D
+D
+D
+D
+D
+C
+"}

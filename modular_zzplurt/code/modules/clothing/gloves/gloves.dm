@@ -46,9 +46,9 @@
 	name = "tactical maid sleeves"
 	desc = "'Tactical' cleaning gloves modified to fit certain shadekins."
 
-/obj/item/clothing/gloves/captain/old
+/obj/item/clothing/gloves/captain/centcom/old
 	name = "old captain's gloves"
-	desc = "Regal blue gloves, with a nice gold trim.. These pair seem to lack most of what modern captain gloves would have.. Still swanky."
+	desc = "Exotic green gloves, with a nice gold trim, a vintage pair.. These ones seem to lack most of what modern captain gloves would have.. Still swanky."
 	armor_type = null
 	siemens_coefficient = 0.5
 	cold_protection = HANDS

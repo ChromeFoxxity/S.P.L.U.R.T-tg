@@ -200,9 +200,17 @@
 	icon_state = "goner_offcap_y"
 
 /obj/item/clothing/head/helmet/old/oldstation
-	name = "degrading SWAT helmet"
-	desc = "A formerly robust helmet with the Nanotrasen logo emblazoned on the top. Due to degradation the helmet's visor obstructs the users ability to see long distances."
-	icon_state = "swat"
+	name = "degraded ancient helmet"
+	desc = "A ancient standard issue security helmet that was issued a century ago. Due to degradation the helmet's visor obstructs the users ability to see long distances, but at least it still protects the head."
+	icon = 'modular_zzplurt/icons/obj/clothing/head.dmi'
+	worn_icon = 'modular_zzplurt/icons/mob/clothing/head.dmi'
+	icon_state = "oldhelmet"
+	tint = 1
+
+/obj/item/clothing/head/helmet/old/oldstation/pristine
+	name = "ancient helmet"
+	desc = "A ancient standard issue security helmet that was issued a century ago, the fact it's pristine and untouched is a mystery. Protects the head from impacts."
+	tint = 0
 
 /obj/item/clothing/head/hooded/winterhood/security/redsec/oldstation
 	desc = "A red winter hood. Definitely not bulletproof, letalone armored either, especially not the part where your face goes."

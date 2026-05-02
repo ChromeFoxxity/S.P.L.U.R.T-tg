@@ -136,14 +136,18 @@
 	desc = "A blue helmet used to distinguish <i>non-combatant</i> \"PRESS\" members, like if anyone cares."
 	armor_type = /datum/armor/none
 
-/obj/item/clothing/suit/armor/vest/old/oldstation
-	name = "degrading armor vest"
-	desc = "Older generation slim Type I armored vest. Due to degradation over time the vest is far less maneuverable to move in."
-	icon_state = "armoralt"
-	slowdown = 0.8
+/obj/item/clothing/suit/hooded/wintercoat/centcom/old
+	name = "captain's winter coat"
+	desc = "A luxurious winter coat woven in the bright green and gold colours of Central Command, when they used to issue Station Captains green uniforms. It has a small pin in the shape of the Nanotrasen logo for a zipper."
+	armor_type = /datum/armor/winterhood_security
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/centcom/old
+
+/obj/item/clothing/head/hooded/winterhood/centcom/old
+	icon_state = "hood_centcom"
+	armor_type = /datum/armor/winterhood_security
 
 /obj/item/clothing/suit/hooded/wintercoat/security/redsec/oldstation
-	name = "security winter jacket"
+	name = "old security winter jacket"
 	desc = "A red winter coat, an older variant with no added armor. It glitters with a mild ablative coating and a robust air of authority. The zipper tab is a pair of jingly little handcuffs that get annoying after the first ten seconds."
 	armor_type = null
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/security/redsec/oldstation

@@ -1,14 +1,15 @@
 //Ancient cryogenic sleepers. Players become NT crewmen from a hundred year old space station, now on the verge of collapse.
 /obj/effect/mob_spawn/ghost_role/human/splurt/oldstation
-	name = "old cryogenics pod"
+	name = "occupied cryogenic freezer"
 	desc = "A humming cryo pod. You can barely recognise a uniform underneath the built up ice. The machine is attempting to wake up its occupant."
 	prompt_name = "an ancient crewman"
 	icon = 'modular_skyrat/modules/cryosleep/icons/cryogenics.dmi'
 	icon_state = "cryopod"
 	you_are_text = "You are a crewman working for Nanotrasen, stationed onboard a state of the art research station."
-	flavour_text = "You vaguely recall rushing into a cryogenics pod due to an oncoming radiation storm. \
-	The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
-	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod."
+	flavour_text = "You were an employee for Nanotrasen working on one a station called Space Station 3. You vaguely recall rushing into a \
+		cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that \
+		you would only be asleep for eight hours. As you open your eyes, everything seems rusted and broken, a dark feeling swells in your \
+		gut as you climb out of your pod."
 	important_text = "Work as a team with your fellow survivors and do not abandon them."
 	outfit = /datum/outfit/oldeng
 	spawner_job_path = /datum/job/ancient_crew
@@ -73,20 +74,17 @@
 /datum/outfit/oldstation/cap
 	name = "Ancient SS3 Captain"
 	id = /obj/item/card/id/away/old/oldstation/cap
-	uniform = /obj/item/clothing/under/rank/captain
-	head = /obj/item/clothing/head/hats/caphat
-	suit = /obj/item/clothing/suit/armor/vest/old/oldstation
+	uniform = /obj/item/clothing/under/rank/centcom/commander/old
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/laceup
-	gloves = /obj/item/clothing/gloves/captain/old
-	l_pocket = /obj/item/assembly/flash/handheld
-	r_pocket = /obj/item/melee/baton/telescopic/gold
+	gloves = /obj/item/clothing/gloves/captain/centcom/old
+	r_pocket = /obj/item/melee/baton/telescopic
 
 /datum/outfit/oldstation/sec
 	name = "Ancient SS3 Security Officer"
 	id = /obj/item/card/id/away/old/oldstation/sec
 	uniform = /obj/item/clothing/under/rank/security/nanotrasen
-	shoes = /obj/item/clothing/shoes/combat/old
+	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
@@ -113,7 +111,7 @@
 /datum/outfit/oldstation/service
 	name = "Ancient SS3 Service Worker"
 	id = /obj/item/card/id/away/old/oldstation/crew
-	uniform = /obj/item/clothing/under/rank/civilian/lawyer/bluesuit
+	uniform = /obj/item/clothing/under/costume/buttondown/slacks
 	suit = /obj/item/clothing/suit/toggle/chef
 	head = /obj/item/clothing/head/utility/chefhat
 	shoes = /obj/item/clothing/shoes/laceup
@@ -225,7 +223,7 @@
 	sechud_icon_state = "hudretrodoctor"
 
 /datum/id_trim/away/old/crew
-	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINTENANCE, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN)
+	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINTENANCE, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN, ACCESS_HYDROPONICS, ACCESS_JANITOR,)
 	assignment = "Service Worker"
 	sechud_icon_state = "hudretrocrew"
 

@@ -106,8 +106,8 @@
 	name = "tactical maid headband"
 	desc = "Tacticute modified to fit certain shadekins."
 
-/obj/item/clothing/head/beret/blueshield/bridgeofficer
-	name = "bridge officer's beret"
-	desc = "A blue beret with a silver badge, denoting its owner as a Lieutenant. It's nothing special, as one would've wanted."
-	greyscale_colors = "#3A4E7D#D4D7DF"
-	armor_type = null
+/obj/item/clothing/head/hats/centhat/old
+	name = "captain's hat"
+	desc = "A vintage green and gold captain's hat, back when they used to issue Station Captains green uniforms. Still good to be king."
+	armor_type = /datum/armor/hats_caphat
+	strip_delay = 6 SECONDS

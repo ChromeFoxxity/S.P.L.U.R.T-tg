@@ -20,16 +20,16 @@
 
 /obj/structure/closet/secure_closet/oldstation/captain
 	name = "captain's locker"
-	icon_state = "cap"
-	req_access = list(ACCESS_AWAY_COMMAND, ACCESS_ARMORY)
+	icon = 'modular_skyrat/master_files/icons/obj/closet.dmi'
+	icon_state = "cc"
+	req_access = list(ACCESS_AWAY_COMMAND)
 
 /obj/structure/closet/secure_closet/oldstation/captain/PopulateContents()
 	..()
-	new /obj/item/clothing/under/rank/captain(src)
-	new /obj/item/clothing/under/rank/captain/skirt(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/captain(src)
-	new /obj/item/clothing/suit/jacket/capjacket(src)
-	new /obj/item/clothing/head/hats/caphat(src)
+	new /obj/item/clothing/under/rank/centcom/commander/old(src)
+	new /obj/item/clothing/under/rank/centcom/centcom_skirt/old(src)
+	new /obj/item/clothing/suit/hooded/wintercoat/centcom/old(src)
+	new /obj/item/clothing/head/hats/centhat/old(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/storage/backpack/satchel/leather(src)

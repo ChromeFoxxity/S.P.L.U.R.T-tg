@@ -2,40 +2,43 @@
 	projectile_speed_multiplier = 1.15 // it'd be REALLY fast otherwise
 
 /obj/item/gun/energy/laser/retro
-	name ="\improper Type 1 laser gun"
-	desc = "The NT Type 1 Heat Delivery System, developed by Nanotrasen. A vintage laser gun that was one of the first mass-produced laser guns, at first \
-		it was manufactured with small cells that made it unreliable in the face of combat or for security work, but now after Nanotrasen's efforts, the gun \
-		now has a much better capacity charge on it, to make it more reliable on the field. However still has the downside of having to constantly recharge, \
-		which some Nanotrasen security officers still relied on ballistic weapons despite this being in the armory. However, due to it's age nowadays it is \
-		no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite \
-		amongst pirates and other outlaws."
+	name ="\improper NT-L2 \"Sentinel\" Laser Gun"
+	desc = "A laser gun that was Nanotrasen's first truly successful mass-produced laser weapon platform, designed as an improved successor to the \
+		poorly developed NT-L1 Pioneer. Featuring a significantly expanded power cell and enhanced internal systems, the Sentinel addressed many of the \
+		reliability issues that hindered earlier laser arms, becoming a dependable, if still somewhat power-hungry option for early corporate security \
+		forces. Though its frequent recharge requirements left many officers preferring traditional ballistic weaponry, the Sentinel proved durable, \
+		lethal, and remarkably easy to maintain. Its distinctive vintage construction now marks it as an aging relic of Nanotrasen's early \
+		military-industrial expansion, but surviving units remain highly valued by collectors, frontier militias, pirates, and criminal organizations alike."
 	icon = 'modular_zzplurt/icons/obj/weapons/guns/energy.dmi'
 
 /obj/item/gun/energy/laser/retro/old
-	desc = "The NT Type 1 Heat Delivery System, developed by Nanotrasen. One of their recent discoveries in technological advancements, this was one of the \
-		first ever models manufactured, which explains the old, small cell in it that makes it nearly useless, it was security's least favorite weapon on \
-		vintage stations alike, as they usually stayed with trusty police equipment like tasers and ballistic guns, but when ammo was low, they had no choice. \
-		Now it's been abandoned for so long that it's got a ruined paint job, and dusty from years of neglect. It looks pretty sad now.."
+	name ="\improper NT-L1 \"Pioneer\" Laser Gun"
+	desc = "One of Nanotrasen's earliest breakthroughs in directed-energy weaponry, the Pioneer represents the first generation of corporate laser arms. \
+		Its primitive internal power cell offered severely limited charge capacity, leaving it with poor ammunition endurance and making it unpopular among \
+		security personnel who favored more dependable ballistic and stun weaponry. While revolutionary for its time, the platform was quickly rendered \
+		obsolete by advancing energy systems. Most surviving examples now sit abandoned in aging armories, their worn paint and dust-covered frames serving \
+		as relics of Nanotrasen's first uncertain step into laser combat technology."
 	icon_state = "retro_old"
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun/old)
 
 /obj/item/gun/energy/laser/retro/old/upgraded
-	desc = "The NT Type 1 Heat Delivery System, developed by Nanotrasen. One of their recent discoveries in technological advancements, this was one of the \
-		first ever models manufactured, which explains the old, small cell in it that makes it nearly useless, it was security's least favorite weapon on \
-		vintage stations alike, as they usually stayed with trusty police equipment like tasers and ballistic guns, this one has had a cell upgrade, making \
-		it much more reliable! It was a design flaw that Nanotrasen was committed to fix as soon as possible for it's Type 1, but it was never mass-produced, \
-		and it's clean as well! Just look at that shine, just like it's brand new."
+	desc = "A restored version from Nanotrasen's earliest laser weapons program, this upgraded Pioneer has been retrofitted with a larger modernized power \
+		cell and refinished with a pristine factory-grade paint job. Though its improved charge capacity addresses many of the shortcomings that plagued the \
+		original design, the weapon still bears signs of its incomplete redevelopment, an ambitious modernization project that was ultimately abandoned before \
+		reaching full production. As a result, it remains a rare transitional relic: part historical artifact, part experimental upgrade, representing a path \
+		Nanotrasen considered but never fully pursued."
 	icon_state = "retro"
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
 
 /obj/item/gun/energy/e_gun/old
-	name = "prototype energy gun"
-	desc = "The K14-Multiphase Energy Gun, it was a recent prototype that has been manufactured, one of the first ever unique laser rifle that has multifaceted \
-		energy lens allowing the gun to alter the form of projectile it fires on command, it was never fully flushed out by scientists. But the blueprints \
-		were already sent out to Nanotrasen, who knows how far they've gone from this. It was unfortunately only halfway built, it hadn't had the chance to be \
-		mass-produced like earlier models, considering it's still the bare bones of the energy gun.. It hasn't even had a outer frame put on it yet which make it \
-		awkward to handle, cables sometimes get in the way, even the lights on the top of the gun indicating how charged it is aren't covered, which is why \
-		it's sometimes too distracting to accurately aim with."
+	name = "NT-XP3 \"Aegis\" Multiphase Prototype Rifle"
+	desc = "The Aegis was one of Nanotrasen's earliest and most ambitious prototype energy weapons, representing a major leap beyond conventional \
+		laser technology. Designed with an experimental multiphase lens array, the platform could dynamically alternate between lethal laser fire and \
+		non-lethal stun discharges, an unprecedented advancement for its era and the conceptual foundation for later standardized energy guns. Despite its \
+		groundbreaking versatility, the Aegis remained an incomplete developmental platform, rushed through early production stages before refinement could \
+		be finalized. Exposed wiring, unfinished external housing, unstable ergonomics, and visible charge indicators left the rifle cumbersome and awkward \
+		to wield in active combat. While never mass-produced, its blueprints and core technologies became instrumental in shaping Nanotrasen's future energy \
+		weapon programs, cementing the Aegis as a rare but pivotal precursor to the corporation's more polished and reliable laser and energy weapon lines."
 	icon = 'modular_zzplurt/icons/obj/weapons/guns/energy.dmi'
 
 /obj/item/gun/energy/laser/retro/old/upgraded/add_deep_lore()
@@ -44,5 +47,11 @@
 /obj/item/gun/energy/laser/retro/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_NANOTRASEN)
 
+/obj/item/gun/energy/laser/retro/old/give_manufacturer_examine()
+	AddElement(/datum/element/manufacturer_examine, COMPANY_NANOTRASEN)
+
 /obj/item/gun/energy/laser/retro/old/upgraded/give_manufacturer_examine()
+	AddElement(/datum/element/manufacturer_examine, COMPANY_NANOTRASEN)
+
+/obj/item/gun/energy/e_gun/old/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_NANOTRASEN)

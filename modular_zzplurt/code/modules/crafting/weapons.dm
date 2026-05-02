@@ -1,5 +1,5 @@
 /datum/crafting_recipe/retro_gun
-	name = "Type 1 laser gun upgrade"
+	name = "\"Pioneer\" laser gun upgrade"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/laser/retro/old/upgraded
 	reqs = list(/obj/item/gun/energy/laser/retro/old = 1,
