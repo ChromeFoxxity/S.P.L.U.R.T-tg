@@ -115,9 +115,39 @@
 	//Updating the visuals when the mob updates doesn't work (it disappears)
 	//RegisterSignals(held_mob, list(COMSIG_CARBON_APPLY_OVERLAY, COMSIG_CARBON_REMOVE_OVERLAY, COMSIG_ATOM_EXAMINE), PROC_REF(update_visuals))
 
-/obj/item/mob_holder/micro/release(del_on_release, display_messages)
-	UnregisterSignal(held_mob, list(COMSIG_MOB_EQUIPPED_ITEM, COMSIG_MOB_UNEQUIPPED_ITEM))
-	return ..()
+/obj/item/mob_holder/micro/release(display_messages = TRUE)
+	if(!held_mob)
+		if(!QDELETED(src))
+			qdel(src)
+		return FALSE
+
+	var/mob/living/released_mob = held_mob
+	var/turf/release_turf = get_turf(src)
+	if(isliving(loc))
+		var/mob/living/captor = loc
+		if(display_messages)
+			to_chat(captor, span_warning("[released_mob] wriggles free!"))
+		captor.dropItemToGround(src)
+		release_turf = get_turf(src) || get_turf(captor)
+
+	UnregisterSignal(released_mob, list(COMSIG_MOB_EQUIPPED_ITEM, COMSIG_MOB_UNEQUIPPED_ITEM))
+	held_mob = null
+
+	if(!release_turf)
+		release_turf = get_turf(released_mob)
+	if(!release_turf)
+		release_turf = get_turf(loc)
+	if(!release_turf)
+		CRASH("/obj/item/mob_holder/micro/release could not resolve a turf for [released_mob]")
+
+	released_mob.forceMove(release_turf)
+	released_mob.reset_perspective()
+	released_mob.setDir(SOUTH)
+	if(display_messages)
+		released_mob.visible_message(span_warning("[released_mob] uncurls!"))
+	if(!QDELETED(src))
+		qdel(src)
+	return TRUE
 
 /obj/item/mob_holder/micro/Destroy()
 	UnregisterSignal(src, COMSIG_ATOM_EXAMINE)
@@ -140,6 +170,12 @@
 		return
 	visible_message(span_warning("[src] escapes [carrier]!"))
 	release()
+
+/obj/item/mob_holder/micro/relaymove(mob/living/mover, direction)
+	if(mover==held_mob)
+		return
+	return ..() //This prevents movemement while being held
+	// This looks like a bandaid solution but it works at least; Would probably be better off in its parent file
 
 /obj/item/mob_holder/micro/assume_air(datum/gas_mixture/giver)
 	var/turf/location = get_turf(src)
@@ -181,7 +217,7 @@
 								null,
 								list(M)
 				)
-				to_chat(M, span_userdanger("[user] slams their fist down on you!")) // Seems I was wrong, I can do better
+				to_chat(M, span_userdanger("[user] slams their fist down on you!"))
 				playsound(loc, 'sound/items/weapons/punch1.ogg', 50, 1)
 				M.adjust_brute_loss(5)
 			if("disarm")
