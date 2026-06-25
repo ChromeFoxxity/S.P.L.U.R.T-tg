@@ -244,13 +244,7 @@
 /area/space)
 "ahP" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/floor/plating,
+/turf/open/chasm/icemoon/complex,
 /area/awaymission/complex/exterior)
 "ahQ" = (
 /mob/living/basic/trooper/complex/ranged/quartermaster,
@@ -4066,6 +4060,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/bronze/filled,
 /area/space)
+"czH" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plating/snowed/complex,
+/area/awaymission/complex/exterior)
 "czS" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/wood/large,
@@ -13736,6 +13739,13 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/dark,
 /area/awaymission/complex/mainfacility/security_east)
+"hMT" = (
+/obj/machinery/power/floodlight,
+/obj/structure/railing/corner/end{
+	dir = 2
+	},
+/turf/open/misc/asteroid/snow/complex,
+/area/awaymission/complex/exterior)
 "hNb" = (
 /obj/effect/spawner/random/trash/graffiti,
 /turf/open/floor/plating,
@@ -14401,6 +14411,13 @@
 /obj/machinery/power/emitter,
 /turf/open/floor/iron/smooth_large,
 /area/awaymission/complex/engfacility/storage/secure)
+"ilr" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/chasm/icemoon/complex,
+/area/awaymission/complex/exterior)
 "ilI" = (
 /obj/structure/fence/corner{
 	dir = 9
@@ -17616,6 +17633,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/awaymission/complex/mainfacility/medical/practitioner)
+"jUX" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/snowed/complex,
+/area/awaymission/complex/exterior)
 "jVj" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -22554,7 +22578,7 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/snowed/complex,
 /area/awaymission/complex/exterior)
 "mRN" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -26919,6 +26943,12 @@
 	},
 /turf/open/floor/plating/snowed/complex,
 /area/space)
+"prk" = (
+/obj/structure/railing/corner/end/flip{
+	dir = 1
+	},
+/turf/open/misc/asteroid/snow/complex,
+/area/awaymission/complex/exterior)
 "prm" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/storage/backpack,
@@ -31460,6 +31490,15 @@
 	},
 /turf/open/floor/wood/tile,
 /area/awaymission/complex/mainfacility/admin/office)
+"rYd" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/snowed/complex,
+/area/awaymission/complex/exterior)
 "rYI" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -35185,6 +35224,13 @@
 /obj/structure/closet/cabinet,
 /turf/open/floor/wood/large,
 /area/space)
+"ugr" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/chasm/icemoon/complex,
+/area/awaymission/complex/exterior)
 "ugv" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -35971,6 +36017,11 @@
 /obj/structure/cable/layer1,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
+"uAy" = (
+/obj/structure/flora/grass/both/style_random,
+/obj/structure/railing/corner/end/flip,
+/turf/open/misc/asteroid/snow/complex,
+/area/awaymission/complex/exterior)
 "uAQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/spacevine,
@@ -38874,6 +38925,15 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/bronze/filled,
 /area/space)
+"weg" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plating/snowed/complex,
+/area/awaymission/complex/exterior)
 "weB" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -40341,7 +40401,7 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/snowed/complex,
 /area/awaymission/complex/exterior)
 "wUK" = (
 /obj/effect/turf_decal/trimline/red/real_red/filled/line{
@@ -41757,6 +41817,12 @@
 /obj/structure/bookcase/random,
 /turf/open/floor/mineral/plastitanium,
 /area/awaymission/complex/mainfacility/syndicate)
+"xNy" = (
+/obj/structure/railing/corner/end{
+	dir = 1
+	},
+/turf/open/misc/asteroid/snow/complex,
+/area/awaymission/complex/exterior)
 "xNB" = (
 /obj/structure/barricade/wooden/snowed,
 /obj/structure/barricade/wooden/crude/snow,
@@ -44863,34 +44929,34 @@ awd
 fOc
 bGF
 awd
-maQ
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-awd
-awd
+hMT
+rYd
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+ilr
+jUX
+prk
 awd
 bGF
 swH
@@ -45121,6 +45187,7 @@ awd
 rEs
 awd
 mRD
+hkS
 ahP
 ahP
 ahP
@@ -45145,8 +45212,7 @@ ahP
 ahP
 ahP
 ahP
-ahP
-ahP
+hkS
 wUA
 awd
 bGF
@@ -45377,34 +45443,34 @@ awd
 awd
 bGF
 awd
-awd
-gZn
-awd
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-oaL
-awd
-awd
-awd
+uAy
+czH
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+ugr
+weg
+xNy
 awd
 wzp
 awd
@@ -45636,7 +45702,7 @@ xXo
 awd
 awd
 awd
-awd
+oaL
 oaL
 oaL
 oaL
