@@ -47,7 +47,7 @@
 
 	// if the target has the preference off, stop the interaction.
 	if(get_size(target) > RESIZE_TINY)
-		if(target.client.prefs?.read_preference(/datum/preference/toggle/erp/stomping) == FALSE)
+		if(target.client?.prefs?.read_preference(/datum/preference/toggle/erp/stomping) == FALSE)
 			return FALSE
 
 	if(ishuman(src))
@@ -69,9 +69,9 @@
 			return TRUE
 
 		if(COMPARE_SIZES(user, target) >= 2)
-			log_combat(user, target, "stepped on", addition="[resolve_intent_name(user.combat_mode)] trample")
+			log_combat(user, target, "stepped on", addition="[resolve_intent_name(user)] trample")
 			if((user.mobility_flags & MOBILITY_MOVE) && !user.buckled)
-				switch(resolve_intent_name(user.combat_mode))
+				switch(resolve_intent_name(user))
 					if("disarm")
 						now_pushing = 0
 						user.forceMove(target.loc)
@@ -163,7 +163,7 @@
 //Proc for scaling brute damage on size difference
 /mob/living/carbon/proc/sizediffBruteloss(mob/living/carbon/target)
 	var/B = COMPARE_SIZES(src, target) * 3 //macro divided by micro, times 3
-	target.adjustBruteLoss(B) //final result in brute loss
+	target.adjust_brute_loss(B) //final result in brute loss
 
 //Proc for instantly grabbing valid size difference. Code optimizations soon(TM)
 /*

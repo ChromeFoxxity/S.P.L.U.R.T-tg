@@ -55,6 +55,14 @@
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
 /turf/open/floor/iron/herringbone,
 /area/ruin/space/has_grav/interdyne)
+"aR" = (
+/obj/machinery/button/door{
+	id = "interdyne_vault";
+	name = "secret button";
+	pixel_y = 25
+	},
+/turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
+/area/ruin/space/has_grav/interdyne)
 "ba" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -120,7 +128,8 @@
 "bQ" = (
 /obj/machinery/button/door{
 	id = "interdyne_vault";
-	name = "secret button"
+	name = "secret button";
+	pixel_y = 25
 	},
 /obj/structure/dresser,
 /turf/open/floor/carpet/royalblack,
@@ -3652,11 +3661,6 @@
 	},
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/interdyne)
-"UC" = (
-/obj/structure/table/reinforced/titaniumglass,
-/obj/item/infuser_book,
-/turf/open/floor/iron/dark,
-/area/ruin/space/has_grav/interdyne)
 "UD" = (
 /obj/machinery/computer/operating{
 	dir = 1
@@ -3872,7 +3876,6 @@
 /obj/machinery/door/airlock/silver{
 	name = "Breakroom"
 	},
-/obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4573,7 +4576,7 @@ jD
 kP
 nn
 nn
-nn
+aR
 nn
 JE
 JE
@@ -5285,7 +5288,7 @@ LG
 gO
 nn
 wC
-UC
+KQ
 Vz
 ma
 sZ
