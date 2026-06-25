@@ -12274,7 +12274,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/awaymission/complex/hydrofacility)
 "gVl" = (
-/turf/closed/wall/ice,
+/turf/closed/wall/r_wall,
 /area/awaymission/complex/exterior/atmospherics)
 "gVv" = (
 /obj/structure/spider/stickyweb,
@@ -15120,6 +15120,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 6
 	},
+/obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility/cargo/office)
 "iHf" = (
@@ -20746,7 +20747,6 @@
 /obj/effect/decal/cleanable/blood/trail{
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/pistol/nt_glock/empty,
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -21171,6 +21171,9 @@
 	dir = 8
 	},
 /area/awaymission/complex/mainfacility/cargo)
+"lZx" = (
+/turf/closed/wall/r_wall,
+/area/awaymission/complex/exterior)
 "lZS" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/tank_holder/oxygen,
@@ -23150,11 +23153,11 @@
 /turf/open/floor/iron,
 /area/awaymission/complex/engfacility/solar)
 "nkC" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
 	},
 /obj/machinery/newscaster/directional/east,
+/obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/wood/large,
 /area/awaymission/complex/mainfacility/cargo/directoroffice)
 "nkL" = (
@@ -24909,11 +24912,6 @@
 	initial_gas_mix = null
 	},
 /area/space)
-"ofD" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/filingcabinet/filingcabinet,
-/turf/open/floor/iron,
-/area/space)
 "ofJ" = (
 /obj/effect/turf_decal/trimline/blue/filled/warning{
 	dir = 4
@@ -25496,7 +25494,7 @@
 /area/awaymission/complex/cave)
 "ouM" = (
 /obj/effect/decal/cleanable/plasma,
-/turf/closed/wall/ice,
+/turf/open/floor/plating,
 /area/space)
 "ouZ" = (
 /mob/living/basic/trooper/complex/ranged/security/smg/disabler,
@@ -26552,6 +26550,9 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/wood/large,
 /area/awaymission/complex/mainfacility/admin/cap)
+"pga" = (
+/turf/closed/wall/r_wall,
+/area/space)
 "pgc" = (
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/machinery/microwave,
@@ -40870,7 +40871,7 @@
 	},
 /area/awaymission/complex/mainfacility)
 "xkv" = (
-/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/turf/closed/wall/r_wall/plastitanium/nodiagonal,
 /area/awaymission/complex/mainfacility/syndicate)
 "xkT" = (
 /turf/open/floor/wood,
@@ -45993,7 +45994,7 @@ obG
 obG
 dEr
 rsu
-ofD
+kes
 rvn
 qcx
 obG
@@ -90734,7 +90735,7 @@ oEt
 awd
 gZn
 awd
-awd
+oEt
 awd
 awd
 awd
@@ -90988,12 +90989,12 @@ awd
 awd
 awd
 awd
-awd
 aBe
-awd
-oEt
-awd
-awd
+aBe
+aBe
+aBe
+aBe
+gZn
 awd
 awd
 awd
@@ -91244,13 +91245,13 @@ awd
 awd
 awd
 duh
-awd
 aBe
 aBe
 aBe
 aBe
 aBe
-gZn
+aBe
+aBe
 aBe
 aBe
 awd
@@ -91502,12 +91503,12 @@ swH
 awd
 awd
 aBe
-aBe
-aBe
-aBe
-aBe
-aBe
-aBe
+lZx
+lZx
+lZx
+lZx
+lZx
+lZx
 aBe
 vYX
 vYX
@@ -91759,12 +91760,12 @@ awd
 awd
 jUs
 aBe
-luq
+pga
 ouM
-luq
-luq
-luq
-luq
+dLC
+mdr
+mdr
+pga
 aBe
 vYX
 fpt
@@ -92015,15 +92016,15 @@ awd
 awd
 jUs
 naV
-aBe
+naV
 djw
 joK
 gZZ
 dLC
 dLC
-luq
-luq
-luq
+pga
+pga
+pga
 giq
 uNB
 rcz
@@ -92528,8 +92529,8 @@ awd
 oEt
 wxy
 naV
-aBe
-aBe
+naV
+naV
 aMr
 joK
 bwk
@@ -92786,15 +92787,15 @@ awd
 wxy
 aBe
 aBe
-aBe
+naV
 djw
 uey
 ukE
 iaD
 mdr
-luq
-luq
-luq
+pga
+pga
+pga
 gVl
 jxI
 lQr
@@ -93044,12 +93045,12 @@ aBe
 aBe
 aBe
 aBe
-luq
+pga
 nSh
 xhd
 sCd
-luq
-luq
+mdr
+pga
 aBe
 aBe
 aBe
@@ -93301,12 +93302,12 @@ aBe
 aBe
 aBe
 aBe
-luq
-luq
-luq
-luq
-luq
-aBe
+pga
+pga
+pga
+pga
+pga
+lZx
 aBe
 aBe
 aBe
