@@ -33,3 +33,45 @@
 		return
 	to_chat(user, span_notice("You write [writing] on [user == M ? "your" : "[M]'s"] [selected_bodypart.name]."))
 	selected_bodypart.written_text += writing
+
+/obj/item/pen/fountain/syndicate
+	name = "suspicious fountain pen"
+	desc = "It's a suspiciously blood red fountain pen. The nib is quite sharp."
+	icon = 'modular_zzplurt/icons/obj/service/bureaucracy.dmi'
+	icon_state = "pen-fountain-syndie"
+	force = 5
+	throwforce = 5
+	throw_speed = 4
+	sharpness = SHARP_EDGED
+	resistance_flags = FIRE_PROOF
+	embed_type = /datum/embedding/pen/syndicate
+
+/datum/embedding/pen/syndicate
+	embed_chance = 50
+
+/obj/item/pen/fountain/syndicate/gold
+	name = "suspicious gold fountain pen"
+	desc = "It's a suspiciously expensive blood red fountain pen made with pure gold, and a very smooth metal. The nib is extremely paper-sharp, you feel \
+		like it'd be terrible to write with, but oddly enough it writes really smoothly."
+	icon = 'modular_zzplurt/icons/obj/service/bureaucracy.dmi'
+	icon_state = "pen-fountain-syndie_gold"
+	force = 10
+	throwforce = 10
+	throw_speed = 6
+	custom_materials = list(/datum/material/gold = SMALL_MATERIAL_AMOUNT*7.5)
+	embed_type = /datum/embedding/pen/syndicate_sharper
+
+/obj/item/pen/fountain/syndicate/silver
+	name = "suspicious silver fountain pen"
+	desc = "It's a suspiciously expensive blood red fountain pen made with pure silver, and a very smooth metal. The nib is pretty paper-sharp, you feel \
+		like it'd be terrible to write with, but oddly enough it writes really smoothly."
+	icon = 'modular_zzplurt/icons/obj/service/bureaucracy.dmi'
+	icon_state = "pen-fountain-syndie_silver"
+	force = 8
+	throwforce = 8
+	throw_speed = 5
+	custom_materials = list(/datum/material/silver = SMALL_MATERIAL_AMOUNT*7.5)
+	embed_type = /datum/embedding/pen/syndicate_sharper
+
+/datum/embedding/pen/syndicate_sharper
+	embed_chance = 75
