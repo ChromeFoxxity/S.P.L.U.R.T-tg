@@ -4289,7 +4289,7 @@
 /obj/effect/decal/cleanable/blood/trail{
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/pistol/nt_glock/empty,
+/obj/item/gun/ballistic/automatic/pistol/sec_glock/empty,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility/dorms)
@@ -12163,7 +12163,7 @@
 /area/awaymission/complex/mainfacility/syndicate)
 "Pc" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/item/gun/ballistic/automatic/pistol/nt_glock,
+/obj/item/gun/ballistic/automatic/pistol/sec_glock,
 /turf/open/floor/iron,
 /area/awaymission/complex/mainfacility)
 "Pd" = (

@@ -69,7 +69,7 @@
 		if("detach")
 			if(detachable)
 				chassis.ui_selected_module_index = null
-				if(equipment_flags & NOT_ABLE_TO_REMOVE_FROM_MECHA) //SPLURT EDIT
+				if(action_type & NOT_ABLE_TO_REMOVE_FROM_MECHA) //SPLURT EDIT
 				return //SPLURT EDIT
 			detach(get_turf(src))
 			. = TRUE

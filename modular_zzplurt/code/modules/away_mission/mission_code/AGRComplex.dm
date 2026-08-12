@@ -86,27 +86,38 @@
 	<br>You may view intelligence reports from your predecessors in the filing cabinet in your office.
 	"}
 
-/obj/item/gun/ballistic/automatic/pistol/nt_glock/lethal
-	spawn_magazine_type = /obj/item/ammo_box/magazine/m9mm
-
 /obj/item/ammo_casing/c10mm/spent
 	projectile_type = null
 
 /obj/item/ammo_casing/c9mm/spent
 	projectile_type = null
 
-/obj/item/ammo_casing/c460rowland/spent
-	projectile_type = null
-
 /obj/item/ammo_casing/c46x30mm/spent
 	projectile_type = null
 
+/obj/item/ammo_casing/a50ae/spent
+	projectile_type = null
+
+/obj/item/ammo_casing/c9mm/security/spent
+	projectile_type = null
+
 /obj/machinery/camera/autoname/complex
+	name = "Complex Camera"
+	desc = "A heavily frosted camera. Perhaps you should smile and wave to it."
 	network = list("Complex")
 	use_power = NO_POWER_USE
 	start_active = TRUE
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
+
+/obj/machinery/camera/preset/complex
+	name = "Complex Camera"
+	desc = "A heavily frosted camera. Perhaps you should smile and wave to it."
+	network = list("Complex")
+	use_power = NO_POWER_USE
+	start_active = TRUE
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/preset/complex, 0)
 
 /obj/machinery/computer/security/complex
 	name = "facility monitoring console"
@@ -265,16 +276,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 /datum/id_trim/job/nanotrasen_consultant/complex
 	assignment = "Nanotrasen Representative"
 	department_color = COLOR_CENTCOM_BLUE
-	subdepartment_color = COLOR_CENTCOM_BLUE
+	subdepartment_color = COLOR_TEAL
 
 /datum/outfit/job/nanotrasen_consultant/complex
 	name = "Complex Nanotrasen Representative"
 	id_trim = /datum/id_trim/job/nanotrasen_consultant/complex
-	id = /obj/item/card/id/advanced/centcom
-	uniform = /obj/item/clothing/under/rank/centcom/commander
-	suit = /obj/item/clothing/suit/hooded/wintercoat/centcom/nt_consultant
+	uniform = /obj/item/clothing/under/rank/nanotrasen/commander
+	suit = /obj/item/clothing/suit/hooded/wintercoat/nanotrasen/gold
 	head = null
-	mask = /obj/item/clothing/mask/gas/atmos/centcom
+	mask = /obj/item/clothing/mask/gas/atmos/nanotrasen
 	belt = null
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = null
@@ -525,10 +535,38 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	outfit = /datum/outfit/job/prisoner/complex/coatless
 
 /datum/outfit/job/prisoner/complex/coatless
-	name = "Coatless - Complex Logistics Specialist"
+	name = "Coatless - Complex Convict"
 	suit = null
 	mask = null
 	gloves = null
+
+/obj/effect/mob_spawn/corpse/human/complex/botanist
+	name = "Complex Hydroponicist"
+	outfit = /datum/outfit/job/botanist/complex
+
+/datum/id_trim/job/botanist/complex
+	assignment = "Hydroponicist"
+	department_color = COLOR_SERVICE_LIME
+	subdepartment_color = COLOR_SERVICE_LIME
+
+/datum/outfit/job/botanist/complex
+	name = "Complex Hydroponicist"
+	id_trim = /datum/id_trim/job/botanist/complex
+	suit = /obj/item/clothing/suit/hooded/wintercoat/hydro
+	mask = /obj/item/clothing/mask/gas/glass
+	gloves = /obj/item/clothing/gloves/botanic_leather
+	shoes = /obj/item/clothing/shoes/winterboots
+	belt = null
+
+/obj/effect/mob_spawn/corpse/human/complex/botanist/coatless
+	name = "Coatless - Complex Hydroponicist"
+	outfit = /datum/outfit/job/cargo_tech/complex/coatless
+
+/datum/outfit/job/botanist/complex/coatless
+	name = "Coatless - Complex Hydroponicist"
+	suit = /obj/item/clothing/suit/apron/overalls
+	mask = null
+	shoes = /obj/item/clothing/shoes/sneakers/black
 
 /obj/effect/mob_spawn/corpse/human/complex/cargo_tech
 	name = "Complex Logistics Specialist"
@@ -824,8 +862,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	)
 
 /mob/living/basic/trooper/complex/ranged/gp9
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/nt_glock)
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/nt_glock
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/sec_glock)
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/sec_glock
 	casingtype = /obj/item/ammo_casing/c9mm
 	projectilesound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
 
@@ -860,6 +898,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	maxHealth = 150
 	health = 150
 	death_sound = 'sound/items/sec_hailer/sec_death.ogg'
+
+/mob/living/basic/trooper/complex/security/survivor
+	name = "Complex Security"
+	desc = "An employee of Nanotrasen, apart of the AGR Complex staff, one of the only ones who actually made it out alive."
+
+/mob/living/basic/trooper/complex/security/survivor/Initialize(mapload)
+	. = ..()
+	var/datum/callback/retaliate_callback = CALLBACK(src, PROC_REF(ai_retaliate_behaviour))
+	AddComponent(/datum/component/ai_retaliate_advanced, retaliate_callback)
 
 /mob/living/basic/trooper/complex/security/armored
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/security/armored
@@ -912,8 +959,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	name = "Complex Security"
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/security
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/nt_glock/lethal)
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/nt_glock/lethal
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/sec_glock)
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/sec_glock
 	casingtype = /obj/item/ammo_casing/c9mm
 	maxHealth = 150
 	health = 150
@@ -957,8 +1004,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 /mob/living/basic/trooper/complex/ranged/security/armored
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/security/armored
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/security/armored
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/nt_glock)
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/nt_glock
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/sec_glock)
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/sec_glock
 	casingtype = /obj/item/ammo_casing/c9mm
 	maxHealth = 175
 	health = 175
@@ -1027,8 +1074,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 
 /mob/living/basic/trooper/complex/prisoner/baseball_bat
 	loot = list(/obj/item/melee/baseball_bat)
-	attack_verb_continuous = "stabs"
-	attack_verb_simple = "stabbed"
+	attack_verb_continuous = "whacks"
+	attack_verb_simple = "battered"
 	melee_damage_lower = 12
 	melee_damage_upper = 12
 	attack_sound = 'sound/items/weapons/genhit1.ogg'
@@ -1047,6 +1094,31 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	melee_damage_upper = 30
 	var/projectile_deflect_chance = 25
 	melee_damage_type = STAMINA
+
+/mob/living/basic/trooper/complex/botanist
+	name = "Complex Hydroponicist"
+	corpse = /obj/effect/mob_spawn/corpse/human/complex/botanist
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/botanist
+
+/mob/living/basic/trooper/complex/botanist/hatchet
+	loot = list(/obj/item/hatchet)
+	attack_verb_continuous = "stabs"
+	attack_verb_simple = "stabbed"
+	melee_damage_lower = 12
+	melee_damage_upper = 12
+	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SLASH
+	r_hand = /obj/item/hatchet
+
+/mob/living/basic/trooper/complex/botanist/baseball_bat
+	loot = list(/obj/item/melee/baseball_bat)
+	attack_verb_continuous = "whacks"
+	attack_verb_simple = "battered"
+	melee_damage_lower = 12
+	melee_damage_upper = 12
+	attack_sound = 'sound/items/weapons/genhit1.ogg'
+	attack_vis_effect = ATTACK_EFFECT_SMASH
+	r_hand = /obj/item/melee/baseball_bat
 
 /mob/living/basic/trooper/complex/cargotech
 	name = "Complex Logistics Specialist"
@@ -1126,8 +1198,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/captain
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/complex/captain
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/m45a5)
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/m45a5
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/deagle/gold)
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/deagle/gold
 	casingtype = /obj/item/ammo_casing/c460rowland
 	maxHealth = 250
 	health = 250
@@ -1176,6 +1248,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	icon = 'icons/obj/clothing/under/rnd.dmi'
 	worn_icon = 'icons/mob/clothing/under/rnd.dmi'
 	icon_state = "genetics_skirt"
+
+//Windoor
+/obj/machinery/door/window/clockwork
+	name = "brass windoor"
+	desc = "A thin door with translucent brass paneling."
+	icon_state = "clockwork"
+	base_state = "clockwork"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/clockwork/left, 0)
 
 /area/awaymission/complex
 	name = "Complex"
@@ -1242,6 +1323,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	icon_state = "commons"
 	outdoors = TRUE
 
+/area/awaymission/complex/exterior/lights/outpost
+	name = "Nanotrasen Outpost Exterior Lights"
+	icon_state = "commons"
+	outdoors = TRUE
+
 /area/awaymission/complex/cave
 	name = "Complex Caves"
 	icon = 'icons/area/areas_away_missions.dmi'
@@ -1276,6 +1362,84 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/complex, 0)
 	requires_power = TRUE
 	static_lighting = TRUE
 	base_lighting_alpha = 0
+
+/area/awaymission/complex/storagestation/garage
+	name = "Storage Substation Garage"
+
+/area/awaymission/complex/stronghold
+	name = "Cult Stronghold"
+	icon = 'icons/area/areas_away_missions.dmi'
+	icon_state = "awaycontent8"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
+/area/awaymission/complex/cabin
+	name = "Abandoned Cabin"
+	icon_state = "commons"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
+/area/awaymission/complex/outpost
+	name = "Nanotrasen Outpost"
+	icon = 'icons/area/areas_station.dmi'
+	icon_state = "gateway"
+
+/area/awaymission/complex/outpost/lounge
+	name = "Outpost Lounge"
+	icon_state = "lounge"
+
+/area/awaymission/complex/outpost/supply
+	name = "Outpost Storage"
+	icon_state = "mining_storage"
+
+/area/awaymission/complex/outpost/barracks
+	name = "Outpost Barracks"
+	icon_state = "dorms"
+
+/area/awaymission/complex/outpost/power
+	name = "Outpost Power Station"
+	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
+	icon_state = "power_room"
+
+/area/awaymission/complex/custodfacility
+	name = "Custodial Facility"
+	icon_state = "janitor"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
+/area/awaymission/complex/custodfacility/power
+	name = "Custodial Facility Power Station"
+	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
+	icon_state = "power_room"
+
+/area/awaymission/complex/custodfacility
+	name = "Custodial Facility"
+	icon_state = "janitor"
+	requires_power = TRUE
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+
+/area/awaymission/complex/custodfacility/storage
+	name = "Custodial Facility Storage"
+
+/area/awaymission/complex/custodfacility/breakroom
+	name = "Custodial Facility Break Room"
+
+/area/awaymission/complex/custodfacility/hazardous
+	name = "Custodial Facility Hazardous Disposal"
+
+/area/awaymission/complex/custodfacility/disposal
+	name = "Custodial Facility Waste Disposal"
+
+/area/awaymission/complex/custodfacility/lights
+	name = "Custodial Facility Exterior Lights"
+	icon_state = "commons"
+	always_unpowered = FALSE
+	power_light = TRUE
+	requires_power = FALSE
 
 /area/awaymission/complex/hydrofacility
 	name = "Hydroponics Facility"

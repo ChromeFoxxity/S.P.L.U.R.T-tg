@@ -692,8 +692,8 @@
 		hud_used.build_hand_slots()
 
 //GetAllContents that is reasonable and not stupid
-/mob/living/proc/get_all_gear(equipment_flags = INCLUDE_ACCESSORIES|INCLUDE_PROSTHETICS, recursive = TRUE)
-	var/list/processing_list = get_equipped_items(INCLUDE_POCKETS|INCLUDE_HELD|equipment_flags)
+/mob/living/proc/get_all_gear(action_type = INCLUDE_ACCESSORIES|INCLUDE_PROSTHETICS, recursive = TRUE)
+	var/list/processing_list = get_equipped_items(INCLUDE_POCKETS|INCLUDE_HELD|action_type)
 	list_clear_nulls(processing_list) // handles empty hands
 	var/i = 0
 	while(i < length(processing_list))
@@ -703,8 +703,8 @@
 	return processing_list
 
 /// Returns a list of things that the provided mob has, including any storage-capable implants.
-/mob/living/proc/gather_belongings(equipment_flags = INCLUDE_ACCESSORIES|INCLUDE_PROSTHETICS, recursive = TRUE)
-	var/list/belongings = get_all_gear(equipment_flags, recursive)
+/mob/living/proc/gather_belongings(action_type = INCLUDE_ACCESSORIES|INCLUDE_PROSTHETICS, recursive = TRUE)
+	var/list/belongings = get_all_gear(action_type, recursive)
 	for (var/obj/item/implant/storage/internal_bag in implants)
 		belongings += internal_bag.contents
 	return belongings
