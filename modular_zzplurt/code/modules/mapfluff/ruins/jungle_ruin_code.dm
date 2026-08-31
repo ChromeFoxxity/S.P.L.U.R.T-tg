@@ -1,6 +1,4 @@
 /// LUNA ///
-
-// EFFIGY PROMO SPECIFIC - Soft-replacing the OG SR version too. While you're here, why not check out Brandish 2? It's pretty good.
 /obj/item/melee/sabre/luna/Initialize(mapload)
 	. = ..()
 	new /obj/item/claymore/cutlass/luna(src.loc)
@@ -10,9 +8,9 @@
 /obj/item/claymore/cutlass/luna
 	name = "Luna"
 	desc = "Forged by a madwoman, in recognition of a time, a place - she thought almost real. Various etchings of moons are inscribed onto the surface, different phases marking different parts of the blade."
-	icon = 'local/icons/obj/weapons/sword.dmi'
-	lefthand_file = 'local/icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'local/icons/mob/inhands/weapons/swords_righthand.dmi'
+	icon = 'modular_zzplurt/icons/obj/weapons/sword.dmi'
+	lefthand_file = 'modular_zzplurt/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'modular_zzplurt/icons/mob/inhands/weapons/swords_righthand.dmi'
 	icon_state = "luna"
 	inhand_icon_state = "luna"
 	slot_flags = null // Let's not.

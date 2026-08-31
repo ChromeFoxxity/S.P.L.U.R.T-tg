@@ -15,16 +15,15 @@
 	configured_transport_id = SIGMA_OCTANTIS_LINE_1
 
 /obj/machinery/computer/tram_controls/sigma_octantis
-	icon = 'local/icons/obj/machines/computer.dmi'
 	icon_screen = SIGMA_OCTANTIS_LINE_1
 	specific_transport_id = SIGMA_OCTANTIS_LINE_1
 
 /obj/machinery/transport/destination_sign/sigma_octantis
-	icon = 'local/icons/obj/tram/tram_display.dmi'
+	icon = 'modular_zzplurt/icons/obj/tram/tram_display.dmi'
 	configured_transport_id = SIGMA_OCTANTIS_LINE_1
 
 /obj/machinery/transport/destination_sign/indicator/sigma_octantis
-	icon = 'local/icons/obj/tram/tram_indicator.dmi'
+	icon = 'modular_zzplurt/icons/obj/tram/tram_indicator.dmi'
 	configured_transport_id = SIGMA_OCTANTIS_LINE_1
 
 /obj/machinery/transport/destination_sign/Initialize(mapload)
@@ -52,8 +51,8 @@
 	tgui_icons = list("Supermatter Satellite" = "satellite")
 
 /obj/machinery/door/airlock/tram/half
-	icon = 'local/icons/obj/doors/airlocks/tram/tram-half.dmi'
-	overlays_file = 'local/icons/obj/doors/airlocks/tram/tram-half-overlays.dmi'
+	icon = 'modular_zzplurt/icons/obj/doors/airlocks/tram/tram-half.dmi'
+	overlays_file = 'modular_zzplurt/icons/obj/doors/airlocks/tram/tram-half.dmi'
 	multi_tile = FALSE
 	bound_width = 32
 
