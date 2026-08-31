@@ -103,3 +103,13 @@ endmap
 
 map eventmap
 endmap
+
+##EFFIGY MAPS##
+
+map rimpoint
+	votable
+endmap
+
+map sigma_octantis
+	votable
+endmap

@@ -33,6 +33,10 @@
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\Ouroboros\Ouroboros.dmm"
 		// BUBBER EDIT ADDITION END
+		// SPLURT EDIT ADDITION START
+		#include "map_files\RimPoint\RimPoint.dmm"
+		#include "map_files\SigmaOctantis\SigmaOctantis.dmm"
+		// SPLURT EDIT ADDITION END
 	#endif
 	#ifdef ALL_TEMPLATES
 		#include "templates.dm"

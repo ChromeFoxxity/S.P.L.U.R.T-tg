@@ -16,6 +16,7 @@ $include map_vote.txt
 
 # SPLURT configs
 $include splurt/discord.txt
+$include effigy_config.txt
 $include splurt/fetish_content.txt
 $include splurt/game_options.txt
 $include splurt/age_gate.txt

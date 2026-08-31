@@ -1,6 +1,5 @@
 /obj/effect/turf_decal/stripes/blue
 	icon_state = "warningline_blue"
-	icon = 'modular_skyrat/modules/sec_haul/icons/misc/turf_decals.dmi'
 
 /obj/effect/turf_decal/stripes/blue/line
 	icon_state = "warningline_blue"

@@ -10,6 +10,10 @@
 	var/list/left = list()
 	///whitelist of chem id's that go to the right side. Empty to disable port
 	var/list/right = list()
+	///whitelist of chems but their name instead of path
+	var/list/english_left = list()
+	///whitelist of chems but their name instead of path
+	var/list/english_right = list()
 
 /obj/machinery/plumbing/filter/Initialize(mapload, layer)
 	. = ..()

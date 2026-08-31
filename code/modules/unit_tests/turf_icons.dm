@@ -32,6 +32,19 @@
 	ignored_types += typesof(/turf/open/openspace/ocean)
 	ignored_types += typesof(/turf/open/misc/ocean)
 	// SKYRAT EDIT END
+	// SPLURT EDIT START
+	ignored_types += typesof(/turf/open/floor/plating/ocean_plating)
+	ignored_types += typesof(/turf/open/misc/ironsand/ocean)
+	ignored_types += typesof(/turf/open/floor/iron/ocean)
+	ignored_types += typesof(/turf/open/floor/iron/solarpanel/ocean)
+	ignored_types += typesof(/turf/open/floor/engine/hull/ocean)
+	ignored_types += typesof(/turf/open/floor/engine/hull/reinforced/ocean)
+	ignored_types += typesof(/turf/open/floor/glass/reinforced/ocean)
+	ignored_types += typesof(/turf/open/floor/glass/plasma/ocean)
+	ignored_types += typesof(/turf/open/floor/glass/reinforced/plasma/ocean)
+	ignored_types += typesof(/turf/open/misc/canal)
+	ignored_types += typesof(/turf/open/misc/canal_mutable)
+	// SPLURT EDIT END
 
 
 	for(var/turf/open/open_turf_path as anything in (subtypesof(/turf/open) - ignored_types))

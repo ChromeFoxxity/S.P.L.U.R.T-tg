@@ -586,14 +586,14 @@
 		// I prefer it to creating 2 extra plane masters however, so it's a cost I'm willing to pay
 		// LU
 		if(use_glow)
-			var/mutable_appearance/glow_overlay = mutable_appearance('icons/effects/glow_weather.dmi', weather_state, overlay_layer, null, WEATHER_GLOW_PLANE, 100 / 255 * weather_alpha, offset_const = offset)
+			var/mutable_appearance/glow_overlay = mutable_appearance(glow_overlay_icon, weather_state, overlay_layer, null, ABOVE_LIGHTING_PLANE, 100, offset_const = offset) // SPLURT EDIT
 			glow_overlay.color = weather_color
 			gen_overlay_cache += glow_overlay
 
 		// By default we render ourselves to both particle and non-particle weather, as those are mutually exclusive
 		// So that particle weather can have full alpha overlays when the pref is disabled, but partially transparent overlays when its enabled
 		for (var/overlay_plane in overlay_planes)
-			var/mutable_appearance/new_weather_overlay = mutable_appearance('icons/effects/weather_effects.dmi', weather_state, overlay_layer, plane = overlay_plane, alpha = weather_alpha, offset_const = offset)
+			var/mutable_appearance/weather_overlay = mutable_appearance(weather_overlay_icon, weather_state, overlay_layer, plane = overlay_plane, offset_const = offset) // SPLURT EDIT
 			new_weather_overlay.color = weather_color
 			gen_overlay_cache += new_weather_overlay
 
