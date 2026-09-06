@@ -10,3 +10,7 @@
   Lucky:
   - balance: Acolytes now need 35 players in order to spawn, and have had their weight
       reduced to 3.
+2026-09-06:
+  JupiterJaeden:
+  - rscadd: Adds the *foxyip emote. Credit to space station 14's primary repo for
+      the sound.
