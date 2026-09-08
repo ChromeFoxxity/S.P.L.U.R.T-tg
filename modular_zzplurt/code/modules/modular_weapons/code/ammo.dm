@@ -147,12 +147,11 @@
 /obj/projectile/bullet/c46x30mm/ap
 	armour_penetration = 45
 
-<<<<<<< HEAD
 // Spent casings
 
 /obj/item/ammo_casing/c9mm/spent
 	projectile_type = null
-=======
+
 // PRIVATE SECURITY AR AMMO CODE
 
 /obj/item/ammo_box/magazine/c68
@@ -186,4 +185,3 @@
 	armour_penetration = 20
 	wound_bonus = -15
 	wound_falloff_tile = 0
->>>>>>> upstream/master

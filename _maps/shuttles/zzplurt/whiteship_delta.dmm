@@ -77,17 +77,10 @@
 /turf/open/floor/iron/white/side,
 /area/shuttle/abandoned/delta/medical)
 "bO" = (
-/obj/structure/bed{
-	dir = 1
-	},
-/obj/item/bedsheet/qm{
-	dir = 1
-	},
-/obj/structure/curtain/bounty,
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/light_switch/directional/west,
-/obj/structure/spider/stickyweb,
 /obj/effect/decal/cleanable/cobweb,
+/obj/structure/hedge,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "bQ" = (
@@ -479,7 +472,6 @@
 /obj/item/storage/lockbox/medal/cargo,
 /obj/item/radio/headset/headset_cargo,
 /obj/item/gun/energy/disabler,
-/obj/item/computer_disk/quartermaster,
 /obj/machinery/light/small/directional/east,
 /obj/item/clothing/suit/space/syndicate/black/orange{
 	desc = "An old N+S brand space suit, accompanied by N+S's classic orange theme, this time with a more darker, menacing theme! It's slightly cumbersome. But it has some built-in armor padding, and the technology is a little aged. But it keeps you safe, and alive in the vaccum of space. Brought to you by Nanotrasen!";
@@ -490,6 +482,7 @@
 	name = "N+S command space helmet"
 	},
 /obj/structure/spider/stickyweb,
+/obj/item/disk/computer/quartermaster,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "ji" = (
@@ -771,11 +764,6 @@
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/delta/crew)
 "pG" = (
-/obj/structure/table,
-/obj/machinery/fax{
-	fax_name = "Delta-Class Frigate";
-	name = "Delta-Class Frigate's Fax Machine"
-	},
 /obj/machinery/button/door/directional/west{
 	name = "Bridge Window Lockdown Control";
 	id = "delta_bridge";
@@ -794,6 +782,7 @@
 	pixel_y = -25
 	},
 /obj/structure/spider/stickyweb,
+/obj/structure/hedge,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "pO" = (
@@ -1313,10 +1302,15 @@
 /turf/open/floor/iron,
 /area/shuttle/abandoned/delta/crew)
 "xw" = (
-/obj/structure/window/reinforced/spawner/directional/south,
-/obj/structure/window/reinforced/spawner/directional/east,
 /obj/item/radio/intercom/directional/west,
-/turf/open/floor/iron/shuttle/cargo,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/table,
+/obj/machinery/fax{
+	fax_name = "Delta-Class Frigate";
+	name = "Delta-Class Frigate's Fax Machine"
+	},
+/obj/structure/spider/stickyweb,
+/turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "xB" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -1373,14 +1367,21 @@
 /turf/open/floor/iron/dark/textured,
 /area/shuttle/abandoned/delta/bridge)
 "yn" = (
-/obj/structure/window/reinforced/spawner/directional/north,
-/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/sign/departments/aisat/directional/west,
 /obj/machinery/camera/directional/west{
 	network = list("delta_whiteship");
 	c_tag = "Bridge"
 	},
-/turf/open/floor/iron/shuttle/cargo,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/bed{
+	dir = 1
+	},
+/obj/structure/curtain/bounty,
+/obj/item/bedsheet/qm{
+	dir = 1
+	},
+/obj/structure/spider/stickyweb,
+/turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "yz" = (
 /obj/machinery/door/airlock/mining{
@@ -1817,7 +1818,9 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
-/obj/structure/ai_core/deactivated,
+/obj/structure/ai_core{
+	state = 5
+	},
 /turf/open/floor/iron/shuttle/cargo,
 /area/shuttle/abandoned/delta/bridge)
 "Ht" = (

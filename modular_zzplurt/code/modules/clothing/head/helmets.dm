@@ -192,17 +192,6 @@
 	desc = "An army officer cap with yellow pin."
 	icon_state = "goner_offcap_y"
 
-<<<<<<< HEAD
-/obj/item/clothing/head/utility/hardhat/nanotrasen
-	name = "black heavy-duty hat"
-	desc = "A tough plastic helmet with a suspension rig, designed to protect against blunt impacts. This one is a sober shade of black, with a Nanotrasen logo on the front."
-	icon = 'modular_zzplurt/icons/obj/clothing/hats.dmi'
-	worn_icon = 'modular_zzplurt/icons/mob/clothing/hats.dmi'
-	icon_state = "hardhat0_black"
-	inhand_icon_state = null
-	hat_type = "black"
-	dog_fashion = null
-=======
 /obj/item/clothing/head/helmet/novisor
 	desc = "Standard Security gear. Protects the head from impacts, this one lacks a visor over the eyes."
 	icon_state = "helmet-novisor"
@@ -231,4 +220,13 @@
 	worn_icon = 'modular_zzplurt/icons/mob/clothing/head.dmi'
 	icon_state = "mercenary_helmet"
 	flags_cover = EARS_COVERED
->>>>>>> upstream/master
+
+/obj/item/clothing/head/utility/hardhat/nanotrasen
+	name = "black heavy-duty hat"
+	desc = "A tough plastic helmet with a suspension rig, designed to protect against blunt impacts. This one is a sober shade of black, with a Nanotrasen logo on the front."
+	icon = 'modular_zzplurt/icons/obj/clothing/hats.dmi'
+	worn_icon = 'modular_zzplurt/icons/mob/clothing/hats.dmi'
+	icon_state = "hardhat0_black"
+	inhand_icon_state = null
+	hat_type = "black"
+	dog_fashion = null

@@ -16,9 +16,25 @@
 /datum/map_template/ruin/space/interdyne
 	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // TG Map Edit
 
-<<<<<<< HEAD
 /datum/map_template/ruin/space/whiteshipdock
 	never_spawn_with = list(/datum/map_template/ruin/space/new_whiteship_meta,/datum/map_template/ruin/space/new_whiteship_delta)
+
+/datum/map_template/ruin/space/splurt/icemoon_asteroid
+	id = "icemoon_asteroid"
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
+	suffix = "icemoon_asteroid.dmm"
+	name = "Icemoon Asteroid"
+	description = "A sizeable asteroid from presumably an ice planet of some kind. It appears to possess a microbiome on its interior."
+
+/datum/map_template/ruin/space/skyrat/shuttle8532
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // Skyrat Map edit.
+
+/datum/map_template/ruin/space/splurt/foreclosed_warehouse
+	id = "foreclosed_warehouse"
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
+	suffix = "foreclosed_warehouse.dmm"
+	name = "Foreclosed Warehouse"
+	description = "A derelict warehouse that has been abandoned and left to rot. It appears to have a complex internal structure."
 
 /datum/map_template/ruin/space/new_whiteship_meta
 	id = "new_meta"
@@ -35,21 +51,3 @@
 	name = "Space Ruin Delta-Class Frigate"
 	description = "The Delta is a compact and advanced mining ship that supplements its comparatively small organic crew with a full suite of robotics facilities, including an AI and a host of mining and logistics drones and cyborgs. The Delta's low logistical footprint has thoroughly endeared it to N+S Logistics' upper management, but its cramped accomodations and lackluster defensive armament make it distinctly unpopular with the company's spacefaring employees."
 	never_spawn_with = list(/datum/map_template/ruin/space/whiteshipdock,/datum/map_template/ruin/space/new_whiteship_meta)
-=======
-/datum/map_template/ruin/space/splurt/icemoon_asteroid
-	id = "icemoon_asteroid"
-	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
-	suffix = "icemoon_asteroid.dmm"
-	name = "Icemoon Asteroid"
-	description = "A sizeable asteroid from presumably an ice planet of some kind. It appears to possess a microbiome on its interior."
->>>>>>> upstream/master
-
-/datum/map_template/ruin/space/skyrat/shuttle8532
-	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // Skyrat Map edit.
-
-/datum/map_template/ruin/space/splurt/foreclosed_warehouse
-	id = "foreclosed_warehouse"
-	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
-	suffix = "foreclosed_warehouse.dmm"
-	name = "Foreclosed Warehouse"
-	description = "A derelict warehouse that has been abandoned and left to rot. It appears to have a complex internal structure."

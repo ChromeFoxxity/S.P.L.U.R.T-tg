@@ -3635,7 +3635,6 @@
 /obj/item/storage/lockbox/medal/cargo,
 /obj/item/radio/headset/headset_cargo,
 /obj/item/gun/energy/disabler,
-/obj/item/computer_disk/quartermaster,
 /obj/item/clothing/suit/space/syndicate/black/orange{
 	desc = "An old N+S brand space suit, accompanied by N+S's classic orange theme, this time with a more darker, menacing theme! It's slightly cumbersome. But it has some built-in armor padding, and the technology is a little aged. But it keeps you safe, and alive in the vaccum of space. Brought to you by Nanotrasen!";
 	name = "N+S command space suit"
@@ -3644,6 +3643,7 @@
 	desc = "An old N+S brand space helmet, accompanied by N+S's classic orange theme, this time with a more menacing theme! It has a tinted visor, useful for welding. But it also has some built-in armor padding, the technology is a little aged. But it keeps you safe, and alive in the vaccum of space. Brought to you by Nanotrasen!";
 	name = "N+S command space helmet"
 	},
+/obj/item/disk/computer/quartermaster,
 /turf/open/floor/wood/large,
 /area/shuttle/abandoned/meta/qmoffice)
 "MT" = (
@@ -4398,7 +4398,7 @@
 	},
 /obj/item/storage/medkit/toxin,
 /obj/item/storage/pill_bottle/iron,
-/obj/item/stack/medical/gauze/twelve,
+/obj/item/stack/medical/wrap/gauze/twelve,
 /turf/open/floor/iron/textured,
 /area/shuttle/abandoned/meta/cargo)
 "Vj" = (
