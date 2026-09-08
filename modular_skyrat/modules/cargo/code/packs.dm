@@ -23,7 +23,7 @@
 	)
 	crate_name = "mouse crate"
 
-/datum/supply_pack/critter/mouse/generate()
+/datum/supply_pack/critter/mouse/generate(crate_override)
 	. = ..()
 	for(var/i in 1 to 5)
 		new /mob/living/basic/mouse(.)
@@ -37,7 +37,7 @@
 	)
 	crate_name = "chinchilla crate"
 
-/datum/supply_pack/critter/chinchilla/generate()
+/datum/supply_pack/critter/chinchilla/generate(crate_override)
 	. = ..()
 	for(var/i in 1 to 3)
 		new /mob/living/basic/pet/chinchilla(.)
@@ -61,7 +61,7 @@
 	)
 	crate_name = "pedigree stud pitbull crate"
 
-/datum/supply_pack/critter/pitbull/generate()
+/datum/supply_pack/critter/pitbull/generate(crate_override)
 	. = ..()
 	for(var/i in 1 to 3)
 		new /mob/living/basic/pet/dog/pitbull(.)
@@ -163,9 +163,9 @@
 	cost = CARGO_CRATE_VALUE * 5
 	access = ACCESS_MEDICAL
 	contains = list(
-		/obj/item/weaponcell/medical/brute,
-		/obj/item/weaponcell/medical/burn,
-		/obj/item/weaponcell/medical/toxin,
+		/obj/item/weaponcell/medical/tier_1/brute,
+		/obj/item/weaponcell/medical/tier_1/burn,
+		/obj/item/weaponcell/medical/tier_1/toxin,
 	)
 	crate_name = "medicell replacement crate"
 
@@ -660,7 +660,7 @@
 	name = "Authentic Renaissance Faire Crate"
 	desc = "Contains two authentic suits of armor, swords, and two bows and cuirass' for the cowards hiding in the back."
 	cost = CARGO_CRATE_VALUE * 30
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	contains = list(
 		/obj/item/clothing/suit/armor/riot/knight/larp/red,
 		/obj/item/clothing/gloves/plate/larp/red,
@@ -732,7 +732,7 @@
 	contains = list(/obj/item/grown/log)
 	crate_name = "lumber crate"
 
-/datum/supply_pack/materials/rawlumber/generate()
+/datum/supply_pack/materials/rawlumber/generate(crate_override)
 	. = ..()
 	for(var/i in 1 to 19)
 		new /obj/item/grown/log(.)
@@ -740,7 +740,7 @@
 /datum/supply_pack/imports/cin_surplus
 	name = "CIN Military Surplus Crate"
 	desc = "A collection of surplus equipment sourced from the Coalition of Independent Nations' military stockpiles. Likely to contain old and outdated equipment, as is the nature of surplus."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	cost = CARGO_CRATE_VALUE * 9
 	contains = list(
 		/obj/item/storage/box/colonial_rations = 1,

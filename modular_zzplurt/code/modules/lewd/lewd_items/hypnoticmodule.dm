@@ -37,7 +37,7 @@
 /datum/quirk/hypnotic_borg
 	name = "Hypnotic Optics"
 	desc = "Your optical displays and chassis presence are captivating to those susceptible to hypnosis."
-	abstract_parent_type = /datum/quirk/hypnotic_borg
+	abstract_type = /datum/quirk/hypnotic_borg
 	icon = FA_ICON_FACE_GRIN_HEARTS
 	value = 0
 	quirk_flags = QUIRK_HIDE_FROM_SCAN
@@ -115,6 +115,10 @@
 	icon = 'modular_skyrat/modules/borgs/icons/robot_items.dmi'
 	icon_state = "module_lust"
 	custom_price = 0
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT,
+	)
 
 /datum/techweb_node/augmentation/New()
 	. = ..()

@@ -72,6 +72,7 @@
 				/obj/item/clothing/under/misc/latex_halfcatsuit = 8,
 				/obj/item/clothing/gloves/latex_gloves = 8,
 				/obj/item/clothing/shoes/latex_heels = 4,
+				/obj/item/clothing/shoes/latex_heels/ballet_heels = 4,
 				/obj/item/clothing/shoes/latex_socks = 8,
 
 				/obj/item/storage/belt/erpbelt = 5,//Leather Belt, holds a lot of tools.
@@ -97,7 +98,7 @@
 				//clothing facial/head
 				/obj/item/clothing/mask/ballgag = 8,
 				/obj/item/clothing/mask/ballgag/choking = 8,
-				/obj/item/clothing/mask/muzzle/ring = 4,
+				/obj/item/clothing/mask/ballgag/ring = 8, // SPLURT EDIT - Use new ring class
 				/obj/item/clothing/head/deprivation_helmet = 5,
 				/obj/item/clothing/glasses/blindfold/kinky = 5,
 				/obj/item/clothing/ears/kinky_headphones = 5,
@@ -123,6 +124,7 @@
 
 				//hands
 				/obj/item/clothing/gloves/ball_mittens = 8,
+				/obj/item/clothing/gloves/ball_mittens/loadout_paw = 5,
 			),
 		),
 			list(
@@ -172,6 +174,7 @@
 		/obj/item/clothing/neck/size_collar = 8,//It only works in the Interlink anyways
 		/obj/item/toy/plush/cescrewsplush = 1,
 		/obj/item/toy/plush/sinvox = 1,
+		/obj/item/skillchip/mkiiultra = 2,
 		)
 
 	contraband = list(
@@ -185,7 +188,10 @@
 					/obj/item/reagent_containers/applicator/pill/hexacrocin = 10,
 					/obj/item/reagent_containers/applicator/pill/pentacamphor = 5,
 					/obj/item/reagent_containers/cup/bottle/hexacrocin = 4,
-					/obj/item/reagent_containers/cup/bottle/pentacamphor = 2)
+					/obj/item/reagent_containers/cup/bottle/pentacamphor = 2,
+					/obj/item/reagent_containers/cup/bottle/plushmium = 1,
+					/obj/item/clothing/sextoy/fleshlight/bluespace = 1
+				)
 
 	refill_canister = /obj/item/vending_refill/lustwish
 	payment_department = ACCOUNT_SRV

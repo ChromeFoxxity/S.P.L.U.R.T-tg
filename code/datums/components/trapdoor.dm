@@ -336,6 +336,7 @@
 	name = "trapdoor controller"
 	desc = "A sinister-looking controller for a trapdoor."
 	icon_state = "trapdoor"
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 0.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.5)
 	///if the trapdoor isn't linked it will try to link on pulse, this shouldn't be spammable
 	COOLDOWN_DECLARE(search_cooldown)
 	///trapdoor link cooldown time here!
@@ -382,6 +383,7 @@
 	icon = 'icons/obj/devices/remote.dmi'
 	icon_state = "trapdoor_remote"
 	COOLDOWN_DECLARE(trapdoor_cooldown)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 1.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.5)
 	var/trapdoor_cooldown_time = 2 SECONDS
 	var/obj/item/assembly/trapdoor/internals
 
@@ -468,6 +470,7 @@
 
 ///subtype with internals already included. If you're giving a department a roundstart trapdoor, this is what you want
 /obj/item/trapdoor_remote/preloaded
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.6, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 1.1)
 
 /obj/item/trapdoor_remote/preloaded/Initialize(mapload)
 	. = ..()
@@ -479,6 +482,7 @@
 	desc = "A kit containing all the parts needed to build a trapdoor. Can only be used on open space."
 	icon = 'icons/obj/weapons/improvised.dmi'
 	icon_state = "kitsuitcase"
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6.7, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 2.2)
 	var/in_use = FALSE
 
 /obj/item/trapdoor_kit/Initialize(mapload)

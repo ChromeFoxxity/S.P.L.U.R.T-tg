@@ -9,7 +9,7 @@
 		SET_PLANE_IMPLICIT(src, FLOOR_PLANE)
 		layer = HIGH_TURF_LAYER
 
-/obj/structure/plaque/static_plaque/get_moutable_objects()
+/obj/structure/plaque/static_plaque/get_mountable_objects()
 	return list()
 
 /obj/structure/plaque/static_plaque/find_and_mount_on_atom(mark_for_late_init, late_init)
@@ -21,7 +21,7 @@
 	desc = "This plaque commemorates the fall of the Atmos FEA division. For all the charred, dizzy, and brittle men who have died in its hands."
 
 /obj/structure/plaque/static_plaque/thunderdome
-	name = "Thunderdome Plaque"
+	name = "\improper Thunderdome plaque"
 	desc = "This plaque commemorates those who have fallen in glorious combat.  For all the charred, dizzy, and beaten men who have died in its hands."
 
 /obj/structure/plaque/static_plaque/golden
@@ -38,7 +38,7 @@
 
 // Runtimestation: added Nov 11, 2016 (946ec1fec869eb59d6a84e32c90613af734fcd0e)
 /obj/structure/plaque/static_plaque/golden/commission
-	name = "Commission Plaque"
+	name = "commission plaque"
 	desc = "Spinward Sector Station SS-13\n'Runtime' Class Outpost\nCommissioned 03/11/2556\n'Dedicated to the Pioneers'"
 	icon_state = "commission_nt"
 	layer = BELOW_OPEN_DOOR_LAYER
@@ -73,9 +73,9 @@
 /obj/structure/plaque/static_plaque/golden/commission/tram
 	desc = "Spinward Sector Station SS-13\n'Tram' Class Outpost\nCommissioned 11/03/2561\n'Making Moves'"
 
-// Wawastation: added Jun 4, 2024 (#82298)
-/obj/structure/plaque/static_plaque/golden/commission/wawa
-	desc = "Spinward Sector Station SS-13\n'Wawa' Class Outpost\nCommissioned 04/06/2564\n'Forever Vertical'"
+// Kilostation: added Nov 13, 2019 (#46968), removed, readded Jul 7, 2026 (#96447)
+/obj/structure/plaque/static_plaque/golden/commission/kilo
+	desc = "Spinward Sector Station SS-13\n'Kilo' Class Outpost\nCommissioned 13/11/2559\nDecommissioned\nRecommissioned 7/7/2566'Forever Different'"
 
 // Boxstation: added Nov 15, 2010 (pre-git), removed Jul 06, 2020 (#52017)- 9 years, 7 months, 21 days
 // Modified NSSJourney (from FluffySTG), added April 19, 2021 (#4884). added to Bubber Feb 10, 2024 (#1128).
@@ -135,6 +135,10 @@
 // Birdshot: added Apr 29, 2023 (#74371), removed Jul 9, 2025 (#92022) — 2 years, 2 months, 10 days
 /obj/structure/plaque/static_plaque/golden/commission/birdshot
 	desc = "Spinward Sector Station SS-13\n'Birdshot' Class Outpost\nCommissioned 29/04/2563\nDecommissioned 09/07/2565\n'Shooting for the Stars'"
+
+// Wawastation: added Jun 4, 2024 (#82298), removed Jul 7, 2026 (#96447) - 2 years, 1 month, 3 days
+/obj/structure/plaque/static_plaque/golden/commission/wawa
+	desc = "Spinward Sector Station SS-13\n'Wawa' Class Outpost\nCommissioned 04/06/2564\nDecomissioned 9/07/2565\n'Forever Vertical'"
 
 // Other Stations
 

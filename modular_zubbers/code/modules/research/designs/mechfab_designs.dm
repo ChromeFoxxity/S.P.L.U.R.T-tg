@@ -5,11 +5,14 @@
 	id = "blanksynth"
 	build_type = MECHFAB
 	construction_time = 60 SECONDS
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 20,
-					/datum/material/glass = SHEET_MATERIAL_AMOUNT * 10,
-					/datum/material/silver = SHEET_MATERIAL_AMOUNT * 0.5,
-					/datum/material/gold = SHEET_MATERIAL_AMOUNT * 0.25)
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 20,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT * 10,
+		/datum/material/silver = SHEET_MATERIAL_AMOUNT * 0.5,
+		/datum/material/gold = SHEET_MATERIAL_AMOUNT * 0.25
+	)
 	category = list(RND_CATEGORY_MECHFAB_SYNTH + RND_SUBCATEGORY_MECHFAB_SYNTH_PARTS)
+	inherit_materials = DESIGN_DONT_INHERIT_MATS
 
 	build_path = /mob/living/carbon/human/species/synth/empty
 
@@ -50,6 +53,22 @@
 	materials = list(
 		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5,
 		/datum/material/glass = SHEET_MATERIAL_AMOUNT * 2.5,
+	)
+	construction_time = 12 SECONDS
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_RESEARCH
+	)
+
+/datum/design/borg_upgrade_research_rcd
+	name = "Research cyborg synthetic repair tool"
+	id = "borg_upgrade_research_rcd"
+	build_type = MECHFAB
+	build_path = /obj/item/borg/upgrade/robotics_rcd
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.5,
+		/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT,
+		/datum/material/plasma = SHEET_MATERIAL_AMOUNT,
+		/datum/material/gold = SMALL_MATERIAL_AMOUNT * 5,
 	)
 	construction_time = 12 SECONDS
 	category = list(

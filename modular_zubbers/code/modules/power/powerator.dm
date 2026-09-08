@@ -109,7 +109,7 @@
 /obj/machinery/powerator/examine(mob/user)
 	. = ..()
 	if(panel_open)
-		. += span_warning("The maintainence panel is currently open, preventing [src] from working!")
+		. += span_warning("The maintenance panel is currently open, preventing [src] from working!")
 
 	if(!anchored)
 		. += span_warning("The anchors are not bolted to the floor, preventing [src] from working!")
@@ -240,6 +240,7 @@
 	name = "Tarkon Powerator"
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
 	build_path = /obj/machinery/powerator/tarkon
+	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT)
 
 /obj/machinery/powerator/tarkon
 	name = "Tarkon powerator"

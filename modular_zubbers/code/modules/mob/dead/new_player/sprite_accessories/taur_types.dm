@@ -21,7 +21,7 @@
 	color_src = USE_MATRIXED_COLORS
 	dimension_x = 64
 	center = TRUE
-	relevent_layers = list(BODY_FRONT_LAYER, BODY_ADJ_LAYER, BODY_FRONT_UNDER_CLOTHES, ABOVE_BODY_FRONT_HEAD_LAYER)
+	relevent_layers = list(EXTERNAL_ADJACENT, EXTERNAL_FRONT, EXTERNAL_FRONT_UNDER_CLOTHES, EXTERNAL_FRONT_OVER_HEAD)
 	organ_type = /obj/item/organ/taur_body/horselike // horselike by default, dont forget to override if you make another bodytype
 	flags_for_organ = SPRITE_ACCESSORY_HIDE_SHOES
 	/// Must be a single specific tauric suit variation bitflag. Don't do FLAG_1|FLAG_2
@@ -54,6 +54,9 @@
 						return TRUE
 				if (STYLE_TAUR_HOOF)
 					if (worn_suit.worn_icon_taur_hoof)
+						return TRUE
+				if (STYLE_TAUR_BIG)
+					if (worn_suit.worn_icon_taur_big)
 						return TRUE
 
 	if(target.owned_turf)
@@ -126,6 +129,12 @@
 	name = "Drider"
 	icon_state = "drider"
 	organ_type = /obj/item/organ/taur_body/spider
+
+/datum/sprite_accessory/taur/broodmother
+	name = "Broodmother"
+	icon_state = "broodmother"
+	organ_type = /obj/item/organ/taur_body/spider
+	icon = 'modular_zubbers/icons/customization/taur.dmi'
 
 /datum/sprite_accessory/taur/insect
 	name = "Insect"
@@ -229,7 +238,7 @@
 /datum/sprite_accessory/taur/biglegs
 	name = "Big Legs"
 	icon_state = "biglegs"
-	taur_mode = STYLE_TAUR_PAW
+	taur_mode = STYLE_TAUR_BIG
 	organ_type = /obj/item/organ/taur_body/anthro
 
 /datum/sprite_accessory/taur/biglegs/stanced

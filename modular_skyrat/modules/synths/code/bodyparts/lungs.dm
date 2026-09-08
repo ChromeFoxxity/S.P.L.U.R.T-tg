@@ -12,7 +12,11 @@
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_LUNGS
 	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
-	organ_flags = ORGAN_ROBOTIC
+	organ_flags = ORGAN_ROBOTIC | ORGAN_SYNTHETIC_FROM_SPECIES
+	custom_materials = list(
+		/datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT,
+		/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT,
+	)
 
 /obj/item/organ/lungs/synth/emp_act(severity)
 	. = ..()

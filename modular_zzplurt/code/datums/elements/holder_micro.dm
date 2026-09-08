@@ -15,7 +15,7 @@
 	var/obj/item/mob_holder/holder = micro.loc
 	if(istype(holder))
 		var/mob/living/living = get_atom_on_turf(micro.loc, /mob/living)
-		if(living && (COMPARE_SIZES(living, micro)) < 2.0)
+		if(living && (COMPARE_SIZES_WITH_LIMBLOSS(living, micro)) < 2.0)
 			living.visible_message(span_warning("\The [living] drops [micro] as [micro.p_they()] grow\s too big to carry."),
 								span_warning("You drop \The [living] as [living.p_they()] grow\s too big to carry."))
 			holder.release()
@@ -23,7 +23,7 @@
 			holder.release()
 
 /datum/element/mob_holder/micro/on_examine(mob/living/source, mob/user, list/examine_list)
-	if(ishuman(user) && !istype(source.loc, /obj/item/mob_holder) && (COMPARE_SIZES(user, source)) >= 2.0)
+	if(ishuman(user) && !istype(source.loc, /obj/item/mob_holder) && (COMPARE_SIZES_WITH_LIMBLOSS(user, source)) >= 2.0)
 		examine_list += span_notice("Looks like [source.p_they(FALSE)] can be picked up using <b>Alt+Click and grab intent</b>!")
 
 /// Do not inherit from /mob_holder, interactions are different.
@@ -62,7 +62,7 @@
 		to_chat(user, span_warning("You can't pick yourself up."))
 		source.balloon_alert(user, "cannot pick yourself!")
 		return FALSE
-	if(COMPARE_SIZES(user, source) < 2.0)
+	if(COMPARE_SIZES_WITH_LIMBLOSS(user, source) < 2.0)
 		to_chat(user, span_warning("They're too big to pick up!"))
 		source.balloon_alert(user, "too big to pick up!")
 		return FALSE
@@ -77,7 +77,7 @@
 	source.visible_message(span_warning("[user] starts picking up [source]."), \
 					span_userdanger("[user] starts picking you up!"))
 	source.balloon_alert(user, "picking up")
-	var/time_required = COMPARE_SIZES(source, user) * 4 SECONDS //Scale how fast the pickup will be depending on size difference
+	var/time_required = COMPARE_SIZES_WITH_LIMBLOSS(source, user) * 4 SECONDS //Scale how fast the pickup will be depending on size difference
 	if(!do_after(user, time_required, source))
 		return FALSE
 
@@ -115,9 +115,39 @@
 	//Updating the visuals when the mob updates doesn't work (it disappears)
 	//RegisterSignals(held_mob, list(COMSIG_CARBON_APPLY_OVERLAY, COMSIG_CARBON_REMOVE_OVERLAY, COMSIG_ATOM_EXAMINE), PROC_REF(update_visuals))
 
-/obj/item/mob_holder/micro/release(del_on_release, display_messages)
-	UnregisterSignal(held_mob, list(COMSIG_MOB_EQUIPPED_ITEM, COMSIG_MOB_UNEQUIPPED_ITEM))
-	return ..()
+/obj/item/mob_holder/micro/release(display_messages = TRUE)
+	if(!held_mob)
+		if(!QDELETED(src))
+			qdel(src)
+		return FALSE
+
+	var/mob/living/released_mob = held_mob
+	var/turf/release_turf = get_turf(src)
+	if(isliving(loc))
+		var/mob/living/captor = loc
+		if(display_messages)
+			to_chat(captor, span_warning("[released_mob] wriggles free!"))
+		captor.dropItemToGround(src)
+		release_turf = get_turf(src) || get_turf(captor)
+
+	UnregisterSignal(released_mob, list(COMSIG_MOB_EQUIPPED_ITEM, COMSIG_MOB_UNEQUIPPED_ITEM))
+	held_mob = null
+
+	if(!release_turf)
+		release_turf = get_turf(released_mob)
+	if(!release_turf)
+		release_turf = get_turf(loc)
+	if(!release_turf)
+		CRASH("/obj/item/mob_holder/micro/release could not resolve a turf for [released_mob]")
+
+	released_mob.forceMove(release_turf)
+	released_mob.reset_perspective()
+	released_mob.setDir(SOUTH)
+	if(display_messages)
+		released_mob.visible_message(span_warning("[released_mob] uncurls!"))
+	if(!QDELETED(src))
+		qdel(src)
+	return TRUE
 
 /obj/item/mob_holder/micro/Destroy()
 	UnregisterSignal(src, COMSIG_ATOM_EXAMINE)
@@ -140,6 +170,12 @@
 		return
 	visible_message(span_warning("[src] escapes [carrier]!"))
 	release()
+
+/obj/item/mob_holder/micro/relaymove(mob/living/mover, direction)
+	if(mover==held_mob)
+		return
+	return ..() //This prevents movemement while being held
+	// This looks like a bandaid solution but it works at least; Would probably be better off in its parent file
 
 /obj/item/mob_holder/micro/assume_air(datum/gas_mixture/giver)
 	var/turf/location = get_turf(src)
@@ -175,15 +211,34 @@
 	if(istype(M))
 		switch(resolve_intent_name(user))
 			if("harm") //TO:DO, rework all of these interactions to be a lot more in depth
-				visible_message(span_danger("[user] slams their fist down on [M]!"))
+				user.visible_message(span_danger("[user] slams their fist down on [M]!"),
+								span_danger("You slam your fist down on [M]!"),
+								null,
+								null,
+								list(M)
+				)
+				to_chat(M, span_userdanger("[user] slams their fist down on you!"))
 				playsound(loc, 'sound/items/weapons/punch1.ogg', 50, 1)
 				M.adjust_brute_loss(5)
 			if("disarm")
-				visible_message(span_danger("[user] pins [M] down with a finger!"))
+
+				user.visible_message(span_danger("[user] pins [M] down with a finger!"),
+								span_danger("You pin [M] down with a finger!"),
+								null,
+								null,
+								list(M)
+				)
+				to_chat(M, span_userdanger("[user] pins you down with a finger!"))
 				playsound(loc, 'sound/effects/bodyfall/bodyfall1.ogg', 50, 1)
 				M.adjust_stamina_loss(10)
 			if("grab")
-				visible_message(span_danger("[user] squeezes their fist around [M]!"))
+				user.visible_message(span_danger("[user] squeezes their fist around [M]!"),
+								span_danger("You squeeze your fist around [M]!"),
+								null,
+								null,
+								list(M)
+				)
+				to_chat(M, span_userdanger("[user] squeezes their fist around you!"))
 				playsound(loc, 'sound/items/weapons/thudswoosh.ogg', 50, 1)
 				M.adjust_oxy_loss(5)
 			else
@@ -240,15 +295,19 @@
 	transform = null
 
 // And right here i throw all of those error sprites in the trash
-/obj/item/mob_holder/micro/build_worn_icon(default_layer, default_icon_file, isinhands, female_uniform, override_state, override_file, mutant_styles)
+/obj/item/mob_holder/micro/build_worn_icon(
+	default_layer = 0,
+	default_icon_file = null,
+	isinhands = FALSE,
+	female_uniform = NO_FEMALE_UNIFORM,
+	override_state = null,
+	override_file = null,
+	bodyshape = NONE,
+	mutant_styles = NONE,
+)
 	return null
 
-/obj/item/mob_holder/micro/verb/interact_with_held()
-	set name = "Interact With Held"
-	set desc = "Perform an interaction with the held mob."
-	set category = "IC"
-	set src in view(usr.client)
-
+GAME_VERB_SRC_DESC(/obj/item/mob_holder/micro, interact_with_held, view(), "Interact With Held", "Perform an interaction with the held mob.", "IC")
 	if(!held_mob)
 		to_chat(usr, span_warning("You're not holding anyone!"))
 		return

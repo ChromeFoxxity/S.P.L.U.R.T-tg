@@ -2,7 +2,6 @@
 	title = JOB_NT_REP
 	description = "Represent Nanotrasen on the station, argue with the HoS about \
 		why he can't just field execute people for petty theft, get drunk in your office."
-	department_head = list("Nanotrasen High Command")
 	head_announce = list(RADIO_CHANNEL_IAA)
 	faction = FACTION_STATION
 	total_positions = 1
@@ -53,12 +52,17 @@
 	icon_state = "Nanotrasen Consultant"
 	icon = 'modular_zzplurt/icons/mob/effects/landmarks.dmi'
 
+/obj/machinery/fax/heads/ntc
+	name = "Nanotrasen Consultant's Fax Machine"
+	fax_name = "Nanotrasen Consultant's Office"
+
 /obj/structure/closet/secure_closet/nanotrasen_consultant
 	name = "nanotrasen consultant's locker"
 	req_access = list(ACCESS_CENT_GENERAL, ACCESS_COMMAND)
 	req_one_access = list()
 	icon_state = "nt"
 	icon = 'modular_zzplurt/icons/obj/closet.dmi'
+	storage_capacity = 31
 
 /obj/structure/closet/secure_closet/nanotrasen_consultant/PopulateContents()
 	..()
@@ -66,7 +70,7 @@
 	new /obj/item/clothing/neck/petcollar(src)
 	new /obj/item/pet_carrier(src)
 	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/computer_disk/command/captain(src)
+	new /obj/item/disk/computer/command/captain(src)
 	new /obj/item/radio/headset/heads/nanotrasen(src)
 	new /obj/item/storage/photo_album/ntc(src)
 	new /obj/item/bedsheet/nanotrasen(src)
@@ -144,7 +148,7 @@
 	icon_state = "/obj/item/modular_computer/pda/heads/nanotrasen_consultant"
 	greyscale_config = /datum/greyscale_config/tablet/stripe_thick/head
 	greyscale_colors = "#42B5A6#DAE0F0#B4B9C6"
-	inserted_disk = /obj/item/computer_disk/command/captain
+	inserted_disk = /obj/item/disk/computer/command/captain
 	inserted_item = /obj/item/pen/fountain/nanotrasen
 	starting_programs = list(
 		/datum/computer_file/program/records/security,

@@ -58,7 +58,7 @@
 
 /obj/item/clothing/suit/apron/overalls/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/adjust_fishing_difficulty, -4)
+	AddElement(/datum/element/adjust_fishing_difficulty, -4)
 
 //Captain
 /obj/item/clothing/suit/jacket/capjacket
@@ -194,7 +194,7 @@
 	resistance_flags = NONE
 	species_exception = list(/datum/species/golem)
 
-/obj/item/clothing/suit/hazardvest/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
+/obj/item/clothing/suit/hazardvest/worn_overlays(mutable_appearance/standing, isinhands, icon_file, bodyshape = NONE)
 	. = ..()
 	if(!isinhands)
 		. += emissive_appearance(icon_file, "[icon_state]-emissive", src, alpha = src.alpha, effect_type = EMISSIVE_SPECULAR)
@@ -345,25 +345,26 @@
 	allowed = list(
 		/obj/item/bonesetter,
 		/obj/item/cautery,
+		/obj/item/defibrillator/compact,
 		/obj/item/flashlight/pen,
 		/obj/item/healthanalyzer,
 		/obj/item/hemostat,
-		/obj/item/reagent_containers/dropper,
 		/obj/item/reagent_containers/cup/beaker,
 		/obj/item/reagent_containers/cup/bottle,
 		/obj/item/reagent_containers/cup/tube,
+		/obj/item/reagent_containers/dropper,
 		/obj/item/reagent_containers/hypospray,
 		/obj/item/reagent_containers/syringe,
 		/obj/item/retractor,
 		/obj/item/scalpel,
-		/obj/item/surgical_drapes,
 		/obj/item/storage/pill_bottle,
+		/obj/item/surgical_drapes,
 		/obj/item/tank/internals/emergency_oxygen,
 	)
 
 /obj/item/clothing/suit/apron/surgical/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/adjust_fishing_difficulty, -3) // FISH DOCTOR?!
+	AddElement(/datum/element/adjust_fishing_difficulty, -3) // FISH DOCTOR?!
 
 //Curator
 /obj/item/clothing/suit/jacket/curator
@@ -441,7 +442,7 @@
 	fire = 100
 	acid = 50
 
-/obj/item/clothing/suit/atmos_overalls/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
+/obj/item/clothing/suit/atmos_overalls/worn_overlays(mutable_appearance/standing, isinhands, icon_file, bodyshape = NONE)
 	. = ..()
 	if(!isinhands)
 		. += emissive_appearance(icon_file, "[icon_state]-emissive", src, alpha = src.alpha, effect_type = EMISSIVE_SPECULAR)

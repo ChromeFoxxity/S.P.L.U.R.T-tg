@@ -40,7 +40,7 @@
 	var/datum/team/cortical_borers/borers
 
 /datum/antagonist/cortical_borer/get_preview_icon()
-	return finish_preview_icon(icon('modular_skyrat/modules/cortical_borer/icons/animal.dmi', "brainslug"))
+	return finish_preview_icon(uni_icon('modular_skyrat/modules/cortical_borer/icons/animal.dmi', "brainslug"))
 
 /datum/antagonist/cortical_borer/get_team()
 	return borers
@@ -95,7 +95,7 @@
 	typepath = /datum/round_event/ghost_role/cortical_borer
 	weight = 10
 	min_players = 999
-	max_occurrences = 1 //should only ever happen once
+	max_occurrences = 0 //should only ever happen once. If they were enabled, that is.
 	category = EVENT_CATEGORY_ENTITIES
 	description = "A cortical borer has appeared on station. It will also attempt to produce eggs, and will attempt to gather willing hosts and learn chemicals through the blood."
 

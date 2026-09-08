@@ -6,6 +6,7 @@
 	inhand_icon_state = "chronogun"
 	w_class = WEIGHT_CLASS_NORMAL
 	item_flags = parent_type::item_flags & ~NEEDS_PERMIT
+	can_muzzle_flash = FALSE
 
 	var/mob/living/current_target
 	var/last_check = 0
@@ -91,6 +92,9 @@
 
 	if(current_target)
 		on_beam_tick(current_target)
+
+/obj/item/gun/medbeam/on_mail_unwrap(mob/user, obj/item/mail/traitor/letter)
+	return NONE
 
 /obj/item/gun/medbeam/proc/mid_los_check(atom/movable/user, mob/target, pass_args = PASSTABLE|PASSGLASS|PASSGRILLE, turf/next_step, obj/dummy)
 	for(var/obj/effect/ebeam/medical/B in next_step)// Don't cross the str-beams!

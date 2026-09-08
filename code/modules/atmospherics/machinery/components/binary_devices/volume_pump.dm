@@ -28,9 +28,11 @@
 
 /obj/machinery/atmospherics/components/binary/volume_pump/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/usb_port, list(
-		/obj/item/circuit_component/atmos_volume_pump,
-	))
+	AddComponent(/datum/component/usb_port, \
+		typecacheof(list(
+			/obj/item/circuit_component/atmos_volume_pump,
+		), only_root_path = TRUE) \
+	)
 	register_context()
 
 /obj/machinery/atmospherics/components/binary/volume_pump/click_ctrl(mob/user)
@@ -73,15 +75,15 @@
 
 	var/input_starting_pressure = air1.return_pressure()
 	var/output_starting_pressure = air2.return_pressure()
-
+	//BUBBER CHANGE START: Pumps work in walls again
 	// Requires being able to leak air in order to overclock.
-	if(overclocked)
+/* 	if(overclocked)
 		var/turf/turf = loc
 		if(isclosedturf(turf))
 			balloon_alert_to_viewers("jammed!")
 			overclocked = FALSE
 			update_appearance(UPDATE_ICON)
-
+	BUBBER CHANGE END */
 	if((input_starting_pressure < VOLUME_PUMP_MINIMUM_OUTPUT_PRESSURE) || ((output_starting_pressure > VOLUME_PUMP_MAX_OUTPUT_PRESSURE)) && !overclocked)
 		return
 
@@ -232,7 +234,7 @@
 	input_temperature = add_output_port("Input Temperature", PORT_TYPE_NUMBER)
 	output_temperature = add_output_port("Output Temperature", PORT_TYPE_NUMBER)
 
-	is_active = add_output_port("Active", PORT_TYPE_NUMBER)
+	is_active = add_output_port("Active", PORT_TYPE_BOOLEAN)
 	turned_on = add_output_port("Turned On", PORT_TYPE_SIGNAL)
 	turned_off = add_output_port("Turned Off", PORT_TYPE_SIGNAL)
 

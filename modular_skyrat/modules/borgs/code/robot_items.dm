@@ -372,13 +372,13 @@
 	return ITEM_INTERACT_SUCCESS
 
 
-/obj/item/borg/paperplane_crossbow/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+/obj/item/borg/paperplane_crossbow/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	check_amount()
 	if(!iscyborg(user))
 		return ITEM_INTERACT_BLOCKING
 
 	var/mob/living/silicon/robot/robot_user = user
-	if(!robot_user.cell.use(10))
+	if(!robot_user.cell.use(STANDARD_CELL_CHARGE * 0.1))
 		to_chat(user, span_warning("Not enough power."))
 		return ITEM_INTERACT_BLOCKING
 	return shoot(interacting_with, user)
@@ -579,7 +579,7 @@
 	return TRUE
 
 /obj/item/borg_shapeshifter/attack_self(mob/living/silicon/robot/user)
-	if (user && user.cell && user.cell.charge >  activationCost)
+	if (user && use_power(user, activationCost))
 		if (isturf(user.loc))
 			toggle(user)
 		else
@@ -665,7 +665,7 @@
 			f = user.filters[start+i]
 			animate(f, offset=f:offset, time=0, loop=3, flags=ANIMATION_PARALLEL)
 			animate(offset=f:offset-1, time=rand()*20+10)
-		if (do_after(user, 5 SECONDS, target=user) && user.cell.use(activationCost))
+		if (do_after(user, 5 SECONDS, target=user) && use_power(user, activationCost))
 			playsound(src, 'sound/effects/bamf.ogg', 100, TRUE, -6)
 			to_chat(user, span_notice("You are now disguised."))
 			activate(user)
@@ -702,10 +702,17 @@
 	return TRUE
 
 /obj/item/borg_shapeshifter/process()
-	if (user && !user.cell?.use(activationUpkeep))
+	if (user && !use_power(user, activationUpkeep))
 		disrupt(user)
 	else
 		return PROCESS_KILL
+
+/obj/item/borg_shapeshifter/proc/use_power(mob/living/silicon/robot/user, amount)
+	if(!istype(user))
+		return 0
+	if(!amount)
+		return 1
+	return user.cell?.use(amount)
 
 /obj/item/borg_shapeshifter/proc/activate(mob/living/silicon/robot/user)
 	src.user = user
@@ -880,7 +887,7 @@
 		if("Anvil")
 			new /obj/structure/reagent_anvil(src_turf)
 		if("Water Basin")
-			new /obj/structure/reagent_water_basin(src_turf)
+			new /obj/structure/reagent_dispensers/reagent_smithing_basin(src_turf)
 		if("Crafting Bench")
 			new /obj/structure/reagent_crafting_bench(src_turf)
 

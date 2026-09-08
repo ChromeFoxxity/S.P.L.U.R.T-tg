@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /datum/map_template/ruin/icemoon/underground/nsl_mining_colony
 	name = "Ice-Ruin N+S Cryo-Extraction Facility"
 	id = "nsl_mining_colony"
@@ -6,3 +7,8 @@
 		take hold of the mining operations on the icemoon, no man left alive.."
 	prefix = "_maps/RandomRuins/IceRuins/zzplurt/"
 	suffix = "icemoon_underground_nslcolony.dmm"
+=======
+/datum/map_template/ruin/icemoon/pizza
+	prefix = "_maps/RandomRuins/IceRuins/splurt/" // TG Map Edit
+	always_place = TRUE
+>>>>>>> upstream/master

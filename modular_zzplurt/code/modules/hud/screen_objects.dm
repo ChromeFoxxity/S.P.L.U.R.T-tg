@@ -1,6 +1,8 @@
 
 /atom/movable/screen/intent_toggle
+	parent_type = /atom/movable/screen/combattoggle
 	name = "intent"
+	icon = 'icons/hud/screen_gen.dmi'
 	icon_state = "help"
 	screen_loc = "EAST-4:22,SOUTH:5"
 
@@ -12,12 +14,14 @@
 
 /atom/movable/screen/intent_toggle/Click(location, control, params)
 	var/mob/living/owner = hud?.mymob
-	if(!owner.client.prefs?.read_preference(/datum/preference/toggle/intents))
+	if(!owner?.client?.prefs?.read_preference(/datum/preference/toggle/intents))
 		return
 	var/list/modifiers = params2list(params)
 	var/_x = text2num(modifiers["icon-x"])
 	var/_y = text2num(modifiers["icon-y"])
 	var/mob/living/target_mob = usr
+	if(!target_mob || target_mob != owner)
+		return
 
 	if(_x <= 16)
 		if(_y <= 16)

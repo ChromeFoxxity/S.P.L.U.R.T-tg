@@ -125,19 +125,21 @@
 	W.update_appearance()
 	return W
 
-/turf/open/floor/attackby(obj/item/object, mob/living/user, list/modifiers)
-	if(!object || !user)
-		return TRUE
+/turf/open/floor/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	. = ..()
-	if(.)
+	if(ITEM_INTERACT_ANY_BLOCKER & .)
 		return .
-	if(overfloor_placed && istype(object, /obj/item/stack/tile))
-		try_replace_tile(object, user, modifiers)
-		return TRUE
-	if(user.combat_mode && istype(object, /obj/item/stack/sheet))
-		var/obj/item/stack/sheet/sheets = object
-		return sheets.on_attack_floor(src, user, modifiers)
-	return FALSE
+
+	if(overfloor_placed && istype(tool, /obj/item/stack/tile))
+		try_replace_tile(tool, user, modifiers)
+		return ITEM_INTERACT_SUCCESS
+
+	if(user.combat_mode && istype(tool, /obj/item/stack/sheet))
+		var/obj/item/stack/sheet/sheets = tool
+		if(!sheets.on_attack_floor(src, user, modifiers))
+			return ITEM_INTERACT_BLOCKING
+
+		return ITEM_INTERACT_SUCCESS
 
 /turf/open/floor/crowbar_act(mob/living/user, obj/item/I)
 	if(overfloor_placed && pry_tile(I, user))
@@ -268,7 +270,7 @@
 	return FALSE
 
 /turf/open/floor/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, list/rcd_data)
-	switch(rcd_data["[RCD_DESIGN_MODE]"])
+	switch(rcd_data[RCD_DESIGN_MODE])
 		if(RCD_TURF)
 			var/obj/structure/girder/girder = locate() in src
 			if(girder)
@@ -282,7 +284,7 @@
 				return grille.rcd_act(user, the_rcd, rcd_data)
 
 			//allow directional windows to be built without grills
-			var/obj/structure/window/window_path = rcd_data["[RCD_DESIGN_PATH]"]
+			var/obj/structure/window/window_path = rcd_data[RCD_DESIGN_PATH]
 			if(!initial(window_path.fulltile))
 				if(!valid_build_direction(src, user.dir, is_fulltile = FALSE))
 					balloon_alert(user, "window already here!")
@@ -296,7 +298,7 @@
 			grille.set_anchored(TRUE)
 			return TRUE
 		if(RCD_AIRLOCK)
-			var/obj/machinery/door/airlock_type = rcd_data["[RCD_DESIGN_PATH]"]
+			var/obj/machinery/door/airlock_type = rcd_data[RCD_DESIGN_PATH]
 
 			if(ispath(airlock_type, /obj/machinery/door/window))
 				if(!valid_build_direction(src, user.dir, is_fulltile = FALSE))
@@ -330,7 +332,7 @@
 			assembly.finish_door()
 			return TRUE
 		if(RCD_STRUCTURE)
-			var/atom/movable/design_type = rcd_data["[RCD_DESIGN_PATH]"]
+			var/atom/movable/design_type = rcd_data[RCD_DESIGN_PATH]
 
 			//map absolute types to basic subtypes
 			var/atom/movable/locate_type = design_type
@@ -362,9 +364,9 @@
 			return TRUE
 	return FALSE
 
-/turf/open/floor/rust_turf()
+/turf/open/floor/rust_turf(magic = FALSE)
 	if(HAS_TRAIT(src, TRAIT_RUSTY))
-		return
+		return FALSE
 	ChangeTurf(/turf/open/floor/plating)
 	return ..()
 

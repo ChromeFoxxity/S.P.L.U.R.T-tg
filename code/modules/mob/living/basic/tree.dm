@@ -59,20 +59,20 @@
 	AddElement(/datum/element/death_drops, /obj/item/stack/sheet/mineral/wood)
 	AddComponent(/datum/component/aggro_emote, emote_list = string_list(list("growls")), emote_chance = 20)
 
-/mob/living/basic/tree/Life(seconds_per_tick = SSMOBS_DT, times_fired)
+/mob/living/basic/tree/Life(seconds_per_tick = SSMOBS_DT)
 	. = ..()
 	if(!.) //dead or deleted
 		return
 	if(!isopenturf(loc))
 		return
 	var/turf/open/our_turf = src.loc
-	if(!our_turf.air || !our_turf.air.gases[/datum/gas/carbon_dioxide])
+	if(!our_turf.air || !our_turf.air.moles[/datum/gas/carbon_dioxide])
 		return
-
-	var/co2 = our_turf.air.gases[/datum/gas/carbon_dioxide][MOLES]
+	var/datum/gas_mixture/our_air = our_turf.air
+	var/co2 = our_air.moles[/datum/gas/carbon_dioxide]
 	if(co2 > 0 && SPT_PROB(13, seconds_per_tick))
 		var/amt = min(co2, 9)
-		our_turf.air.gases[/datum/gas/carbon_dioxide][MOLES] -= amt
+		our_air.adjust_gas(/datum/gas/carbon_dioxide, -amt)
 		our_turf.atmos_spawn_air("[GAS_O2]=[amt]")
 
 /mob/living/basic/tree/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)

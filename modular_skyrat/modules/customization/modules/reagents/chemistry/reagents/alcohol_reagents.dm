@@ -219,16 +219,8 @@
 	name = "glass of strawberry daiquiri"
 	desc = "Pink looking drink with flowers and a big straw to sip it. Looks sweet and refreshing, perfect for warm days."
 
-/datum/reagent/consumable/ethanol/liz_fizz
-	name = "Liz Fizz"
-	description = "Triple citrus layered with some ice and cream."
-	boozepwr = 0
-	color = "#D8FF59"
-	quality = DRINK_NICE
-	taste_description = "brain freezing sourness"
-
 /datum/glass_style/drinking_glass/liz_fizz
-	required_drink_type = /datum/reagent/consumable/ethanol/liz_fizz
+	required_drink_type = /datum/reagent/consumable/liz_fizz
 	icon = 'modular_skyrat/master_files/icons/obj/drinks.dmi'
 	icon_state = "liz_fizz"
 	name = "glass of liz fizz"
@@ -463,7 +455,7 @@
 	desc = "Red and white drink for the upper classes or undead."
 
 /datum/reagent/consumable/ethanol/velvet_kiss/expose_mob(mob/living/exposed_mob, methods, reac_volume)
-	if(iszombie(exposed_mob) || isvampire(exposed_mob) || isdullahan(exposed_mob) || ishemophage(exposed_mob)) //Rare races!
+	if(iszombie(exposed_mob) || isvampire(exposed_mob) || isdullahan(exposed_mob) || exposed_mob.has_quirk(/datum/quirk/hemophage)) //Rare races!
 		quality = RACE_DRINK
 	else
 		quality = DRINK_GOOD
@@ -662,7 +654,7 @@
 #define BLOODSHOT_DISGUST 25
 
 /datum/reagent/consumable/ethanol/bloodshot/expose_mob(mob/living/exposed_mob, methods, reac_volume)
-	if(ishemophage(exposed_mob))
+	if(exposed_mob.has_quirk(/datum/quirk/hemophage))
 		quality = RACE_DRINK
 
 	else if(exposed_mob.blood_volume < exposed_mob.blood_volume_normal)

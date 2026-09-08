@@ -1,5 +1,6 @@
 /datum/species/skrell
 	name = "Skrell"
+	plural_form = "Skrell"
 	id = SPECIES_SKRELL
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
@@ -17,7 +18,6 @@
 	mutanttongue = /obj/item/organ/tongue/skrell
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
-	//eyes_icon = 'modular_skyrat/modules/organs/icons/skrell_eyes.dmi' //SPLURT EDIT - https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/453
 	mutantbrain = /obj/item/organ/brain/skrell
 	mutanteyes = /obj/item/organ/eyes/skrell
 	mutantlungs = /obj/item/organ/lungs/skrell
@@ -125,6 +125,7 @@
 	desc = "Large black orbs."
 	icon = 'modular_skyrat/modules/organs/icons/skrell_organ.dmi'
 	icon_state = "eyes"
+	eye_icon = 'modular_skyrat/modules/organs/icons/skrell_eyes.dmi'
 	flash_protect = FLASH_PROTECTION_NONE //flash buff given their weakness to brute and cold
 
 /obj/item/organ/lungs/skrell

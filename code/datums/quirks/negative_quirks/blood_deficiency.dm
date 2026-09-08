@@ -9,7 +9,7 @@
 	hardcore_value = 8
 	mail_goodies = list(/obj/item/reagent_containers/blood/o_minus) // universal blood type that is safe for all
 	/// Minimum amount of blood the paint is set to
-	var/min_blood = BLOOD_VOLUME_SAFE - 25 // just barely survivable without treatment
+	var/min_blood = BLOOD_VOLUME_SAFE + 1 // just barely survivable without treatment
 
 /datum/quirk/blooddeficiency/add(client/client_source)
 	RegisterSignal(quirk_holder, COMSIG_HUMAN_ON_HANDLE_BLOOD, PROC_REF(lose_blood))
@@ -31,7 +31,7 @@
 		return FALSE
 	return ..()
 
-/datum/quirk/blooddeficiency/proc/lose_blood(datum/source, seconds_per_tick, times_fired)
+/datum/quirk/blooddeficiency/proc/lose_blood(datum/source, seconds_per_tick)
 	SIGNAL_HANDLER
 
 	var/mob/living/carbon/human/human_holder = quirk_holder

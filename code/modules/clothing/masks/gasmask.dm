@@ -48,7 +48,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 		AddComponent(/datum/component/clothing_dirt, dirt_state)
 
 	if(fishing_modifier)
-		AddComponent(/datum/component/adjust_fishing_difficulty, fishing_modifier)
+		AddElement(/datum/element/adjust_fishing_difficulty, fishing_modifier)
 
 	if(!max_filters || !starting_filter_type)
 		return
@@ -58,10 +58,10 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 		LAZYADD(gas_filters, inserted_filter)
 	has_filter = TRUE
 
-/obj/item/clothing/mask/gas/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file)
+/obj/item/clothing/mask/gas/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file, bodyshape = NONE)
 	. = ..()
 	if(!isinhands && cig)
-		. += cig.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = 'icons/mob/clothing/mask.dmi')
+		. += cig.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = 'icons/mob/clothing/mask.dmi', bodyshape = bodyshape)
 
 /obj/item/clothing/mask/gas/Destroy()
 	QDEL_LAZYLIST(gas_filters)
@@ -226,10 +226,10 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	desc = "A gas mask with built-in welding goggles and a face shield. Looks like a skull - clearly designed by a nerd."
 	icon_state = "weldingmask"
 	flash_protect = FLASH_PROTECTION_WELDER
-	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*2, /datum/material/glass=SHEET_MATERIAL_AMOUNT)
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.4, /datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT)
 	tint = 2
-	toggle_message = "You pull the visor down"
-	alt_toggle_message = "You push the visor up"
+	toggle_message = "You pull the visor down."
+	alt_toggle_message = "You push the visor up."
 	armor_type = /datum/armor/gas_welding
 	actions_types = list(/datum/action/item_action/toggle)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDESNOUT
@@ -258,9 +258,9 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	if(!fishing_modifier)
 		return
 	if(up)
-		qdel(GetComponent(/datum/component/adjust_fishing_difficulty))
+		RemoveElement(/datum/element/adjust_fishing_difficulty)
 	else
-		AddComponent(/datum/component/adjust_fishing_difficulty, fishing_modifier)
+		AddElement(/datum/element/adjust_fishing_difficulty, fishing_modifier)
 
 /obj/item/clothing/mask/gas/welding/update_icon_state()
 	. = ..()
@@ -292,6 +292,19 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	w_class = WEIGHT_CLASS_SMALL
 	fishing_modifier = 0
 	pepper_tint = FALSE
+
+/obj/item/clothing/mask/gas/syndicate/plasmaman
+	starting_filter_type = /obj/item/gas_filter/plasmaman
+
+/obj/item/clothing/mask/gas/syndicate/cybersun
+	name = "\improper Cybersun mask"
+	desc = "It's really more about making a statement than protecting you from environmental hazards."
+	icon_state = "cybersun"
+	flags_cover = MASKCOVERSMOUTH
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+	visor_flags_cover = MASKCOVERSMOUTH
+	alternate_worn_layer = BENEATH_HAIR_LAYER
 
 /obj/item/clothing/mask/gas/clown_hat
 	name = "clown wig and mask"
@@ -469,6 +482,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	icon_state = "carp_mask"
 	inhand_icon_state = null
 	flags_cover = MASKCOVERSEYES
+	clothing_flags = MASKINTERNALS | CARP_STYLE_FACTOR
 	fishing_modifier = -4
 
 /obj/item/clothing/mask/gas/tiki_mask
@@ -476,7 +490,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	desc = "A creepy wooden mask. Surprisingly expressive for a poorly carved bit of wood."
 	icon_state = "tiki_eyebrow"
 	inhand_icon_state = null
-	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 1.25)
+	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 2)
 	resistance_flags = FLAMMABLE
 	flags_cover = MASKCOVERSEYES
 	max_integrity = 100

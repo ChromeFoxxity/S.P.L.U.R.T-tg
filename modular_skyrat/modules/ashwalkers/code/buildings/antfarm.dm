@@ -5,6 +5,7 @@
 	icon_state = "anthill"
 	density = TRUE
 	anchored = TRUE
+	custom_materials = list(/datum/material/sand = SHEET_MATERIAL_AMOUNT * 20)
 	/// If the farm is occupied by ants
 	var/has_ants = FALSE
 	/// the chance for the farm to get ants
@@ -73,7 +74,7 @@
 	if(istype(attacking_item, /obj/item/food))
 		qdel(attacking_item)
 		balloon_alert(user, "food has been placed")
-		user.mind.adjust_experience(/datum/skill/primitive, 5)
+		user.mind?.adjust_experience(/datum/skill/primitive, 5)
 		ant_chance++
 		if(prob(user.mind.get_skill_modifier(/datum/skill/primitive, SKILL_PROBS_MODIFIER)))
 			ant_chance++
@@ -87,7 +88,7 @@
 				return
 
 			qdel(selected_food)
-			user.mind.adjust_experience(/datum/skill/primitive, 5)
+			user.mind?.adjust_experience(/datum/skill/primitive, 5)
 			ant_chance++
 			if(prob(user.mind.get_skill_modifier(/datum/skill/primitive, SKILL_PROBS_MODIFIER)))
 				ant_chance++

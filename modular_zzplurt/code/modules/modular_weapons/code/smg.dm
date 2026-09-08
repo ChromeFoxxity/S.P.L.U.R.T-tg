@@ -50,6 +50,11 @@
 	spread = 10
 	fire_sound = 'modular_zzplurt/sound/items/weapons/gun/wt458_shot.ogg'
 	fire_sound_volume = 70
+	custom_materials = list(
+		/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 20,
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 16,
+		/datum/material/titanium = SHEET_MATERIAL_AMOUNT * 4,
+	)
 //Gunshot is taken from this  https://github.com/ParadiseSS13/Paradise/tree/master/sound/weapons/gunshots#gunshot_rifle.ogg
 //However, I could not find who it was attributed to or where it comes from
 
@@ -82,7 +87,7 @@
 	AddElement(/datum/element/manufacturer_examine, COMPANY_NANOTRASEN)
 
 /obj/item/gun/ballistic/automatic/wt458/add_bayonet_point()
-	AddComponent(/datum/component/bayonet_attachable, offset_x = 25, offset_y = 2)
+	AddComponent(/datum/component/bayonet_attachable, offset_x = 25, offset_y = 14)
 
 /obj/item/gun/ballistic/automatic/wt458/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
@@ -90,3 +95,6 @@
 		light_overlay = "flight", \
 		overlay_x = 10, \
 		overlay_y = 19)
+
+/obj/item/gun/ballistic/automatic/wt458/nomag
+	spawnwithmagazine = FALSE

@@ -13,6 +13,12 @@
 /datum/quirk/item_quirk/family_heirloom/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder
 	var/obj/item/heirloom_type
+	// BUBBER EDIT ADDITION BEGIN - lets users manually designate heirlooms
+	if (!client_source?.prefs?.read_preference(/datum/preference/toggle/random_heirloom))
+		mark_action = new /datum/action/mark_family_heirloom(src)
+		mark_action.Grant(human_holder)
+		return
+	// BUBBER EDIT ADDITION END
 
 	// The quirk holder's species - we have a 50% chance, if we have a species with a set heirloom, to choose a species heirloom.
 	var/datum/species/holder_species = human_holder.dna?.species
@@ -44,6 +50,8 @@
 	)
 
 /datum/quirk/item_quirk/family_heirloom/post_add()
+	if (mark_action) // BUBBER EDIT ADDITION
+		return // BUBBER EDIT ADDITION
 	var/list/names = splittext(quirk_holder.real_name, " ")
 	var/family_name = names[names.len]
 
@@ -52,6 +60,7 @@
 		to_chat(quirk_holder, span_boldnotice("A wave of existential dread runs over you as you realize your precious family heirloom is missing. Perhaps the Gods will show mercy on your cursed soul?"))
 		return
 	family_heirloom.AddComponent(/datum/component/heirloom, quirk_holder.mind, family_name)
+	quirk_holder.add_mob_memory(/datum/memory/key/quirk_heirloom, protagonist = quirk_holder, heirloom_name = initial(family_heirloom.name))
 
 	return ..()
 

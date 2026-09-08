@@ -26,7 +26,6 @@
 	response_harm_simple = "kick"
 	gold_core_spawnable = FRIENDLY_SPAWN
 	faction = list(FACTION_NEUTRAL)
-	can_be_held = FALSE
 	health = 100
 	maxHealth = 100
 	light_range = 1.5 // Bioluminescence!
@@ -37,6 +36,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/ant
 
 /datum/emote/ant
+	abstract_type = /datum/emote/ant
 	mob_type_allowed_typecache = /mob/living/basic/ant
 	mob_type_blacklist_typecache = list()
 

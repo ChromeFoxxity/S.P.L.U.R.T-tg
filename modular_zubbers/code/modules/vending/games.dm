@@ -15,7 +15,10 @@
 				/obj/item/toy/plush/bubbledragon = 3,
 				/obj/item/toy/plush/bubbleplush = 3,
 				/obj/item/toy/plush/carpplushie = 3,
+				/obj/item/toy/plush/cello_plush = 3,
 				/obj/item/toy/plush/chirp_plush = 3,
+				/obj/item/toy/plush/expie = 3,
+				/obj/item/toy/plush/expie/milky = 3,
 				/obj/item/toy/plush/goatplushie = 3,
 				/obj/item/toy/plush/headcrab = 3,
 				/obj/item/toy/plush/lizard_plushie = 3,
@@ -25,10 +28,10 @@
 				/obj/item/toy/plush/moth = 3,
 				/obj/item/toy/plush/moth/lovers = 3,
 				/obj/item/toy/plush/mothroach_plush = 3,
+				/obj/item/toy/plush/myrthel_plush = 3,
 				/obj/item/toy/plush/nukeplushie = 3,
 				/obj/item/toy/plush/pkplush = 3,
 				/obj/item/toy/plush/plasmamanplushie = 3,
-				/obj/item/toy/plush/purplecat = 3,
 				/obj/item/toy/plush/rouny = 3,
 				/obj/item/toy/plush/secoff = 3,
 				/obj/item/toy/plush/shark = 3,
@@ -97,8 +100,20 @@
 				/obj/item/toy/plush/tunafish = 3,
 				/obj/item/toy/plush/xenoplush = 3,
 				/obj/item/toy/plush/xenoplush/xenomaidplush = 3,
+				/obj/item/toy/plush/suspicious_protogen = 3,
+				/obj/item/toy/plush/fox_protogen = 3,
+				/obj/item/toy/plush/tangerine = 3,
+				/obj/item/toy/plush/blue_synth = 3,
 			),
 		),
+		list(
+			"name" = "Art",
+			"icon" = "palette",
+			"products" = list(
+				/obj/item/modular_computer/mini_painting_printer = 2,
+			)
+		),
+
 		list(
 			"name" = "Other",
 			"icon" = "star",

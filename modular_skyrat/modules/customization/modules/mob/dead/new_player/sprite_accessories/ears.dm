@@ -1,7 +1,7 @@
 /datum/sprite_accessory/ears
 	key = "ears"
 	organ_type = /obj/item/organ/ears/mutant
-	relevent_layers = list(BODY_BEHIND_LAYER, BODY_ADJ_LAYER, BODY_FRONT_LAYER)
+	relevent_layers = list(EXTERNAL_BEHIND, EXTERNAL_ADJACENT, EXTERNAL_FRONT)
 	color_src = USE_MATRIXED_COLORS
 
 /datum/sprite_accessory/ears/is_hidden(mob/living/carbon/human/wearer)
@@ -14,7 +14,7 @@
 
 /datum/sprite_accessory/ears/cat
 	recommended_species = list(SPECIES_MAMMAL, SPECIES_HUMAN, SPECIES_SYNTH, SPECIES_FELINE, SPECIES_HUMANOID, SPECIES_GHOUL)
-	relevent_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
+	relevent_layers = list(EXTERNAL_BEHIND, EXTERNAL_FRONT)
 	color_src = USE_ONE_COLOR
 	has_inner = TRUE
 
@@ -282,6 +282,10 @@
 	name = "Teshari Regular"
 	icon_state = "teshari_regular"
 
+/datum/sprite_accessory/ears/mutant/teshari/regularalt
+	name = "Teshari Regular Alt"
+	icon_state = "teshari_feathers_regalt"
+
 /datum/sprite_accessory/ears/mutant/teshari/feathers_bushy
 	name = "Teshari Feathers Bushy"
 	icon_state = "teshari_feathers_bushy"
@@ -334,11 +338,6 @@
 /datum/sprite_accessory/ears/mutant/teshari/feathers_backstrafe
 	name = "Teshari Feathers Backstrafe"
 	icon_state = "teshari_feathers_backstrafe"
-	color_src = USE_ONE_COLOR
-
-/datum/sprite_accessory/ears/mutant/teshari/feathers_thinmohawk
-	name = "Teshari Feathers Thin Mohawk"
-	icon_state = "teshari_feathers_thinmohawk"
 	color_src = USE_ONE_COLOR
 
 /datum/sprite_accessory/ears/mutant/teshari/feathers_thin

@@ -23,7 +23,7 @@
 
 /obj/item/clothing/accessory/pocketwatch/examine(mob/user)
 	. = ..()
-	. += span_info("The current CST (local) time is: [station_time_timestamp()].")
+	. += span_info("The current CST (local) time is: [round_timestamp()].")
 	. += span_info("The current TCT (galactic) time is: [time2text(world.realtime, "hh:mm:ss")].")
 
 /obj/item/storage/backpack/kanken //Donor item for LT3
@@ -40,40 +40,125 @@
 /obj/item/clothing/accessory/fake/medal
 	name = "plastic medal"
 	desc = "Yeah nice try buddy. They won't record this one. Especially since it reads 'youre winnar!!'. Alt-Click to reskin!"
-	unique_reskin = list(
-			"Bronze" = "bronze",
-			"Bronze Heart" = "bronze_heart",
-			"Silver" = "silver",
-			"Gold" = "gold",
-			"Plasma" = "plasma",
-			"Cargo" = "cargo",
-			"Paperwork" = "medal_paperwork",
-			"Medical Second Class" = "med_medal",
-			"Medical First Class" = "med_medal2",
-			"Atmosian" = "elderatmosian",
-			"Emergency Service - General" = "emergencyservices",
-			"Emergency Service - Engineering" = "emergencyservices_engi",
-			"Emergency Service - Medical" = "emergencyservices_med"
-	)
+
+/obj/item/clothing/accessory/fake/medal/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/reskinable_item, /datum/atom_skin/medal)
+
+/datum/atom_skin/medal
+	abstract_type = /datum/atom_skin/medal
+
+/datum/atom_skin/medal/bronze
+	preview_name = "Bronze"
+	new_icon_state = "bronze"
+
+/datum/atom_skin/medal/bronze_heart
+	preview_name = "Bronze Heart"
+	new_icon_state = "bronze_heart"
+
+/datum/atom_skin/medal/silver
+	preview_name = "Silver"
+	new_icon_state = "silver"
+
+/datum/atom_skin/medal/gold
+	preview_name = "Gold"
+	new_icon_state = "gold"
+
+/datum/atom_skin/medal/plasma
+	preview_name = "Plasma"
+	new_icon_state = "plasma"
+
+/datum/atom_skin/medal/cargo
+	preview_name = "Cargo"
+	new_icon_state = "cargo"
+
+/datum/atom_skin/medal/paperwork
+	preview_name = "Paperwork"
+	new_icon_state = "medal_paperwork"
+
+/datum/atom_skin/medal/medical_second_class
+	preview_name = "Medical Second Class"
+	new_icon_state = "med_medal"
+
+/datum/atom_skin/medal/medical_first_class
+	preview_name = "Medical First Class"
+	new_icon_state = "med_medal2"
+
+/datum/atom_skin/medal/atmosian
+	preview_name = "Atmosian"
+	new_icon_state = "elderatmosian"
+
+/datum/atom_skin/medal/emergency_general
+	preview_name = "Emergency Service - General"
+	new_icon_state = "emergencyservices"
+
+/datum/atom_skin/medal/emergency_engineering
+	preview_name = "Emergency Service - Engineering"
+	new_icon_state = "emergencyservices_engi"
+
+/datum/atom_skin/medal/emergency_medical
+	preview_name = "Emergency Service - Medical"
+	new_icon_state = "emergencyservices_med"
+
 // Pride Pin Over-ride
 /obj/item/clothing/accessory/pride
 	icon = 'modular_skyrat/master_files/icons/obj/clothing/accessories.dmi'
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/accessories.dmi'
 
-	unique_reskin  = list(
-	"Rainbow Pride" = "pride",
-	"Bisexual Pride" = "pride_bi",
-	"Pansexual Pride" = "pride_pan",
-	"Asexual Pride" = "pride_ace",
-	"Non-binary Pride" = "pride_enby",
-	"Transgender Pride" = "pride_trans",
-	"Intersex Pride" = "pride_intersex",
-	"Lesbian Pride" = "pride_lesbian",
-	"Man-Loving-Man / Gay Pride" = "pride_mlm",
-	"Genderfluid Pride" = "pride_genderfluid",
-	"Genderqueer Pride" = "pride_genderqueer",
-	"Aromantic Pride" = "pride_aromantic",
-)
+/obj/item/clothing/accessory/pride/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/reskinable_item, /datum/atom_skin/pride)
+
+/datum/atom_skin/pride
+	abstract_type = /datum/atom_skin/pride
+
+/datum/atom_skin/pride/rainbow
+	preview_name = "Rainbow Pride"
+	new_icon_state = "pride"
+
+/datum/atom_skin/pride/bisexual
+	preview_name = "Bisexual Pride"
+	new_icon_state = "pride_bi"
+
+/datum/atom_skin/pride/pansexual
+	preview_name = "Pansexual Pride"
+	new_icon_state = "pride_pan"
+
+/datum/atom_skin/pride/asexual
+	preview_name = "Asexual Pride"
+	new_icon_state = "pride_ace"
+
+/datum/atom_skin/pride/nonbinary
+	preview_name = "Non-binary Pride"
+	new_icon_state = "pride_enby"
+
+/datum/atom_skin/pride/transgender
+	preview_name = "Transgender Pride"
+	new_icon_state = "pride_trans"
+
+/datum/atom_skin/pride/intersex
+	preview_name = "Intersex Pride"
+	new_icon_state = "pride_intersex"
+
+/datum/atom_skin/pride/lesbian
+	preview_name = "Lesbian Pride"
+	new_icon_state = "pride_lesbian"
+
+/datum/atom_skin/pride/mlm
+	preview_name = "Man-Loving-Man / Gay Pride"
+	new_icon_state = "pride_mlm"
+
+/datum/atom_skin/pride/genderfluid
+	preview_name = "Genderfluid Pride"
+	new_icon_state = "pride_genderfluid"
+
+/datum/atom_skin/pride/genderqueer
+	preview_name = "Genderqueer Pride"
+	new_icon_state = "pride_genderqueer"
+
+/datum/atom_skin/pride/aromantic
+	preview_name = "Aromantic Pride"
+	new_icon_state = "pride_aromantic"
 
 // Dogtags
 /obj/item/clothing/accessory/dogtags
@@ -87,6 +172,185 @@
 	attachment_slot = NONE
 	above_suit = TRUE
 
+/// This list is for Protean Match tags, and stores how many tags are waiting to be matched.
+GLOBAL_LIST_EMPTY_TYPED(protean_match_tag_pool, /obj/item/clothing/accessory/dogtags/protean_match)
+/// This list is for Protean Match tags, and stores every tag that's currently assigned to someone. Intended to be used to prevent one person having multiple tags.
+GLOBAL_LIST_EMPTY_TYPED(all_assigned_protean_match_tags, /obj/item/clothing/accessory/dogtags/protean_match)
+
+// The tag pool, contains either unmatched Wearers or unmatched Proteans, waiting for the opposite type to join and match them.
+// It should never ever ever contain both, since if the second type tries to join the list it'll just get paired.
+// So if we need to differentiate between if there's Proteans or Wearers in the pool, we just check the first entry.
+#define POOL GLOB.protean_match_tag_pool
+#define ASSIGNED_TAGS GLOB.all_assigned_protean_match_tags
+#define UNASSIGNED "0"
+#define IN_POOL "1"
+#define MATCHED "2"
+
+/obj/item/clothing/accessory/dogtags/protean_match
+	name = "\improper Protean Match tag"
+	desc = "A small tag from NT's Protean Match program, which pairs Protean crew with interested wearers."
+	worn_icon = null // People shouldn't have to abandon 5 pixels of swag and aura to wear this
+	custom_premium_price = PAYCHECK_CREW * 0.4
+	/// Name of the person assigned to the tag
+	var/assignee_name
+	/// the "true" name of the assignee, source.mind.name, used to keep one person from putting a bunch of their own tags in the pool.
+	var/assignee_truename
+	/// Is the person assigned to the tag a protean? TRUE if yes
+	var/assignee_protean
+	/// What step of the matching journey
+	var/match_progress = UNASSIGNED
+	var/datum/weakref/paired_tag_weakref
+
+///This is how a person can assign a tag to themself, or switch if they're in the candidate pool
+/obj/item/clothing/accessory/dogtags/protean_match/attack_self(mob/user)
+	switch(match_progress)
+		if(UNASSIGNED)
+			assign(user)
+			// match_progress and sounds are set within assign()
+		if(IN_POOL)
+			to_chat(user, "You press the button on the tag, removing it from the Protean Match candidate pool and unclaiming it.")
+			playsound(src, "modular_skyrat/modules/emotes/sound/emotes/synth_no.ogg", 20, FALSE)
+			balloon_alert(user, "tag unassigned")
+
+			unassign()
+			return
+		if(MATCHED)
+			var/obj/item/clothing/accessory/dogtags/protean_match/paired_tag = paired_tag_weakref?.resolve()
+			var/safety = (tgui_alert(user, "You are currently matched with [paired_tag?.assignee_name]. Are you sure you want to unclaim your tag? This will unassign both tags.", "Unclaim tag?", list("Unclaim", "Cancel")))
+			if(safety == "Cancel" || !in_range(src, user))
+				return
+			to_chat(user, "You press the button on the tag, unmatching with [paired_tag?.assignee_name] and exiting the Protean Match candidate pool.")
+			playsound(src, "modular_skyrat/modules/emotes/sound/emotes/synth_no.ogg", 20, FALSE)
+			balloon_alert(user, "unmatched tag")
+
+			paired_tag.unassign("matched tag deactivated")
+			unassign()
+			return
+
+/obj/item/clothing/accessory/dogtags/protean_match/click_alt(mob/user)
+	if(length(POOL) ? (assignee_protean == POOL[1].assignee_protean) : TRUE)
+		playsound(src, "sound/machines/buzz/buzz-sigh.ogg", 20, FALSE)
+		balloon_alert(user, "no other valid matches in pool")
+		return
+	if(match_progress == MATCHED)
+		var/obj/item/clothing/accessory/dogtags/protean_match/paired_tag = paired_tag_weakref?.resolve()
+		var/safety = (tgui_alert(user, "You are currently matched with [paired_tag?.assignee_name]. Are you sure you want to attempt to match with someone else in the pool? This will unassign the other user's tag.", "Re-match tag?", list("Re-match", "Cancel")))
+		if(safety == "Cancel" || !in_range(src, user))
+			return
+		unassign()
+		assign(user) //This comes before the paired tag is unassigned so that it doesn't consider the existing pairing as a valid candidate
+		paired_tag.unassign("matched tag deactivated")
+
+/obj/item/clothing/accessory/dogtags/protean_match/Destroy()
+	POOL -= src
+	ASSIGNED_TAGS -= src
+	if(match_progress == MATCHED)
+		var/obj/item/clothing/accessory/dogtags/protean_match/paired_tag = paired_tag_weakref?.resolve()
+		paired_tag.unassign("paired tag destroyed")
+	return ..()
+
+///Filters out crew that can't wear Proteans or shouldn't have them.
+/obj/item/clothing/accessory/dogtags/protean_match/proc/assign(mob/source)
+	. = TRUE
+	/// If this ends up not being null, the assignment fails and returns the reason
+	var/ineligibility_reason = null
+	var/mob/living/user
+	var/obj/item/card/id/user_id
+	var/user_id_name
+
+	///Runs through a bunch of reasons why you shouldn't get to be in the pool. If it finds one it sets the ineligibility_reason to a string, which makes the assignment fail
+	if(isliving(source))
+		user = source
+		user_id = user.get_idcard(TRUE)
+		user_id_name = user_id?.get_displayed_name()
+		var/turf/station_check = get_turf(user)
+
+		for(var/obj/item/clothing/accessory/dogtags/protean_match/tag as anything in ASSIGNED_TAGS)
+			if(user_id_name == tag.assignee_name)
+				ineligibility_reason = "existing tag has that name"
+				break
+			if(source.mind.name == tag.assignee_truename) //Checks the user's "true name" to prevent trolling with multiple cardboard IDs
+				ineligibility_reason = "one per person, please"
+				break
+		if(isnull(user_id))
+			ineligibility_reason = "no ID found"
+		else if(!station_check || !is_station_level(station_check.z))
+			ineligibility_reason = "not on station Z-level"
+		else if(user.has_quirk(/datum/quirk/equipping/entombed))
+			ineligibility_reason = "MOD entombed"
+		else if(iscarbon(user))
+			var/mob/living/carbon/carbon_user = user
+			if(carbon_user.dna.species.id == SPECIES_SNAIL)
+				ineligibility_reason = "snailperson"
+	else
+		ineligibility_reason = "invalid being"
+
+	if(ineligibility_reason)
+		playsound(src, "sound/machines/buzz/buzz-sigh.ogg", 20, FALSE)
+		balloon_alert(source, "ineligible: [ineligibility_reason]")
+		return
+
+///From here, we assign a name and species to the tag, and try to match it. If it fails, adds it to the pool.
+	assignee_name = user_id_name
+	assignee_truename = source.mind.name
+	assignee_protean = isprotean(source)
+	ASSIGNED_TAGS += src
+	name += " - [assignee_name] ([assignee_protean ? "Protean" : "Wearer"])"
+	update_static_data_for_all_viewers()
+//If you aren't the same as the other people in the pool, you get matched with one of them
+	if(length(POOL))
+		if(assignee_protean != POOL[1].assignee_protean)
+			var/obj/item/clothing/accessory/dogtags/protean_match/matched_wearer_tag = pick(POOL)
+			matched_wearer_tag.handle_match(src) //Makes the match's tag ping
+			handle_match(matched_wearer_tag) //Makes our tag ping
+			return
+	// This should only run if the code block above fails
+	POOL += src
+	match_progress = IN_POOL
+	say("No match found, added to candidate pool! There are [(length(POOL) - 1) ? "[length(POOL) - 1]" : "no" ] other [assignee_protean ? "Proteans" : "Wearers"] in the pool.")
+
+///Handles the logistics of matching tags. Done by both sets of tags.
+/obj/item/clothing/accessory/dogtags/protean_match/proc/handle_match(obj/item/clothing/accessory/dogtags/protean_match/other_tag)
+	match_progress = MATCHED
+	POOL -= src
+	playsound(src, "modular_skyrat/modules/emotes/sound/emotes/synth_yes.ogg", 20, FALSE)
+	say("Matched with [(other_tag.assignee_protean == TRUE) ? "Protean" : "Wearer"]: [other_tag.assignee_name]!")
+	paired_tag_weakref = other_tag.create_weakref()
+
+/// Used both when unmatching with a person and when leaving the match pool.
+/obj/item/clothing/accessory/dogtags/protean_match/proc/unassign(unmatch_reason)
+	match_progress = UNASSIGNED
+	POOL -= src
+	ASSIGNED_TAGS -= src
+	assignee_name = null
+	assignee_truename = null
+	assignee_protean = null
+	name = initial(name)
+	paired_tag_weakref = null
+	update_static_data_for_all_viewers()
+	if(unmatch_reason)
+		say("You have been unmatched. Reason: [unmatch_reason].")
+
+/obj/item/clothing/accessory/dogtags/protean_match/examine(mob/user)
+	. = ..()
+	if(!(in_range(user, src)))
+		return
+	if(assignee_name)
+		. += span_notice("This set is assigned to [assignee_name], a [assignee_protean ? "Protean" : "Wearer"].")
+	switch(match_progress)
+		if(UNASSIGNED)
+			. += span_notice("You can join the program by using it in-hand.")
+		if(IN_POOL)
+			. += span_notice("It's currently in the candidate pool, alongside [length(POOL) - 1] others. Leave the pool by using it in-hand.")
+		if(MATCHED)
+			var/obj/item/clothing/accessory/dogtags/protean_match/paired_tag = paired_tag_weakref?.resolve()
+			. += span_notice("It's currently matched with [paired_tag.assignee_name], and can be unmatched by using it in-hand. To match with a different person in the queue, alt-click.")
+
+#undef POOL
+#undef ASSIGNED_TAGS
+#undef UNASSIGNED
+#undef IN_POOL
+#undef MATCHED
 
 /*
 Greyscaled Medals
@@ -295,18 +559,53 @@ Potential future ideas:
 	greyscale_config = /datum/greyscale_config/medals/glow
 	greyscale_config_worn = /datum/greyscale_config/medals/glow/worn
 	greyscale_colors = "#7effff"
-	unique_reskin = list(
-		"Crystal" = "necklace_crystal",
-		"Bar" = "necklace_bar",
-		"Hollow Bar" = "necklace_bar_hollow",
-		"Diamond" = "necklace_diamond",
-		"Hollow Diamond" = "necklace_diamond_hollow",
-		"Shard" = "necklace_shard",
-		"Hollow Shard" = "necklace_shard_hollow",
-		"Triangle" = "necklace_triangle",
-		"Hollow Triangle" = "necklace_triangle_hollow",
-		"Circle" = "necklace_circle",
-	)
+
+/obj/item/clothing/accessory/bubber/acc_medal/glowcrystal/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/reskinable_item, /datum/atom_skin/glowcrystal)
+
+/datum/atom_skin/glowcrystal
+	abstract_type = /datum/atom_skin/glowcrystal
+
+/datum/atom_skin/glowcrystal/crystal
+	preview_name = "Crystal"
+	new_icon_state = "necklace_crystal"
+
+/datum/atom_skin/glowcrystal/bar
+	preview_name = "Bar"
+	new_icon_state = "necklace_bar"
+
+/datum/atom_skin/glowcrystal/bar_hollow
+	preview_name = "Hollow Bar"
+	new_icon_state = "necklace_bar_hollow"
+
+/datum/atom_skin/glowcrystal/diamond
+	preview_name = "Diamond"
+	new_icon_state = "necklace_diamond"
+
+/datum/atom_skin/glowcrystal/diamond_hollow
+	preview_name = "Hollow Diamond"
+	new_icon_state = "necklace_diamond_hollow"
+
+/datum/atom_skin/glowcrystal/shard
+	preview_name = "Shard"
+	new_icon_state = "necklace_shard"
+
+/datum/atom_skin/glowcrystal/shard_hollow
+	preview_name = "Hollow Shard"
+	new_icon_state = "necklace_shard_hollow"
+
+/datum/atom_skin/glowcrystal/triangle
+	preview_name = "Triangle"
+	new_icon_state = "necklace_triangle"
+
+/datum/atom_skin/glowcrystal/triangle_hollow
+	preview_name = "Hollow Triangle"
+	new_icon_state = "necklace_triangle_hollow"
+
+/datum/atom_skin/glowcrystal/circle
+	preview_name = "Circle"
+	new_icon_state = "necklace_circle"
 
 /*
 // Rank pins

@@ -26,6 +26,7 @@
 	attack_verb_simple = list("attack", "bap", "hit")
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	interaction_flags_atom = parent_type::interaction_flags_atom | INTERACT_ATOM_ALLOW_USER_LOCATION | INTERACT_ATOM_IGNORE_MOBILITY
+	custom_materials = list(/datum/material/plastic = HALF_SHEET_MATERIAL_AMOUNT)
 
 	///A string of flavortext to be displayed at the top of the UI, related to the type of blueprints we are.
 	var/fluffnotice = "Property of Nanotrasen. For heads of staff only. Store in high-secure storage."
@@ -201,6 +202,7 @@
 		/area/centcom/wizard_station,
 		/area/misc/hilbertshotel,
 		/area/misc/hilbertshotelstorage,
+		/area/misc/condo, //BUBBER EDIT - Adds Condos
 	))
 	if(area_checking.type in special_areas)
 		return AREA_SPECIAL

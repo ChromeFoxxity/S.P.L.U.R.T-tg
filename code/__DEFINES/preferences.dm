@@ -47,6 +47,7 @@
 #define PARALLAX_HIGH "High"
 #define PARALLAX_MED "Medium"
 #define PARALLAX_LOW "Low"
+#define PARALLAX_BOOMER "Old"
 #define PARALLAX_DISABLE "Disabled"
 
 #define SCALING_METHOD_NORMAL "normal"
@@ -62,6 +63,7 @@
 #define SEC_DEPT_MEDICAL "Medical"
 #define SEC_DEPT_SCIENCE "Science"
 #define SEC_DEPT_SUPPLY "Supply"
+#define SEC_DEPT_SERVICE "Service" // SPLRUT EDIT ADD, Cause why not.
 
 // Playtime tracking system, see jobs_exp.dm
 #define EXP_TYPE_LIVING "Living"
@@ -166,8 +168,6 @@
 #define LOADOUT_FLAG_GREYSCALING_ALLOWED (1<<2)
 /// Allows the item to be renamed by the player.
 #define LOADOUT_FLAG_ALLOW_NAMING (1<<3)
-/// Allows the item to be reskinned by the player. Only applicable to items with unique_reskin defined.
-#define LOADOUT_FLAG_ALLOW_RESKIN (1<<4)
 
 // Loadout item info keys
 // Changing these will break existing loadouts

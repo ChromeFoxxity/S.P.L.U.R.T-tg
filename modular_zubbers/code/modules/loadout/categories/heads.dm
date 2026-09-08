@@ -25,12 +25,7 @@
 /datum/loadout_item/head/hats/warden/drill
 	name = "Warden's Campaign Hat"
 	item_path = /obj/item/clothing/head/hats/warden/drill
-
-/datum/loadout_item/head/hats/warden/police/patrol
-	name = "Police Patrol Cap"
-	item_path = /obj/item/clothing/head/hats/warden/police/patrol
-	restricted_roles = list(ALL_JOBS_SEC)
-	loadout_flags = parent_type::loadout_flags | LOADOUT_FLAG_ALLOW_RESKIN
+	restricted_roles = list(JOB_WARDEN)
 
 /datum/loadout_item/head/helmet/sec/futuristic
 	name = "Futuristic Security Helmet"
@@ -65,35 +60,47 @@
 	donator_only = TRUE
 	restricted_roles = list(JOB_NT_REP)
 
-/datum/loadout_item/head/security_garrison
-	name = "Security Garrison Cap"
-	item_path = /obj/item/clothing/head/security_garrison
-	restricted_roles = list(ALL_JOBS_SEC)
-	loadout_flags = parent_type::loadout_flags | LOADOUT_FLAG_ALLOW_RESKIN
+/datum/loadout_item/head/hats/blueshield_beret
+	name = "Blueshield's Beret"
+	item_path = /obj/item/clothing/head/beret/blueshield
+	restricted_roles = list(JOB_BLUESHIELD)
 
-/datum/loadout_item/head/security_cap
-	name = "Security Cap"
-	item_path = /obj/item/clothing/head/security_cap
-	restricted_roles = list(ALL_JOBS_SEC)
-	loadout_flags = parent_type::loadout_flags | LOADOUT_FLAG_ALLOW_RESKIN
+
+/datum/loadout_item/head/hats/blueshield_beret_navy
+	name = "Navy Blueshield's Beret"
+	item_path = /obj/item/clothing/head/beret/blueshield/navy
+	restricted_roles = list(JOB_BLUESHIELD)
 
 /datum/loadout_item/head/security_cap/soft
 	name = "Security Soft Cap"
 	item_path = /obj/item/clothing/head/soft/sec
 	restricted_roles = list(ALL_JOBS_SEC)
-	loadout_flags = parent_type::loadout_flags & ~LOADOUT_FLAG_ALLOW_RESKIN
+
+/datum/loadout_item/head/security_cap/recolorable
+	name = "Recolorable Security Cap"
+	item_path = /obj/item/clothing/head/soft/sec/recolorable
+	restricted_roles = list(ALL_JOBS_SEC)
+	greyscale_component_preview_icon_file = 'modular_zubbers/icons/obj/clothing/head/hats.dmi'
+
+/datum/loadout_item/head/security_cap/recolorable/set_item_color(datum/preference_middleware/loadout/manager, mob/user)
+	return set_component_style_item_color(manager, user)
+
+/datum/loadout_item/head/security_cap/recolorable/set_slot_greyscale(datum/preference_middleware/loadout/manager, datum/greyscale_modify_menu/open_menu)
+	return set_component_style_slot_greyscale(manager, open_menu)
+
+/datum/loadout_item/head/security_cap/recolorable/on_equip_item(obj/item/equipped_item, list/item_details, mob/living/carbon/human/equipper, datum/outfit/outfit, visuals_only = FALSE)
+	. = ..()
+	apply_component_style_to_equipped_item(equipped_item, item_details)
 
 /datum/loadout_item/head/security_cap/veteran
 	name = "Veteran's Soft Security Cap"
 	item_path = /obj/item/clothing/head/soft/veteran
 	restricted_roles = list(ALL_JOBS_SEC)
-	loadout_flags = parent_type::loadout_flags & ~LOADOUT_FLAG_ALLOW_RESKIN
 
 /datum/loadout_item/head/security_cap/colonial
 	name = "Imperial Police Cap"
 	item_path = /obj/item/clothing/head/hats/colonial/nri_police
 	restricted_roles = list(ALL_JOBS_SEC, JOB_CUSTOMS_AGENT)
-	loadout_flags = parent_type::loadout_flags & ~LOADOUT_FLAG_ALLOW_RESKIN
 
 /datum/loadout_item/head/security_beanie
 	name = "Security Beanie"
@@ -102,24 +109,13 @@
 
 /datum/loadout_item/head/beret/sec/peacekeeper
 	name = "Peacekeeper Beret"
-	item_path = /obj/item/clothing/head/beret/sec/peacekeeper
+	item_path = /obj/item/clothing/head/beret/sec
 	restricted_roles = list(ALL_JOBS_SEC)
 
 /datum/loadout_item/head/beret/sec/peacekeeper/white
 	name = "Peacekeeper White Beret"
-	item_path = /obj/item/clothing/head/beret/sec/peacekeeper/white
+	item_path = /obj/item/clothing/head/beret/sec/white
 	restricted_roles = list(ALL_JOBS_SEC)
-
-/datum/loadout_item/head/helmet/sec/terra
-	name = "Sol Police Helmet"
-	item_path = /obj/item/clothing/head/helmet/sec/terra
-	restricted_roles = list(ALL_JOBS_SEC)
-
-/datum/loadout_item/head/hats/warden/police/patrol
-	name = "Warden's Police Cap"
-	item_path = /obj/item/clothing/head/hats/warden/police/patrol
-	restricted_roles = list(ALL_JOBS_SEC)
-	loadout_flags = parent_type::loadout_flags | LOADOUT_FLAG_ALLOW_RESKIN
 
 /datum/loadout_item/head/helmet/sec/redsec
 	name = "Security Red Helmet"
@@ -135,7 +131,6 @@
 	name = "Security Kepi"
 	item_path = /obj/item/clothing/head/security_kepi
 	restricted_roles = list(ALL_JOBS_SEC)
-	loadout_flags = parent_type::loadout_flags | LOADOUT_FLAG_ALLOW_RESKIN
 
 /datum/loadout_item/head/beret/sec/peacekeeper/armadyne
 	name = "Armadyne Corporate Beret"
@@ -149,7 +144,7 @@
 
 /datum/loadout_item/head/beret/sec/peacekeeper/security_medic
 	name = "Security Medic Beret"
-	item_path = /obj/item/clothing/head/beret/sec/peacekeeper/security_medic
+	item_path = /obj/item/clothing/head/beret/sec/security_medic
 	restricted_roles = list(JOB_SECURITY_MEDIC)
 
 /datum/loadout_item/head/lace_bow
@@ -181,3 +176,15 @@
 /datum/loadout_item/head/soft/frontier_colonist
 	name = "Frontier Cap"
 	item_path = /obj/item/clothing/head/soft/frontier_colonist
+
+/datum/loadout_item/head/skull
+	name = "Skull Helmet"
+	item_path = /obj/item/clothing/head/helmet/skull/fake
+
+/datum/loadout_item/head/soft/plasmax_black
+	name = "PlasMAX Envirosuit Helmet"
+	item_path = /obj/item/clothing/head/helmet/space/plasmaman/plasmax_black
+
+/datum/loadout_item/head/colonial
+	name = "Colonial Cap"
+	item_path = /obj/item/clothing/head/hats/colonial

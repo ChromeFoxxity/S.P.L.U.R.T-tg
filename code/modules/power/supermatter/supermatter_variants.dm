@@ -1,3 +1,6 @@
+/obj/machinery/power/supermatter_crystal
+	var/replace_on_spawn = TRUE
+
 /// Normal SM with it's processing disabled.
 /obj/machinery/power/supermatter_crystal/hugbox
 	disable_damage = TRUE
@@ -8,6 +11,14 @@
 /// Normal SM designated as main engine.
 /obj/machinery/power/supermatter_crystal/engine
 	is_main_engine = TRUE
+
+// SPLURT EDIT ADDITION START
+/obj/machinery/power/supermatter_crystal/cardinal_station // I need this to be a specific type since they replace them with the beacon now.
+	is_main_engine = TRUE
+	anchored = FALSE
+	inertia_force_weight = 3
+	replace_on_spawn = FALSE
+// SPLURT EDIT ADDITION END
 
 /// Shard SM.
 /obj/machinery/power/supermatter_crystal/shard
@@ -61,6 +72,7 @@
 	icon_state = "sm_small"
 	moveable = TRUE
 	anchored = FALSE
+	custom_materials = list(/datum/material/adamantine = SHEET_MATERIAL_AMOUNT * 20, /datum/material/iron = SHEET_MATERIAL_AMOUNT)
 
 /obj/machinery/power/supermatter_crystal/small/Initialize(mapload)
 	. = ..()
@@ -76,3 +88,4 @@
 	throw_speed = 1
 	throw_range = 1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	custom_materials = list(/datum/material/adamantine = SHEET_MATERIAL_AMOUNT * 20)

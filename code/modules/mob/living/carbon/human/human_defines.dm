@@ -5,7 +5,7 @@
 	icon = 'icons/mob/human/human.dmi'
 	icon_state = "human_basic"
 	appearance_flags = KEEP_TOGETHER|TILE_BOUND|PIXEL_SCALE|LONG_GLIDE
-	hud_possible = list(HEALTH_HUD,STATUS_HUD,ID_HUD,WANTED_HUD,IMPLOYAL_HUD,IMPSEC_FIRST_HUD,IMPSEC_SECOND_HUD,ANTAG_HUD,GLAND_HUD,FAN_HUD,PERMIT_HUD,DNR_HUD,NANITE_HUD,DIAG_NANITE_FULL_HUD) //BUBBER EDIT ADDITION - PERMIT_HUD, DNR_HUD
+	hud_possible = list(HEALTH_HUD,STATUS_HUD,BLOOD_HUD,ID_HUD,WANTED_HUD,IMPLOYAL_HUD,IMPSEC_FIRST_HUD,IMPSEC_SECOND_HUD,ANTAG_HUD,GLAND_HUD,FAN_HUD,PERMIT_HUD,DNR_HUD,NANITE_HUD,DIAG_NANITE_FULL_HUD)  //BUBBER EDIT ADDITION - PERMIT_HUD, DNR_HUD, NANITE_HUD, DIAG_NANITE_FULL_HUD
 	hud_type = /datum/hud/human
 	pressure_resistance = 25
 	buckle_lying = 0
@@ -24,15 +24,9 @@
 	var/hairstyle = "Bald"
 
 	///Colours used for hair and facial hair gradients.
-	var/list/grad_color = list(
-		COLOR_BLACK,	//Hair Gradient Color
-		COLOR_BLACK,	//Facial Hair Gradient Color
-	)
+	var/list/grad_color
 	///Styles used for hair and facial hair gradients.
-	var/list/grad_style = list(
-		"None",	//Hair Gradient Style
-		"None",	//Facial Hair Gradient Style
-	)
+	var/list/grad_style
 
 	//Facial hair colour and style
 	var/facial_hair_color = COLOR_BLACK
@@ -70,6 +64,14 @@
 	var/datum/laugh_type/selected_laugh //SKYRAT EDIT ADDITION
 
 	//Equipment slots
+	var/obj/item/back = null
+	var/obj/item/head = null
+	var/obj/item/clothing/gloves = null
+	var/obj/item/clothing/ears = null
+	var/obj/item/clothing/glasses/glasses = null
+	var/obj/item/clothing/shoes/shoes = null
+	var/obj/item/clothing/neck/wear_neck = null
+	var/obj/item/clothing/mask/wear_mask = null
 	var/obj/item/clothing/wear_suit = null
 	var/obj/item/clothing/w_uniform = null
 	var/obj/item/belt = null
@@ -104,6 +106,17 @@
 	/// Actual height of the mob. Don't touch this one, it is set via update_mob_height()
 	VAR_FINAL/mob_height = HUMAN_HEIGHT_MEDIUM
 
+	/// Tracks how long in seconds we've been in a low pressure environment
+	VAR_FINAL/seconds_in_low_pressure = 0
+
+	/// Combined width of our body sprite
+	VAR_PRIVATE/cached_body_width = ICON_SIZE_X
+	/// Combined height of our body sprite
+	VAR_PRIVATE/cached_body_height = ICON_SIZE_Y
+	/// Leftmost offset of our overlays
+	var/cached_body_min_x_offset = 0
+	/// Rightmost offset of our overlays
+	var/cached_body_min_y_offset = 0
 	// BUBBER EDIT START - Floating Hands quirk
 	var/obj/effect/abstract/held_tk_effect/left/held_left
 	var/obj/effect/abstract/held_tk_effect/right/held_right

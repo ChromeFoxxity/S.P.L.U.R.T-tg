@@ -283,7 +283,7 @@ GLOBAL_LIST_INIT(ai_employers, list(
 #define GET_CULTIST(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/cult))
 
 /// Checks if the mob is a sentient or non-sentient cultist
-#define IS_CULTIST_OR_CULTIST_MOB(mob) ((IS_CULTIST(mob)) || (mob.faction.Find(FACTION_CULT)))
+#define IS_CULTIST_OR_CULTIST_MOB(mob) ((IS_CULTIST(mob)) || (mob.has_faction(FACTION_CULT)))
 
 /**
  * Heretic checks
@@ -369,7 +369,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 /// Chance the traitor gets a kill objective. If this prob fails, they will get a steal objective instead.
 #define KILL_PROB 50
 /// If a kill objective is rolled, chance that it is to destroy the AI.
-#define DESTROY_AI_PROB(denominator) (100 / denominator)
+#define DESTROY_AI_PROB(denominator) 0 // SPLURT EDIT - no destroy AI objectives, was (100 / denominator)
 /// If the destroy AI objective doesn't roll, chance that we'll get a maroon instead. If this prob fails, they will get a generic assassinate objective instead.
 #define MAROON_PROB 0 // SPLURT EDIT - No more maroon objectives, from 30 > 0
 /// Probability that any job related objective is picked
@@ -422,6 +422,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 #define ANTAG_GROUP_ARACHNIDS "Arachnid Infestation"
 #define ANTAG_GROUP_ASHWALKERS "Ash Walkers"
 #define ANTAG_GROUP_BIOHAZARDS "Biohazards"
+#define ANTAG_GROUP_BLOODY "Bloody Monstrosities"
 #define ANTAG_GROUP_CLOWNOPS "Clown Operatives"
 #define ANTAG_GROUP_ERT "Emergency Response Team"
 #define ANTAG_GROUP_GLITCH "Digital Anomalies"

@@ -12035,7 +12035,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/heads_quarters/hop)
 "eOt" = (
-/mob/living/simple_animal/bot/secbot/pingsky,
+/mob/living/basic/bot/secbot/pingsky,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -14033,14 +14033,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/department/science)
-"fxw" = (
-/obj/structure/closet/emcloset/anchored,
-/obj/effect/turf_decal/trimline/green/filled/line{
-	dir = 4
-	},
-/obj/effect/landmark/start/hangover,
-/turf/open/floor/iron,
-/area/station/hallway/primary/upper)
 "fxR" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=8";
@@ -23856,11 +23848,11 @@
 "jla" = (
 /obj/structure/table,
 /obj/item/binoculars,
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = -5;
 	pixel_y = 8
 	},
-/obj/item/computer_disk,
+/obj/item/disk/computer,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
@@ -28256,9 +28248,9 @@
 /area/station/security/brig/upper)
 "kNu" = (
 /obj/structure/closet/secure_closet/quartermaster,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
+/obj/item/disk/computer/quartermaster,
+/obj/item/disk/computer/quartermaster,
+/obj/item/disk/computer/quartermaster,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 5
@@ -30689,6 +30681,24 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
+"lHQ" = (
+/obj/structure/table,
+/obj/item/food/grown/wheat,
+/obj/item/food/grown/melonlike/watermelon,
+/obj/item/food/grown/citrus/orange,
+/obj/item/food/grown/grapes,
+/obj/item/food/grown/cocoapod,
+/obj/item/food/grown/apple,
+/obj/item/food/grown/chili,
+/obj/item/food/grown/cherries,
+/obj/item/food/grown/soybeans,
+/obj/item/food/grown/citrus/lime,
+/obj/machinery/light/directional/south,
+/obj/effect/turf_decal/siding/green{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/service/hydroponics/garden)
 "lHU" = (
 /obj/structure/cable,
 /obj/effect/mapping_helpers/broken_floor,
@@ -32024,6 +32034,14 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
+"mgj" = (
+/obj/structure/closet/emcloset/anchored,
+/obj/effect/turf_decal/trimline/green/filled/line{
+	dir = 4
+	},
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/iron,
+/area/station/hallway/primary/upper)
 "mgk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/west,
@@ -35230,17 +35248,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
-"nok" = (
-/obj/structure/closet/emcloset,
-/obj/effect/turf_decal/trimline/yellow/filled/line{
-	dir = 10
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/effect/landmark/start/hangover,
-/turf/open/floor/iron,
-/area/station/hallway/primary/port)
 "noo" = (
 /obj/structure/chair/sofa/bench/right{
 	dir = 8
@@ -38030,7 +38037,7 @@
 /area/station/service/abandoned_gambling_den)
 "ooh" = (
 /obj/effect/decal/cleanable/generic,
-/mob/living/simple_animal/bot/secbot/beepsky{
+/mob/living/basic/bot/secbot/beepsky{
 	name = "Officer Beepsky"
 	},
 /turf/open/floor/plating,
@@ -42118,6 +42125,17 @@
 /obj/structure/sign/warning/secure_area/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/gateway)
+"pPk" = (
+/obj/structure/closet/emcloset,
+/obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 10
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/iron,
+/area/station/hallway/primary/port)
 "pPu" = (
 /obj/machinery/telecomms/receiver/preset_right,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
@@ -47794,24 +47812,6 @@
 /obj/structure/flora/bush/grassy/style_random,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/park)
-"rSy" = (
-/obj/structure/table,
-/obj/item/food/grown/wheat,
-/obj/item/food/grown/watermelon,
-/obj/item/food/grown/citrus/orange,
-/obj/item/food/grown/grapes,
-/obj/item/food/grown/cocoapod,
-/obj/item/food/grown/apple,
-/obj/item/food/grown/chili,
-/obj/item/food/grown/cherries,
-/obj/item/food/grown/soybeans,
-/obj/item/food/grown/citrus/lime,
-/obj/machinery/light/directional/south,
-/obj/effect/turf_decal/siding/green{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/service/hydroponics/garden)
 "rSQ" = (
 /obj/structure/reagent_dispensers/plumbed{
 	dir = 1
@@ -48082,7 +48082,7 @@
 "rWM" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/mob/living/simple_animal/bot/secbot/beepsky/armsky,
+/mob/living/basic/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/ai_monitored/security/armory)
 "rWU" = (
@@ -49959,9 +49959,9 @@
 /area/station/medical/chemistry)
 "sEE" = (
 /obj/structure/rack,
-/obj/item/computer_disk/engineering,
-/obj/item/computer_disk/engineering,
-/obj/item/computer_disk/engineering,
+/obj/item/disk/computer/engineering,
+/obj/item/disk/computer/engineering,
+/obj/item/disk/computer/engineering,
 /obj/item/lighter,
 /obj/item/clothing/glasses/meson{
 	pixel_y = 4
@@ -51091,15 +51091,15 @@
 /area/station/ai_monitored/command/storage/satellite)
 "sXV" = (
 /obj/structure/table,
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = -8;
 	pixel_y = -3
 	},
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = -5;
 	pixel_y = 8
 	},
-/obj/item/computer_disk/ordnance{
+/obj/item/disk/computer/ordnance{
 	pixel_x = 1
 	},
 /obj/machinery/light_switch/directional/west{
@@ -52064,9 +52064,9 @@
 /obj/item/taperecorder{
 	pixel_x = -3
 	},
-/obj/item/computer_disk/ordnance,
-/obj/item/computer_disk/ordnance,
-/obj/item/computer_disk/ordnance,
+/obj/item/disk/computer/ordnance,
+/obj/item/disk/computer/ordnance,
+/obj/item/disk/computer/ordnance,
 /obj/effect/turf_decal/siding/purple{
 	dir = 5
 	},
@@ -57767,7 +57767,7 @@
 /area/station/service/hydroponics/park)
 "vAU" = (
 /obj/structure/closet/secure_closet/chief_medical,
-/obj/item/computer_disk/medical,
+/obj/item/disk/computer/medical,
 /obj/effect/turf_decal/tile/blue/opposingcorners{
 	dir = 1
 	},
@@ -57901,20 +57901,20 @@
 /area/station/cargo/storage)
 "vEt" = (
 /obj/structure/table,
-/obj/item/stack/sticky_tape{
+/obj/item/stack/medical/wrap/sticky_tape{
 	pixel_x = 7;
 	pixel_y = 7
 	},
-/obj/item/stack/sticky_tape{
+/obj/item/stack/medical/wrap/sticky_tape{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/stack/sticky_tape,
-/obj/item/stack/sticky_tape{
+/obj/item/stack/medical/wrap/sticky_tape,
+/obj/item/stack/medical/wrap/sticky_tape{
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/stack/sticky_tape{
+/obj/item/stack/medical/wrap/sticky_tape{
 	pixel_x = -7;
 	pixel_y = -7
 	},
@@ -152746,7 +152746,7 @@ xzK
 qSb
 nYG
 xLh
-nok
+pPk
 nvb
 qpi
 sOG
@@ -161444,7 +161444,7 @@ pLM
 xml
 pLM
 jIX
-rSy
+lHQ
 aCi
 qja
 fgv
@@ -162249,7 +162249,7 @@ siC
 kDA
 qIo
 qIo
-fxw
+mgj
 owR
 owR
 dcs
