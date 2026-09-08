@@ -840,10 +840,6 @@
 	pixel_y = 14;
 	pixel_x = -3
 	},
-/obj/item/stamp/nanotrasen/ns/captain{
-	pixel_y = 1;
-	pixel_x = -7
-	},
 /obj/item/paper_bin{
 	pixel_y = 4;
 	pixel_x = 5
@@ -853,6 +849,10 @@
 	pixel_y = 3
 	},
 /obj/structure/spider/stickyweb,
+/obj/item/stamp/nanotrasen/ns/supply{
+	pixel_x = -7;
+	pixel_y = 3
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/delta/bridge)
 "qt" = (
