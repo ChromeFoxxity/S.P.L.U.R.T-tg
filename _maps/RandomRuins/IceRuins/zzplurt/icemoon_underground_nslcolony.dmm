@@ -1691,9 +1691,9 @@
 /area/icemoon/underground/explored)
 "ik" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/gibspawner/human,
-/obj/effect/mob_spawn/corpse/human/skeleton,
 /obj/effect/decal/cleanable/blood/gibs/core,
+/obj/effect/gibspawner/human/bodypartless,
+/obj/effect/mob_spawn/corpse/human/skeleton,
 /turf/open/misc/asteroid/snow/icemoon/do_not_chasm,
 /area/icemoon/underground/explored)
 "il" = (
@@ -5169,9 +5169,9 @@
 	},
 /area/icemoon/underground/explored)
 "Au" = (
-/obj/machinery/autolathe,
 /obj/effect/turf_decal/tile/yellow/opposingcorners,
 /obj/machinery/newscaster/directional/south,
+/obj/machinery/rnd/production/colony_lathe,
 /turf/open/floor/iron/textured,
 /area/ruin/nsl_mining_colony/engineering)
 "Ax" = (
