@@ -46,7 +46,7 @@ GLOBAL_LIST_EMPTY(clock_warp_areas)
 	///are we warping down
 	var/warping = FALSE
 	///what area types are we blocked from warping to
-	var/static/list/blocked_areas = typecacheof(list(/area/station/service/chapel, /area/station/ai_monitored))
+	var/static/list/blocked_areas = typecacheof(list(/area/station/service/chapel))
 
 /datum/action/innate/clockcult/warp/Activate()
 	if(!isliving(owner))
