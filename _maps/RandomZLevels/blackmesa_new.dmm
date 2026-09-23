@@ -881,12 +881,9 @@
 /turf/open/floor/iron/textured_large,
 /area/awaymission/black_mesa/entrance_hall)
 "brg" = (
-/obj/structure/table,
-/obj/item/folder/yellow,
-/obj/item/folder/yellow{
-	pixel_x = 4
-	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/item/modular_computer/laptop/preset/civilian,
+/obj/structure/table/reinforced,
 /turf/open/floor/iron,
 /area/awaymission/black_mesa/entrance_lobby)
 "bri" = (
@@ -5599,7 +5596,14 @@
 "iwG" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor/left/directional/east,
-/obj/item/paper,
+/obj/item/folder/yellow{
+	pixel_y = 4;
+	pixel_x = -3
+	},
+/obj/item/folder/yellow{
+	pixel_x = 5;
+	pixel_y = 1
+	},
 /turf/open/floor/iron/dark/textured_large,
 /area/awaymission/black_mesa/entrance_lobby)
 "ixa" = (
@@ -6122,6 +6126,18 @@
 /obj/effect/random_mob_placer/xen,
 /turf/open/floor/iron/dark,
 /area/awaymission/black_mesa/science_decon_room)
+"jfS" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/table/reinforced,
+/obj/item/phone{
+	pixel_y = 6;
+	pixel_x = -3
+	},
+/obj/item/reagent_containers/cup/glass/mug/coco{
+	pixel_x = 7
+	},
+/turf/open/floor/iron,
+/area/awaymission/black_mesa/entrance_lobby)
 "jhj" = (
 /obj/structure/table,
 /obj/item/flashlight/flashdark,
@@ -7262,7 +7278,15 @@
 /area/awaymission/black_mesa/black_ops_downstairs_atrium)
 "kTw" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/structure/table,
+/obj/structure/table/reinforced,
+/obj/item/clipboard{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/pen{
+	pixel_x = -4;
+	pixel_y = 4
+	},
 /turf/open/floor/iron,
 /area/awaymission/black_mesa/entrance_lobby)
 "kTL" = (
@@ -11177,6 +11201,17 @@
 	},
 /turf/open/floor/iron/smooth_large,
 /area/awaymission/black_mesa/cryo_hallway)
+"qxe" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/table/reinforced,
+/obj/item/paper_bin{
+	pixel_y = 4
+	},
+/obj/item/pen{
+	pixel_y = 4
+	},
+/turf/open/floor/iron,
+/area/awaymission/black_mesa/entrance_lobby)
 "qyF" = (
 /turf/open/misc/beach/coastline_t/xen{
 	dir = 4
@@ -12395,6 +12430,12 @@
 	},
 /turf/open/floor/wood/parquet,
 /area/awaymission/black_mesa/employee_dorm_room)
+"smc" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/table/reinforced,
+/obj/item/radio/intercom,
+/turf/open/floor/iron,
+/area/awaymission/black_mesa/entrance_lobby)
 "smE" = (
 /obj/machinery/porta_turret/black_mesa,
 /turf/open/floor/iron/textured_large,
@@ -13434,6 +13475,9 @@
 /obj/structure/alien/weeds/xen,
 /turf/open/floor/iron/smooth_large,
 /area/awaymission/black_mesa/entrance_internal_hall)
+"tKQ" = (
+/turf/open/space/basic,
+/area/awaymission/black_mesa)
 "tKS" = (
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/electrolyzer,
@@ -16538,7 +16582,7 @@
 /area/awaymission/black_mesa/xen/acid_lake_hallway)
 "ygc" = (
 /turf/closed/indestructible/rock,
-/area/space)
+/area/awaymission/black_mesa/entrance_tunnel)
 "ygf" = (
 /obj/structure/window/spawner/directional/south,
 /obj/structure/window/spawner/directional/east,
@@ -69243,6 +69287,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 vLS
 vLS
@@ -69267,7 +69312,6 @@ vLS
 vLS
 vLS
 bCY
-lWF
 lWF
 lWF
 lWF
@@ -69500,6 +69544,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 eho
@@ -69524,7 +69569,6 @@ eho
 eho
 lhz
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -69757,6 +69801,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -69781,7 +69826,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -70014,6 +70058,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -70038,7 +70083,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -70271,6 +70315,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -70295,7 +70340,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -70528,6 +70572,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -70552,7 +70597,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -70785,6 +70829,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -70809,7 +70854,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -71042,6 +71086,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -71066,7 +71111,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -71299,6 +71343,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -71323,7 +71368,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -71556,6 +71600,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -71580,7 +71625,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -71813,6 +71857,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 qCo
@@ -71837,7 +71882,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -72070,6 +72114,7 @@ lWF
 lWF
 lWF
 lWF
+lWF
 vLS
 eho
 tBR
@@ -72094,7 +72139,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -72328,6 +72372,7 @@ vLS
 vLS
 vLS
 vLS
+vLS
 eho
 ueX
 tqo
@@ -72351,7 +72396,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -72584,6 +72628,7 @@ pTj
 pTj
 pTj
 pTj
+pTj
 eho
 lhz
 ejW
@@ -72608,7 +72653,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -72830,6 +72874,7 @@ gcH
 gcH
 gcH
 gcH
+gcH
 dlB
 rEs
 geC
@@ -72865,7 +72910,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -73087,6 +73131,7 @@ uHS
 sSs
 gcH
 gcH
+gcH
 dlB
 rEs
 geC
@@ -73122,7 +73167,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -73344,6 +73388,7 @@ sFW
 lWh
 gcH
 gcH
+gcH
 dlB
 rEs
 geC
@@ -73379,7 +73424,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -73605,6 +73649,7 @@ pTj
 pTj
 pTj
 pTj
+pTj
 okE
 okE
 okE
@@ -73636,7 +73681,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -73860,6 +73904,7 @@ gcH
 gcH
 pTj
 ygc
+ygc
 pTj
 vqW
 lXQ
@@ -73893,7 +73938,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -74117,6 +74161,7 @@ gcH
 gcH
 pTj
 ygc
+ygc
 pTj
 qIV
 lXQ
@@ -74150,7 +74195,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -74373,7 +74417,8 @@ cyR
 gcH
 yfr
 pTj
-ygc
+evh
+evh
 pTj
 nym
 lXQ
@@ -74407,7 +74452,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -74629,8 +74673,9 @@ gcH
 gcH
 dtV
 gcH
-pTj
-ygc
+wFM
+rjQ
+rjQ
 pTj
 rMj
 che
@@ -74664,7 +74709,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -74887,7 +74931,8 @@ gcH
 gcH
 gcH
 pTj
-ygc
+rjQ
+rjQ
 pTj
 uGi
 lXQ
@@ -74921,7 +74966,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -75144,7 +75188,8 @@ iwG
 okE
 pTj
 pTj
-evh
+rjQ
+rjQ
 pTj
 pTj
 icy
@@ -75178,7 +75223,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -75393,14 +75437,15 @@ fiT
 oEk
 pUW
 pTj
-kTw
-kTw
+jfS
+smc
 kTw
 lXQ
 rgR
 brg
-lXQ
+qxe
 pTj
+rjQ
 rjQ
 rjQ
 rjQ
@@ -75435,7 +75480,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -75666,6 +75710,7 @@ rjQ
 rjQ
 rjQ
 rjQ
+rjQ
 evh
 glT
 glT
@@ -75692,7 +75737,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -75917,6 +75961,7 @@ byb
 pTj
 rjQ
 rjQ
+rjQ
 evh
 evh
 evh
@@ -75949,7 +75994,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -76174,6 +76218,7 @@ pTj
 pTj
 rjQ
 rjQ
+rjQ
 evh
 glT
 glT
@@ -76206,7 +76251,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -76431,6 +76475,7 @@ rjQ
 rjQ
 rjQ
 rjQ
+rjQ
 evh
 glT
 glT
@@ -76463,7 +76508,6 @@ qCo
 qCo
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -76688,6 +76732,7 @@ rjQ
 rjQ
 rjQ
 rjQ
+rjQ
 evh
 evh
 evh
@@ -76720,7 +76765,6 @@ eho
 eho
 eho
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -76946,6 +76990,7 @@ evh
 evh
 evh
 evh
+evh
 vLS
 vLS
 vLS
@@ -76977,7 +77022,6 @@ vLS
 vLS
 vLS
 vLS
-lWF
 lWF
 lWF
 lWF
@@ -77200,11 +77244,11 @@ vLS
 vLS
 vLS
 vLS
+tKQ
 vLS
 vLS
 vLS
 vLS
-lWF
 lWF
 lWF
 lWF
