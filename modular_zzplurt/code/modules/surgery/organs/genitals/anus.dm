@@ -1,7 +1,8 @@
 /obj/item/organ/genital/anus/get_description_string(datum/sprite_accessory/genital/gas)
 	var/u_His = owner?.p_their() || "their"
+	var/anus_style = gas ? LOWER_TEXT(gas.icon_state) : LOWER_TEXT(genital_name)
 
-	desc = "You see [u_His] squishy [LOWER_TEXT(gas.icon_state)] pucker parting [u_His] asscheeks"
+	desc = "You see [u_His] squishy [anus_style] pucker parting [u_His] asscheeks"
 
 /obj/item/organ/genital/anus/get_sprite_size_string()
 	. = "[genital_type]_[floor(genital_size)]"
@@ -14,5 +15,6 @@
 
 	return ..()
 
+// SPLURT anus DMI uses FRONT. Overlay must be postfix -> draw layer, not the old EXTERNAL_* bitflag.
 /datum/bodypart_overlay/mutant/genital/anus
-	layers = EXTERNAL_FRONT
+	layers = list(EXTERNAL_FRONT = BODY_FRONT_LAYER)

@@ -40,6 +40,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 #define GOODY_FREE_SHIPPING_MAX 5
 /// How much to charge oversized goody orders
 #define CRATE_TAX 700
+#define REFILL_RANGE_DEFAULT 10
 
 /obj/docking_port/mobile/supply
 	name = "supply shuttle"
@@ -123,11 +124,16 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 	if(getDockedId() == "cargo_away") // Buy when we leave home.
 		buy()
 		create_mail()
+		if(SSshuttle.renew_cargo_air)
+			refill_air()
 	. = ..() // Fly/enter transit.
 	if(. != DOCKING_SUCCESS)
 		return
 	if(getDockedId() == "cargo_away") // Sell when we get home
 		sell()
+		if(SSshuttle.renew_cargo_air)
+			refill_air()
+
 
 /obj/docking_port/mobile/supply/proc/buy()
 	SEND_SIGNAL(SSshuttle, COMSIG_SUPPLY_SHUTTLE_BUY)
@@ -165,7 +171,6 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 	var/pack_cost
 	var/list/goodies_by_buyer = list() // if someone orders more than GOODY_FREE_SHIPPING_MAX goodies, we upcharge to a normal crate so they can't carry around 20 combat shotties
 	var/list/clean_up_orders = list() // orders to remove since we are done with them
-	var/list/forced_briefcases = list() // SKYRAT EDIT ADDITION
 
 	for(var/datum/supply_order/spawning_order in SSshuttle.shopping_list)
 		if(!empty_turfs.len)
@@ -193,38 +198,44 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 			if(spawning_order.paying_account) //Someone paid out of pocket
 				paying_for_this = spawning_order.paying_account
 				// note this is before we increment, so this is the GOODY_FREE_SHIPPING_MAX + 1th goody to ship. also note we only increment off this step if they successfully pay the fee, so there's no way around it
-				if(spawning_order.pack.goody)
-					var/list/current_buyer_orders = goodies_by_buyer[spawning_order.paying_account]
+				if(spawning_order.pack.order_flags & ORDER_GOODY)
+					var/list/current_buyer_orders = goodies_by_buyer[paying_for_this] // BUBBER EDIT
 					if(LAZYLEN(current_buyer_orders) == GOODY_FREE_SHIPPING_MAX)
 						price = round(price + CRATE_TAX)
-						paying_for_this.bank_card_talk("Goody order size exceeds free shipping limit: Assessing [CRATE_TAX] credit S&H fee.")
+						paying_for_this.bank_card_talk("Goody order size exceeds free shipping limit: Assessing [CRATE_TAX] [MONEY_NAME_SINGULAR] S&H fee.")
 			else
 				paying_for_this = SSeconomy.get_dep_account(ACCOUNT_CAR)
 
 			if(paying_for_this)
 				if(!paying_for_this.adjust_money(-price, "Cargo: [spawning_order.pack.name]"))
 					if(spawning_order.paying_account)
-						paying_for_this.bank_card_talk("Cargo order #[spawning_order.id] rejected due to lack of funds. Credits required: [price]")
+						paying_for_this.bank_card_talk("Cargo order #[spawning_order.id] rejected due to lack of funds. [MONEY_NAME_CAPITALIZED] required: [price]")
 					if(!spawning_order.can_be_cancelled) //only if it absolutly cannot be canceled by the player do we cancel it for them
 						SSshuttle.shopping_list -= spawning_order
 						clean_up_orders += spawning_order
 					continue
 
 		pack_cost = spawning_order.pack.get_cost()
+		// BUBBER EDIT START - include cargo-funded goodies in per-buyer goody packaging
+		if(spawning_order.charge_on_purchase && (spawning_order.pack.order_flags & ORDER_GOODY) && paying_for_this)
+			LAZYADD(goodies_by_buyer[paying_for_this], spawning_order)
+		// BUBBER EDIT END
 		if(spawning_order.paying_account && spawning_order.charge_on_purchase) // SKYRAT EDIT CHANGE - ORIGINAL: if(spawning_order.paying_account)
 			paying_for_this = spawning_order.paying_account
-			if(spawning_order.pack.goody)
-				LAZYADD(goodies_by_buyer[spawning_order.paying_account], spawning_order)
+			// BUBBER REMOVAL START
+			// if(spawning_order.pack.order_flags & ORDER_GOODY)
+			// 	LAZYADD(goodies_by_buyer[spawning_order.paying_account], spawning_order)
+			// BUBBER REMOVAL END
 			var/receiver_message = "Cargo order #[spawning_order.id] has shipped."
 			if(spawning_order.charge_on_purchase)
-				receiver_message += " [price] credits have been charged to your bank account"
+				receiver_message += " [price] [MONEY_NAME] have been charged to your bank account"
 			paying_for_this.bank_card_talk(receiver_message)
 			SSeconomy.add_audit_entry(paying_for_this, price, spawning_order.pack.name)
 			var/datum/bank_account/department/cargo = SSeconomy.get_dep_account(ACCOUNT_CAR)
 			cargo.adjust_money(price - pack_cost) //Cargo gets the handling fee
 		value += pack_cost
 
-		if(!spawning_order.pack.goody && !(spawning_order?.paying_account in forced_briefcases)) // SKYRAT EDIT CHANGE - ORIGINAL : if(!spawning_order.pack.goody)
+		if(!(spawning_order.pack.order_flags & ORDER_GOODY)) //we handle goody crates below
 			var/obj/structure/closet/crate = spawning_order.generate(pick_n_take(empty_turfs))
 			crate.name += " - #[spawning_order.id]"
 
@@ -232,7 +243,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		var/from_whom = paying_for_this?.account_holder || "nobody (department order)"
 
 		investigate_log("Order #[spawning_order.id] ([spawning_order.pack.name], placed by [key_name(spawning_order.orderer_ckey)]), paid by [from_whom] has shipped.", INVESTIGATE_CARGO)
-		if(spawning_order.pack.dangerous)
+		if(spawning_order.pack.order_flags & ORDER_DANGEROUS)
 			message_admins("\A [spawning_order.pack.name] ordered by [ADMIN_LOOKUPFLW(spawning_order.orderer_ckey)], paid by [from_whom] has shipped.")
 		purchases++
 
@@ -245,11 +256,10 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 	for(var/buyer_key in goodies_by_buyer)
 		var/list/buying_account_orders = goodies_by_buyer[buyer_key]
 		var/datum/bank_account/buying_account = buyer_key
-		var/buyer = buying_account.account_holder
+		var/buyer = buying_account.account_holder || "Account ID: [buying_account.account_id]" // BUBBER EDIT - allow goodies to be bought privately
 
 		if(buying_account_orders.len > GOODY_FREE_SHIPPING_MAX) // no free shipping, send a crate
-			var/obj/structure/closet/crate/secure/owned/our_crate = new /obj/structure/closet/crate/secure/owned(pick_n_take(empty_turfs))
-			our_crate.buyer_account = buying_account
+			var/obj/structure/closet/crate/secure/owned/our_crate = new /obj/structure/closet/crate/secure/owned(pick_n_take(empty_turfs), buying_account) // BUBBER EDIT - add init arg
 			/// SKYRAT EDIT ADDITION START - FIXES COMMAND BUDGET CASES BEING UNOPENABLE
 			if(istype(our_crate.buyer_account, /datum/bank_account/department))
 				our_crate.department_purchase = TRUE
@@ -258,7 +268,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 			our_crate.name = "goody crate - purchased by [buyer]"
 			miscboxes[buyer] = our_crate
 		else //free shipping in a case
-			miscboxes[buyer] = new /obj/item/storage/lockbox/order(pick_n_take(empty_turfs))
+			miscboxes[buyer] = new /obj/item/storage/lockbox/order(pick_n_take(empty_turfs), buying_account) // BUBBER EDIT - add init arg
 			var/obj/item/storage/lockbox/order/our_case = miscboxes[buyer]
 			our_case.buyer_account = buying_account
 			/// SKYRAT EDIT ADDITION START - FIXES COMMAND BUDGET CASES BEING UNOPENABLE
@@ -286,7 +296,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		qdel(completed_order)
 
 	var/datum/bank_account/cargo_budget = SSeconomy.get_dep_account(ACCOUNT_CAR)
-	investigate_log("[purchases] orders in this shipment, worth [value] credits. [cargo_budget.account_balance] credits left.", INVESTIGATE_CARGO)
+	investigate_log("[purchases] orders in this shipment, worth [value] [MONEY_NAME]. [cargo_budget.account_balance] [MONEY_NAME] left.", INVESTIGATE_CARGO)
 
 /// Deletes and sells the items on the shuttle
 /obj/docking_port/mobile/supply/proc/sell()
@@ -303,6 +313,8 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 				for(var/atom/movable/exporting_atom in shuttle_turf)
 					if(iseyemob(exporting_atom))
 						continue
+					if(isobserver(exporting_atom))
+						continue
 					if(exporting_atom.anchored)
 						continue
 					export_item_and_contents(exporting_atom, apply_elastic = TRUE, dry_run = FALSE, external_report = report)
@@ -317,7 +329,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 
 	SSshuttle.centcom_message = msg
 	if(report.exported_atoms.len)
-		investigate_log("contents sold for [cargo_budget.account_balance - presale_points] credits. Contents: [report.exported_atoms.Join(",")]. Message: [msg]", INVESTIGATE_CARGO)
+		investigate_log("contents sold for [cargo_budget.account_balance - presale_points] [MONEY_NAME]. Contents: [report.exported_atoms.Join(",")]. Message: [msg]", INVESTIGATE_CARGO)
 
 /*
 	Generates a box of mail depending on our exports and imports.
@@ -351,5 +363,22 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 
 	return similar_count
 
+
+/**
+ * This proc collects all turfs on a shuttle, then replaces the air with the initial gas mix across the shuttle.
+ * Used by the shuttle air upgrade.
+ */
+/obj/docking_port/mobile/supply/proc/refill_air()
+	for(var/area/shuttle/shuttle_area as anything in shuttle_areas)
+		for(var/turf/open/floor/shuttle_floor in shuttle_area.get_turfs_from_all_zlevels())
+			if(shuttle_floor.blocks_air)
+			//skip walls
+				continue
+			var/datum/gas_mixture/GM = SSair.parse_gas_string(shuttle_floor.initial_gas_mix, /datum/gas_mixture/turf)
+			shuttle_floor.copy_air(GM)
+			shuttle_floor.temperature = initial(shuttle_floor.temperature)
+			shuttle_floor.update_visuals()
+
 #undef GOODY_FREE_SHIPPING_MAX
 #undef CRATE_TAX
+#undef REFILL_RANGE_DEFAULT

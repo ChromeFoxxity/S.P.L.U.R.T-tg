@@ -129,6 +129,7 @@
 	attack_verb_continuous = list("attacks", "baps", "hits")
 	attack_verb_simple = list("attack", "bap", "hit")
 	interaction_flags_atom = parent_type::interaction_flags_atom | INTERACT_ATOM_ALLOW_USER_LOCATION | INTERACT_ATOM_IGNORE_MOBILITY
+	custom_materials = list(/datum/material/plastic = HALF_SHEET_MATERIAL_AMOUNT)
 
 	var/base_desc = "A blank sheet of synthetic engineering-grade paper."
 	var/linked_desc = "A sheet of synthetic engineering-grade paper with shuttle schematics printed on it."
@@ -148,6 +149,10 @@
 	. = ..()
 	prox_monitor = new(src, 0, FALSE)
 	update_appearance()
+
+/obj/item/shuttle_blueprints/Destroy(force)
+	QDEL_NULL(prox_monitor)
+	return ..()
 
 /obj/item/shuttle_blueprints/equipped(mob/user, slot, initial)
 	. = ..()
@@ -700,6 +705,7 @@
 	base_icon_state = "shuttle_blueprints_crude"
 	base_desc = "This is just a sheet of paper thoroughly covered in what could either be crayon or spraypaint."
 	linked_desc = "This is just a crude doodle of a shuttle drawn on a background of what could either be crayon or spraypaint."
+	custom_materials = list(/datum/material/paper = HALF_SHEET_MATERIAL_AMOUNT / 2)
 
 /obj/item/shuttle_blueprints/borg
 	name = "shuttle blueprint database"

@@ -230,11 +230,8 @@
 	if(isnull(body))
 		return
 	candidate.transfer_to(body, force_key_move = TRUE) // yoinks the candidate's client
-	if(ishuman(body))
-		var/mob/living/carbon/human/human_body = body
-		body.client?.prefs.safe_transfer_prefs_to(body)
-		human_body.dna.remove_all_mutations()
-		human_body.dna.update_dna_identity()
+	if(ishuman(body) && apply_prefs_to_body(body))
+		on_prefs_applied(body)
 
 /**
  * Handles making the body for the candidate
@@ -261,6 +258,24 @@
 		alert_pic = signup_atom_appearance,
 		role_name_text = readable_poll_role,
 	)
+
+/**
+ * Handles prepping the body with the candidate's prefs
+ *
+ * Applies prefs to a given body. Usually that's what you want, but sometimes you don't, in which case you can override this proc.
+ * Returns TRUE if prefs were applied
+ */
+/datum/dynamic_ruleset/midround/from_ghosts/proc/apply_prefs_to_body(mob/living/carbon/human/body)
+	body.client?.prefs.safe_transfer_prefs_to(body)
+	body.dna.remove_all_mutations()
+	body.dna.update_dna_identity()
+	return TRUE
+
+/**
+ * Handles anything extra you want to happen after applying prefs
+ */
+/datum/dynamic_ruleset/midround/from_ghosts/proc/on_prefs_applied(mob/living/carbon/human/body)
+	return
 
 /datum/dynamic_ruleset/midround/from_ghosts/wizard
 	name = "Wizard"
@@ -435,7 +450,7 @@
 	max_antag_cap += prob(50) // 50% chance to get a second xeno, free!
 
 /datum/dynamic_ruleset/midround/from_ghosts/xenomorph/can_be_selected()
-	return ..() && length(find_vents()) > 0
+	return ..() && length(find_vent_spawns()) > 0
 
 /datum/dynamic_ruleset/midround/from_ghosts/xenomorph/execute()
 	. = ..()
@@ -451,30 +466,54 @@
 	return new /mob/living/carbon/alien/larva
 
 /datum/dynamic_ruleset/midround/from_ghosts/xenomorph/create_execute_args()
-	return list(find_vents())
+	return list(find_vent_spawns())
 
 /datum/dynamic_ruleset/midround/from_ghosts/xenomorph/assign_role(datum/mind/candidate, list/vent_list)
 	// xeno login gives antag datums
 	var/obj/vent = length(vent_list) >= 2 ? pick_n_take(vent_list) : vent_list[1]
 	candidate.current.move_into_vent(vent)
 
-/datum/dynamic_ruleset/midround/from_ghosts/xenomorph/proc/find_vents()
-	var/list/vents = list()
-	var/list/vent_pumps = SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/atmospherics/components/unary/vent_pump)
-	for(var/obj/machinery/atmospherics/components/unary/vent_pump/temp_vent as anything in vent_pumps)
-		if(QDELETED(temp_vent))
-			continue
-		if(!is_station_level(temp_vent.loc.z) || temp_vent.welded)
-			continue
-		var/datum/pipeline/temp_vent_parent = temp_vent.parents[1]
-		if(!temp_vent_parent)
-			continue
-		// Stops Aliens getting stuck in small networks.
-		// See: Security, Virology
-		if(length(temp_vent_parent.other_atmos_machines) <= 20)
-			continue
-		vents += temp_vent
-	return vents
+/datum/dynamic_ruleset/midround/from_ghosts/blood_worms
+	name = "Blood Worm Infestation"
+	config_tag = "Midround Blood Worm"
+	preview_antag_datum = /datum/antagonist/blood_worm/infestation
+	// Please set this to HEAVY_MIDROUND once dynamic has fine-grained handling for spawn times and doesn't restrict all heavy midrounds to spawning after 40 minutes.
+	// Blood worms are intended to spawn 10-30 minutes into a round. This is a band-aid fix, and the better of two evils. (wrong threat tier vs wrong round timing)
+	midround_type = LIGHT_MIDROUND
+	false_alarm_able = TRUE
+	pref_flag = ROLE_BLOOD_WORM_INFESTATION
+	jobban_flag = ROLE_BLOOD_WORM
+	candidate_role = "Blood Worm"
+	ruleset_flags = RULESET_INVADER
+	weight = 2 // For reference, Nightmare has a weight of 5.
+	min_pop = 20 // Blood worms are limited by resources, so low pop means they have a harder time getting their tail in the door.
+	min_antag_cap = 1
+	max_antag_cap = 2
+	signup_atom_appearance = /mob/living/basic/blood_worm/juvenile
+
+/datum/dynamic_ruleset/midround/from_ghosts/blood_worms/can_be_selected()
+	return ..() && length(find_vent_spawns()) > 0
+
+/datum/dynamic_ruleset/midround/from_ghosts/blood_worms/execute()
+	. = ..()
+	addtimer(CALLBACK(src, PROC_REF(announce_worms)), rand(450, 750) SECONDS)
+
+/datum/dynamic_ruleset/midround/from_ghosts/blood_worms/create_ruleset_body()
+	return new /mob/living/basic/blood_worm/hatchling
+
+/datum/dynamic_ruleset/midround/from_ghosts/blood_worms/create_execute_args()
+	return list(find_vent_spawns())
+
+/datum/dynamic_ruleset/midround/from_ghosts/blood_worms/assign_role(datum/mind/candidate, list/vent_list)
+	candidate.add_antag_datum(/datum/antagonist/blood_worm)
+	var/obj/vent = length(vent_list) >= 2 ? pick_n_take(vent_list) : vent_list[1]
+	candidate.current.move_into_vent(vent)
+
+/datum/dynamic_ruleset/midround/from_ghosts/blood_worms/proc/announce_worms()
+	priority_announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", ANNOUNCER_ALIENS)
+
+/datum/dynamic_ruleset/midround/from_ghosts/blood_worms/false_alarm()
+	announce_worms()
 
 /datum/dynamic_ruleset/midround/from_ghosts/nightmare
 	name = "Nightmare"
@@ -487,6 +526,9 @@
 	min_pop = 15
 	max_antag_cap = 1
 	signup_atom_appearance = /obj/item/light_eater
+
+/datum/dynamic_ruleset/midround/from_ghosts/nightmare/apply_prefs_to_body(mob/living/carbon/human/body)
+	return FALSE
 
 /datum/dynamic_ruleset/midround/from_ghosts/nightmare/can_be_selected()
 	return ..() && !isnull(find_maintenance_spawn(atmos_sensitive = TRUE, require_darkness = TRUE))
@@ -691,23 +733,50 @@
 	preview_antag_datum = /datum/antagonist/paradox_clone
 	midround_type = LIGHT_MIDROUND
 	pref_flag = ROLE_PARADOX_CLONE
-	ruleset_flags = RULESET_INVADER
+	ruleset_flags = RULESET_INVADER|RULESET_ADMIN_CONFIGURABLE
 	weight = 5
 	min_pop = 10
 	max_antag_cap = 1
 	signup_atom_appearance = /obj/effect/bluespace_stream
 	/// Chance of getting another clone for the price of free
 	var/bonus_clone_chance = 20
+	/// Weakref to the crewmember we picked to clone, chosen before the ghost poll so it can name them
+	var/datum/weakref/clone_target_ref
 
 /datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/New(list/dynamic_config)
 	. = ..()
 	max_antag_cap += prob(bonus_clone_chance)
 
 /datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/can_be_selected()
+	if(clone_target_ref && isnull(clone_target_ref.resolve())) // our chosen original was deleted while we were polling, bail
+		return FALSE
 	return ..() && !isnull(find_clone()) && !isnull(find_maintenance_spawn(atmos_sensitive = TRUE, require_darkness = FALSE))
 
+#define RANDOM_CLONE_TARGET "Random"
+
+/datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/configure_ruleset(mob/admin)
+	var/list/admin_pool = list("[RULESET_CONFIG_CANCEL]" = TRUE, "[RANDOM_CLONE_TARGET]" = TRUE)
+	for(var/mob/living/carbon/human/target as anything in find_clone_candidates())
+		admin_pool["[target.real_name], the [target.mind.assigned_role.title]"] = target
+	var/picked = tgui_input_list(admin, "Select a crewmember to clone", "Clone Target", admin_pool)
+	if(!picked || picked == RULESET_CONFIG_CANCEL)
+		return RULESET_CONFIG_CANCEL
+	if(picked != RANDOM_CLONE_TARGET)
+		clone_target_ref = WEAKREF(admin_pool[picked])
+	return null
+
+#undef RANDOM_CLONE_TARGET
+
+/datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/collect_candidates()
+	var/mob/living/carbon/human/original = clone_target_ref?.resolve() || find_clone()
+	if(isnull(original))
+		return list()
+	clone_target_ref = WEAKREF(original)
+	candidate_role = "clone of [original.real_name] ([original.mind.assigned_role.title])"
+	return ..()
+
 /datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/create_execute_args()
-	return list(find_clone())
+	return list(clone_target_ref.resolve())
 
 /datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/create_ruleset_body()
 	return // handled by assign_role() entirely
@@ -723,6 +792,13 @@
 	bad_version.put_in_hands(new /obj/item/storage/toolbox/mechanical()) //so they dont get stuck in maints
 
 /datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/proc/find_clone()
+	var/list/possible_targets = find_clone_candidates()
+	if(length(possible_targets))
+		return pick(possible_targets)
+	return null
+
+/// Returns every crewmember currently valid to be cloned
+/datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/proc/find_clone_candidates()
 	var/list/possible_targets = list()
 
 	for(var/mob/living/carbon/human/player in GLOB.player_list)
@@ -732,9 +808,7 @@
 			continue
 		possible_targets += player
 
-	if(length(possible_targets))
-		return pick(possible_targets)
-	return null
+	return possible_targets
 
 /datum/dynamic_ruleset/midround/from_ghosts/voidwalker
 	name = "Voidwalker"
@@ -1008,7 +1082,7 @@
 	candidate_role = "Slaughter Demon"
 	// preview_antag_datum = /datum/antagonist/slaughter // Doesn't actually have its own pref
 	midround_type = HEAVY_MIDROUND
-	jobban_flag = ROLE_ALIEN
+	jobban_flag = ROLE_SENTIENCE
 	ruleset_flags = RULESET_INVADER
 	weight = 0
 	min_pop = 20

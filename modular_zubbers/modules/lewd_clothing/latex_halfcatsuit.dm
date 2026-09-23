@@ -8,7 +8,7 @@
 	lefthand_file = 'modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_inhands/lewd_inhand_left.dmi'
 	righthand_file = 'modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_inhands/lewd_inhand_right.dmi'
 	equip_sound = 'modular_skyrat/modules/modular_items/lewd_items/sounds/latex.ogg'
-	worn_icon_taur_paw = 'modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_uniform/lewd_uniform-paw.dmi'
+	worn_icon_taur_big = 'modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_uniform/lewd_uniform-paw.dmi'
 	can_adjust = FALSE
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	strip_delay = 80
@@ -52,26 +52,25 @@
 			if("pair")
 				breasts_overlay.icon_state = "breasts_double"
 				breasts_icon_overlay.icon_state = "iconbreasts_double"
-				accessory_overlay = breasts_overlay
+				breasts_overlay = get_accessory_overlays()
 				add_overlay(breasts_icon_overlay)
 			if("quad")
 				breasts_overlay.icon_state = "breasts_quad"
 				breasts_icon_overlay.icon_state = "iconbreasts_quad"
-				accessory_overlay = breasts_overlay
+				breasts_overlay = get_accessory_overlays()
 				add_overlay(breasts_icon_overlay)
 			if("sextuple")
 				breasts_overlay.icon_state = "breasts_sextuple"
 				breasts_icon_overlay.icon_state = "iconbreasts_sextuple"
-				accessory_overlay = breasts_overlay
+				breasts_overlay = get_accessory_overlays()
 				add_overlay(breasts_icon_overlay)
 
-	update_overlays()
+	update_overlays(UPDATE_OVERLAYS)
 
 	affected_human.regenerate_icons()
 
 /obj/item/clothing/under/misc/latex_halfcatsuit/dropped(mob/living/affected_mob)
 	. = ..()
-	accessory_overlay = null
 	breasts_overlay.icon_state = "none"
 	//SPLURT ADDITION START
 	breasts_overlay.pixel_w = 0

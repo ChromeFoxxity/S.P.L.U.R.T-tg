@@ -78,8 +78,10 @@
 	desc = "The latest and greatest power razor born from the science of shaving."
 	icon = 'modular_skyrat/modules/salon/icons/items.dmi'
 	icon_state = "razor"
+	inhand_icon_state = null
 	obj_flags = CONDUCTS_ELECTRICITY
 	w_class = WEIGHT_CLASS_TINY
+	sound_vary = FALSE
 	// How long do we take to shave someone's (facial) hair?
 	var/shaving_time = 5 SECONDS
 
@@ -120,8 +122,9 @@
 			to_chat(user, span_warning("There is no facial hair to shave!"))
 			return
 
-		if(!get_location_accessible(target_human, location))
-			to_chat(user, span_warning("The mask is in the way!"))
+		var/covering = target_human.is_mouth_covered()
+		if(covering)
+			to_chat(user, span_warning("[covering] is in the way!"))
 			return
 
 		if(HAS_TRAIT(target_human, TRAIT_SHAVED))
@@ -147,7 +150,7 @@
 			to_chat(user, span_warning("There is no hair to shave!"))
 			return
 
-		if(!get_location_accessible(target_human, location))
+		if(!target_human.is_location_accessible(location))
 			to_chat(user, span_warning("The headgear is in the way!"))
 			return
 

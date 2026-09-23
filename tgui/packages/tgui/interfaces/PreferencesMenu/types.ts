@@ -1,6 +1,6 @@
 import type { BooleanLike } from 'tgui-core/react';
 
-import type { sendAct } from '../../backend';
+import type { sendAct } from '../../events/act';
 import type {
   LoadoutCategory,
   LoadoutList,
@@ -30,6 +30,7 @@ export enum Food {
   Sugar = 'SUGAR',
   Toxic = 'TOXIC',
   Vegetables = 'VEGETABLES',
+  Egg = 'EGG',
   Bloody = 'BLOODY', // SKYRAT EDIT ADDITION - Hemophage Food
 }
 
@@ -38,6 +39,12 @@ export enum JobPriority {
   Medium = 2,
   High = 3,
 }
+
+type JobPreference = {
+  job: string;
+  priority: JobPriority | null;
+  assigned_profile_slot: number | null;
+};
 
 export type Name = {
   can_randomize: BooleanLike;
@@ -79,6 +86,7 @@ export type Perk = {
 
 export type Department = {
   head?: string;
+  color?: string;
 };
 
 export type Job = {
@@ -186,39 +194,44 @@ export enum PrefsWindow {
   Keybindings = 2,
 }
 
+export type CharacterPreferencesData = {
+  preview_options: string[]; // SKYRAT EDIT ADDITION
+  preview_selection: string; // SKYRAT EDIT ADDITION
+
+  clothing: Record<string, string>;
+  features: Record<string, string>;
+  game_preferences: Record<string, unknown>;
+  non_contextual: {
+    random_body: RandomSetting;
+    [otherKey: string]: unknown;
+  };
+  secondary_features: Record<string, unknown>;
+  character_basics: Record<string, unknown>; // BUBBER EDIT ADDITION: more character setup tabs
+  ooc_preferences: Record<string, unknown>; // BUBBER EDIT ADDITION: more character setup tabs
+  silicon_preferences: Record<string, unknown>; // BUBBER EDIT ADDITION: more character setup tabs
+  supplemental_features: Record<string, unknown>;
+  manually_rendered_features: Record<string, string>;
+
+  names: Record<string, string>;
+
+  misc: {
+    gender: Gender;
+    joblessrole: JoblessRole;
+    species: string;
+    loadout_lists: LoadoutList; // BUBBER EDIT: Multiple loadout presets: ORIGINAL: loadout_list: LoadoutList;
+    job_clothes: BooleanLike;
+    loadout_index: string; // BUBBER EDIT ADDITION: Multiple loadout presets
+    background_state: string; // BUBBER EDIT ADDITION: Swappable character editor backgrounds
+  };
+
+  randomization: Record<string, RandomSetting>;
+};
+
 export type PreferencesMenuData = {
   character_preview_view: string;
   character_profiles: (string | null)[];
 
-  preview_options: string[]; // SKYRAT EDIT ADDITION
-  preview_selection: string; // SKYRAT EDIT ADDITION
-
-  character_preferences: {
-    clothing: Record<string, string>;
-    features: Record<string, string>;
-    game_preferences: Record<string, unknown>;
-    non_contextual: {
-      random_body: RandomSetting;
-      [otherKey: string]: unknown;
-    };
-    secondary_features: Record<string, unknown>;
-    supplemental_features: Record<string, unknown>;
-    manually_rendered_features: Record<string, string>;
-
-    names: Record<string, string>;
-
-    misc: {
-      gender: Gender;
-      joblessrole: JoblessRole;
-      species: string;
-      loadout_lists: LoadoutList; // BUBBER EDIT: Multiple loadout presets: ORIGINAL: loadout_list: LoadoutList;
-      job_clothes: BooleanLike;
-      loadout_index: string; // BUBBER EDIT ADDITION: Multiple loadout presets
-      background_state: string; // BUBBER EDIT ADDITION: Swappable character editor backgrounds
-    };
-
-    randomization: Record<string, RandomSetting>;
-  };
+  character_preferences: CharacterPreferencesData;
 
   content_unlocked: BooleanLike;
 
@@ -231,7 +244,7 @@ export type PreferencesMenuData = {
       required_playtime: number;
     }
   >;
-  job_preferences: Record<string, JobPriority>;
+  job_preferences: JobPreference[];
 
   // SKYRAT EDIT
   job_alt_titles: Record<string, string>;

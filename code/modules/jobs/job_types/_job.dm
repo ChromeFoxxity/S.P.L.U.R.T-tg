@@ -1,4 +1,5 @@
 /datum/job
+	abstract_type = /datum/job
 	/// The name of the job , used for preferences, bans and more. Make sure you know what you're doing before changing this.
 	var/title = "NOPE"
 
@@ -11,11 +12,8 @@
 	/// Innate skill levels unlocked at roundstart. Based on config.jobs_have_minimal_access config setting, for example with a full crew. Format is list(/datum/skill/foo = SKILL_EXP_NOVICE) with exp as an integer or as per code/_DEFINES/skills.dm
 	var/list/minimal_skills
 
-	/// Determines who can demote this position
-	var/department_head = list()
-
 	/// Tells the given channels that the given mob is the new department head. See communications.dm for valid channels.
-	var/list/head_announce = null
+	var/head_announce
 
 	/// Bitflags for the job
 	var/auto_deadmin_role_flags = NONE
@@ -71,7 +69,7 @@
 
 	var/display_order = JOB_DISPLAY_ORDER_DEFAULT
 
-	///What types of bounty tasks can this job receive past the default?
+	///What types of bounty tasks can this job receive past the default? TODO, move to id trims.
 	var/bounty_types = CIV_JOB_BASIC
 
 	/// Goodies that can be received via the mail system.
@@ -140,6 +138,9 @@
 	/// If set, look for a policy with this instead of the job title
 	var/policy_override
 
+	/// How desensitized this job is to seeing death as a base - applied with the job
+	var/desensitized_base = 1.0
+
 /datum/job/New()
 	. = ..()
 	// SKYRAT EDIT START
@@ -158,6 +159,8 @@
 	SHOULD_CALL_PARENT(TRUE)
 	if(length(mind_traits))
 		spawned.mind.add_traits(mind_traits, JOB_TRAIT)
+
+	spawned.mind.desensitized_level = clamp(desensitized_base, DESENSITIZED_MINIMUM, spawned.mind.desensitized_level)
 
 	var/obj/item/organ/liver/liver = spawned.get_organ_slot(ORGAN_SLOT_LIVER)
 	if(liver && length(liver_traits))
@@ -204,7 +207,7 @@
 /// Note the joining mob has no client at this point.
 /datum/job/proc/announce_job(mob/living/joining_mob, job_title) // SKYRAT EDIT CHANGE - ALTERNATIVE_JOB_TITLES - Original: /datum/job/proc/announce_job(mob/living/joining_mob)
 	if(head_announce)
-		announce_head(joining_mob, head_announce, job_title) // SKYRAT EDIT CHANGE - ALTERNATIVE_JOB_TITLES - Original: announce_head(joining_mob, head_announce)
+		announce_head(joining_mob, list(head_announce), job_title)	// BUBBER EDIT - fixes alternative job titles
 
 
 //Used for a special check of whether to allow a client to latejoin as this job.
@@ -391,12 +394,20 @@
 				back = /obj/item/storage/backpack/satchel/leather //Leather Satchel
 			if(GMESSENGER)
 				back = /obj/item/storage/backpack/messenger //Grey messenger bag
+			//BUBBER EDIT BEGIN
 			if(FBACKPACK)
 				back = /obj/item/storage/backpack/industrial/frontier_colonist
 			if(FSATCHEL)
 				back = /obj/item/storage/backpack/industrial/frontier_colonist/satchel
 			if(FMESSENGER)
 				back = /obj/item/storage/backpack/industrial/frontier_colonist/messenger
+			if(TPACKWAIST)
+				back = /obj/item/storage/backpack/waist_pack
+			if(TPACKBELT)
+				back = /obj/item/storage/backpack/storage_belt
+			if(TPACKCHEST)
+				back = /obj/item/storage/backpack/chest_pack
+			//BUBBER EDIT END
 			if(DSATCHEL)
 				back = satchel //Department satchel
 			if(DMESSENGER)
@@ -453,8 +464,7 @@
 		var/datum/bank_account/account = SSeconomy.bank_accounts_by_id["[equipped.account_id]"]
 
 		if(account && account.account_id == equipped.account_id)
-			card.registered_account = account
-			account.bank_cards += card
+			card.set_account(account)
 
 		equipped.update_ID_card()
 
@@ -469,15 +479,18 @@
 		stack_trace("pda_slot was set but we couldn't find a PDA!")
 		return
 
-	pda.imprint_id(equipped.real_name, equipped_job.title)
-	pda.update_ringtone(equipped_job.job_tone)
+	pda.imprint_id(equipped.real_name, equipped_job?.title || equipped.job)
+	pda.update_ringtone(equipped_job?.job_tone)
 	pda.UpdateDisplay()
 
 	var/client/equipped_client = GLOB.directory[ckey(equipped.mind?.key)]
 
 	if(equipped_client)
 		pda.update_pda_prefs(equipped_client)
-
+		//BUBBER EDIT BEGIN
+		var/obj/item/modular_computer/pda/synth/brainpooter = locate() in equipped.get_all_contents()
+		brainpooter?.update_user_settings(equipped_client)
+		//BUBBER EDIT END
 /datum/outfit/job/get_chameleon_disguise_info()
 	var/list/types = ..()
 	types -= /obj/item/storage/backpack //otherwise this will override the actual backpacks
@@ -567,7 +580,7 @@
 	var/mob/living/spawn_instance
 	if(ispath(spawn_type, /mob/living/silicon/ai))
 		// This is unfortunately necessary because of snowflake AI init code. To be refactored.
-		spawn_instance = new spawn_type(get_turf(spawn_point), null, player_client.mob)
+		spawn_instance = new spawn_type(get_turf(spawn_point), null, player_client.mob, TRUE)
 	else
 		spawn_instance = spawn_point.JoinPlayerHere(spawn_type, TRUE)
 	spawn_instance.apply_prefs_job(player_client, src)
@@ -719,3 +732,10 @@
 		CRASH("[src.type] has no job icon state.")
 
 	return icon('icons/mob/huds/hud.dmi', icon_state)
+
+/datum/job/proc/display_order_with_department()
+	var/datum/job_department/main_department = departments_list?[1]
+	if(!main_department)
+		main_department = /datum/job_department/undefined
+
+	return display_order + (main_department::display_order * 1000)

@@ -2,16 +2,19 @@
 //Module meant to give temporary passive buffs to wearer, gives three options with diffrent effects and shared cooldowns.
 
 /obj/item/mod/module/protean_servo
-	name = "protean MOD servo module"
-	desc = "A module made for use in protean MOD suits that adds new subroutines while folded. Comes with three modes, each partially takes over MOD suit’s motor functions to enhance the wearer's general movement, performing medical duties or construction tasks. Due to high computing power demand, protean can only use this module while worn by someone else."
+	name = "\improper Protean MOD servo module"
+	desc = "A module made for use in Protean MOD suits that adds new subroutines while folded. Comes with three modes, each partially takes over MOD suit's motor functions to enhance the wearer's general movement, performing medical duties or construction tasks. Due to high computing power demand, Protean can only use this module while worn by someone else."
 	icon_state = "no_baton"
 	complexity = 3
 	use_energy_cost = DEFAULT_CHARGE_DRAIN
 	module_type = MODULE_TOGGLE //with this the module will automaticly deactivate if it's depowered or taken off
-
+	custom_materials = list(
+		/datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT,
+	)
 //abilities that we'll be granting to Protean by activating the module
 	var/datum/action/cooldown/protean_servo/movement/servo_movement = new /datum/action/cooldown/protean_servo/movement
-	var/datum/action/cooldown/protean_servo/medical/servo_medical = new /datum/action/cooldown/protean_servo/medical
+//	var/datum/action/cooldown/protean_servo/medical/servo_medical = new /datum/action/cooldown/protean_servo/medical
 	var/datum/action/cooldown/protean_servo/engineering/servo_engineering = new /datum/action/cooldown/protean_servo/engineering
 
 /obj/item/mod/module/protean_servo/on_activation()
@@ -22,12 +25,12 @@
 
 	if(protean_in_suit == mod.wearer) //Protean cant benefit from module they're suposed to be powering
 		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
-		to_chat(mod.wearer, span_warning("[src] needs someone else as the wearer, it can't be used on a protean."))
+		to_chat(mod.wearer, span_warning("[src] needs someone else as the wearer, it can't be used on a Protean."))
 		deactivate()
 		return
 
 	servo_movement.Grant(protean_in_suit)
-	servo_medical.Grant(protean_in_suit)
+//	servo_medical.Grant(protean_in_suit)
 	servo_engineering.Grant(protean_in_suit)
 
 /obj/item/mod/module/protean_servo/on_deactivation(display_message = TRUE, deleting = FALSE)
@@ -36,11 +39,11 @@
 	var/mob/living/carbon/human/protean_in_suit = protean_core?.linked_species.owner
 
 	servo_movement.Remove(protean_in_suit) //All the cleanup, since module deactivates once out of power, this will remove granted abilities
-	servo_medical.Remove(protean_in_suit)
+//	servo_medical.Remove(protean_in_suit)
 	servo_engineering.Remove(protean_in_suit)
 
 	mod.wearer.remove_status_effect(/datum/status_effect/protean_servo_movement)
-	mod.wearer.remove_status_effect(/datum/status_effect/protean_servo_medical)
+//	mod.wearer.remove_status_effect(/datum/status_effect/protean_servo_medical)
 	mod.wearer.remove_status_effect(/datum/status_effect/protean_servo_engineer)
 
 ////Protean servo module: Abilities////
@@ -69,6 +72,7 @@
 	wearer.visible_message(span_warning("[protean] speeds up [wearer]'s movement!"))
 	StartCooldown()
 
+/*
 /datum/action/cooldown/protean_servo/medical
 	name = "Enhance medical actions"
 	desc = "Aids in your wearer's surgeries, medicicine aplications and carrying patients for moderate amount of time."
@@ -84,6 +88,7 @@
 	wearer.apply_status_effect(/datum/status_effect/protean_servo_medical)
 	wearer.visible_message(span_warning("[protean] assists in [wearer]'s medical actions!"))
 	StartCooldown()
+*/
 
 /datum/action/cooldown/protean_servo/engineering
 	name = "Enhance building"
@@ -129,7 +134,7 @@
 	owner.remove_traits(list(TRAIT_RESTRAINED),PROTEAN_SERVO_TRAIT)
 	for(var/obj/item/thing in owner.held_items)
 		clear_servo_trait(thing)
-	owner.visible_message(span_warning("[owner]'s movement return to normal as protean module runs out of power"))
+	owner.visible_message(span_warning("[owner]'s movement return to normal as Protean module runs out of power."))
 
 /datum/status_effect/protean_servo_movement/proc/clear_servo_trait(obj/item/thing, ...)
 	SIGNAL_HANDLER
@@ -140,6 +145,7 @@
 	multiplicative_slowdown = -0.4 //movement speed modifier
 	blacklisted_movetypes = (FLYING|FLOATING)
 
+/*
 //Medical option
 /atom/movable/screen/alert/status_effect/protean_servo_medical
 	name = "Helping hand"
@@ -161,11 +167,12 @@
 	. = ..()
 	UnregisterSignal(owner, COMSIG_LIVING_INITIATE_SURGERY_STEP)
 	owner.remove_traits(list(TRAIT_QUICKER_CARRY, TRAIT_FASTMED),PROTEAN_SERVO_TRAIT)
-	owner.visible_message(span_warning("[owner]'s movement return to normal as protean module runs out of power"))
+	owner.visible_message(span_warning("[owner]'s movement return to normal as Protean module runs out of power."))
 
 /datum/status_effect/protean_servo_medical/proc/servo_surgery_bonus(mob/living/carbon/_source, mob/living/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, datum/surgery_step/step, list/modifiers)
 	SIGNAL_HANDLER
 	modifiers[SPEED_MOD_INDEX] *= 0.25 //surgery speed modifier
+*/
 
 //Engineering option
 /atom/movable/screen/alert/status_effect/protean_servo_engineer
@@ -188,7 +195,7 @@
 	. = ..()
 	owner.remove_actionspeed_modifier(/datum/actionspeed_modifier/protean_servo_engineer)
 	owner.remove_traits(list(TRAIT_QUICK_BUILD),PROTEAN_SERVO_TRAIT)
-	owner.visible_message(span_warning("[owner]'s movement return to normal as protean module runs out of power"))
+	owner.visible_message(span_warning("[owner]'s movement return to normal as Protean module runs out of power."))
 
 /datum/actionspeed_modifier/protean_servo_engineer
 	multiplicative_slowdown = -0.35 //action speed modifier

@@ -1,3 +1,33 @@
+
+/obj/item/toy/plush/Initialize(mapload)
+	. = ..()
+	if(plappable)
+		create_storage(max_slots = 1, max_specific_storage = WEIGHT_CLASS_SMALL, canhold = list(/obj/item/clothing/sextoy/dildo, /obj/item/clothing/sextoy/fleshlight, /obj/item/clothing/sextoy/portal_fleshlight))
+
+/obj/item/toy/plush/examine(mob/user)
+	. = ..()
+	if(!plappable)
+		return
+	if(locate(/obj/item/clothing/sextoy/dildo) in src)
+		. += span_notice("There is a wet dildo attached to it!")
+	else if(locate(/obj/item/clothing/sextoy/fleshlight) in src)
+		. += span_notice("There is a wet fleshlight inserted in it!")
+	else if(locate(/obj/item/clothing/sextoy/portal_fleshlight) in src)
+		. += span_notice("There is real portal fleshlight inserted in it!")
+	else
+		. += span_notice("It looks like there's a slot for a sex toy.")
+
+/obj/item/toy/plush/attack(mob/living/target, mob/living/user, params)
+	if(!istype(target) || !plappable)
+		return ..()
+
+	var/obj/item/clothing/sextoy/foundToy = locate(/obj/item/clothing/sextoy) in src
+	if(foundToy)
+		foundToy.attack(target, user, params)
+		src.GetComponent(/datum/component/squeak)?.play_squeak()
+	else
+		return ..()
+
 /obj/item/toy/plush/chaotic_toaster
 	name = "Chaotic toaster"
 	desc = "You arent sure if this plushie want a hug, or harvest your organs, or both"
@@ -133,6 +163,7 @@
 	icon = 'modular_zzplurt/icons/obj/plushes.dmi'
 	icon_state = "glitchy_protogen"
 	worn_icon_state = "glitchy_protogen"
+	plappable = FALSE // Can already plap
 
 /obj/item/toy/plush/glitchy_protogen/Initialize(mapload)
 	. = ..()
@@ -190,3 +221,55 @@
 	icon_state = "redmut"
 	gender = MALE
 	squeak_override = list('modular_zzplurt/sound/voice/bork.ogg' = 1, 'modular_skyrat/modules/emotes/sound/voice/bark1.ogg' = 1, 'modular_skyrat/modules/emotes/sound/voice/bark2.ogg' = 1)
+
+/obj/item/toy/plush/fentalynn
+	name = "\improper Yapping Fox Plushie"
+	desc = "With the consequences of Fenlynn deciding to fuck with the <b>Wizard Federation</b> having caught up with her, she has suffered the wrath of Plaucifico the Flaccid, having been polymorphed into a marketable plushie."
+	icon = 'modular_zzplurt/icons/obj/plushes.dmi'
+	icon_state = "fentalynn"
+	attack_verb_simple = list("beat", "bully", "assault", "harass", "abuse", "yap")
+	attack_verb_continuous = list("beats", "bullies", "assaults", "harasses", "abuses", "yaps")
+	squeak_override = list('modular_zzplurt/sound/voice/yap.ogg' = 19, 'modular_skyrat/modules/alerts/sound/security_levels/delta.ogg' = 1)
+	plappable = FALSE // Doesn't want
+
+/obj/item/toy/plush/doctoraddy
+	name = "Doctor Addy Plushie"
+	desc = "The crudely drawn cardboard hospital ID says that she's A Real Doctor™, but holding the plushie doesn't inspire confidence. A velcro pouch on the bottom contains a baggie full of cheese."
+	icon = 'modular_zzplurt/icons/obj/plushes.dmi'
+	icon_state = "doctoraddy"
+	attack_verb_simple = list("perform", "heal", "cheese")
+	attack_verb_continuous = list("performs", "heals", "cheeses")
+	squeak_override = list('modular_zzplurt/sound/voice/yip.ogg' = 19, 'modular_zubbers/sound/alerts/violet.ogg' = 1)
+
+/obj/item/toy/plush/fuckassrabit
+	name = "\improper Wabbit of Gier"
+	desc = "You get the unbridled sense of superiority and vanity from this plushie"
+	icon = 'modular_zzplurt/icons/obj/plushes.dmi'
+	icon_state = "dumbrabbit"
+	gender = MALE
+	squeak_override = list('modular_zzplurt/sound/items/donorplushsound.ogg' = 1)
+
+/obj/item/toy/plush/zenplush
+	name = "\improper Fluffy plushie"
+	desc = "A warm fluffy plushie, it seems very cuddleable"
+	icon = 'modular_zzplurt/icons/obj/plushes.dmi'
+	icon_state = "zenplush"
+	gender = FEMALE
+	squeak_override = list('modular_zzplurt/sound/items/donorawoo.ogg' = 1)
+
+/obj/item/toy/plush/novaplush
+	name = "\improper Marketable Nova Plushie"
+	desc = "even when I am not here, I will always be here."
+	icon = 'modular_zzplurt/icons/obj/plushes.dmi'
+	icon_state = "novaplush"
+	gender = FEMALE
+	squeak_override = list('modular_zubbers/sound/emotes/sound_voice_mar.ogg' = 1)
+
+/obj/item/toy/plush/aurumplush
+	name = "Gilded Synth"
+	desc = "A regal-looking synth that walks on all four, you can't tell if this plushie is made of real gold or painted that way.. It comes with built-in LED's!"
+	icon = 'modular_zzplurt/icons/obj/plushes.dmi'
+	icon_state = "aurumplush"
+	attack_verb_simple = list("beep", "boop", "ping")
+	attack_verb_continuous = list("beeps", "boops", "pings")
+	squeak_override = list('modular_zzplurt/sound/machines/beep.ogg' = 1)

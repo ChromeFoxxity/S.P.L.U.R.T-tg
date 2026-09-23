@@ -10,6 +10,7 @@
 		heavily modified, and the filter assembly has been replaced with a voice modulator to make the wearer sound more robotic."
 	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
 	max_filters = 0
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.55, /datum/material/glass = SMALL_MATERIAL_AMOUNT)
 	///Our SPEAKING name while our voice is cloaked. Defaults to "Unknown", but can be set by var editing.
 	var/modulated_name = "Unknown"
 	///Used to store a special name if they wearer has one before equipping the mask.
@@ -49,6 +50,11 @@
 	update_voice(user)
 
 /obj/item/clothing/mask/gas/modulator/dropped(mob/user)
+	. = ..()
+	UnregisterSignal(user, list(COMSIG_MOB_SAY, SIGNAL_ADDTRAIT(TRAIT_SIGN_LANG), SIGNAL_REMOVETRAIT(TRAIT_SIGN_LANG)))
+	update_voice(user)
+
+/obj/item/clothing/mask/gas/modulator/doStrip(mob/stripper, mob/user)
 	. = ..()
 	UnregisterSignal(user, list(COMSIG_MOB_SAY, SIGNAL_ADDTRAIT(TRAIT_SIGN_LANG), SIGNAL_REMOVETRAIT(TRAIT_SIGN_LANG)))
 	update_voice(user)
@@ -93,3 +99,6 @@
 		return
 
 	speech_args[SPEECH_SPANS] |= SPAN_ROBOT
+
+/obj/item/clothing/mask/gas/sechailer
+	worn_icon_teshari = 'modular_zubbers/icons/mob/clothing/mask/mask_teshari.dmi'

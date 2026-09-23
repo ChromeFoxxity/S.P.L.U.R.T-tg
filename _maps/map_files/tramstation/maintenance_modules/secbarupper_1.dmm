@@ -172,7 +172,7 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Security Maintenance Hatch"
 	},
-/obj/effect/mapping_helpers/airlock/unres{
+/obj/effect/mapping_helpers/airlock/unres/delayed{
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
@@ -346,12 +346,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/duct,
-/obj/structure/sign/warning/secure_area{
-	desc = "A warning sign which reads 'MULE CROSSING - LOOK BOTH WAYS";
-	name = "MULE CROSSING - LOOK BOTH WAYS";
-	pixel_y = 32;
-	dir = 1
-	},
+/obj/structure/sign/warning/secure_area/directional/north,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/department/security)
 "Uo" = (
@@ -788,8 +783,8 @@ eg
 eg
 eg
 eg
-ZA
-ZA
+eg
+eg
 eg
 eg
 eg
@@ -828,10 +823,10 @@ eg
 eg
 eg
 eg
-ZA
-ZA
-ZA
-ZA
+eg
+eg
+eg
+eg
 eg
 eg
 eg
@@ -868,10 +863,10 @@ eg
 eg
 eg
 eg
-ZA
-ZA
-ZA
-ZA
+eg
+eg
+eg
+eg
 eg
 eg
 eg
@@ -908,7 +903,7 @@ eg
 eg
 eg
 eg
-ZA
+eg
 eg
 eg
 eg
@@ -947,8 +942,8 @@ ZA
 ZA
 ZA
 ZA
-ZA
-ZA
+eg
+eg
 eg
 eg
 eg
@@ -987,8 +982,8 @@ ZA
 ZA
 ZA
 ZA
-ZA
-ZA
+eg
+eg
 eg
 eg
 eg
@@ -1027,8 +1022,8 @@ ZA
 ZA
 ZA
 ZA
-ZA
-ZA
+eg
+eg
 eg
 eg
 eg
@@ -1297,7 +1292,7 @@ eg
 eg
 DK
 bW
-ZA
+eg
 ZA
 ZA
 ZA

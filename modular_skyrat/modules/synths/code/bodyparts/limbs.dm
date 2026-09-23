@@ -31,10 +31,15 @@
 	is_dimorphic = FALSE
 	should_draw_greyscale = TRUE
 	icon_greyscale = BODYPART_ICON_IPC
-	bodytype = BODYTYPE_ROBOTIC
+	bodytype = BODYTYPE_ROBOTIC | BODYTYPE_SYNTHETIC
 	bodyshape = BODYSHAPE_HUMANOID
 	change_exempt_flags = NONE
 	dmg_overlay_type = "robotic"
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.25,
+		/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT,
+		/datum/material/gold = SMALL_MATERIAL_AMOUNT,
+	)
 
 	brute_modifier = SYNTH_BRUTE_MODIFIER
 	burn_modifier = SYNTH_BURN_MODIFIER
@@ -54,7 +59,7 @@
 		BURN = ROBOTIC_BURN_EXAMINE_TEXT,
 	)
 
-	head_flags = HEAD_DEFAULT_FEATURES
+	head_flags = HEAD_DEFAULT_FEATURES & (~HEAD_DEBRAIN)
 	bodypart_flags = BODYPART_UNHUSKABLE
 
 /datum/design/synth_head
@@ -87,10 +92,15 @@
 	is_dimorphic = FALSE
 	icon_greyscale = BODYPART_ICON_IPC
 	should_draw_greyscale = TRUE
-	bodytype = BODYTYPE_ROBOTIC
+	bodytype = BODYTYPE_ROBOTIC | BODYTYPE_SYNTHETIC
 	bodyshape = BODYSHAPE_HUMANOID
 	change_exempt_flags = NONE
 	dmg_overlay_type = "robotic"
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3.25,
+		/datum/material/silver = SMALL_MATERIAL_AMOUNT,
+		/datum/material/gold = SMALL_MATERIAL_AMOUNT,
+	)
 
 	brute_modifier = SYNTH_BRUTE_MODIFIER
 	burn_modifier = SYNTH_BURN_MODIFIER
@@ -167,6 +177,10 @@
 	bodyshape = BODYSHAPE_HUMANOID
 	change_exempt_flags = NONE
 	dmg_overlay_type = "robotic"
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2,
+		/datum/material/gold = SMALL_MATERIAL_AMOUNT,
+	)
 
 	brute_modifier = SYNTH_BRUTE_MODIFIER
 	burn_modifier = SYNTH_BURN_MODIFIER
@@ -220,6 +234,10 @@
 	bodyshape = BODYSHAPE_HUMANOID
 	change_exempt_flags = NONE
 	dmg_overlay_type = "robotic"
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2,
+		/datum/material/gold = SMALL_MATERIAL_AMOUNT,
+	)
 
 	brute_modifier = SYNTH_BRUTE_MODIFIER
 	burn_modifier = SYNTH_BURN_MODIFIER
@@ -275,6 +293,10 @@
 	bodyshape = BODYSHAPE_HUMANOID
 	change_exempt_flags = NONE
 	dmg_overlay_type = "robotic"
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3,
+		/datum/material/gold = SMALL_MATERIAL_AMOUNT * 2,
+	)
 
 	brute_modifier = SYNTH_BRUTE_MODIFIER
 	burn_modifier = SYNTH_BURN_MODIFIER
@@ -330,6 +352,10 @@
 	bodyshape = BODYSHAPE_HUMANOID
 	change_exempt_flags = NONE
 	dmg_overlay_type = "robotic"
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3,
+		/datum/material/gold = SMALL_MATERIAL_AMOUNT * 2,
+	)
 
 	brute_modifier = SYNTH_BRUTE_MODIFIER
 	burn_modifier = SYNTH_BURN_MODIFIER

@@ -173,15 +173,18 @@
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT*2)
 	rust_resistance = RUST_RESISTANCE_BASIC
 
-/turf/closed/wall/mineral/wood/attackby(obj/item/W, mob/user)
-	if(W.get_sharpness() && W.force)
-		var/duration = ((4.8 SECONDS)/W.force) * 2 //In seconds, for now.
-		if(istype(W, /obj/item/hatchet) || istype(W, /obj/item/fireaxe))
-			duration /= 4 //Much better with hatchets and axes.
-		if(do_after(user, duration * (1 SECONDS), target=src)) //Into deciseconds.
-			dismantle_wall(FALSE,FALSE)
-			return
-	return ..()
+/turf/closed/wall/mineral/wood/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+	if(!tool.get_sharpness() || !tool.force)
+		return ..()
+
+	var/duration = (4.8 SECONDS / tool.force) * 2 //In seconds, for now.
+	if(istype(tool, /obj/item/hatchet) || istype(tool, /obj/item/fireaxe))
+		duration /= 4 //Much better with hatchets and axes.
+	if(!do_after(user, duration * 1 SECONDS, target = src)) //Into deciseconds.
+		return ITEM_INTERACT_BLOCKING
+
+	dismantle_wall(FALSE,FALSE)
+	return ITEM_INTERACT_SUCCESS
 
 /turf/closed/wall/mineral/hulk_recoil(obj/item/bodypart/arm, mob/living/carbon/human/hulkman, damage = 0)
 	return ..() //No recoil damage, wood is weak
@@ -190,6 +193,8 @@
 	desc = "A solidly wooden wall. It's a bit weaker than a wall made with metal."
 	girder_type = /obj/structure/barricade/wooden
 	hardness = 67 //a bit weaker than iron (60)
+	sheet_amount = 5
+	make_delay = 5 SECONDS
 
 /turf/closed/wall/mineral/bamboo
 	name = "bamboo wall"
@@ -275,10 +280,10 @@
 	custom_materials = list(/datum/material/titanium = SHEET_MATERIAL_AMOUNT*2)
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
-/turf/closed/wall/mineral/titanium/rust_turf()
+/turf/closed/wall/mineral/titanium/rust_turf(magic = FALSE)
 	if(HAS_TRAIT(src, TRAIT_RUSTY))
 		ChangeTurf(/turf/closed/wall/rust)
-		return
+		return TRUE
 	return ..()
 
 /turf/closed/wall/mineral/titanium/nodiagonal
@@ -321,10 +326,10 @@
 	canSmoothWith = SMOOTH_GROUP_SURVIVAL_TITANIUM_POD
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
-/turf/closed/wall/mineral/titanium/rust_turf()
+/turf/closed/wall/mineral/titanium/rust_turf(magic = FALSE)
 	if(HAS_TRAIT(src, TRAIT_RUSTY))
 		ChangeTurf(/turf/closed/wall/rust)
-		return
+		return TRUE
 	return ..()
 
 /////////////////////Plastitanium walls/////////////////////
@@ -344,10 +349,10 @@
 	custom_materials = list(/datum/material/alloy/plastitanium = SHEET_MATERIAL_AMOUNT*2)
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
-/turf/closed/wall/mineral/plastitanium/rust_turf()
+/turf/closed/wall/mineral/plastitanium/rust_turf(magic = FALSE)
 	if(HAS_TRAIT(src, TRAIT_RUSTY))
 		ChangeTurf(/turf/closed/wall/rust)
-		return
+		return TRUE
 	return ..()
 
 
@@ -361,10 +366,10 @@
 	icon_state = MAP_SWITCH("plastitanium_wall-0", "plastitanium_overspace")
 	fixed_underlay = list("space" = TRUE)
 
-/turf/closed/wall/mineral/plastitanium/rust_turf()
+/turf/closed/wall/mineral/plastitanium/rust_turf(magic = FALSE)
 	if(HAS_TRAIT(src, TRAIT_RUSTY))
 		ChangeTurf(/turf/closed/wall/rust)
-		return
+		return TRUE
 	return ..()
 
 

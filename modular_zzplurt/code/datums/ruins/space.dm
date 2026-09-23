@@ -16,5 +16,29 @@
 /datum/map_template/ruin/space/interdyne
 	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // TG Map Edit
 
+/datum/map_template/ruin/space/splurt/icemoon_asteroid
+	id = "icemoon_asteroid"
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
+	suffix = "icemoon_asteroid.dmm"
+	name = "Icemoon Asteroid"
+	description = "A sizeable asteroid from presumably an ice planet of some kind. It appears to possess a microbiome on its interior."
+
 /datum/map_template/ruin/space/skyrat/shuttle8532
 	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // Skyrat Map edit.
+
+/datum/map_template/ruin/space/splurt/foreclosed_warehouse
+	id = "foreclosed_warehouse"
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
+	suffix = "foreclosed_warehouse.dmm"
+	name = "Foreclosed Warehouse"
+	description = "A derelict warehouse that has been abandoned and left to rot. It appears to have a complex internal structure."
+
+/datum/map_template/ruin/space/infested_frigate
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/" // TG Map Edit
+
+/datum/map_template/ruin/space/splurt/abandoned_pirate_ship
+	id = "abandoned_pirate_ship"
+	prefix = "_maps/RandomRuins/SpaceRuins/splurt/"
+	suffix = "abandoned_pirate_ship.dmm"
+	name = "Abandoned Pirate Ship"
+	description = "A derelict pirate vessel that has been abandoned and left to rot. Seems to be free of threats."

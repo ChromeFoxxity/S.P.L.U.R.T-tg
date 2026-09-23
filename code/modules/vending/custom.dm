@@ -285,6 +285,10 @@
 	/// Charges the user if its not the owner
 	var/datum/bank_account/payee = id_card.registered_account
 	if(!compartmentLoadAccessCheck(user))
+		if(istype(id_card, /obj/item/card/id/departmental_budget))
+			balloon_alert(user, "invalid payment card")
+			to_chat(user, span_warning("You cannot use a departmental card for this."))
+			return
 		if(!payee.has_money(dispensed_item.custom_price))
 			balloon_alert(user, "insufficient funds!")
 			return
@@ -292,10 +296,10 @@
 		payee.adjust_money(-dispensed_item.custom_price, , "Vending: [dispensed_item]")
 		linked_account.adjust_money(dispensed_item.custom_price, "Vending: [dispensed_item] Bought")
 		linked_account.bank_card_talk("[payee.account_holder] made a [dispensed_item.custom_price] \
-		cr purchase at your custom vendor.")
+		[MONEY_SYMBOL] purchase at your custom vendor.")
 		/// Log the transaction
 		SSblackbox.record_feedback("amount", "vending_spent", dispensed_item.custom_price)
-		log_econ("[dispensed_item.custom_price] credits were spent on [src] buying a \
+		log_econ("[dispensed_item.custom_price] [MONEY_NAME] were spent on [src] buying a \
 		[dispensed_item] by [payee.account_holder], owned by [linked_account.account_holder].")
 		/// Make an alert
 		var/ref = REF(user)

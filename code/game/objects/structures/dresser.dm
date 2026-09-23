@@ -8,15 +8,16 @@
 	resistance_flags = FLAMMABLE
 	density = TRUE
 	anchored = TRUE
+	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 10)
 
-/obj/structure/dresser/attackby(obj/item/I, mob/user, list/modifiers, list/attack_modifiers)
-	if(I.tool_behaviour == TOOL_WRENCH)
-		to_chat(user, span_notice("You begin to [anchored ? "unwrench" : "wrench"] [src]."))
-		if(I.use_tool(src, user, 20, volume=50))
-			to_chat(user, span_notice("You successfully [anchored ? "unwrench" : "wrench"] [src]."))
-			set_anchored(!anchored)
-	else
-		return ..()
+/obj/structure/dresser/wrench_act(mob/living/user, obj/item/tool)
+	to_chat(user, span_notice("You begin to [anchored ? "unwrench" : "wrench"] [src]."))
+	if(!tool.use_tool(src, user, 20, volume=50))
+		return ITEM_INTERACT_BLOCKING
+
+	to_chat(user, span_notice("You successfully [anchored ? "unwrench" : "wrench"] [src]."))
+	set_anchored(!anchored)
+	return ITEM_INTERACT_SUCCESS
 
 /obj/structure/dresser/atom_deconstruct(disassembled = TRUE)
 	new /obj/item/stack/sheet/mineral/wood(drop_location(), 10)
@@ -47,11 +48,11 @@
 				dressing_human.underwear = new_undies
 				// SPLURT EDIT ADDITION - Extra Inventory
 				dressing_human.dropItemToGround(dressing_human.w_underwear)
-				var/datum/sprite_accessory/underwear/sprite = SSaccessories.underwear_list[new_undies]
+				var/datum/sprite_accessory/clothing/underwear/sprite = SSaccessories.underwear_list[new_undies]
 				dressing_human.equip_to_slot_or_del(new sprite.briefs_obj(dressing_human), ITEM_SLOT_UNDERWEAR)
 				// SPLURT EDIT END
 		if("Underwear Color")
-			var/new_underwear_color = tgui_color_picker(dressing_human, "Choose your underwear color", "Underwear Color", dressing_human.underwear_color) // BUBBERSTATION EDIT: TGUI COLOR PICKER
+			var/new_underwear_color = tgui_color_picker(dressing_human, "Choose your underwear color", "Underwear Color", dressing_human.underwear_color)
 			if(new_underwear_color)
 				dressing_human.underwear_color = sanitize_hexcolor(new_underwear_color)
 				// SPLURT EDIT ADDITION - Extra Inventory
@@ -65,7 +66,7 @@
 				dressing_human.undershirt = new_undershirt
 				// SPLURT EDIT ADDITION - Extra Inventory
 				dressing_human.dropItemToGround(dressing_human.w_shirt)
-				var/datum/sprite_accessory/undershirt/sprite = SSaccessories.undershirt_list[new_undershirt]
+				var/datum/sprite_accessory/clothing/undershirt/sprite = SSaccessories.undershirt_list[new_undershirt]
 				dressing_human.equip_to_slot_or_del(new sprite.shirt_obj(dressing_human), ITEM_SLOT_SHIRT)
 				// SPLURT EDIT END
 		if("Undershirt Color")
@@ -83,7 +84,7 @@
 				dressing_human.socks = new_socks
 				// SPLURT EDIT ADDITION - Extra Inventory
 				dressing_human.dropItemToGround(dressing_human.w_socks)
-				var/datum/sprite_accessory/socks/sprite = SSaccessories.socks_list[new_socks]
+				var/datum/sprite_accessory/clothing/socks/sprite = SSaccessories.socks_list[new_socks]
 				dressing_human.equip_to_slot_or_del(new sprite.socks_obj(dressing_human), ITEM_SLOT_SOCKS)
 				// SPLURT EDIT END
 		if("Socks Color")
@@ -101,7 +102,7 @@
 				dressing_human.bra = new_bra
 				// SPLURT EDIT ADDITION - Extra Inventory
 				dressing_human.dropItemToGround(dressing_human.w_bra)
-				var/datum/sprite_accessory/bra/sprite = SSaccessories.bra_list[new_bra]
+				var/datum/sprite_accessory/clothing/bra/sprite = SSaccessories.bra_list[new_bra]
 				dressing_human.equip_to_slot_or_del(new sprite.bra_obj(dressing_human), ITEM_SLOT_BRA)
 				// SPLURT EDIT END
 		if("Bra Color")

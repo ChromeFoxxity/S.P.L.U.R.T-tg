@@ -1,9 +1,3 @@
-// SKYRAT EDIT CHANGE BEGIN - ALCOHOL_PROCESSING
-// Defines for the ballmer peak.
-#define BALLMER_PEAK_LOW_END 25.8 // Original 12.9
-#define BALLMER_PEAK_HIGH_END 27.6 // Original 13.8
-#define BALLMER_PEAK_WINDOWS_ME 37 // Original 26
-
 /// The threshld which determine if someone is tipsy vs drunk
 #define TIPSY_THRESHOLD 23.4 // Original 6
 // SKYRAT EDIT CHANGE END - ALCOHOL_PROCESSING
@@ -112,6 +106,7 @@
 	owner.add_mood_event(id, /datum/mood_event/drunk, drunk_value)
 	owner.clear_mood_event("[id]_after")
 	RegisterSignal(owner, COMSIG_MOB_FIRED_GUN, PROC_REF(drunk_gun_fired))
+	RegisterSignal(owner, COMSIG_MOVABLE_GRABBED_RESISTING, PROC_REF(grabbed_resisting))
 
 /datum/status_effect/inebriated/drunk/on_remove()
 	clear_effects()
@@ -132,6 +127,7 @@
 		owner.sound_environment_override = SOUND_ENVIRONMENT_NONE
 
 	UnregisterSignal(owner, COMSIG_MOB_FIRED_GUN)
+	UnregisterSignal(owner, COMSIG_MOVABLE_GRABBED_RESISTING)
 	REMOVE_TRAIT(owner, TRAIT_FEARLESS, TRAIT_STATUS_EFFECT(id))
 
 /datum/status_effect/inebriated/drunk/proc/drunk_gun_fired(datum/source, obj/item/gun/gun, atom/firing_at, params, zone, bonus_spread_values)
@@ -144,6 +140,15 @@
 	if(istype(gun, /obj/item/gun/grenadelauncher) || istype(gun, /obj/item/gun/ballistic/revolver/grenadelauncher))
 		return
 	bonus_spread_values[MAX_BONUS_SPREAD_INDEX] += (drunk_value * 0.5)
+
+/datum/status_effect/inebriated/drunk/proc/grabbed_resisting(datum/source, mob/living/grabbed, list/grab_stats)
+	SIGNAL_HANDLER
+
+	if(!HAS_TRAIT(owner, TRAIT_DRUNKEN_BRAWLER))
+		return
+
+	grab_stats[GRAB_STAT_EFFECTIVE_STATE] += 1
+	grab_stats[GRAB_STAT_FAIL_DAMAGE] += clamp((owner.get_fire_loss() + owner.get_brute_loss()) / 10, 3, 20)
 
 /datum/status_effect/inebriated/drunk/set_drunk_value(set_to)
 	. = ..()
@@ -160,10 +165,10 @@
 
 /datum/status_effect/inebriated/drunk/on_tick_effects()
 	// Handle the Ballmer Peak.
-	// If our owner is a scientist (has the trait "TRAIT_BALLMER_SCIENTIST"), there's a 5% chance
+	// If our owner is a scientist (has the trait "TRAIT_SCIENTIST_LIVER"), there's a 5% chance
 	// that they'll say one of the special "ballmer message" lines, depending their drunk-ness level.
 	var/obj/item/organ/liver/liver_organ = owner.get_organ_slot(ORGAN_SLOT_LIVER)
-	if(liver_organ && HAS_TRAIT(liver_organ, TRAIT_BALLMER_SCIENTIST) && prob(5))
+	if(liver_organ && HAS_TRAIT(liver_organ, TRAIT_SCIENTIST_LIVER) && prob(5) && HAS_PERSONALITY(owner, /datum/personality/whimsical))
 		if(drunk_value >= BALLMER_PEAK_LOW_END && drunk_value <= BALLMER_PEAK_HIGH_END)
 			owner.say(pick_list_replacements(VISTA_FILE, "ballmer_good_msg"), forced = "ballmer")
 
@@ -269,11 +274,7 @@
 	name = "Drunk"
 	desc = "All that alcohol you've been drinking is impairing your speech, \
 		motor skills, and mental cognition. Make sure to act like it."
-	use_user_hud_icon = TRUE
+	use_user_hud_icon = USER_HUD_STYLE_INHERIT
 	overlay_state = "drunk"
-
-#undef BALLMER_PEAK_LOW_END
-#undef BALLMER_PEAK_HIGH_END
-#undef BALLMER_PEAK_WINDOWS_ME
 
 #undef TIPSY_THRESHOLD

@@ -28,7 +28,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	 */
 	var/plural_form
 
-	///Whether or not the race has sexual characteristics (biological genders). At the moment this is only FALSE for skeletons and shadows
+	/// Whether or not the race has sexual characteristics (biological genders). At the moment this is only FALSE for skeletons and shadows
 	var/sexes = TRUE
 
 	///The maximum number of bodyparts this species can have.
@@ -146,13 +146,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/list/inherent_traits = list()
 	/// List of biotypes the mob belongs to. Used by diseases.
 	var/inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	/// The type of respiration the mob is capable of doing. Used by adjust_oxy_loss.
-	var/inherent_respiration_type = RESPIRATION_OXYGEN
 	///List of factions the mob gain upon gaining this species.
 	var/list/inherent_factions
-
-	///What gas does this species breathe? Used by suffocation screen alerts, most of actual gas breathing is handled by mutantlungs. See [life.dm][code/modules/mob/living/carbon/human/life.dm]
-	var/breathid = GAS_O2
 
 	///What anim to use for gibbing
 	var/gib_anim = "gibbed-h"
@@ -200,6 +195,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		plural_form = "[name]\s"
 	if(!examine_limb_id)
 		examine_limb_id = id
+	// Carbons determine bodypart order by this list, so we need to make sure it's sorted properly
+	sortTim(bodypart_overrides, GLOBAL_PROC_REF(cmp_bodypart_by_body_part_asc), associative = TRUE)
 
 	return ..()
 
@@ -308,7 +305,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		// if we have an extra organ that before changing that the species didnt have, remove it
 		if(!new_organ)
 			if(existing_organ && (old_organ_type == existing_organ.type || replace_current))
-				existing_organ.Remove(organ_holder)
+				existing_organ.Remove(organ_holder, special = TRUE) // BUBBER EDIT - Fix dummy CI due to regenerate_organs being called with replace_current = FALSE, which caused existing organs to not be removed properly
 				qdel(existing_organ)
 			continue
 
@@ -386,11 +383,12 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	// Drop the items the new species can't wear
 	human_who_gained_species.mob_biotypes = inherent_biotypes
-	human_who_gained_species.mob_respiration_type = inherent_respiration_type
 	human_who_gained_species.butcher_results = knife_butcher_results?.Copy()
 
 	//update body zones to match what they are supposed to have
-	human_who_gained_species.hud_used?.healthdoll.update_body_zones()
+	var/atom/movable/screen/healthdoll/doll = human_who_gained_species.hud_used?.screen_objects[HUD_MOB_HEALTHDOLL]
+	if (doll)
+		doll.update_body_zones()
 
 	// BUBBER EDIT BEGIN - Bake digitigrade into the species on apply
 	try_make_digitigrade(human_who_gained_species)
@@ -422,7 +420,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	if(inherent_factions)
 		for(var/i in inherent_factions)
-			human_who_gained_species.faction += i //Using +=/-= for this in case you also gain the faction from a different source.
+			human_who_gained_species.add_faction(i)
 
 	// All languages associated with this language holder are added with source [LANGUAGE_SPECIES]
 	// rather than source [LANGUAGE_ATOM], so we can track what to remove if our species changes again
@@ -445,7 +443,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	human_who_gained_species.living_flags &= ~STOP_OVERLAY_UPDATE_BODY_PARTS
 
 	//we don't allow it to update during species transition, so update it now
-	human_who_gained_species.hud_used?.healthdoll.update_appearance()
+	human_who_gained_species.hud_used?.screen_objects[HUD_MOB_HEALTHDOLL]?.update_appearance()
 
 /**
  * Proc called when a carbon is no longer this species.
@@ -477,7 +475,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	if(inherent_factions)
 		for(var/i in inherent_factions)
-			human.faction -= i
+			human.remove_faction(i)
 
 	clear_tail_moodlets(human)
 
@@ -497,23 +495,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	SEND_SIGNAL(human, COMSIG_SPECIES_LOSS, src)
 
 	human.living_flags &= ~STOP_OVERLAY_UPDATE_BODY_PARTS
-
-// This exists so sprite accessories can still be per-layer without having to include that layer's
-// number in their sprite name, which causes issues when those numbers change.
-/datum/species/proc/mutant_bodyparts_layertext(layer)
-	switch(layer)
-		if(BODY_BEHIND_LAYER)
-			return "BEHIND"
-		if(BODY_ADJ_LAYER)
-			return "ADJ"
-		if(BODY_FRONT_LAYER)
-			return "FRONT"
-		//SKYRAT EDIT ADDITION BEGIN
-		if(BODY_FRONT_UNDER_CLOTHES)
-			return "FRONT_UNDER"
-		if(ABOVE_BODY_FRONT_HEAD_LAYER)
-			return "FRONT_OVER"
-		//SKYRAT EDIT ADDITION END
 
 ///Proc that will randomise the hair, or primary appearance element (i.e. for moths wings) of a species' associated mob
 /datum/species/proc/randomize_main_appearance_element(mob/living/carbon/human/human_mob)
@@ -558,11 +539,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		new_features["[sample_overlay.feature_key]"] = sample_overlay.get_random_appearance().name
 
 	return new_features
-
-/datum/species/proc/spec_life(mob/living/carbon/human/H, seconds_per_tick, times_fired)
-	SHOULD_CALL_PARENT(TRUE)
-	if(HAS_TRAIT(H, TRAIT_NOBREATH) && (H.health < H.crit_threshold) && !HAS_TRAIT(H, TRAIT_NOCRITDAMAGE))
-		H.adjust_brute_loss(0.5 * seconds_per_tick)
 
 /datum/species/proc/can_equip(obj/item/I, slot, disable_warning, mob/living/carbon/human/H, bypass_equip_delay_self = FALSE, ignore_equipped = FALSE, indirect_action = FALSE)
 	if(no_equip_flags & slot && !(I.is_mod_shell_component() && (modsuit_slot_exceptions & slot))) // SKYRAT EDIT ADDITION - ORIGINAL: if(no_equip_flags & slot)
@@ -612,6 +588,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				return FALSE
 			/* SKYRAT EDIT REMOVAL
 			if((H.bodyshape & BODYSHAPE_DIGITIGRADE) && !(I.item_flags & IGNORE_DIGITIGRADE))
+			if((H.bodytype & BODYTYPE_DIGITIGRADE) && !(I.item_flags & IGNORE_DIGITIGRADE))
 				if(!(I.supports_variations_flags & DIGITIGRADE_VARIATIONS))
 					if(!disable_warning)
 						to_chat(H, span_warning("The footwear around here isn't compatible with your feet!"))
@@ -940,14 +917,14 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/kicking = (atk_effect == ATTACK_EFFECT_KICK)
 	var/final_armor_block = armor_block
 	if(kicking || grappled) //kicks and punches when grappling bypass armor slightly.
-		if(damage >= 9)
+		if(damage >= 12 || (damage >= 9 && prob(66)))
 			target.force_say()
 		log_combat(user, target, grappled ? "grapple punched" : "kicked")
 		final_armor_block -= limb_accuracy
 		target.apply_damage(damage, attack_type, affecting, final_armor_block, attack_direction = attack_direction, sharpness = limb_sharpness)
 	else // Normal attacks do not gain the benefit of armor penetration.
 		target.apply_damage(damage, attack_type, affecting, armor_block, attack_direction = attack_direction, sharpness = limb_sharpness)
-		if(damage >= 9)
+		if(damage >= 12 || (damage >= 9 && prob(66)))
 			target.force_say()
 		log_combat(user, target, "punched")
 
@@ -1045,7 +1022,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		to_chat(owner, span_warning("You attempt to touch [target]!"))
 		return
 
-	SEND_SIGNAL(owner, COMSIG_MOB_ATTACK_HAND, owner, target, attacker_style)
+	SEND_SIGNAL(owner, COMSIG_MOB_ATTACK_HAND, owner, target, attacker_style, modifiers) //BUBBER EDIT - Original line SEND_SIGNAL(owner, COMSIG_MOB_ATTACK_HAND, owner, target, attacker_style)
 
 	if(LAZYACCESS(modifiers, RIGHT_CLICK))
 		disarm(owner, target, attacker_style)
@@ -1066,9 +1043,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * * environment (required) The environment gas mix
  * * humi (required)(type: /mob/living/carbon/human) The mob we will target
  */
-/datum/species/proc/handle_environment(mob/living/carbon/human/humi, datum/gas_mixture/environment, seconds_per_tick, times_fired)
-	handle_environment_pressure(humi, environment, seconds_per_tick, times_fired)
-	handle_gas_interaction(humi, environment, seconds_per_tick, times_fired)
+/datum/species/proc/handle_environment(mob/living/carbon/human/humi, datum/gas_mixture/environment, seconds_per_tick)
+	handle_environment_pressure(humi, environment, seconds_per_tick)
+	handle_gas_interaction(humi, environment, seconds_per_tick)
 
 /**
  * Body temperature handler for species
@@ -1078,22 +1055,22 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * vars:
  * * humi (required)(type: /mob/living/carbon/human) The mob we will target
  */
-/datum/species/proc/handle_body_temperature(mob/living/carbon/human/humi, seconds_per_tick, times_fired)
+/datum/species/proc/handle_body_temperature(mob/living/carbon/human/humi, seconds_per_tick)
 	// When in a cryo unit we suspend all natural body regulation
 	if(istype(humi.loc, /obj/machinery/cryo_cell))
 		return
 
 	// Only stabilise core temp when alive and not in statis
 	if(humi.stat < DEAD && !HAS_TRAIT(humi, TRAIT_STASIS))
-		body_temperature_core(humi, seconds_per_tick, times_fired)
+		body_temperature_core(humi, seconds_per_tick)
 
 	// These do run in statis
-	body_temperature_skin(humi, seconds_per_tick, times_fired)
-	body_temperature_alerts(humi, seconds_per_tick, times_fired)
+	body_temperature_skin(humi, seconds_per_tick)
+	body_temperature_alerts(humi, seconds_per_tick)
 
 	// Do not cause more damage in statis
 	if(!HAS_TRAIT(humi, TRAIT_STASIS))
-		body_temperature_damage(humi, seconds_per_tick, times_fired)
+		body_temperature_damage(humi, seconds_per_tick)
 
 /**
  * Used to stabilize the core temperature back to normal on living mobs
@@ -1102,7 +1079,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * vars:
  * * humi (required) The mob we will stabilize
  */
-/datum/species/proc/body_temperature_core(mob/living/carbon/human/humi, seconds_per_tick, times_fired)
+/datum/species/proc/body_temperature_core(mob/living/carbon/human/humi, seconds_per_tick)
 	var/natural_change = get_temp_change_amount(humi.get_body_temp_normal() - humi.coretemperature, 0.06 * seconds_per_tick)
 	humi.adjust_coretemperature(humi.metabolism_efficiency * natural_change)
 
@@ -1116,7 +1093,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * - seconds_per_tick: The amount of time that is considered as elapsing
  * - times_fired: The number of times SSmobs has fired
  */
-/datum/species/proc/body_temperature_skin(mob/living/carbon/human/humi, seconds_per_tick, times_fired)
+/datum/species/proc/body_temperature_skin(mob/living/carbon/human/humi, seconds_per_tick)
 
 	// change the core based on the skin temp
 	var/skin_core_diff = humi.bodytemperature - humi.coretemperature
@@ -1236,7 +1213,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * vars:
  * * humi (required) The mob we will targeting
  */
-/datum/species/proc/body_temperature_damage(mob/living/carbon/human/humi, seconds_per_tick, times_fired)
+/datum/species/proc/body_temperature_damage(mob/living/carbon/human/humi, seconds_per_tick)
 
 	//If the body temp is above the wound limit start adding exposure stacks
 	if(humi.bodytemperature > BODYTEMP_HEAT_WOUND_LIMIT)
@@ -1246,7 +1223,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	//when exposure stacks are greater then 10 + rand20 try to apply wounds and reset stacks
 	if(humi.heat_exposure_stacks > (10 + rand(0, 20)))
-		apply_burn_wounds(humi, seconds_per_tick, times_fired)
+		apply_burn_wounds(humi, seconds_per_tick)
 		humi.heat_exposure_stacks = 0
 
 	// Body temperature is too hot, and we do not have resist traits
@@ -1297,7 +1274,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * vars:
  * * humi (required) The mob we will targeting
  */
-/datum/species/proc/apply_burn_wounds(mob/living/carbon/human/humi, seconds_per_tick, times_fired)
+/datum/species/proc/apply_burn_wounds(mob/living/carbon/human/humi, seconds_per_tick)
 	// If we are resistant to heat exit
 	if(HAS_TRAIT(humi, TRAIT_RESISTHEAT))
 		return
@@ -1307,7 +1284,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		return
 
 	// Lets pick a random body part and check for an existing burn
-	var/obj/item/bodypart/bodypart = pick(humi.bodyparts)
+	var/obj/item/bodypart/bodypart = pick(humi.get_bodyparts())
 	var/datum/wound/existing_burn
 	for (var/datum/wound/iterated_wound as anything in bodypart.wounds)
 		var/datum/wound_pregen_data/pregen_data = iterated_wound.get_pregen_data()
@@ -1339,7 +1316,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	humi.apply_damage(burn_damage * seconds_per_tick, BURN, bodypart, wound_clothing = FALSE)
 
 /// Handle the air pressure of the environment
-/datum/species/proc/handle_environment_pressure(mob/living/carbon/human/H, datum/gas_mixture/environment, seconds_per_tick, times_fired)
+/datum/species/proc/handle_environment_pressure(mob/living/carbon/human/H, datum/gas_mixture/environment, seconds_per_tick)
 	var/pressure = environment.return_pressure()
 	var/adjusted_pressure = H.calculate_affecting_pressure(pressure)
 
@@ -1361,6 +1338,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		// No pressure issues here clear pressure alerts
 		if(WARNING_LOW_PRESSURE to WARNING_HIGH_PRESSURE)
 			H.clear_alert(ALERT_PRESSURE)
+			H.seconds_in_low_pressure = 0
 
 		// Low pressure here, show an alert
 		if(HAZARD_LOW_PRESSURE to WARNING_LOW_PRESSURE)
@@ -1369,6 +1347,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				H.clear_alert(ALERT_PRESSURE)
 			else
 				H.throw_alert(ALERT_PRESSURE, /atom/movable/screen/alert/lowpressure, 1)
+			H.seconds_in_low_pressure = 0
 
 		// Very low pressure, show an alert and take damage
 		else
@@ -1376,28 +1355,26 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			if(HAS_TRAIT(H, TRAIT_RESISTLOWPRESSURE))
 				H.clear_alert(ALERT_PRESSURE)
 			else
-				var/pressure_damage = LOW_PRESSURE_DAMAGE * H.physiology.pressure_mod * H.physiology.brute_mod * seconds_per_tick
+				var/pressure_damage = min(round(1 + (H.seconds_in_low_pressure / 80 SECONDS), 0.05) * BASE_LOW_PRESSURE_DAMAGE, MAX_LOW_PRESSURE_DAMAGE)  * H.physiology.pressure_mod * H.physiology.brute_mod * seconds_per_tick
 				H.adjust_brute_loss(pressure_damage, required_bodytype = BODYTYPE_ORGANIC)
 				H.throw_alert(ALERT_PRESSURE, /atom/movable/screen/alert/lowpressure, 2)
+			H.seconds_in_low_pressure += seconds_per_tick
 
 /**
  *	Handles exposure to the skin of various gases.
  */
-/datum/species/proc/handle_gas_interaction(mob/living/carbon/human/human, datum/gas_mixture/environment, seconds_per_tick, times_fired)
+/datum/species/proc/handle_gas_interaction(mob/living/carbon/human/human, datum/gas_mixture/environment, seconds_per_tick)
 	/// Some non-clothing items may end up in these slots, e.g. flowers worn on the head, so we should consider clothing_flags as potentially nonexistant as a var.
 	/// Otherwise we will get a very spammy runtime.
-	var/suit_flags = istype(human?.wear_suit, /obj/item/clothing) ? human.wear_suit.clothing_flags : NONE
-	var/head_flags = istype(human?.head, /obj/item/clothing) ? human.head.clothing_flags : NONE
+	var/suit_flags = astype(human?.wear_suit, /obj/item/clothing)?.clothing_flags
+	var/head_flags = astype(human?.head, /obj/item/clothing)?.clothing_flags
 
 	if((suit_flags & STOPSPRESSUREDAMAGE) && (head_flags & STOPSPRESSUREDAMAGE))
 		return
 
-	for(var/gas_id in environment.gases)
-		var/gas_amount = environment.gases[gas_id][MOLES]
-		switch(gas_id)
-			if(/datum/gas/antinoblium) // Antinoblium - irradiates the target.
-				if(gas_amount >= MOLES_GAS_VISIBLE && SPT_PROB(1, gas_amount * seconds_per_tick))
-					SSradiation.irradiate(human)
+	var/antinoblium_moles = environment.moles[/datum/gas/antinoblium]
+	if (antinoblium_moles >= MOLES_GAS_VISIBLE && SPT_PROB(1, antinoblium_moles * seconds_per_tick))
+		SSradiation.irradiate(human)
 
 ////////////
 //  Stun  //
@@ -1715,6 +1692,14 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			SPECIES_PERK_DESC = "[plural_form] are resilient to being shocked.",
 		))
 
+	if(inherent_biotypes & (MOB_ROBOTIC|MOB_MINERAL))
+		to_add += list(list(
+			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
+			SPECIES_PERK_ICON = FA_ICON_HAMMER,
+			SPECIES_PERK_NAME = "Tough Frame",
+			SPECIES_PERK_DESC = "[plural_form] are more resistant to slashing and stabbing, but more vulnerable to impacts.",
+		))
+
 	return to_add
 
 /**
@@ -1891,6 +1876,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	to_add += create_pref_liver_perks()
 	to_add += create_pref_lung_perks()
+	to_add += create_pref_brain_perks() //BUBBER EDIT - We got brain stuff
 
 	return to_add
 
@@ -1945,12 +1931,13 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	var/list/to_add = list()
 
-	if (breathid != GAS_O2)
+	var/breath_id = get_breath_type()
+	if (breath_id && breath_id != GAS_O2)
 		to_add += list(list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "wind",
-			SPECIES_PERK_NAME = "[capitalize(breathid)] Breathing",
-			SPECIES_PERK_DESC = "[plural_form] must breathe [breathid] to survive. You receive a tank when you arrive.",
+			SPECIES_PERK_NAME = "[capitalize(breath_id)] Breathing",
+			SPECIES_PERK_DESC = "[plural_form] must breathe [breath_id] to survive. You receive a tank when you arrive.",
 		))
 
 	return to_add
@@ -2014,7 +2001,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		final_bodypart_overrides[BODY_ZONE_L_LEG] = /obj/item/bodypart/leg/left/digitigrade
 	*/ // BUBBER EDIT REMOVAL END
 
-	for(var/obj/item/bodypart/old_part as anything in target.bodyparts)
+	for(var/obj/item/bodypart/old_part as anything in target.get_bodyparts())
 		if((old_part.change_exempt_flags & BP_BLOCK_CHANGE_SPECIES) || (old_part.bodypart_flags & BODYPART_IMPLANTED))
 			continue
 
@@ -2022,7 +2009,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		var/obj/item/bodypart/new_part
 		if(path)
 			new_part = new path()
-			new_part.replace_limb(target, TRUE)
+			new_part.replace_limb(target)
 			new_part.update_limb(is_creating = TRUE)
 			new_part.set_initial_damage(old_part.brute_dam, old_part.burn_dam)
 		qdel(old_part)
@@ -2086,21 +2073,31 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 /// Remove body markings
 /datum/species/proc/remove_body_markings(mob/living/carbon/human/hooman)
-	for(var/obj/item/bodypart/part as anything in hooman.bodyparts)
+	var/needs_update = FALSE
+	for(var/obj/item/bodypart/part as anything in hooman.get_bodyparts())
 		for(var/datum/bodypart_overlay/simple/body_marking/marking in part.bodypart_overlays)
-			part.remove_bodypart_overlay(marking)
+			part.remove_bodypart_overlay(marking, update = FALSE)
+			needs_update = TRUE
+
+	if(needs_update && !(hooman.living_flags & STOP_OVERLAY_UPDATE_BODY_PARTS))
+		hooman.update_body_parts()
+	return null
 
 /**
- * Calculates the expected height values for this species
- *
- * Return a height value corresponding to a specific height filter
- * Return null to just use the mob's base height
+ * Returns what type of gas this species breathes
  */
-/datum/species/proc/update_species_heights(mob/living/carbon/human/holder)
-	if(HAS_TRAIT(holder, TRAIT_DWARF))
-		return HUMAN_HEIGHT_DWARF
+/datum/species/proc/get_breath_type()
+	if(isnull(mutantlungs))
+		return null
 
-	if(HAS_TRAIT(holder, TRAIT_TOO_TALL))
-		return HUMAN_HEIGHT_TALLEST
+	if(mutantlungs::safe_plasma_min > 0)
+		return GAS_PLASMA
 
+	if(mutantlungs::safe_oxygen_min > 0)
+		return GAS_O2
+
+	if(mutantlungs::safe_nitro_min > 0)
+		return GAS_N2
+
+	stack_trace("Unsupported breath type for species with [mutantlungs]")
 	return null

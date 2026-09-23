@@ -2,7 +2,6 @@
 	title = JOB_SECURITY_MEDIC
 	description = "Patch up officers and prisoners, realize you don't have the tools to Tend Wounds, barge into Medbay and tell them how to do their jobs"
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
-	department_head = list(JOB_HEAD_OF_SECURITY)
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
@@ -42,11 +41,27 @@
 	)
 	rpg_title = "Battle Cleric"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
+	
+	sec_antag_cap = 1.25
+	banned_quirks = list(SEC_RESTRICTED_QUIRKS)
+	alt_titles = list(
+		"Security Medic",
+		"Field Medic",
+		"Security Corpsman",
+		"Brig Physician",
+		"Combat Medic",
+		"Special Operations Medic",
+	)
 
 /datum/outfit/job/security_medic
 	name = "Security Medic"
 	jobtype = /datum/job/security_medic
 
+	backpack_contents = list(
+		/obj/item/security_voucher/primary = 1,
+		/obj/item/security_voucher/utility = 1
+		)
+	suit_store = /obj/item/flashlight/seclite
 	belt = /obj/item/modular_computer/pda/security
 	ears = /obj/item/radio/headset/headset_medsec
 	uniform = /obj/item/clothing/under/rank/security/peacekeeper/security_medic
@@ -55,8 +70,7 @@
 	glasses = /obj/item/clothing/glasses/hud/medsechud
 	suit = /obj/item/clothing/suit/armor/vest/peacekeeper/security_medic
 	l_hand = /obj/item/storage/medkit/brute
-	head = /obj/item/clothing/head/beret/sec/peacekeeper/security_medic
-	suit_store = /obj/item/gun/energy/e_gun/advtaser
+	head = /obj/item/clothing/head/beret/sec/security_medic
 	backpack = /obj/item/storage/backpack/security
 	satchel = /obj/item/storage/backpack/satchel/sec
 	duffelbag = /obj/item/storage/backpack/duffelbag/sec
@@ -117,9 +131,7 @@
 /obj/item/storage/bag/garment/secmed/PopulateContents()
 	. = ..()
 	new /obj/item/clothing/suit/toggle/labcoat/skyrat/security_medic(src)
-	new /obj/item/clothing/suit/toggle/labcoat/skyrat/security_medic/blue(src)
 	new /obj/item/clothing/suit/hazardvest/security_medic(src)
-	new /obj/item/clothing/suit/hazardvest/security_medic/blue(src)
 	new /obj/item/clothing/head/helmet/sec/peacekeeper/security_medic(src)
 	new /obj/item/clothing/under/rank/medical/scrubs/skyrat/red/sec(src)
 	new /obj/item/clothing/under/rank/security/peacekeeper/security_medic/alternate(src)

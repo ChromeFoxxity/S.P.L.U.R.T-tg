@@ -115,17 +115,13 @@
 // 	name = "Hypnotic Chastity Watch"
 // 	item_path = /obj/item/chastity_hypno/watch
 
-/datum/loadout_item/pocket_items/electropack/vibrator
-	name = "Vibrator"
-	item_path = /obj/item/clothing/sextoy/vibrator
+// /datum/loadout_item/pocket_items/electropack/vibrator
+// 	name = "Vibrator"
+// 	item_path = /obj/item/clothing/sextoy/vibrator
 
 /datum/loadout_item/pocket_items/electropack/vibrator/small
 	name = "Remote Vibroegg"
 	item_path = /obj/item/clothing/sextoy/eggvib
-
-/datum/loadout_item/pocket_items/strapon_strap
-	name = "Strapon Strap"
-	item_path = /obj/item/clothing/strapon
 
 //
 /datum/loadout_item/pocket_items/plushbox

@@ -522,15 +522,15 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 /datum/objective_item/steal/hdd_extraction
 	name = "the source code for Project Goon from the master R&D server mainframe"
-	targetitem = /obj/item/computer_disk/hdd_theft
+	targetitem = /obj/item/disk/computer/hdd_theft
 	excludefromjob = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_GENETICIST)
 	item_owner = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST)
 	exists_on_map = TRUE
 	difficulty = 4
 	steal_hint = "The hard drive of the master research server, found in R&D's server room."
 
-/obj/item/computer_disk/hdd_theft/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/computer_disk/hdd_theft)
+/obj/item/disk/computer/hdd_theft/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/disk/computer/hdd_theft)
 
 /datum/objective_item/steal/hdd_extraction/New()
 	special_equipment += /obj/item/paper/guides/antag/hdd_extraction
@@ -552,7 +552,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	return GLOB.main_supermatter_engine != null
 
 // Doesn't need item_owner = (JOB_AI) because this handily functions as a murder objective if there isn't one
-/datum/objective_item/steal/functionalai
+/* /datum/objective_item/steal/functionalai
 	name = "a functional AI"
 	targetitem = /obj/item/aicard
 	difficulty = 5
@@ -582,7 +582,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 		return TRUE
 
 	return FALSE
-
+SPLURT Edit, Removes steal AI - as it is essentially soft RR for the AI. */
 /datum/objective_item/steal/blueprints
 	name = "the station blueprints"
 	targetitem = /obj/item/blueprints
@@ -914,6 +914,17 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 /obj/item/mod/control/pre_equipped/rescue/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/mod/control/pre_equipped/rescue)
+
+/datum/objective_item/steal/spy/cmo_defib
+	name = "Chief Medical Officer's Compact Defibrillator"
+	targetitem = /obj/item/defibrillator/compact/loaded/cmo
+	excludefromjob = list(JOB_CHIEF_MEDICAL_OFFICER)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "The Compact Defibrillator, found on their person, or in their closet."
+
+/obj/item/defibrillator/compact/loaded/cmo/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/defibrillator/compact/loaded/cmo)
 
 /datum/objective_item/steal/spy/hos_modsuit
 	name = "the head of security's safeguard MOD control unit"

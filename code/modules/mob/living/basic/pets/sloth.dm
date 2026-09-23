@@ -10,7 +10,6 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/basic/sloth)
 
 	speak_emote = list("yawns")
 
-	can_be_held = TRUE
 	held_state = "sloth"
 
 	response_help_continuous = "pets"
@@ -38,6 +37,7 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/basic/sloth)
 	ai_controller = /datum/ai_controller/basic_controller/sloth
 
 /datum/emote/sloth
+	abstract_type = /datum/emote/sloth
 	mob_type_allowed_typecache = /mob/living/basic/sloth
 	mob_type_blacklist_typecache = list()
 
@@ -52,6 +52,7 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/basic/sloth)
 	AddElement(/datum/element/pet_bonus, "ssmile")
 	AddElement(/datum/element/footstep, footstep_type = FOOTSTEP_MOB_CLAW)
 	AddElement(/datum/element/ai_retaliate)
+	AddElement(/datum/element/can_be_held)
 	AddComponent(/datum/component/tree_climber)
 
 	if(!mapload || !isnull(GLOB.cargo_sloth) || !is_station_level(z))

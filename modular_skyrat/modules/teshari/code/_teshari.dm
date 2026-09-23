@@ -4,9 +4,9 @@
 
 /datum/species/teshari
 	name = "Teshari"
+	plural_form = "Teshari"
 	id = SPECIES_TESHARI
 	no_gender_shaping = TRUE // Female uniform shaping breaks Teshari worn sprites, so this is disabled. This will not affect anything else in regards to gender however.
-	//eyes_icon = 'modular_skyrat/modules/organs/icons/teshari_eyes.dmi' //SPLURT EDIT - https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/453
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
@@ -18,6 +18,7 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	payday_modifier = 1.0
 	mutanttongue = /obj/item/organ/tongue/teshari
+	mutanteyes = /obj/item/organ/eyes/teshari
 	custom_worn_icons = list(
 		OFFSET_HEAD = TESHARI_HEAD_ICON,
 		OFFSET_FACEMASK = TESHARI_MASK_ICON,
@@ -59,8 +60,14 @@
 	)
 
 /obj/item/organ/tongue/teshari
+	name = "teshari tongue"
 	liked_foodtypes = SEAFOOD | VEGETABLES | NUTS
 	disliked_foodtypes = GROSS | GRAIN
+
+/obj/item/organ/eyes/teshari
+	name = "teshari eyes"
+	eye_icon = 'modular_skyrat/modules/organs/icons/teshari_eyes.dmi'
+	blink_animation = FALSE
 
 /datum/species/teshari/prepare_human_for_preview(mob/living/carbon/human/tesh)
 	var/base_color = "#c0965f"
@@ -74,11 +81,11 @@
 
 /datum/species/teshari/on_species_gain(mob/living/carbon/human/new_teshari, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()
-	passtable_on(new_teshari, SPECIES_TRAIT)
+	ADD_TRAIT(new_teshari, TRAIT_PASSTABLE, SPECIES_TRAIT)
 
 /datum/species/teshari/on_species_loss(mob/living/carbon/C, datum/species/new_species, pref_load)
 	. = ..()
-	passtable_off(C, SPECIES_TRAIT)
+	REMOVE_TRAIT(C, TRAIT_PASSTABLE, SPECIES_TRAIT)
 
 /datum/species/teshari/create_pref_unique_perks()
 	var/list/perk_descriptions = list()

@@ -1,7 +1,6 @@
 /datum/job/prisoner
 	title = JOB_PRISONER
 	description = "Keep yourself occupied in permabrig."
-	department_head = list("The Security Team")
 	faction = FACTION_STATION
 	total_positions = 12		// SKYRAT EDIT: Original value (0)
 	spawn_positions = 2
@@ -75,7 +74,7 @@
 	var/datum/prisoner_crime/crime = GLOB.prisoner_crimes[crime_name]
 	if (isnull(crime))
 		return
-	var/list/limbs_to_tat = new_prisoner.bodyparts.Copy()
+	var/list/limbs_to_tat = new_prisoner.get_bodyparts()
 	for(var/i in 1 to crime.tattoos)
 		if(!length(SSpersistence.prison_tattoos_to_use) || visuals_only)
 			return

@@ -6,7 +6,7 @@
 		if(!glass_item.use(1))
 			return
 		new /obj/item/stack/clay(get_turf(src))
-		user.mind.adjust_experience(/datum/skill/production, 1)
+		user.mind?.adjust_experience(/datum/skill/production, 1)
 		return
 	return ..()
 
@@ -16,7 +16,7 @@
 		if(!glass_item.use(1))
 			return
 		new /obj/item/stack/clay(src)
-		user.mind.adjust_experience(/datum/skill/production, 1)
+		user.mind?.adjust_experience(/datum/skill/production, 1)
 		return
 	return ..()
 
@@ -30,7 +30,7 @@
 		if(!glass_item.use(1))
 			return
 		new /obj/item/stack/clay(get_turf(src))
-		user.mind.adjust_experience(/datum/skill/production, 1)
+		user.mind?.adjust_experience(/datum/skill/production, 1)
 		return
 	return ..()
 
@@ -144,6 +144,7 @@
 	icon_state = "throw_wheel_empty"
 	density = TRUE
 	anchored = TRUE
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 10)
 	///if the structure has clay
 	var/has_clay = FALSE
 	//if the structure is in use or not
@@ -187,7 +188,7 @@
 			return
 		to_chat(user, span_notice(given_message[loop_try]))
 	new spawn_type(get_turf(src))
-	user.mind.adjust_experience(/datum/skill/production, 50)
+	user.mind?.adjust_experience(/datum/skill/production, 50)
 	has_clay = FALSE
 	icon_state = "throw_wheel_empty"
 

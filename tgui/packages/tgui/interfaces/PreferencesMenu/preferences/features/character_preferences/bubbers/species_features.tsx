@@ -4,6 +4,7 @@ import {
   type FeatureChoiced,
   FeatureShortTextInput,
   FeatureTextInput,
+  FeatureTriColorInput,
   type FeatureToggle,
 } from '../../base';
 import { FeatureDropdownInput } from '../../dropdowns';
@@ -86,7 +87,7 @@ export const display_gender: FeatureChoiced = {
 };
 
 export const flavor_text_nsfw: Feature<string> = {
-  name: 'NSFW Flavor Text',
+  name: 'Flavor Text (NSFW)',
   description:
     'The NSFW part of your flavor text. Used to store visual sexual details.',
   component: FeatureTextInput,
@@ -129,7 +130,7 @@ export const headshot_silicon: Feature<string> = {
 };
 
 export const headshot_nsfw: Feature<string> = {
-  name: 'NSFW Headshot',
+  name: 'Headshot (NSFW)',
   description:
     'Headshot, but for NSFW references. \
     Requires a link ending with .png, .jpeg, or .jpg, starting with \
@@ -141,7 +142,7 @@ export const headshot_nsfw: Feature<string> = {
 };
 
 export const headshot_silicon_nsfw: Feature<string> = {
-  name: 'Silicon NSFW Headshot',
+  name: 'Silicon Headshot (NSFW)',
   description:
     'Headshot, but for NSFW references on Silicons. \
     Requires a link ending with .png, .jpeg, or .jpg, starting with \
@@ -182,7 +183,13 @@ export const art_ref: Feature<string> = {
 };
 
 export const art_ref_nsfw: FeatureToggle = {
-  name: 'Art Reference NSFW',
+  name: 'Art Reference (NSFW)',
   description: 'Is your reference picture NSFW?',
   component: CheckboxInput,
+};
+
+export const mutant_colors_color: Feature<string[]> = {
+  name: 'Body Colors',
+  component: FeatureTriColorInput,
+  description: 'Body color used for non-human species.',
 };

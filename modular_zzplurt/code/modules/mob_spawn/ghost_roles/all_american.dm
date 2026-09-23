@@ -4,7 +4,6 @@
 	title = ROLE_ALLAMERICAN
 	policy_index = ROLE_ALLAMERICAN
 	akula_outfit = /datum/outfit/akula
-	antagonist_restricted = TRUE
 
 /obj/effect/mob_spawn/ghost_role/human/allamerican
 	name = "All-American Diner Employee"
@@ -92,7 +91,7 @@
 /obj/effect/mob_spawn/ghost_role/robot/diner/special(mob/living/silicon/robot/new_spawn)
 	. = ..()
 	if(new_spawn.client) //It should have a client, right?
-		new_spawn.faction += ROLE_ALLAMERICAN
+		new_spawn.add_faction(list(ROLE_ALLAMERICAN))
 		new_spawn.UnlinkSelf() //This should prevent AI linking and consoles to see or lock them down.
 		new_spawn.laws = new /datum/ai_laws/allamerican()
 		new_spawn.show_laws() //Check your laws.
@@ -183,3 +182,5 @@
 /obj/item/paper/fluff/ruins/allamericandiner/better/manager
 	name = "Notice for Managers"
 	default_raw_text = "Welcome to your new position of Manager! Remember to PAY YOUR EMPLOYEES A SALARY! Giving them a constant paycheck makes sure that they stay loyal to your leadership, we won't want a mutiny within one of our diners now would we? So, keep paying them. - REGIONAL MANAGER."
+
+#undef ROLE_ALLAMERICAN

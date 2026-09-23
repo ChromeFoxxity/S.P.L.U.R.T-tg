@@ -134,7 +134,7 @@
 		// BUBBERSTATION EDIT END
 		playsound(user, 'sound/machines/ping.ogg', 25)
 		to_chat(user, span_notice("You scan [target]."))
-		user.mind.adjust_experience(/datum/skill/research, 5) //SKYRAT EDIT: Research Skill (simple research)
+		user.mind?.adjust_experience(/datum/skill/research, 5) //SKYRAT EDIT: Research Skill (simple research)
 	else if(!(config_flags & EXPERIMENT_CONFIG_SILENT_FAIL))
 		playsound(user, 'sound/machines/buzz/buzz-sigh.ogg', 25)
 		to_chat(user, span_notice("[target] is not related to your currently selected experiment."))
@@ -343,16 +343,7 @@
 		for (var/datum/experiment/experiment as anything in linked_web.available_experiments)
 			if(!can_select_experiment(experiment))
 				continue
-			var/list/data = list(
-				name = experiment.name,
-				description = experiment.description,
-				tag = experiment.exp_tag,
-				selected = selected_experiment == experiment,
-				progress = experiment.check_progress(),
-				performance_hint = experiment.performance_hint,
-				ref = REF(experiment)
-			)
-			.["experiments"] += list(data)
+			.["experiments"] += list(list("selected" = selected_experiment == experiment) + experiment.to_ui_data())
 
 /datum/component/experiment_handler/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()

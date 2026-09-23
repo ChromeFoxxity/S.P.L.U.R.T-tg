@@ -6,6 +6,7 @@
 	icon_state = "refactory"
 	organ_flags = ORGAN_ROBOTIC | ORGAN_NANOMACHINE
 	organ_traits = list(TRAIT_NOHUNGER)
+	custom_premium_price = PAYCHECK_COMMAND * 2
 
 	/// How much max metal can we hold at any given time (In sheets). This isn't using nutrition code because nutrition code gets weird without livers.
 	var/metal_max = PROTEAN_STOMACH_FULL
@@ -86,7 +87,7 @@
 		var/obj/item/food/golem_food/food = eating
 		if(metal > (PROTEAN_STOMACH_FULL - 0.3) && food.owner.loc == owner)
 			balloon_alert(owner, "storage full!")
-			return COMSIG_CARBON_BLOCK_EAT
+			return BLOCK_EAT_ATTEMPT
 
 /// If we ate a sheet of metal, add it to storage.
 /obj/item/organ/stomach/protean/after_eat(atom/edible)

@@ -24,6 +24,10 @@
 	name = "borg resizer"
 	desc = "A cyborg resizer, it makes a cyborg grow/shrink to different sizes." //Could probably use a different description
 	icon_state = "module_general"
+	custom_materials = list(
+		/datum/material/titanium = SHEET_MATERIAL_AMOUNT * 2.5,
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT,
+	)
 	// Standard resize percentage, makes the borg the same size an expander would have made them unless specified otherwise
 	var/resize_amount = 160
 
@@ -82,9 +86,8 @@
 	var/prev_lockcharge = borg.lockcharge
 	borg.SetLockdown(TRUE)
 	borg.set_anchored(TRUE)
-	var/datum/effect_system/fluid_spread/smoke/smoke = new
-	smoke.set_up(1, holder = borg, location = borg.loc)
-	smoke.start()
+	var/datum/effect_system/basic/spark_spread/sparks = new(borg.loc, 1, TRUE)
+	sparks.start()
 	sleep(0.2 SECONDS)
 	for(var/i in 1 to 4)
 		playsound(borg, pick(

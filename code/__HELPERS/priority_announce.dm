@@ -98,7 +98,20 @@
 		else
 			GLOB.news_network.submit_article(text, "[command_name()] Update", NEWSCASTER_STATION_ANNOUNCEMENTS, null)
 
-/proc/print_command_report(text = "", title = null, announce=TRUE)
+/**
+ * Print a report to all the communications consoles, and optionally send an announcement to players about it. This is used for the roundstart report, but can also be used for other reports in the future.
+ *
+ * * text - the text of the report to print
+ * * title - the title of the report, which is also the name of the printed paper.
+ * If null, defaults to "Classified [command_name()] Update"
+ * * announce - whether or not to send an announcement to players about the report being printed.
+ * Defaults to TRUE.
+ * * contains_advanced_html - whether or not the text contains advanced HTML that should be rendered on the paper.
+ * Advanced HTML (currently) only includes <img> tags, but may include other tags in the future.
+ * Do not allow player inputted reports to contain advanced HTML.
+ * Defaults to FALSE, which means only basic HTML will be rendered.
+ */
+/proc/print_command_report(text = "", title = null, announce = TRUE, contains_advanced_html = FALSE)
 	if(!title)
 		title = "Classified [command_name()] Update"
 
@@ -114,7 +127,7 @@
 	message.title = title
 	message.content = text
 
-	GLOB.communications_controller.send_message(message)
+	GLOB.communications_controller.send_message(message, contains_advanced_html = contains_advanced_html)
 
 /**
  * Sends a minor annoucement to players.
@@ -202,7 +215,7 @@
 	var/datum/callback/should_play_sound_callback = astype(should_play_sound)
 
 	for(var/mob/target in players)
-		if(isnewplayer(target) || !target.can_hear())
+		if(isnewplayer(target) || HAS_TRAIT(target, TRAIT_DEAF))
 			continue
 
 		to_chat(target, announcement)
@@ -226,7 +239,7 @@
 	var/static/list/quiet_areas = typecacheof(typesof(/area/station/maintenance) + typesof(/area/space) + typesof(/area/station/commons/dorms))
 	for(var/mob/target in players)
 		// no redundant checks please
-		if(isnewplayer(target) || !target.can_hear() || isnull(target.client))
+		if(isnewplayer(target) || HAS_TRAIT(target, TRAIT_DEAF) || isnull(target.client))
 			continue
 
 		// ugly line but it do do dit
@@ -236,23 +249,25 @@
 		else
 			preferred_announcer = SSstation.announcer
 
-		if(!sound_override)
-			sound_override = preferred_announcer.get_rand_alert_sound()
-		else if(preferred_announcer.event_sounds[sound_override])
-			var/list/announcer_key = preferred_announcer.event_sounds[sound_override]
-			sound_override = pick(announcer_key)
-		else if(sound_override == ANNOUNCER_COMMAND_REPORT)
-			sound_override = preferred_announcer.get_rand_report_sound()
-		else if(sound_override == ANNOUNCER_RANDOM_WELCOME)
-			sound_override = preferred_announcer.get_rand_welcome_sound()
+		var/computed_sound = sound_override
+		if(!computed_sound)
+			computed_sound = preferred_announcer.get_rand_alert_sound()
+		else if(preferred_announcer.event_sounds[computed_sound])
+			var/list/announcer_key = preferred_announcer.event_sounds[computed_sound]
+			computed_sound = pick(announcer_key)
+		else if(computed_sound == ANNOUNCER_COMMAND_REPORT)
+			computed_sound = preferred_announcer.get_rand_report_sound()
+		else if(computed_sound == ANNOUNCER_RANDOM_WELCOME)
+			computed_sound = preferred_announcer.get_rand_welcome_sound()
+
 		// couldnt find ANYTHING fallback please FALLBACK!!!
-		else if(GLOB.announcer_keys.Find(sound_override) || sound_override == ANNOUNCER_RANDOM_ALERT)
-			sound_override = preferred_announcer.get_rand_alert_sound()
+		else if(GLOB.announcer_keys.Find(computed_sound) || computed_sound == ANNOUNCER_RANDOM_ALERT)
+			computed_sound = preferred_announcer.get_rand_alert_sound()
 
-		if(!isnull(sound_override))
-			sound_override = sound(sound_override)
+		if(!isnull(computed_sound))
+			computed_sound = sound(computed_sound)
 
-		var/sound_to_play = !isnull(sound_override) ? sound_override : 'sound/announcer/notice/notice2.ogg'
+		var/sound_to_play = !isnull(computed_sound) ? computed_sound : 'sound/announcer/notice/notice2.ogg'
 
 		if(target.client?.prefs.read_preference(/datum/preference/toggle/sound_announcements))
 			var/area/A = get_area(target)

@@ -20,6 +20,7 @@
 	drop_sound = 'sound/items/handling/tools/rcd_drop.ogg'
 	pickup_sound = 'sound/items/handling/tools/rcd_pickup.ogg'
 	sound_vary = TRUE
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 3)
 
 	/// main category of currently selected design[Structures, Airlocks, Airlock Access]
 	var/root_category
@@ -43,7 +44,7 @@
 	/// variable for R walls to deconstruct them
 	var/canRturf = FALSE
 	/// integrated airlock electronics for setting access to a newly built airlocks
-	var/obj/item/electronics/airlock/airlock_electronics
+	var/obj/item/electronics/airlock/rcd/airlock_electronics
 
 	COOLDOWN_DECLARE(destructive_scan_cooldown)
 
@@ -53,6 +54,10 @@
 /obj/effect/rcd_hologram
 	name = "hologram"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/item/electronics/airlock/rcd
+	item_flags = parent_type::item_flags | ABSTRACT
+	custom_materials = null
 
 /obj/effect/rcd_hologram/Initialize(mapload)
 	. = ..()
@@ -68,9 +73,9 @@
 	design_category = GLOB.rcd_designs[root_category][1]
 	var/list/design = GLOB.rcd_designs[root_category][design_category][1]
 
-	rcd_design_path = design["[RCD_DESIGN_PATH]"]
+	rcd_design_path = design[RCD_DESIGN_PATH]
 	design_title = initial(rcd_design_path.name)
-	mode = design["[RCD_DESIGN_MODE]"]
+	mode = design[RCD_DESIGN_MODE]
 	construction_mode = mode
 
 	GLOB.rcd_list += src
@@ -138,8 +143,8 @@
  * * [mob][user]- the user
  */
 /obj/item/construction/rcd/proc/can_place(atom/target, list/rcd_results, mob/user)
-	var/rcd_mode = rcd_results["[RCD_DESIGN_MODE]"]
-	var/atom/movable/rcd_structure = rcd_results["[RCD_DESIGN_PATH]"]
+	var/rcd_mode = rcd_results[RCD_DESIGN_MODE]
+	var/atom/movable/rcd_structure = rcd_results[RCD_DESIGN_PATH]
 	/**
 	 *For anything that does not go an a wall we have to make sure that turf is clear for us to put the structure on it
 	 *If we are just trying to destroy something then this check is not necessary
@@ -257,8 +262,8 @@
 		balloon_alert(user, "too durable!")
 		return ITEM_INTERACT_BLOCKING
 
-	rcd_results["[RCD_DESIGN_MODE]"] = mode
-	rcd_results["[RCD_DESIGN_PATH]"] = rcd_design_path
+	rcd_results[RCD_DESIGN_MODE] = mode
+	rcd_results[RCD_DESIGN_PATH] = rcd_design_path
 
 	var/delay = rcd_results["delay"] * delay_mod
 	if (
@@ -272,10 +277,10 @@
 
 	var/target_name = target.name //Store this information before it gets mutated by the rcd.
 	var/target_path = target.type
-	var/atom/design_path = rcd_results["[RCD_DESIGN_PATH]"]
+	var/atom/design_path = rcd_results[RCD_DESIGN_PATH]
 	var/location = AREACOORD(target)
 	if(_rcd_create_effect(target, user, delay, rcd_results))
-		log_tool("[key_name(user)] used [src] to [rcd_results["[RCD_DESIGN_MODE]"] != RCD_DECONSTRUCT ? "construct [initial(design_path.name)]([design_path])" : "deconstruct [target_name]([target_path])"] at [location]")
+		log_tool("[key_name(user)] used [src] to [rcd_results[RCD_DESIGN_MODE] != RCD_DECONSTRUCT ? "construct [initial(design_path.name)]([design_path])" : "deconstruct [target_name]([target_path])"] at [location]")
 
 	current_active_effects -= 1
 	return ITEM_INTERACT_SUCCESS
@@ -292,7 +297,7 @@
 /obj/item/construction/rcd/proc/_rcd_create_effect(atom/target, mob/user, delay, list/rcd_results)
 	PRIVATE_PROC(TRUE)
 
-	var/obj/effect/constructing_effect/rcd_effect = new(get_turf(target), delay, rcd_results["[RCD_DESIGN_MODE]"], construction_upgrades)
+	var/obj/effect/constructing_effect/rcd_effect = new(get_turf(target), delay, rcd_results[RCD_DESIGN_MODE], construction_upgrades)
 
 	//resource & structure placement sanity checks before & after delay along with beam effects
 	if(!useResource(rcd_results["cost"], user, TRUE) || !can_place(target, rcd_results, user))
@@ -421,9 +426,9 @@
 			if(design == null) //not a valid design
 				return TRUE
 			design_category = category_name
-			mode = design["[RCD_DESIGN_MODE]"]
+			mode = design[RCD_DESIGN_MODE]
 			construction_mode = mode
-			rcd_design_path = design["[RCD_DESIGN_PATH]"]
+			rcd_design_path = design[RCD_DESIGN_PATH]
 			design_title = initial(rcd_design_path.name)
 			blueprint_changed = TRUE
 
@@ -568,8 +573,9 @@
 	ranged = TRUE
 	has_ammobar = FALSE
 	resistance_flags = FIRE_PROOF | INDESTRUCTIBLE // should NOT be destroyed unless the equipment is destroyed
-	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON | DROPDEL // already qdeleted in the equipment's Destroy() but you can never be too sure
+	item_flags = NOBLUDGEON | DROPDEL // already qdeleted in the equipment's Destroy() but you can never be too sure
 	delay_mod = 0.5
+	custom_materials = null
 
 /obj/item/construction/rcd/exosuit/ui_status(mob/user, datum/ui_state/state)
 	if(ismecha(owner))
@@ -610,6 +616,23 @@
 		return gundam.use_energy(amount * MASS_TO_ENERGY)
 	return TRUE
 
+/obj/item/construction/rcd/exosuit/detonate_pulse()
+	var/obj/item/mecha_parts/mecha_equipment/rcd/ourshell = loc
+	if(!istype(ourshell))
+		return
+	ourshell.audible_message(span_danger("<b>[ourshell] begins to vibrate and buzz loudly!</b>"), \
+	span_danger("<b>[ourshell] begins vibrating violently!</b>"))
+	// 5 seconds to get rid of it
+	addtimer(CALLBACK(src, PROC_REF(detonate_pulse_explode)), 5 SECONDS)
+
+/obj/item/construction/rcd/exosuit/detonate_pulse_explode()
+	var/obj/item/mecha_parts/mecha_equipment/rcd/ourshell = loc
+	explosion(ourshell, light_impact_range = 3, flame_range = 1, flash_range = 1)
+	if(owner)
+		ourshell.detach()
+	qdel(ourshell)
+
+
 #undef MASS_TO_ENERGY
 
 #undef FREQUENT_USE_DEBUFF_MULTIPLIER
@@ -622,9 +645,9 @@
 	w_class = WEIGHT_CLASS_TINY
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
-	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT *6, /datum/material/glass=SHEET_MATERIAL_AMOUNT*4)
+	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT * 6, /datum/material/glass=SHEET_MATERIAL_AMOUNT*3)
 	var/ammoamt = 40
 
 /obj/item/rcd_ammo/large
-	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*24, /datum/material/glass=SHEET_MATERIAL_AMOUNT*16)
+	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*24, /datum/material/glass=SHEET_MATERIAL_AMOUNT*12)
 	ammoamt = 160
