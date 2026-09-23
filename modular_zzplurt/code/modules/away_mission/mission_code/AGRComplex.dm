@@ -907,6 +907,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/preset/complex, 0)
 	. = ..()
 	var/datum/callback/retaliate_callback = CALLBACK(src, PROC_REF(ai_retaliate_behaviour))
 	AddComponent(/datum/component/ai_retaliate_advanced, retaliate_callback)
+/mob/living/basic/trooper/complex/proc/ai_retaliate_behaviour(mob/living/attacker)
+	if (!istype(attacker))
+		return
+	for (var/mob/living/basic/trooper/nanotrasen/potential_trooper in oview(src, 7))
+		potential_trooper.ai_controller.insert_blackboard_key_lazylist(BB_BASIC_MOB_RETALIATE_LIST, attacker)
 
 /mob/living/basic/trooper/complex/security/armored
 	corpse = /obj/effect/mob_spawn/corpse/human/complex/security/armored
@@ -1200,7 +1205,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/preset/complex, 0)
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/deagle/gold)
 	r_hand = /obj/item/gun/ballistic/automatic/pistol/deagle/gold
-	casingtype = /obj/item/ammo_casing/c460rowland
+	casingtype = /obj/item/ammo_box/magazine/m50
 	maxHealth = 250
 	health = 250
 	projectilesound = 'modular_skyrat/modules/modular_weapons/sounds/pistol_heavy.ogg'
